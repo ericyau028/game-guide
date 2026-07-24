@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="瑪奇Mobile副本攻略大全—一般副本、深淵副本(Math/Barri/Runda)、週日地下城、神秘地下城、世界BOSS與組隊系統完整指南。">
+  <meta name="keywords" content="瑪奇Mobile, 副本攻略, 深淵副本, 어비스, Math, Barri, Runda, 週日地下城, 世界BOSS, Mabinogi Mobile, 組隊系統">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="瑪奇Mobile副本攻略大全｜深淵、週日地下城與組隊指南—攻略站">
+  <meta property="og:description" content="2026 Season 2版完整副本攻略，涵蓋深淵副本三大類型、週日地下城、神秘地下城與世界BOSS。">
+  <meta property="og:type" content="article">
+  <title>瑪奇Mobile副本攻略大全｜深淵、週日地下城與組隊指南—攻略站</title>
+  <link rel="canonical" href="https://example.com/mabinogi-mobile/articles/dungeon-guide.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <!-- Reading Progress -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../index.html" class="nav-link">首頁</a>
+          <a href="../index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="newbie-guide.html" class="nav-link">新手指南</a>
+          <a href="tier-list.html" class="nav-link">職業排行</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../index.html" class="nav-link">首頁</a>
+        <a href="../index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="newbie-guide.html" class="nav-link">新手指南</a>
+        <a href="tier-list.html" class="nav-link">職業排行</a>
+        <a href="dungeon-guide.html" class="nav-link">副本攻略</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../index.html" class="hover:text-indigo-400 transition">首頁</a>
+      <span class="mx-2">›</span>
+      <a href="../index.html" class="hover:text-indigo-400 transition">瑪奇Mobile</a>
+      <span class="mx-2">›</span>
+      <span class="text-gray-300">副本攻略大全</span>
+    </nav>
+  </div>
+
+  <!-- ===== ARTICLE LAYOUT ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <!-- LEFT: TOC -->
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER: Article Content -->
+    <article class="flex-1 min-w-0">
+      <!-- Article Header -->
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">瑪奇 Mobile 副本攻略大全｜深淵、週日地下城與組隊指南</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            GameGuide 編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-24
+          </span>
+          <span>·</span>
+          <span>約 20 分鐘閱讀</span>
+          <span class="badge badge-blue">副本攻略</span>
+        </div>
+      </header>
+
+      <!-- Article Body -->
+      <div id="article-content" class="article-content">
+
+        <h2 id="overview">副本系統總覽</h2>
+        <p>瑪奇 Mobile 中副本系統是核心玩法之一，涵蓋主線任務、裝備養成、高難度挑戰與限時活動等多種內容。根據韓服 Season 2 版本的資料，遊戲內共可區分為以下四大副本類型：</p>
+        <div class="overflow-x-auto">
+          <table>
+            <thead>
+              <tr>
+                <th>副本類型</th>
+                <th>韓服名稱</th>
+                <th>難度</th>
+                <th>人數</th>
+                <th>主要獎勵</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>一般副本</strong></td>
+                <td>일반 던전</td>
+                <td>★〜★★★</td>
+                <td>1〜4人</td>
+                <td>主線經驗、材料裝備</td>
+              </tr>
+              <tr>
+                <td><strong>深淵副本</strong></td>
+                <td>어비스 던전</td>
+                <td>★★★★★</td>
+                <td>4人</td>
+                <td>傳說裝備材料、高級符文</td>
+              </tr>
+              <tr>
+                <td><strong>週日地下城</strong></td>
+                <td>요일 던전</td>
+                <td>★★〜★★★★</td>
+                <td>1〜4人</td>
+                <td>大量金幣、符文材料</td>
+              </tr>
+              <tr>
+                <td><strong>神秘地下城</strong></td>
+                <td>미스틱 던전</td>
+                <td>★★★〜★★★★</td>
+                <td>1〜4人</td>
+                <td>高階符文</td>
+              </tr>
+              <tr>
+                <td><strong>世界BOSS</strong></td>
+                <td>월드 보스</td>
+                <td>★★★★★</td>
+                <td>多人組隊</td>
+                <td>特殊裝備、稱號</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <blockquote>本攻略所有數據基於韓服 Season 2 版本，實際內容請以台服正式上線版本為準。</blockquote>
+
+        <h2 id="normal-dungeons">一般副本攻略</h2>
+        <p>一般副本是遊戲中最基礎的副本類型，主要分為主線流程副本與材料副本兩種。這類副本單人或組隊均可挑戰，是前期提升等級與收集基礎裝備的主要途徑。</p>
+        <h3 id="main-story">主線副本</h3>
+        <p>主線副本隨著劇情推進逐步解鎖，每個章節包含多個關卡。首次通關可獲得大量經驗值與綁定鑽石，並解鎖下一階段的內容。建議新手優先完成主線副本，以開啟更多功能與系統。</p>
+        <h3 id="material-farming">材料副本</h3>
+        <p>材料副本每日有入場次數限制，產出強化材料、進化素材與裝備製作圖紙。根據需求選擇對應的副本刷取，是後期裝備養成的重要資源來源。</p>
+        <ul>
+          <li><strong>金幣副本：</strong>大量金幣產出，每日必刷</li>
+          <li><strong>經驗副本：</strong>快速提升角色等級</li>
+          <li><strong>裝備副本：</strong>產出各職業裝備碎片</li>
+          <li><strong>符文副本：</strong>符文升級材料</li>
+        </ul>
+        <blockquote>建議每日至少完成金幣副本與經驗副本，長期累積下來收益非常可觀。</blockquote>
+
+        <h2 id="abyss-types">深淵副本三大類型</h2>
+        <p>深淵副本（어비스 던전 / Abyss Dungeon）是遊戲中最具挑戰性的 PVE 內容，目前韓服 Season 2 共開放三大深淵，分別是 <strong>마스（Math）深淵</strong>、<strong>바리（Barri）深淵</strong> 與 <strong>룬다（Runda）深淵</strong>。每個深淵都有獨特的 Boss 機制與場景設計。</p>
+        <h3 id="abyss-math">마스（Math）深淵</h3>
+        <p>Math 深淵以「知識與秩序」為主題，Boss 擁有大量範圍攻擊與召喚機制。場地中會週期性出現「知識符文」，玩家需在限時內破壞符文以避免全團滅團機制。</p>
+        <ul>
+          <li><strong>推薦戰力：</strong> 30,000+</li>
+          <li><strong>核心機制：</strong> 符文破壞、定期全屏AOE</li>
+          <li><strong>難度評價：</strong> 三個深淵中難度中等</li>
+          <li><strong>掉落：</strong> 法師系傳說裝備材料</li>
+        </ul>
+        <h3 id="abyss-barri">바리（Barri）深淵</h3>
+        <p>Barri 深淵以「自然與生命」為主題，Boss 具有強大的回復能力與召喚小怪機制。戰鬥中需要分配輸出火力同時處理小怪，否則 Boss 會持續回復血量導致戰鬥時間無限拉長。</p>
+        <ul>
+          <li><strong>推薦戰力：</strong> 32,000+</li>
+          <li><strong>核心機制：</strong> 小怪處理、Boss 回復抑制</li>
+          <li><strong>難度評價：</strong> 三個深淵中難度最高</li>
+          <li><strong>掉落：</strong> 戰士系傳說裝備材料</li>
+        </ul>
+        <h3 id="abyss-runda">룬다（Runda）深淵</h3>
+        <p>Runda 深淵以「暗影與幻象」為主題，Boss 擅長使用分身與隱身技能，需要團隊成員具備良好的判斷力與溝通。戰鬥中場地會出現「真實之鏡」，只有站在鏡子前的玩家才能看見 Boss 本體。</p>
+        <ul>
+          <li><strong>推薦戰力：</strong> 30,000+</li>
+          <li><strong>核心機制：</strong> 分身辨識、真實之鏡</li>
+          <li><strong>難度評價：</strong> 三個深淵中機制最複雜</li>
+          <li><strong>掉落：</strong> 盜賊系/弓箭手系傳說裝備材料</li>
+        </ul>
+
+        <h2 id="abyss-entry">深淵副本入場與獎勵</h2>
+        <p>深淵副本設有嚴格的入場限制，需要消耗特定道具才能挑戰，是遊戲中後期最重要的裝備產出來源。</p>
+        <h3 id="entry-requirements">入場條件</h3>
+        <ul>
+          <li>每週限制入場次數（韓服 Season 2 為每週 3 次）</li>
+          <li>入場需消耗 <strong>어비스 입장권（深淵入場券）</strong></li>
+          <li>入場券可透過每日任務、活動與週日地下城取得</li>
+          <li>每週一 05:00（伺服器時間）重置入場次數</li>
+        </ul>
+        <h3 id="rewards">獎勵一覽</h3>
+        <div class="overflow-x-auto">
+          <table>
+            <thead>
+              <tr>
+                <th>獎勵類型</th>
+                <th>說明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>高級符文</strong></td>
+                <td>隨機掉落傳奇品質符文，大幅提升角色戰力</td>
+              </tr>
+              <tr>
+                <td><strong>傳說裝備材料</strong></td>
+                <td>各職業傳說裝備的製作材料，每個深淵對應不同職業系</td>
+              </tr>
+              <tr>
+                <td><strong>深淵代幣</strong></td>
+                <td>可在深淵商店兌換專屬道具與時裝</td>
+              </tr>
+              <tr>
+                <td><strong>熟練度經驗</strong></td>
+                <td>大量技能熟練度經驗值</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <blockquote>建議每週務必將深淵入場次數全部用完，是獲取傳說裝備材料的主要管道。</blockquote>
+
+        <h2 id="daily-dungeon">週日地下城</h2>
+        <p>週日地下城（요일 던전 / Daily Dungeon）是每日開放特定屬性的地下城，獎勵大量金幣與符文材料。不同星期對應不同的屬性，玩家需要根據屬性搭配正確的職業與技能組合。</p>
+        <div class="overflow-x-auto">
+          <table>
+            <thead>
+              <tr>
+                <th>星期</th>
+                <th>屬性</th>
+                <th>推薦職業</th>
+                <th>主要獎勵</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>星期一</strong></td>
+                <td><span class="text-red-400">火屬性</span></td>
+                <td>冰結術士、劍術士</td>
+                <td>金幣、火符文材料</td>
+              </tr>
+              <tr>
+                <td><strong>星期二</strong></td>
+                <td><span class="text-blue-400">水屬性</span></td>
+                <td>火焰術士、電擊術士</td>
+                <td>金幣、水符文材料</td>
+              </tr>
+              <tr>
+                <td><strong>星期三</strong></td>
+                <td><span class="text-green-400">自然屬性</span></td>
+                <td>弓箭手、吟遊詩人</td>
+                <td>金幣、自然符文材料</td>
+              </tr>
+              <tr>
+                <td><strong>星期四</strong></td>
+                <td><span class="text-amber-400">光屬性</span></td>
+                <td>治癒師、騎士</td>
+                <td>金幣、光符文材料</td>
+              </tr>
+              <tr>
+                <td><strong>星期五</strong></td>
+                <td><span class="text-purple-400">暗屬性</span></td>
+                <td>暗黑術士、雙刀</td>
+                <td>金幣、暗符文材料</td>
+              </tr>
+              <tr>
+                <td><strong>星期六</strong></td>
+                <td><span class="text-amber-400">全屬性</span></td>
+                <td>任意組合</td>
+                <td>大量金幣、隨機符文材料</td>
+              </tr>
+              <tr>
+                <td><strong>星期日</strong></td>
+                <td><span class="text-amber-400">全屬性（加倍）</span></td>
+                <td>任意組合</td>
+                <td>雙倍金幣、高級符文材料</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 id="daily-tips">攻略要點</h3>
+        <ul>
+          <li>屬性克制非常重要，使用對應屬性攻擊可造成額外 30% 傷害</li>
+          <li>週六與週日是刷金幣的最佳時機，建議使用金幣加成道具</li>
+          <li>每日入場次數有限，韓服設定為每日 5 次</li>
+        </ul>
+
+        <h2 id="mystic-dungeon">神秘地下城</h2>
+        <p>神秘地下城（미스틱 던전 / Mystic Dungeon）是一種隨機出現的特殊副本，在地圖上探索時有機率觸發進入入口。與一般副本不同，神秘地下城擁有獨立的關卡結構與Boss機制，難度介於一般副本與深淵副本之間。</p>
+        <h3 id="mystic-features">特色說明</h3>
+        <ul>
+          <li><strong>隨機出現：</strong> 完成一般副本後有機率在出口處出現神秘入口</li>
+          <li><strong>限時挑戰：</strong> 進入後限時 15 分鐘內通關</li>
+          <li><strong>高階符文：</strong> 通關保證掉落至少一個高級符文</li>
+          <li><strong>每日限制：</strong> 每日最多進入 3 次</li>
+          <li><strong>無法復活：</strong> 挑戰中無法使用復活石，死亡即退出</li>
+        </ul>
+        <blockquote>神秘地下城是獲取高階符文的重要管道，運氣好時可能直接掉落傳說級符文。建議每日保留次數挑戰。</blockquote>
+
+        <h2 id="world-boss">世界BOSS</h2>
+        <p>世界BOSS（월드 보스 / World Boss）是限時出現的大型團隊挑戰，所有伺服器玩家可共同參與。BOSS 具有極高的血量與多種狂暴機制，需要大量玩家協力才能擊敗。</p>
+        <h3 id="boss-schedule">出現時間</h3>
+        <ul>
+          <li>每日固定時間出現（韓服 Season 2 設定為 12:00、20:00、22:00）</li>
+          <li>每次出現持續 30 分鐘</li>
+          <li>BOSS 被擊敗後會進入冷卻，隨機在伺服器頻道重生</li>
+        </ul>
+        <h3 id="boss-strategy">組隊策略</h3>
+        <ul>
+          <li>建議至少組成 4 人小隊，與其他小隊協同作戰</li>
+          <li>隊伍中必須有 <strong>治癒師</strong> 負責團隊血量維持</li>
+          <li>坦克職業負責拉住 BOSS 仇恨，避免輸出職業被秒殺</li>
+          <li>遠程職業保持安全距離輸出，注意躲避範圍攻擊</li>
+        </ul>
+        <div class="overflow-x-auto">
+          <table>
+            <thead>
+              <tr>
+                <th>BOSS 名稱</th>
+                <th>等級</th>
+                <th>推薦戰力</th>
+                <th>特殊機制</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>暗黑龍</strong></td>
+                <td>Lv.70</td>
+                <td>25,000+</td>
+                <td>定期全屏暗黑吐息，需躲避</td>
+              </tr>
+              <tr>
+                <td><strong>巨魔像</strong></td>
+                <td>Lv.75</td>
+                <td>30,000+</td>
+                <td>血量低於 30% 時狂暴，攻擊力翻倍</td>
+              </tr>
+              <tr>
+                <td><strong>沙漠之主</strong></td>
+                <td>Lv.80</td>
+                <td>35,000+</td>
+                <td>召喚沙塵暴，降低視野</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <blockquote>世界BOSS 的獎勵根據傷害排名發放，排名越高獲得稀有裝備的機率越大。建議組滿隊伍並攜帶充足藥水參加。</blockquote>
+
+        <h2 id="party-system">組隊系統指南</h2>
+        <p>瑪奇 Mobile 的組隊系統最多支援 4 人組隊，遊戲內建「即時匹配系統」稱為 <strong>偶然相遇（우연한 만남）</strong>，讓玩家可以快速找到隊友挑戰各種副本。</p>
+        <h3 id="matching">匹配系統</h3>
+        <ul>
+          <li>自動匹配同等級區間的玩家</li>
+          <li>可選擇特定副本進行匹配</li>
+          <li>匹配成功後自動傳送至副本入口</li>
+          <li>支援單人匹配與預組隊伍匹配</li>
+        </ul>
+        <h3 id="team-composition">推薦組隊配置</h3>
+        <p>根據韓服 Season 2 的 META，推薦的組隊配置為 <strong>1 坦克 + 1 治療 + 2 輸出</strong>，這是目前深淵副本與高難度內容中最穩定的組合。</p>
+        <div class="overflow-x-auto">
+          <table>
+            <thead>
+              <tr>
+                <th>位置</th>
+                <th>推薦職業</th>
+                <th>職責</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>坦克</strong></td>
+                <td>騎士、大劍戰士</td>
+                <td>吸引仇恨、承受傷害、保護隊友</td>
+              </tr>
+              <tr>
+                <td><strong>治療</strong></td>
+                <td>治癒師、祭司</td>
+                <td>維持隊伍血量、解除負面狀態</td>
+              </tr>
+              <tr>
+                <td><strong>輸出 x2</strong></td>
+                <td>劍術士、冰結術士、雙刀、弩弓射手</td>
+                <td>最大化傷害輸出、處理副本機制</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 id="party-tips">組隊小提示</h3>
+        <ul>
+          <li>高難度副本建議使用語音溝通（Discord 等）</li>
+          <li>進入副本前確認所有隊員已準備好藥水與 Buff 道具</li>
+          <li>坦克職業需熟悉 Boss 技能節奏，掌握開怪時機</li>
+          <li>治療職業需注意站位，避免被範圍技能波及</li>
+        </ul>
+
+        <h2 id="faq">常見問題 FAQ</h2>
+        <h3 id="faq1">Q1：深淵副本的入場券要如何獲得？</h3>
+        <p>深淵入場券（어비스 입장권）可透過每日簽到獎勵、完成每日任務、參與週日地下城隨機掉落以及活動商店兌換取得。每週限時活動也可能贈送入場券，建議多加留意遊戲內公告。</p>
+        <h3 id="faq2">Q2：深淵副本每週可以打幾次？</h3>
+        <p>韓服 Season 2 設定為每週 3 次，三個深淵共享次數。每週一 05:00（伺服器時間）重置次數。請注意，未使用的次數不會累積到下週。</p>
+        <h3 id="faq3">Q3：週日地下城的屬性克制效果有多大？</h3>
+        <p>使用克制屬性攻擊可造成約 30% 的額外傷害，同時受到該屬性攻擊的傷害也會降低。建議根據當天屬性選擇對應職業或技能符文，能大幅提升通關效率。</p>
+        <h3 id="faq4">Q4：神秘地下城失敗後會消耗次數嗎？</h3>
+        <p>是的，只要進入神秘地下城就會消耗當日次數，無論是否通關。由於神秘地下城無法復活，建議進入前確認裝備與藥水準備充足。</p>
+        <h3 id="faq5">Q5：世界BOSS的獎勵是如何分配的？</h3>
+        <p>世界BOSS 獎勵根據對 BOSS 造成的傷害排名發放。排名前 10% 的玩家可獲得最高獎勵（包含傳說裝備掉落資格），排名越高獲得稀有物品的機率越高。即使排名較低也有參與獎勵。</p>
+        <h3 id="faq6">Q6：單人玩家適合打哪種副本？</h3>
+        <p>一般副本與週日地下城（低難度）可以單人挑戰。深淵副本與世界BOSS 強烈建議組隊挑戰。神秘地下城視個人戰力而定，戰力足夠的玩家可嘗試單刷。</p>
+        <h3 id="faq7">Q7：副本中的復活機制是怎樣的？</h3>
+        <p>一般副本中可使用復活石復活（每日有使用上限）。深淵副本中每場有 3 次免費復活機會，用完後需使用復活石或等待隊友救援。神秘地下城與世界BOSS 無法復活。</p>
+
+        <h2 id="summary">總結</h2>
+        <p>瑪奇 Mobile 的副本系統豐富多樣，從最初級的一般副本到最高難度的深淵副本，每個階段都有對應的內容可以挑戰。以下是最重要的幾點提醒：</p>
+        <ul>
+          <li>新手優先完成主線副本，解鎖核心功能</li>
+          <li>每日必刷金幣副本與經驗副本奠定資源基礎</li>
+          <li>每週深淵副本次數一定要用完，是傳說裝備主要來源</li>
+          <li>週末記得刷週日地下城，金幣收益加倍</li>
+          <li>神秘地下城隨機出現，遇到了就去挑戰看看</li>
+          <li>世界BOSS 記得參加，即使打不動也有參與獎勵</li>
+          <li>組隊時保持良好溝通，1 坦克 + 1 治療 + 2 輸出是最穩定的配置</li>
+        </ul>
+        <blockquote>本攻略數據基於韓服 Season 2 版本，具體 BOSS 機制與數值可能因版本更新而有所變動，建議參考最新遊戲內資訊。祝各位冒險者在艾琳大陸上冒險愉快！</blockquote>
+
+      </div>
+
+      <!-- Article Footer -->
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-blue">副本攻略</span>
+          <span class="badge badge-red">深淵副本</span>
+          <span class="badge badge-green">週日地下城</span>
+          <span class="badge badge-gold">組隊系統</span>
+          <span class="badge badge-blue">瑪奇Mobile</span>
+        </div>
+
+        <!-- Related Articles -->
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="newbie-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-indigo-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">新手入門完全指南</h4>
+              <p class="text-gray-500 text-xs mt-1">從零開始的艾琳冒險攻略</p>
+            </div>
+          </a>
+          <a href="tier-list.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-amber-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">職業強度排行榜</h4>
+              <p class="text-gray-500 text-xs mt-1">Season 2 全職業 Tier List</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIGHT: Ad Sidebar -->
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <!-- AdSense 300×250 -->
+        <div class="ad-slot" style="min-height:250px;">廣告位<br>300×250</div>
+        <!-- AdSense 300×600 -->
+        <div class="ad-slot" style="min-height:600px;">廣告位<br>300×600</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">瑪奇Mobile</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="newbie-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門指南</a></li>
+            <li><a href="tier-list.html" class="text-gray-500 hover:text-indigo-400 transition">職業排行榜</a></li>
+            <li><a href="dungeon-guide.html" class="text-gray-500 hover:text-indigo-400 transition">副本攻略大全</a></li>
+            <li><a href="../index.html" class="text-gray-500 hover:text-indigo-400 transition">更多攻略...</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">職業攻略</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">副本攻略</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">生活技能</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">裝備養成</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">聯絡方式</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">隱私權政策</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">服務條款</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
