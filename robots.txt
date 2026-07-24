@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://game.yau888.com/sitemap.xml
