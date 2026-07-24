@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="?�戲?�略�?- ?��??��??��??�戲?��??�攻?�、�??�培養�??�、�??�解?��?裝�??�薦??>
-  <meta name="keywords" content="?�戲?�略, ?�戲?��?, Mabinogi Mobile, ?��?Mobile, ?��??�略">
+  <meta name="description" content="遊戲攻略站 - 提供各類熱門遊戲的最新攻略、角色培養指南、關卡解析與裝備推薦。">
+  <meta name="keywords" content="遊戲攻略, 遊戲指南, Mabinogi Mobile, 瑪奇Mobile, 手遊攻略">
   <meta name="author" content="GameGuide.tw">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="?�戲?�略�?- ?�?��??�攻?��???>
-  <meta property="og:description" content="?��??��??��??�戲?��??�攻?�、�??�培養�??��??�卡�????>
+  <meta property="og:title" content="遊戲攻略站 - 最全遊戲攻略指南">
+  <meta property="og:description" content="提供各類熱門遊戲的最新攻略、角色培養指南與關卡解析。">
   <meta property="og:type" content="website">
-  <title>?�戲?�略�?- ?�?��??�攻?��???/title>
+  <title>遊戲攻略站 - 最全遊戲攻略指南</title>
   <link rel="canonical" href="https://game.yau888.com/">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,26 +41,26 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
-          <span>?�略�?/span>
+          <span>攻略站</span>
         </a>
 
         <!-- Desktop Nav -->
         <div class="hidden md:flex items-center gap-1">
-          <a href="index.html" class="nav-link active">首�?</a>
-          <a href="#popular" class="nav-link">?��??�略</a>
-          <a href="#categories" class="nav-link">?�戲?��?</a>
-          <a href="#about" class="nav-link">?�於?��?/a>
+          <a href="index.html" class="nav-link active">首頁</a>
+          <a href="#popular" class="nav-link">熱門攻略</a>
+          <a href="#categories" class="nav-link">遊戲分類</a>
+          <a href="#about" class="nav-link">關於我們</a>
         </div>
 
         <!-- Search + Mobile Toggle -->
         <div class="flex items-center gap-3">
           <div class="relative hidden sm:block">
-            <input id="search-input" type="text" placeholder="?��??�略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
             <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
           </div>
-          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="?�單">
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
@@ -72,7 +72,7 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
       <div class="flex justify-between items-center mb-8">
-        <span class="text-white font-bold text-lg">?�單</span>
+        <span class="text-white font-bold text-lg">選單</span>
         <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -80,13 +80,13 @@
         </button>
       </div>
       <div class="flex flex-col gap-2">
-        <a href="index.html" class="nav-link active">首�?</a>
-        <a href="#popular" class="nav-link">?��??�略</a>
-        <a href="#categories" class="nav-link">?�戲?��?</a>
-        <a href="#about" class="nav-link">?�於?��?/a>
+        <a href="index.html" class="nav-link active">首頁</a>
+        <a href="#popular" class="nav-link">熱門攻略</a>
+        <a href="#categories" class="nav-link">遊戲分類</a>
+        <a href="#about" class="nav-link">關於我們</a>
       </div>
       <div class="mt-6">
-        <input type="text" placeholder="?��??�略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
       </div>
     </div>
     <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
@@ -99,17 +99,17 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center max-w-3xl mx-auto">
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-          ?�方�?span class="text-indigo-400">?�戲?�略</span>?��?
+          全方位<span class="text-indigo-400">遊戲攻略</span>指南
         </h1>
         <p class="text-gray-400 text-lg mb-8">
-          ?�?�、�??��?角色?��??�略?��??�解?�、�??�推?��?實用?�巧�??��?輕�??��?每�?款�??��?
+          最新、最全的角色培養攻略、關卡解析、裝備推薦與實用技巧，助你輕鬆通關每一款遊戲。
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
           <a href="#popular" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg transition w-full sm:w-auto text-center">
-            ?��??�覽
+            開始瀏覽
           </a>
           <a href="#categories" class="px-6 py-3 bg-[#1a1d2e] hover:bg-[#232740] border border-[#2a2d3e] text-gray-300 font-semibold rounded-lg transition w-full sm:w-auto text-center">
-            ?�戲?��?
+            遊戲分類
           </a>
         </div>
       </div>
@@ -118,15 +118,15 @@
 
   <!-- ===== AD SLOT TOP ===== -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-8">
-    <div class="ad-slot">�??�???Google AdSense 728?90</div>
+    <div class="ad-slot">廣告位 — Google AdSense 728×90</div>
   </div>
 
   <!-- ===== POPULAR GAMES ===== -->
   <section id="popular" class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between mb-8">
-        <h2 class="text-2xl font-bold text-white">?��??�略?�戲</h2>
-        <a href="#categories" class="text-sm text-indigo-400 hover:text-indigo-300 transition">?��??�部 ??/a>
+        <h2 class="text-2xl font-bold text-white">熱門攻略遊戲</h2>
+        <a href="#categories" class="text-sm text-indigo-400 hover:text-indigo-300 transition">查看全部 →</a>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -141,17 +141,17 @@
           </div>
           <div class="p-5">
             <div class="flex items-center gap-2 mb-2">
-              <span class="badge badge-gold">人氣?�薦</span>
+              <span class="badge badge-gold">人氣推薦</span>
               <span class="badge badge-green">MMORPG</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-1">?��? Mobile</h3>
-            <p class="text-gray-400 text-sm mb-3">角色?��??�戰鬥�?巧、任?�攻?��??�活系統完整?��???/p>
+            <h3 class="text-lg font-bold text-white mb-1">瑪奇 Mobile</h3>
+            <p class="text-gray-400 text-sm mb-3">角色培養、戰鬥技巧、任務攻略與生活系統完整指南。</p>
             <div class="flex items-center text-xs text-gray-500 gap-4">
               <span class="flex items-center gap-1">
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                12 篇攻??
+                12 篇攻略
               </span>
-              <span>每週更??/span>
+              <span>每週更新</span>
             </div>
           </div>
         </a>
@@ -166,17 +166,17 @@
           </div>
           <div class="p-5">
             <div class="flex items-center gap-2 mb-2">
-              <span class="badge badge-blue">?��?上�?</span>
+              <span class="badge badge-blue">即將上線</span>
               <span class="badge badge-green">RPG</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-1">?�爾?��???Mobile</h3>
-            <p class="text-gray-400 text-sm mb-3">?��?上�??��??�移植�??��??��??�握?��???/p>
+            <h3 class="text-lg font-bold text-white mb-1">艾爾登法環 Mobile</h3>
+            <p class="text-gray-400 text-sm mb-3">預計上線的經典移植手遊，提前掌握先機。</p>
             <div class="flex items-center text-xs text-gray-500 gap-4">
               <span class="flex items-center gap-1">
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                ?��?�?
+                預告中
               </span>
-              <span>?�注?�新</span>
+              <span>關注更新</span>
             </div>
           </div>
         </div>
@@ -191,17 +191,17 @@
           </div>
           <div class="p-5">
           <div class="flex items-center gap-2 mb-2">
-              <span class="badge badge-blue">?��?上�?</span>
+              <span class="badge badge-blue">即將上線</span>
               <span class="badge badge-green">策略</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-1">?��?帝�? Mobile</h3>
-            <p class="text-gray-400 text-sm mb-3">?��?上�??��??��??��??��??��??��??�略?�容??/p>
+            <h3 class="text-lg font-bold text-white mb-1">文明帝國 Mobile</h3>
+            <p class="text-gray-400 text-sm mb-3">預計上線的經典策略遊戲，敬請期待攻略內容。</p>
             <div class="flex items-center text-xs text-gray-500 gap-4">
               <span class="flex items-center gap-1">
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                ?�注�?
+                關注中
               </span>
-              <span>準�?�?/span>
+              <span>準備中</span>
             </div>
           </div>
         </div>
@@ -213,16 +213,16 @@
   <!-- ===== CATEGORIES ===== -->
   <section id="categories" class="py-16 bg-[#0c0e15]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-white mb-6">?�戲?��?</h2>
+      <h2 class="text-2xl font-bold text-white mb-6">遊戲分類</h2>
 
       <!-- Filter Buttons -->
       <div class="flex flex-wrap gap-2 mb-8">
-        <button class="category-pill active" data-filter="all">?�部</button>
+        <button class="category-pill active" data-filter="all">全部</button>
         <button class="category-pill" data-filter="mmorpg">MMORPG</button>
         <button class="category-pill" data-filter="rpg">RPG</button>
         <button class="category-pill" data-filter="strategy">策略</button>
-        <button class="category-pill" data-filter="action">?��?</button>
-        <button class="category-pill" data-filter="casual">休�?</button>
+        <button class="category-pill" data-filter="action">動作</button>
+        <button class="category-pill" data-filter="casual">休閒</button>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="game-grid">
@@ -233,7 +233,7 @@
             </svg>
           </div>
           <div class="p-4">
-            <h3 class="font-bold text-white mb-1">?��? Mobile</h3>
+            <h3 class="font-bold text-white mb-1">瑪奇 Mobile</h3>
             <span class="badge badge-green">MMORPG</span>
           </div>
         </a>
@@ -245,7 +245,7 @@
             </svg>
           </div>
           <div class="p-4">
-            <h3 class="font-bold text-white mb-1">?��?</h3>
+            <h3 class="font-bold text-white mb-1">原神</h3>
             <span class="badge badge-blue">RPG</span>
           </div>
         </div>
@@ -257,7 +257,7 @@
             </svg>
           </div>
           <div class="p-4">
-            <h3 class="font-bold text-white mb-1">三�?�?Mobile</h3>
+            <h3 class="font-bold text-white mb-1">三國志 Mobile</h3>
             <span class="badge badge-gold">策略</span>
           </div>
         </div>
@@ -269,8 +269,8 @@
             </svg>
           </div>
           <div class="p-4">
-            <h3 class="font-bold text-white mb-1">?��??��?�?Mobile</h3>
-            <span class="badge badge-red">?��?</span>
+            <h3 class="font-bold text-white mb-1">暗黑破壞神 Mobile</h3>
+            <span class="badge badge-red">動作</span>
           </div>
         </div>
       </div>
@@ -279,13 +279,13 @@
 
   <!-- ===== AD SLOT MID ===== -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8">
-    <div class="ad-slot" style="min-height:250px;">�??�???Google AdSense 300?250</div>
+    <div class="ad-slot" style="min-height:250px;">廣告位 — Google AdSense 300×250</div>
   </div>
 
   <!-- ===== LATEST ARTICLES ===== -->
   <section class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-white mb-8">?�?�攻?��?�?/h2>
+      <h2 class="text-2xl font-bold text-white mb-8">最新攻略文章</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <!-- Article 1 -->
@@ -297,11 +297,11 @@
           </div>
           <div class="p-5 flex flex-col justify-center">
             <div class="flex items-center gap-2 mb-2">
-              <span class="badge badge-gold">?��? Mobile</span>
+              <span class="badge badge-gold">瑪奇 Mobile</span>
               <span class="text-xs text-gray-500">2026-07-24</span>
             </div>
-            <h3 class="font-bold text-white mb-1">?��??��?完全?��?：�??��?始�??�琳?�險</h3>
-            <p class="text-gray-400 text-sm">詳細介紹角色?�建?�基?��?作、�??�任?��?程�?必知系統，新?��??��?</p>
+            <h3 class="font-bold text-white mb-1">新手入門完全指南：從零開始的艾琳冒險</h3>
+            <p class="text-gray-400 text-sm">詳細介紹角色創建、基本操作、初期任務流程與必知系統，新手必看！</p>
           </div>
         </a>
 
@@ -314,11 +314,11 @@
           </div>
           <div class="p-5 flex flex-col justify-center">
             <div class="flex items-center gap-2 mb-2">
-              <span class="badge badge-green">?��? Mobile</span>
+              <span class="badge badge-green">瑪奇 Mobile</span>
               <span class="text-xs text-gray-500">2026-07-18</span>
             </div>
-            <h3 class="font-bold text-white mb-1">?�鬥系統深度�??：�???��??�搭??/h3>
-            <p class="text-gray-400 text-sm">?�職業核心�??��??�、�??窗口?�斷?��??��?綴優?��??�面?��???/p>
+            <h3 class="font-bold text-white mb-1">戰鬥系統深度解析：連招與技能搭配</h3>
+            <p class="text-gray-400 text-sm">各職業核心技能機制、連招窗口判斷與裝備詞綴優先級全面分析。</p>
           </div>
         </div>
 
@@ -331,11 +331,11 @@
           </div>
           <div class="p-5 flex flex-col justify-center">
             <div class="flex items-center gap-2 mb-2">
-              <span class="badge badge-gold">?��? Mobile</span>
+              <span class="badge badge-gold">瑪奇 Mobile</span>
               <span class="text-xs text-gray-500">2026-07-15</span>
             </div>
-            <h3 class="font-bold text-white mb-1">經�?系統?�賺?�幣?�略</h3>
-            <p class="text-gray-400 text-sm">交�?行�??�、採?�路線、製作利潤�??��??�常?�幣?�入?�大�?策略??/p>
+            <h3 class="font-bold text-white mb-1">經濟系統與賺金幣攻略</h3>
+            <p class="text-gray-400 text-sm">交易行機制、採集路線、製作利潤分析與日常金幣收入最大化策略。</p>
           </div>
         </div>
 
@@ -348,11 +348,11 @@
           </div>
           <div class="p-5 flex flex-col justify-center">
             <div class="flex items-center gap-2 mb-2">
-              <span class="badge badge-green">?��? Mobile</span>
+              <span class="badge badge-green">瑪奇 Mobile</span>
               <span class="text-xs text-gray-500">2026-07-12</span>
             </div>
-            <h3 class="font-bold text-white mb-1">?�活?�?��??��??��??��??��??��?</h3>
-            <p class="text-gray-400 text-sm">?��?活�??��?級解?�內容、�??��?得管?��?製�??�方?�薦??/p>
+            <h3 class="font-bold text-white mb-1">生活技能指南：料理、鍛造與附魔</h3>
+            <p class="text-gray-400 text-sm">各生活技能等級解鎖內容、材料取得管道與製作配方推薦。</p>
           </div>
         </div>
 
@@ -363,23 +363,23 @@
   <!-- ===== ABOUT ===== -->
   <section id="about" class="py-16 bg-[#0c0e15]">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-bold text-white mb-4">?�於?�略�?/h2>
+      <h2 class="text-2xl font-bold text-white mb-4">關於攻略站</h2>
       <p class="text-gray-400 mb-6">
-        ?�略站致?�於?�玩家�?供�??�面?��?準確?��??�攻?�內容。�??�由一群熱?��??��??�家組�?�?
-        ?��?追蹤?�款?�戲?��??��??��??��?帶�?第�??��??�略資�???
+        攻略站致力於為玩家提供最全面、最準確的遊戲攻略內容。我們由一群熱愛遊戲的玩家組成，
+        持續追蹤各款遊戲的最新動態，為你帶來第一手的攻略資訊。
       </p>
       <div class="flex flex-wrap justify-center gap-8 text-center">
         <div>
           <div class="text-3xl font-bold text-indigo-400">100+</div>
-          <div class="text-gray-500 text-sm mt-1">?�略?��?</div>
+          <div class="text-gray-500 text-sm mt-1">攻略文章</div>
         </div>
         <div>
           <div class="text-3xl font-bold text-purple-400">10+</div>
-          <div class="text-gray-500 text-sm mt-1">?�戲專�?</div>
+          <div class="text-gray-500 text-sm mt-1">遊戲專區</div>
         </div>
         <div>
           <div class="text-3xl font-bold text-emerald-400">50K+</div>
-          <div class="text-gray-500 text-sm mt-1">?�訪?��?</div>
+          <div class="text-gray-500 text-sm mt-1">月訪問量</div>
         </div>
       </div>
     </div>
@@ -395,44 +395,44 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            ?�略�?
+            攻略站
           </div>
-          <p class="text-gray-500 text-sm">?�玩家�??��?實用?��??�攻?�平?��?/p>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
         </div>
         <div>
-          <h4 class="text-white font-semibold mb-3">?�戲專�?</h4>
+          <h4 class="text-white font-semibold mb-3">遊戲專區</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="mabinogi-mobile/index.html" class="text-gray-500 hover:text-indigo-400 transition">?��? Mobile</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">?��??�戲?��?上�?...</a></li>
+            <li><a href="mabinogi-mobile/index.html" class="text-gray-500 hover:text-indigo-400 transition">瑪奇 Mobile</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">更多遊戲即將上線...</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-white font-semibold mb-3">?�略?��?</h4>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">角色?��?</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">?�鬥?��?/a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">任�??�略</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">裝�??�薦</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">角色培養</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">戰鬥技巧</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">任務攻略</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">裝備推薦</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-white font-semibold mb-3">?�於</h4>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="#about" class="text-gray-500 hover:text-indigo-400 transition">?�於?��?/a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">?�絡?��?</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">?��?權政�?/a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">?��?條款</a></li>
+            <li><a href="#about" class="text-gray-500 hover:text-indigo-400 transition">關於我們</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">聯絡方式</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">隱私權政策</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">服務條款</a></li>
           </ul>
         </div>
       </div>
       <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
-        &copy; 2026 ?�略�?GameGuide.tw ??All rights reserved.
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
       </div>
     </div>
   </footer>
 
   <!-- Back to Top -->
-  <button id="back-to-top" class="back-to-top" aria-label="?�到?�部">
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
       <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
     </svg>
