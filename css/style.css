@@ -299,6 +299,21 @@ a:hover {
   background: rgba(99, 102, 241, 0.04);
 }
 
+/* Article Card Image */
+.article-thumb {
+  background-image: url('https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fc/8f/51/fc8f5157-9daa-b107-5fd9-0012dcc2d1f4/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/200x200bb.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #1a1d2e;
+}
+
+/* Game Card Image */
+.game-card-img {
+  background-size: cover;
+  background-position: center;
+  background-color: #1a1d2e;
+}
+
 /* Ad Placeholder */
 .ad-slot {
   background: linear-gradient(135deg, #1a1d2e, #232740);
