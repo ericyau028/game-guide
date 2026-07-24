@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="瑪奇Mobile戰鬥系統深度解析— 技能鏈、變身系統、元素克制、全職業戰鬥風格全面分析。">
-  <meta name="keywords" content="瑪奇Mobile, 戰鬥系統, 技能鏈, 變身系統, 元素克制, 深淵副本, Mabinogi Mobile">
+  <meta name="description" content="?��?Mobile?�鬥系統深度�?????�?��??��?身系統、�?素�??�、全?�業?�鬥風格?�面?��???>
+  <meta name="keywords" content="?��?Mobile, ?�鬥系統, ?�?��?, 變身系統, ?��??�制, 深淵?�本, Mabinogi Mobile">
   <meta name="author" content="GameGuide.tw">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="瑪奇 Mobile 戰鬥系統深度解析｜技能鏈、變身與元素克制 — 攻略站">
-  <meta property="og:description" content="2026年版瑪奇Mobile戰鬥系統深度解析，技能鏈、變身系統與元素克制系統完整攻略。">
+  <meta property="og:title" content="?��? Mobile ?�鬥系統深度�??｜�??��??��?身�??��??�制 ???�略�?>
+  <meta property="og:description" content="2026年�??��?Mobile?�鬥系統深度�??，�??��??��?身系統�??��??�制系統完整?�略??>
   <meta property="og:type" content="article">
-  <title>瑪奇 Mobile 戰鬥系統深度解析｜技能鏈、變身與元素克制 — 攻略站</title>
-  <link rel="canonical" href="https://example.com/mabinogi-mobile/articles/combat-system.html">
+  <title>?��? Mobile ?�鬥系統深度�??｜�??��??��?身�??��??�制 ???�略�?/title>
+  <link rel="canonical" href="https://yau888.com/mabinogi-mobile/articles/combat-system.html">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -40,21 +40,21 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
-          <span>攻略站</span>
+          <span>?�略�?/span>
         </a>
         <div class="hidden md:flex items-center gap-1">
-          <a href="../../index.html" class="nav-link">首頁</a>
-          <a href="../index.html" class="nav-link">瑪奇Mobile</a>
-          <a href="newbie-guide.html" class="nav-link">新手指南</a>
+          <a href="../../index.html" class="nav-link">首�?</a>
+          <a href="../index.html" class="nav-link">?��?Mobile</a>
+          <a href="newbie-guide.html" class="nav-link">?��??��?</a>
         </div>
         <div class="flex items-center gap-3">
           <div class="relative hidden sm:block">
-            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <input id="search-input" type="text" placeholder="?��??�略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
             <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
           </div>
-          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="?�單">
             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
@@ -64,7 +64,7 @@
     </div>
     <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
       <div class="flex justify-between items-center mb-8">
-        <span class="text-white font-bold text-lg">選單</span>
+        <span class="text-white font-bold text-lg">?�單</span>
         <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -72,12 +72,12 @@
         </button>
       </div>
       <div class="flex flex-col gap-2">
-        <a href="../../index.html" class="nav-link">首頁</a>
-        <a href="../index.html" class="nav-link">瑪奇Mobile</a>
-        <a href="newbie-guide.html" class="nav-link">新手指南</a>
+        <a href="../../index.html" class="nav-link">首�?</a>
+        <a href="../index.html" class="nav-link">?��?Mobile</a>
+        <a href="newbie-guide.html" class="nav-link">?��??��?</a>
       </div>
       <div class="mt-6">
-        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+        <input type="text" placeholder="?��??�略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
       </div>
     </div>
     <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
@@ -86,11 +86,11 @@
   <!-- ===== BREADCRUMB ===== -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
     <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
-      <a href="../../index.html" class="hover:text-indigo-400 transition">首頁</a>
-      <span class="mx-2">›</span>
-      <a href="../index.html" class="hover:text-indigo-400 transition">瑪奇Mobile</a>
-      <span class="mx-2">›</span>
-        <span class="text-gray-300">戰鬥系統深度解析｜技能鏈、變身與元素克制</span>
+      <a href="../../index.html" class="hover:text-indigo-400 transition">首�?</a>
+      <span class="mx-2">??/span>
+      <a href="../index.html" class="hover:text-indigo-400 transition">?��?Mobile</a>
+      <span class="mx-2">??/span>
+        <span class="text-gray-300">?�鬥系統深度�??｜�??��??��?身�??��??�制</span>
     </nav>
   </div>
 
@@ -100,7 +100,7 @@
     <!-- LEFT: TOC -->
     <aside class="hidden lg:block w-56 flex-shrink-0">
       <div class="toc">
-        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">?��?</h4>
         <div id="toc-list" class="flex flex-col gap-0.5"></div>
       </div>
     </aside>
@@ -109,11 +109,11 @@
     <article class="flex-1 min-w-0">
       <!-- Article Header -->
       <header class="mb-8">
-        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">瑪奇 Mobile 戰鬥系統深度解析｜技能鏈、變身與元素克制</h1>
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">?��? Mobile ?�鬥系統深度�??｜�??��??��?身�??��??�制</h1>
         <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
           <span class="flex items-center gap-1">
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-            攻略站編輯部
+            ?�略站編輯部
           </span>
           <span>·</span>
           <span class="flex items-center gap-1">
@@ -121,621 +121,621 @@
             2026-07-24
           </span>
           <span>·</span>
-          <span>約 20 分鐘閱讀</span>
-          <span class="badge badge-red">戰鬥攻略</span>
-          <span class="badge badge-gold">瑪奇Mobile</span>
+          <span>�?20 ?��??��?</span>
+          <span class="badge badge-red">?�鬥?�略</span>
+          <span class="badge badge-gold">?��?Mobile</span>
         </div>
       </header>
 
-      <!-- Ad: 728×90 Banner -->
+      <!-- Ad: 728?90 Banner -->
       <div class="mb-8">
-        <div class="ad-slot" style="min-height:90px;">廣告位 728×90</div>
+        <div class="ad-slot" style="min-height:90px;">�??�?728?90</div>
       </div>
 
       <!-- Article Body -->
       <div id="article-content" class="article-content">
 
-        <!-- ===== 一、戰鬥系統概述 ===== -->
-        <h2 id="combat-overview">一、戰鬥系統概述</h2>
-        <p>瑪奇 Mobile 採用全新的即時動作戰鬥系統，相較於傳統回合制 MMORPG，本作戰鬥更強調操作技巧與即時反應。玩家需要在戰鬥中不斷移動、閃避、釋放技能，並根據敵人的動作調整戰鬥節奏。整體手感流暢，打擊感在同類型手遊中屬上乘水準。</p>
+        <!-- ===== 一?�戰鬥系統�?�?===== -->
+        <h2 id="combat-overview">一?�戰鬥系統�?�?/h2>
+        <p>?��? Mobile ?�用?�新?�即?��?作戰鬥系統�??��??�傳統�??�制 MMORPG，本作戰鬥更強調?��??�巧�??��??��??�玩家�?要在?�鬥中�??�移?�、�??�、�??��??��?並根?�敵人�??��?調整?�鬥節奏。整體�??��??��??��??�在?��??��??�中屬�?乘水準�?/p>
 
-        <h3 id="skill-system">技能系統</h3>
-        <p>瑪奇 Mobile 的技能系統具有多重深度，不僅僅是單純的技能施放，更包含技能鏈、熟練連繫、充能機制與技能等級等多個層面。</p>
+        <h3 id="skill-system">?�?�系�?/h3>
+        <p>?��? Mobile ?��??�系統具?��??�深度�?不�??�是?��??��??�施?��??��??��??��??��?練�?��?��??��??��??�?��?級�?多個層?��?/p>
 
-        <h4 id="skill-chain">技能鏈（스킬 체인）</h4>
-        <p>每個職業擁有特定的技能連招順序，稱為「技能鏈」。正確銜接技能鏈中的技能順序時，會觸發額外效果或傷害加成。技能鏈不僅考驗玩家對技能順序的記憶，更需要在實戰中根據戰況靈活調整。例如戰士系的技能鏈通常以普攻起手，銜接技能後以重擊終結，才能最大化輸出效率。</p>
+        <h4 id="skill-chain">?�?��?（스??체인�?/h4>
+        <p>每個職業�??�特定�??�?��???��?，稱?�「�??��??�。正確�??��??��?中�??�?��?序�?，�?觸發額�??��??�傷害�??�。�??��?不�??��??�家對�??��?序�?記憶，更?�要在實戰中根?�戰況�?活調?�。�?如戰士系?��??��??�常以普?�起?��??�接?�?��?以�??��?結�??�能?�大�?輸出?��???/p>
 
-        <h4 id="proficiency-link">熟練連繫系統（숙련 연계 시스템）</h4>
-        <p>Season 2 更新後引入的全新機制。在戰鬥中連續使用特定技能順序時，會累積熟練連繫層數，每層提供一定比例的增益效果（如攻擊力提升、冷卻減少等）。層數越高增益越強，但中斷連繫後層數會重置。這套系統鼓勵玩家在戰鬥中維持穩定的輸出節奏，而不是單純的爆發後等待冷卻。</p>
+        <h4 id="proficiency-link">?�練??��系統（�????��? ?�스?��?</h4>
+        <p>Season 2 ?�新後�??��??�新機制?�在?�鬥中�??使用?��??�?��?序�?，�?累�??�練??��層數，�?層�?供�?定�?例�?增�??��?（�??��??��??�、冷?��?少�?）。層?��?高�??��?強�?但中?��?��後層?��??�置?�這�?系統鼓勵?�家?�戰鬥中維�?穩�??�輸?��?奏�??��??�單純�??�發後�?待冷?��?/p>
 
-        <h4 id="charge-skills">充能技能（차지 스킬）</h4>
-        <p>部分技能需要按住技能按鈕進行充能後再釋放，充能時間越長，技能效果越強。此機制在魔法師系職業中最為常見，例如充能火球術可以提升傷害倍率和爆炸範圍。充能技能需要在安全位置進行引導，因此站位和時機判斷至關重要。</p>
+        <h4 id="charge-skills">?�能?�?��?차�? ?�킬�?/h4>
+        <p>?��??�?��?要�?住�??��??�進�??�能後�??�放，�??��??��??��??�?��??��?強。此機制?��?法師系職業中?�?�常見�?例�??�能?��?術可以�??�傷害倍�??��??��??�。�??��??��?要在安全位置?��?引�?，�?此�?位�??��??�斷?��??��???/p>
 
-        <h4 id="skill-levels">技能等級</h4>
-        <p>每個技能可透過反覆使用獲得技能經驗值，累積經驗值可提升技能等級。達到特定等級時會解鎖進階效果，例如減少冷卻時間、增加傷害倍率、附加額外效果等。建議玩家根據自己的戰鬥風格優先升級核心技能，以獲得最大收益。</p>
+        <h4 id="skill-levels">?�?��?�?/h4>
+        <p>每個�??�可?��??��?使用?��??�?��?驗值�?累�?經�??�可?��??�?��?級。�??�特定�?級�??�解?�進�??��?，�?如�?少冷?��??�、�??�傷害倍�??��??��?外�??��??�建議玩家根?�自己�??�鬥風格?��??��??��??�?��?以獲得�?大收?��?/p>
 
-        <h3 id="cooldown-system">技能冷卻與連招機制</h3>
-        <p>每個技能都有獨立的冷卻時間（CD），從最短的 1.5 秒到最長的 30 秒不等。遊戲引入「技能階梯」設計：基礎技能冷卻短但傷害低，高階技能冷卻長但威力強大。玩家需要在冷卻間隙穿插普通攻擊和基礎技能，才能最大化輸出效率。</p>
-        <p>以下是各類技能的冷卻範圍參考：</p>
+        <h3 id="cooldown-system">?�?�冷?��????機制</h3>
+        <p>每個�??�都?�獨立�??�卻?��?（CD）�?從�??��? 1.5 秒到?�?��? 30 秒�?等。�??��??�「�??��?梯」設計�??��??�?�冷?�短但傷害�?，�??��??�冷?�長但�??�強大。玩家�?要在?�卻?��?穿�??�通攻?��??��??�?��??�能?�大�?輸出?��???/p>
+        <p>以�??��?類�??��??�卻範�??�考�?</p>
         <table>
           <thead>
             <tr>
-              <th>技能類型</th>
-              <th>冷卻範圍</th>
-              <th>傷害倍率</th>
-              <th>施放時間</th>
-              <th>適用場景</th>
+              <th>?�?��???/th>
+              <th>?�卻範�?</th>
+              <th>?�害?��?</th>
+              <th>?�放?��?</th>
+              <th>?�用?�景</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>基礎技能</strong></td>
-              <td>1.5 ~ 3 秒</td>
+              <td><strong>?��??�??/strong></td>
+              <td>1.5 ~ 3 �?/td>
               <td>100% ~ 150%</td>
-              <td>即時 ~ 0.3秒</td>
-              <td>日常刷怪、連招銜接</td>
+              <td>?��? ~ 0.3�?/td>
+              <td>?�常?�怪、�???�接</td>
             </tr>
             <tr>
-              <td><strong>中階技能</strong></td>
-              <td>5 ~ 10 秒</td>
+              <td><strong>中�??�??/strong></td>
+              <td>5 ~ 10 �?/td>
               <td>200% ~ 350%</td>
-              <td>0.3 ~ 0.8秒</td>
-              <td>精英怪、PVP爆發</td>
+              <td>0.3 ~ 0.8�?/td>
+              <td>精英?�、PVP?�發</td>
             </tr>
             <tr>
-              <td><strong>高階技能</strong></td>
-              <td>15 ~ 25 秒</td>
+              <td><strong>高�??�??/strong></td>
+              <td>15 ~ 25 �?/td>
               <td>400% ~ 700%</td>
-              <td>0.5 ~ 1.5秒</td>
-              <td>BOSS戰、關鍵時刻</td>
+              <td>0.5 ~ 1.5�?/td>
+              <td>BOSS?�、�??��???/td>
             </tr>
             <tr>
-              <td><strong>終極技能</strong></td>
-              <td>30 ~ 60 秒</td>
+              <td><strong>終極?�??/strong></td>
+              <td>30 ~ 60 �?/td>
               <td>800% ~ 1500%</td>
-              <td>1.0 ~ 2.5秒</td>
-              <td>BOSS破防、團隊爆發</td>
+              <td>1.0 ~ 2.5�?/td>
+              <td>BOSS?�防?��??��???/td>
             </tr>
           </tbody>
         </table>
 
-        <!-- ===== 二、變身系統 ===== -->
-        <h2 id="transformation-system">二、變身系統（변신）</h2>
-        <p>變身系統是瑪奇 Mobile 遊戲中後期的核心戰術系統。玩家在達到特定等級並完成相關任務後，即可解鎖變身能力。變身狀態下角色外觀和能力都會發生巨大變化，但持續時間有限且冷卻時間較長，因此使用的時機至關重要。</p>
+        <!-- ===== 二、�?身系�?===== -->
+        <h2 id="transformation-system">二、�?身系統�?변?��?</h2>
+        <p>變身系統?�瑪�?Mobile ?�戲中�??��??��??��?系統?�玩家在?�到?��?等�?並�??�相?�任?��?，即?�解?��?身能?�。�?身�??��?角色外�??�能?�都?�發?�巨大�??��?但�?續�??��??��??�卻?��?較長，�?此使?��??��??��??��???/p>
 
-        <h3 id="paladin">聖騎士（팔라딘）</h3>
-        <p>聖騎士是光明屬性的變身形態，變身後大幅提升攻擊力與防禦力，同時獲得全新的聖騎士專屬技能。聖騎士變身狀態下，角色周圍會環繞聖光特效，對附近的黑暗屬性敵人造成額外的壓制效果。適合在需要兼顧輸出與生存的戰鬥場合使用，例如高難度副本中的 BOSS 戰或 PVP 中的持久戰。</p>
+        <h3 id="paladin">?��?士�??�라?��?</h3>
+        <p>?��?士是?��?屬性�?變身形�?，�?身�?大�??��??��??��??�禦?��??��??��??�新?��?騎士專屬?�?�。�?騎士變身?�?��?，�??�周?��??��??��??��?，�??��??��??�屬?�敵人造�?額�??��??��??�。適?�在?�要兼顧輸?��??��??�戰鬥場?�使?��?例�?高難度副?�中??BOSS ?��? PVP 中�??��??��?/p>
 
-        <h3 id="dark-knight">黑暗騎士（다크 나이트）</h3>
-        <p>黑暗騎士是黑暗屬性的變身形態，極致提升攻擊輸出，但防禦力會有所降低。黑暗騎士技能以高傷害、高爆發為特色，附帶暗屬性特效。變身後的角色外觀會被暗影包覆，移動速度和攻擊速度均有提升。適合在需要短時間內打出巨量傷害的場合使用，例如 BOSS 的弱點階段或 PVP 中的關鍵擊殺。</p>
+        <h3 id="dark-knight">黑�?騎士（다???�이?��?</h3>
+        <p>黑�?騎士?��??�屬?��?變身形�?，極?��??�攻?�輸?��?但防禦�??��??�?��??��??��?士�??�以高傷害、�??�發?�特?��??�帶?�屬?�特?�。�?身�??��??��?觀?�被?�影?��?，移?�速度?�攻?�速度?��??��??�適?�在?�要短?��??��??�巨?�傷害�??��?使用，�?�?BOSS ?�弱點�?段�? PVP 中�??�鍵?�殺??/p>
 
         <table>
           <thead>
             <tr>
-              <th>變身形態</th>
-              <th>屬性</th>
-              <th>攻擊力</th>
-              <th>防禦力</th>
-              <th>移動速度</th>
-              <th>持續時間</th>
-              <th>冷卻時間</th>
-              <th>適用場合</th>
+              <th>變身形�?</th>
+              <th>屬�?/th>
+              <th>?��???/th>
+              <th>?�禦??/th>
+              <th>移�??�度</th>
+              <th>?��??��?</th>
+              <th>?�卻?��?</th>
+              <th>?�用?��?</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>聖騎士</strong></td>
-              <td>光明</td>
-              <td>大幅提升</td>
-              <td>大幅提升</td>
-              <td>小幅提升</td>
-              <td>30秒</td>
-              <td>5分鐘</td>
-              <td>高難度副本、持久戰</td>
+              <td><strong>?��?�?/strong></td>
+              <td>?��?</td>
+              <td>大�??��?</td>
+              <td>大�??��?</td>
+              <td>小�??��?</td>
+              <td>30�?/td>
+              <td>5?��?</td>
+              <td>高難度副?�、�?久戰</td>
             </tr>
             <tr>
-              <td><strong>黑暗騎士</strong></td>
-              <td>黑暗</td>
-              <td>極致提升</td>
-              <td>降低</td>
-              <td>提升</td>
-              <td>25秒</td>
-              <td>5分鐘</td>
-              <td>爆發輸出、弱點階段</td>
+              <td><strong>黑�?騎士</strong></td>
+              <td>黑�?</td>
+              <td>極致?��?</td>
+              <td>?��?</td>
+              <td>?��?</td>
+              <td>25�?/td>
+              <td>5?��?</td>
+              <td>?�發輸出?�弱點�?�?/td>
             </tr>
           </tbody>
         </table>
         <blockquote>
-          <strong>小技巧：</strong>變身狀態下的技能與普通狀態獨立計算冷卻，因此建議在變身前先釋放完普通狀態的主要技能，再開啟變身獲得雙倍的技能輸出能力。
+          <strong>小�?巧�?</strong>變身?�?��??��??��??�通�??�獨立�?算冷?��??�此建議?��?身�??��??��??�通�??��?主�??�?��??��??��?身獲得�??��??�?�輸?�能?��?
         </blockquote>
 
-        <!-- ===== 三、元素克制系統 ===== -->
-        <h2 id="element-system">三、元素克制系統</h2>
-        <p>瑪奇 Mobile 中存在完整的元素克制循環系統。與傳統的五行或光暗克制不同，本作採用三元素循環克制體系，讓戰鬥中的屬性選擇更具策略性。</p>
+        <!-- ===== 三、�?素�??�系�?===== -->
+        <h2 id="element-system">三、�?素�??�系�?/h2>
+        <p>?��? Mobile 中�??��??��??��??�制循環系統?��??�統?��?行�??��??�制不�?，本作採?��??��?循環?�制體系，�??�鬥中�?屬性選?�更?��??�性�?/p>
 
-        <h3 id="element-cycle">三元素循環克制</h3>
-        <p>元素克制關係為 <strong>火 → 冰 → 雷 → 火</strong> 的循環：</p>
+        <h3 id="element-cycle">三�?素循?��???/h3>
+        <p>?��??�制?��???<strong>??????????????/strong> ?�循?��?</p>
         <ul>
-          <li><strong>🔥 火 → ❄️ 冰：</strong>火焰克制冰結，使用火屬性攻擊冰屬性敵人可造成額外傷害</li>
-          <li><strong>❄️ 冰 → ⚡ 雷：</strong>冰結克制電擊，使用冰屬性攻擊雷屬性敵人效果顯著</li>
-          <li><strong>⚡ 雷 → 🔥 火：</strong>電擊克制火焰，使用雷屬性攻擊火屬性敵人可獲得傷害加成</li>
+          <li><strong>?�� ?????��? ?��?</strong>?�焰?�制?��?，使?�火屬性攻?�冰屬性敵人可?��?額�??�害</li>
+          <li><strong>?��? ???????��?</strong>?��??�制?��?，使?�冰屬性攻?�雷屬性敵人�??�顯??/li>
+          <li><strong>???????�� ?��?</strong>?��??�制?�焰，使?�雷屬性攻?�火屬性敵人可?��??�害?��?</li>
         </ul>
-        <p>在克制關係下，傷害約提升 <strong>+20%~30%</strong>，具體加成幅度取決於雙方的屬性強度差距。這意味著在戰鬥中選擇正確的屬性攻擊，可以產生相當於多一件裝備的傷害差距。</p>
+        <p>?��??��?係�?，傷害�??��? <strong>+20%~30%</strong>，具體�??��?度�?決於?�方?�屬?�強度差距。這�??��??�戰鬥中?��?�?��?�屬?�攻?��??�以?��??�當?��?一件�??��??�害差�???/p>
 
-        <h3 id="monster-weakness">怪物屬性弱點</h3>
-        <p>不僅玩家擁有屬性攻擊，所有怪物和 BOSS 也擁有各自的屬性弱點和抗性。部分怪物可能對某種屬性完全免疫，同時對另一種屬性極度脆弱。在挑戰新副本或 BOSS 前，建議先查閱攻略了解其屬性弱點，準備對應屬性的武器或技能，可以大幅降低攻略難度。</p>
+        <h3 id="monster-weakness">?�物屬性弱�?/h3>
+        <p>不�??�家?��?屬性攻?��??�?�怪物??BOSS 也�??��??��?屬性弱點�??�性。部?�怪物?�能對�?種屬?��??��??��??��?對另一種屬?�極度�?弱。在?�戰?�副?��? BOSS ?��?建議?�查?�攻?��?�?��屬性弱點�?準�?對�?屬性�?武器?��??��??�以大�??��??�略??��??/p>
 
         <table>
           <thead>
             <tr>
-              <th>攻擊屬性</th>
-              <th>克制目標</th>
-              <th>被克制於</th>
-              <th>克制傷害加成</th>
-              <th>適用场景</th>
+              <th>?��?屬�?/th>
+              <th>?�制?��?</th>
+              <th>被�??�於</th>
+              <th>?�制?�害?��?</th>
+              <th>?�用?�景</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>🔥 火</td>
-              <td>冰屬性怪物</td>
-              <td>雷屬性攻擊</td>
+              <td>?�� ??/td>
+              <td>?�屬?�怪物</td>
+              <td>?�屬?�攻??/td>
               <td>+20%~30%</td>
-              <td>冰系副本、冰系BOSS</td>
+              <td>?�系?�本?�冰系BOSS</td>
             </tr>
             <tr>
-              <td>❄️ 冰</td>
-              <td>雷屬性怪物</td>
-              <td>火屬性攻擊</td>
+              <td>?��? ??/td>
+              <td>?�屬?�怪物</td>
+              <td>?�屬?�攻??/td>
               <td>+20%~30%</td>
-              <td>雷系副本、雷系BOSS</td>
+              <td>?�系?�本?�雷系BOSS</td>
             </tr>
             <tr>
-              <td>⚡ 雷</td>
-              <td>火屬性怪物</td>
-              <td>冰屬性攻擊</td>
+              <td>????/td>
+              <td>?�屬?�怪物</td>
+              <td>?�屬?�攻??/td>
               <td>+20%~30%</td>
-              <td>火系副本、火系BOSS</td>
+              <td>?�系?�本?�火系BOSS</td>
             </tr>
           </tbody>
         </table>
 
-        <!-- ===== 四、主要遊戲模式 ===== -->
-        <h2 id="game-modes">四、主要遊戲模式</h2>
-        <p>瑪奇 Mobile 提供多種遊戲模式，滿足不同類型玩家的需求。從輕鬆的野外探索到高強度的競技場，再到挑戰極限的深淵副本，每種模式都有其獨特的樂趣和挑戰。</p>
+        <!-- ===== ?�、主要�??�模�?===== -->
+        <h2 id="game-modes">?�、主要�??�模�?/h2>
+        <p>?��? Mobile ?��?多種?�戲模�?，滿足�??��??�玩家�??�求。�?輕�??��?外探索到高強度�?競�??��??�到?�戰極�??�深淵副?��?每種模�??��??�獨?��?樂趣?��??��?/p>
 
-        <h3 id="pve-mode">PVE — 標準副本與野外戰鬥</h3>
-        <p>PVE 是遊戲的核心內容，包含大量的主線副本、支線任務和野外戰鬥區域。玩家可組成最多 4 人的隊伍挑戰各種關卡。遊戲內建「偶然相遇（우연한 만남）」即時匹配系統，讓玩家無需事先組隊即可快速找到隊友一同攻略副本。對於不擅長社交的單人玩家來說，這是一項非常便利的功能。</p>
+        <h3 id="pve-mode">PVE ??標�??�本?��?外戰�?/h3>
+        <p>PVE ?��??��??��??�容，�??�大?��?主�??�本?�支線任?��??��??�鬥?�?�。玩家可組�??��?4 人�??��??�戰?�種?�卡?��??�內建「偶?�相?��??�연??만남）」即?�匹?�系統�?讓玩家無?�事�?組�??�可快速找?��??��??�攻?�副?�。�??��??�長社交?�單人玩家�?說�??�是一?��?常便?��??�能??/p>
 
-        <h3 id="pvp-mode">PVP — 競技場</h3>
-        <p>PVP 競技場分為 <strong>1v1</strong> 和 <strong>3v3</strong> 兩種模式，所有進入競技場的角色屬性會經過平衡調整，確保勝負更多取決於玩家技術而非裝備差距。此外，PVP 模式下還有專門的平衡調整（詳見下一節），讓戰鬥更加公平且富於策略性。</p>
+        <h3 id="pvp-mode">PVP ??競�???/h3>
+        <p>PVP 競�??��???<strong>1v1</strong> ??<strong>3v3</strong> ?�種模�?，�??�進入競�??��?角色屬性�?經�?平衡調整，確保�?負更多�?決於?�家?�術而�?裝�?差�??�此外�?PVP 模�?下�??��??�?�平衡調?��?詳�?下�?節）�?讓戰鬥更?�公平�?富於策略?��?/p>
 
-        <h3 id="abyss">深淵（어비스）— 高難度 PVE</h3>
-        <p>深淵是遊戲中最具挑戰性的高難度 PVE 內容，分為三大深淵：</p>
+        <h3 id="abyss">深淵（어비스）�?高難�?PVE</h3>
+        <p>深淵?��??�中?�?��??�性�?高難�?PVE ?�容，�??��?大深淵�?</p>
         <ul>
-          <li><strong>마스（Math）深淵：</strong>以機關與陷阱為特色，需要團隊成員之間的高度配合</li>
-          <li><strong>바리（Barri）深淵：</strong>以大量怪物湧入為特色，考驗團隊的AOE輸出和控場能力</li>
-          <li><strong>룬다（Runda）深淵：</strong>以強力 BOSS 戰為特色，每層都有獨特的 BOSS 機制</li>
+          <li><strong>마스（Math）深淵�?</strong>以�??��??�阱?�特?��??�要�??��??��??��?高度?��?</li>
+          <li><strong>바리（Barri）深淵�?</strong>以大?�怪物湧入?�特?��??��??��??�AOE輸出?�控?�能??/li>
+          <li><strong>룬다（Runda）深淵�?</strong>以強??BOSS ?�為?�色，�?層都?�獨?��? BOSS 機制</li>
         </ul>
-        <p>深淵副本需要玩家達到一定等級和裝備門檻才能挑戰，通關後可獲得特殊的深淵貨幣，用於兌換頂級裝備和稀有材料。建議玩家在挑戰深淵前做好充分的準備，包括確認隊伍配置、準備對應屬性的武器和充足的消耗品。</p>
+        <p>深淵?�本?�要玩家�??��?定�?級�?裝�??�檻�??��??��??��?後可?��??��??�深淵貨�???�於?��??��?裝�??��??��??�。建議玩家在?�戰深淵?��?好�??��?準�?，�??�確認�?伍�?置、�??��??�屬?��?武器?��?足�?消耗�???/p>
 
         <!-- ===== 五、PVP 平衡調整 ===== -->
         <h2 id="pvp-balance">五、PVP 平衡調整</h2>
-        <p>為了確保 PVP 的公平性和競技性，瑪奇 Mobile 在 PVP 模式中實施了多項屬性平衡調整。這些調整僅在 PVP 環境中生效，不影響 PVE 的遊戲體驗。</p>
+        <p>?��?確�? PVP ?�公平性�?競�??��??��? Mobile ??PVP 模�?中實?��?多�?屬性平衡調?�。這�?調整?�在 PVP ?��?中�??��?不影??PVE ?��??��?驗�?/p>
 
         <table>
           <thead>
             <tr>
-              <th>調整項目</th>
-              <th>調整內容</th>
-              <th>調整目的</th>
+              <th>調整?�目</th>
+              <th>調整?�容</th>
+              <th>調整?��?</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>暴擊率衰減</strong></td>
-              <td>PVP 中暴擊率經過衰減調整，高暴擊屬性收益降低</td>
-              <td>避免運氣成分過度影響戰局</td>
+              <td><strong>?��??�衰�?/strong></td>
+              <td>PVP 中暴?��?經�?衰�?調整，�??��?屬性收?��?�?/td>
+              <td>?��??�氣?��??�度影響?��?</td>
             </tr>
             <tr>
-              <td><strong>控場效果衰減</strong></td>
-              <td>連續控場時效果持續時間遞減，最終產生免疫</td>
-              <td>防止無限控制連段</td>
+              <td><strong>?�場?��?衰�?</strong></td>
+              <td>????�場?��??��?續�??��?減�??�終產?��???/td>
+              <td>?�止?��??�制??��</td>
             </tr>
             <tr>
-              <td><strong>治療量降低</strong></td>
-              <td>所有治療技能在 PVP 中的效果降低</td>
-              <td>避免戰鬥陷入無限拖延</td>
+              <td><strong>治�??��?�?/strong></td>
+              <td>?�?�治?��??�在 PVP 中�??��??��?</td>
+              <td>?��??�鬥?�入?��??�延</td>
             </tr>
             <tr>
-              <td><strong>整體屬性平衡</strong></td>
-              <td>全屬性經過統一平衡調整，裝備差距縮小</td>
-              <td>確保技術決定勝負</td>
+              <td><strong>?��?屬性平�?/strong></td>
+              <td>?�屬?��??�統一平衡調整，�??�差距縮�?/td>
+              <td>確�??�術決定�?�?/td>
             </tr>
           </tbody>
         </table>
-        <p>這些調整意味著，PVP 中的戰鬥策略和操作技術遠比裝備屬性重要。即使是裝備較為普通的玩家，只要充分理解職業機制並熟練操作，也有機會在競技場中擊敗高裝備玩家。</p>
+        <p>?��?調整?�味?��?PVP 中�??�鬥策略?��?作�?術�?比�??�屬?��?要。即使是裝�?較為?�通�??�家，只要�??��?�?��業�??�並?�練?��?，�??��??�在競�??�中?��?高�??�玩家�?/p>
 
-        <!-- ===== 六、各系列戰鬥風格 ===== -->
-        <h2 id="combat-styles">六、各系列戰鬥風格</h2>
-        <p>瑪奇 Mobile 的職業體系豐富多元，每個系列都有獨特的戰鬥風格和核心機制。以下詳細解析六大戰鬥風格的特點與連招邏輯。</p>
+        <!-- ===== ?�、�?系�??�鬥風格 ===== -->
+        <h2 id="combat-styles">?�、�?系�??�鬥風格</h2>
+        <p>?��? Mobile ?�職業�?系�?富�??��?每個系?�都?�獨?��??�鬥風格?�核心�??�。以下詳細解?�六大戰鬥風?��??��??��???�輯??/p>
 
-        <!-- 戰士系 -->
-        <h3 id="warrior-style">戰士系 — 貼身近戰王者</h3>
-        <p>戰士系是遊戲中最經典的貼身近戰職業，以高防禦和穩定的持續輸出為特色。戰士可以在前線承受大量傷害，同時透過技能組合打出可觀的輸出。</p>
-        <p><strong>核心機制：怒氣累積</strong> — 戰士在戰鬥中透過普通攻擊和被攻擊累積怒氣值，怒氣達到一定數值時可釋放強化技能或進入狂暴狀態。怒氣的管理是戰士玩家的必修課。</p>
-        <p><strong>推薦連招：</strong>普攻 → 技能 → 重擊。先用普通攻擊累積怒氣，接著使用主力輸出技能，最後以重擊終結連招。重擊在怒氣充足時可造成額外傷害和擊退效果。</p>
+        <!-- ?�士�?-->
+        <h3 id="warrior-style">?�士�???貼身近戰?��?/h3>
+        <p>?�士系是?�戲中�?經典?�貼身�??�職業�?以�??�禦?�穩定�??��?輸出?�特?�。戰士可以在?��??��?大�??�害，�??�透�??�?��??��??�可觀?�輸?��?/p>
+        <p><strong>?��?機制：怒氣累�?</strong> ???�士?�戰鬥中?��??�通攻?��?被攻?�累積怒氣?��??�氣?�到一定數?��??��??�強?��??��??�入?�暴?�?�。怒氣?�管?�是?�士?�家?��?修課??/p>
+        <p><strong>?�薦???�?/strong>?�攻 ???�?????��??��??�普?�攻?�累積怒氣，接?�使?�主?�輸?��??��??�後以?��?終�?????��??�在?�氣?�足?�可?��?額�??�害?��??�?��???/p>
 
-        <!-- 魔法師系 -->
-        <h3 id="mage-style">魔法師系 — 元素支配者</h3>
-        <p>魔法師系是遠程法術職業，擁有全遊戲最強的範圍傷害能力。缺點是需要站樁施法，移動中無法進行有效攻擊，對站位要求較高。</p>
-        <p><strong>核心機制：充能 + 元素克制</strong> — 魔法師的許多技能需要充能後釋放才能達到最大效果，同時需要根據敵人屬性選擇正確的元素攻擊以觸發克制加成。</p>
-        <p><strong>推薦連招：</strong>充能 → 爆發 → 控制。先對核心技能進行充能，接著釋放爆發技能造成大量傷害，最後使用控制技能（如冰凍）限制敵人行動，為下一輪充能爭取時間。</p>
+        <!-- 魔�?師系 -->
+        <h3 id="mage-style">魔�?師系 ???��??��???/h3>
+        <p>魔�?師系?��?程�?術職業�??��??��??��?強�?範�??�害?��??�缺點是?�要�?樁施法�?移�?中無法進�??��??��?，�?站�?要�?較�???/p>
+        <p><strong>?��?機制：�???+ ?��??�制</strong> ??魔�?師�?許�??�?��?要�??��??�放?�能?�到?�大�??��??��??�要根?�敵人屬?�選?�正確�??��??��?以觸?��??��??��?/p>
+        <p><strong>?�薦???�?/strong>?�能 ???�發 ???�制?��?對核心�??�進�??�能，接?��??��??��??�造�?大�??�害，�?後使?�控?��??��?如冰?��??�制?�人行�?，為下�?輪�??�爭?��??��?/p>
 
-        <!-- 弓箭手系 -->
-        <h3 id="archer-style">弓箭手系 — 精準獵手</h3>
-        <p>弓箭手系是遠程物理職業，以高機動性和精準打擊聞名。弓箭手可以在移動中射擊，並透過翻滾和後跳保持與敵人的安全距離。</p>
-        <p><strong>核心機制：精準射擊</strong> — 弓箭手的部分技能在命中特定部位或處於特定狀態下時，可以觸發精準射擊效果，造成額外傷害和特殊效果。</p>
-        <p><strong>推薦連招：</strong>標記 → 爆發 → 拉開距離。先用標記技能鎖定目標並附加易傷效果，接著使用爆發技能打出巨量傷害，最後利用位移技能拉開距離，準備下一輪攻擊。</p>
+        <!-- 弓箭?�系 -->
+        <h3 id="archer-style">弓箭?�系 ??精�??��?</h3>
+        <p>弓箭?�系?��?程物?�職業�?以�?機�??��?精�??��??��??��?箭�??�以?�移?�中射�?，並?��?翻滾?��?跳�??��??�人?��??��??��?/p>
+        <p><strong>?��?機制：精準�???/strong> ??弓箭?��??��??�?�在?�中?��??��??��??�特定�??��??��??�以觸發精�?射�??��?，造�?額�??�害?�特殊�??��?/p>
+        <p><strong>?�薦???�?/strong>標�? ???�發 ???��?距離?��??��?記�??��?定目標並?��??�傷?��?，接?�使?��??��??��??�巨?�傷害�??�後利?��?移�??��??��??��?準�?下�?輪攻?��?/p>
 
-        <!-- 治癒師系 -->
-        <h3 id="healer-style">治癒師系 — 團隊守護者</h3>
-        <p>治癒師系是團隊中不可或缺的輔助職業，以治療和保護隊友為核心職責。雖然輸出能力較低，但在高難度副本中的價值無可替代。</p>
-        <p><strong>核心機制：能量管理</strong> — 治癒師的治療技能消耗能量而非魔力，能量會隨著時間緩慢恢復，也可以透過特定技能加速恢復。合理的能量管理決定了團隊的續航能力。</p>
-        <p><strong>推薦連招：</strong>預判治療 → 淨化 → 保護。在隊友受到大量傷害前預先施放治療技能，接著淨化隊友身上的負面狀態，最後在關鍵時刻使用護盾技能保護全隊。</p>
+        <!-- 治�?師系 -->
+        <h3 id="healer-style">治�?師系 ???��?守護??/h3>
+        <p>治�?師系?��??�中不可?�缺?��??�職業�?以治?��?保護?��??�核心職責。�??�輸?�能?��?低�?但在高難度副?�中?�價?�無?�替�?�?/p>
+        <p><strong>?��?機制：能?�管??/strong> ??治�?師�?治�??�?��??�能?�而�?魔�?，能?��??��??��?緩慢?�復，�??�以?��??��??�?��??�恢復。�??��??��?管�?決�?了�??��?續航?��???/p>
+        <p><strong>?�薦???�?/strong>?�判治�? ??淨�? ??保護?�在?��??�到大�??�害?��??�施?�治?��??��??��?淨�??��?身�??��??��??��??�後在?�鍵?�刻使用護盾?�?��?護全?��?/p>
 
-        <!-- 吟遊詩人系 -->
-        <h3 id="bard-style">吟遊詩人系 — 旋律奏者</h3>
-        <p>吟遊詩人系是獨特的團隊增益職業，透過演奏不同旋律來提升團隊戰鬥力。吟遊詩人的操作方式與其他職業截然不同，需要在戰鬥中即時切換曲目。</p>
-        <p><strong>核心機制：節奏/旋律</strong> — 吟遊詩人的技能圍繞節奏系統展開，正確的節奏銜接可以觸發旋律共鳴效果，大幅提升增益效果。每個曲目都有其獨特的節奏模式，需要玩家熟悉和掌握。</p>
-        <p><strong>推薦連招：</strong>起手增益 → 維持 → 大招。戰鬥開始時先施放主要增益曲目，戰鬥中根據戰況切換維持曲目（治療或減傷），在團隊爆發階段使用終極樂章。</p>
+        <!-- ?��?詩人�?-->
+        <h3 id="bard-style">?��?詩人�????��?奏�?/h3>
+        <p>?��?詩人系是?�特?��??��??�職業�??��?演�?不�??��?來�??��??�戰鬥�??��??�詩人�??��??��??�其他職業截?��??��??�要在?�鬥中即?��??�曲?��?/p>
+        <p><strong>?��?機制：�?�??��?</strong> ???��?詩人?��??��?繞�?奏系統�??��?�?��?��?奏�??�可以觸?��?律共鳴�??��?大�??��?增�??��??��??�曲?�都?�其?�特?��?奏模式�??�要玩家�??��??�握??/p>
+        <p><strong>?�薦???�?/strong>起�?增�? ??維�? ??大�??�戰鬥�?始�??�施?�主要�??�曲?��??�鬥中根?�戰況�??�維?�曲?��?治�??��??��?，在?��??�發?�段使用終極樂�???/p>
 
-        <!-- 盜賊系 -->
-        <h3 id="rogue-style">盜賊系 — 暗影刺客</h3>
-        <p>盜賊系是高爆發刺客職業，擁有全遊戲最強的瞬間爆發傷害和最高的機動性。缺點是生存能力極低，需要精準的時機判斷和操作技巧。</p>
-        <p><strong>核心機制：背擊/潛行</strong> — 盜賊在敵人背後攻擊時可觸發背擊加成（額外傷害），潛行狀態下發動攻擊則可觸發偷襲效果（必定暴擊）。善用這兩種機制是盜賊打出超高傷害的關鍵。</p>
-        <p><strong>推薦連招：</strong>潛行 → 爆發 → 撤離。先使用潛行技能進入隱身狀態接近目標，接著打出全套爆發技能（務必從背後攻擊），最後使用撤離技能迅速脫離戰場，等待下一波機會。</p>
+        <!-- ?��?�?-->
+        <h3 id="rogue-style">?��?�????�影?�客</h3>
+        <p>?��?系是高�??�刺客職業�??��??��??��?強�??��??�發?�害?��?高�?機�??�。缺點是?��??��?極�?，�?要精準�??��??�斷?��?作�?巧�?/p>
+        <p><strong>?��?機制：�???潛�?</strong> ???��??�敵人�?後攻?��??�觸?��??��??��?額�??�害）�?潛�??�?��??��??��??�可觸發?�襲?��?（�?定暴?��??��??�這兩種�??�是?��??�出超�??�害?��??��?/p>
+        <p><strong>?�薦???�?/strong>潛�? ???�發 ???�離?��?使用潛�??�?�進入?�身?�?�接近目標�??��??�出?��??�發?�?��??��?從�?後攻?��?，�?後使?�撤?��??��??�脫?�戰?��?等�?下�?波�??��?/p>
 
         <table>
           <thead>
             <tr>
-              <th>戰鬥風格</th>
-              <th>定位</th>
-              <th>核心機制</th>
-              <th>連招邏輯</th>
-              <th>操作難度</th>
-              <th>生存能力</th>
+              <th>?�鬥風格</th>
+              <th>定�?</th>
+              <th>?��?機制</th>
+              <th>????�輯</th>
+              <th>?��???��</th>
+              <th>?��??��?</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>戰士系</strong></td>
-              <td>近戰坦克/輸出</td>
-              <td>怒氣累積</td>
-              <td>普攻→技能→重擊</td>
-              <td>⭐⭐</td>
-              <td>⭐⭐⭐⭐⭐</td>
+              <td><strong>?�士�?/strong></td>
+              <td>近戰?��?/輸出</td>
+              <td>?�氣累�?</td>
+              <td>?�攻?��??��??��?</td>
+              <td>⭐�?</td>
+              <td>⭐�?⭐�?�?/td>
             </tr>
             <tr>
-              <td><strong>魔法師系</strong></td>
-              <td>遠程法術</td>
-              <td>充能 + 元素克制</td>
-              <td>充能→爆發→控制</td>
-              <td>⭐⭐⭐</td>
-              <td>⭐⭐</td>
+              <td><strong>魔�?師系</strong></td>
+              <td>?��?法�?</td>
+              <td>?�能 + ?��??�制</td>
+              <td>?�能?��??��??�制</td>
+              <td>⭐�?�?/td>
+              <td>⭐�?</td>
             </tr>
             <tr>
-              <td><strong>弓箭手系</strong></td>
-              <td>遠程物理</td>
-              <td>精準射擊</td>
-              <td>標記→爆發→拉開距離</td>
-              <td>⭐⭐⭐</td>
-              <td>⭐⭐⭐</td>
+              <td><strong>弓箭?�系</strong></td>
+              <td>?��??��?</td>
+              <td>精�?射�?</td>
+              <td>標�??��??��??��?距離</td>
+              <td>⭐�?�?/td>
+              <td>⭐�?�?/td>
             </tr>
             <tr>
-              <td><strong>治癒師系</strong></td>
-              <td>團隊輔助</td>
-              <td>能量管理</td>
-              <td>預判治療→淨化→保護</td>
-              <td>⭐⭐⭐</td>
-              <td>⭐⭐⭐</td>
+              <td><strong>治�?師系</strong></td>
+              <td>?��?輔助</td>
+              <td>?��?管�?</td>
+              <td>?�判治�??�淨?��?保護</td>
+              <td>⭐�?�?/td>
+              <td>⭐�?�?/td>
             </tr>
             <tr>
-              <td><strong>吟遊詩人系</strong></td>
-              <td>團隊增益</td>
-              <td>節奏/旋律</td>
-              <td>起手增益→維持→大招</td>
-              <td>⭐⭐⭐⭐</td>
-              <td>⭐⭐</td>
+              <td><strong>?��?詩人�?/strong></td>
+              <td>?��?增�?</td>
+              <td>節�??��?</td>
+              <td>起�?增�??�維?��?大�?</td>
+              <td>⭐�?⭐�?</td>
+              <td>⭐�?</td>
             </tr>
             <tr>
-              <td><strong>盜賊系</strong></td>
-              <td>刺客</td>
-              <td>背擊/潛行</td>
-              <td>潛行→爆發→撤離</td>
-              <td>⭐⭐⭐⭐⭐</td>
-              <td>⭐</td>
+              <td><strong>?��?�?/strong></td>
+              <td>?�客</td>
+              <td>?��?/潛�?</td>
+              <td>潛�??��??��??�離</td>
+              <td>⭐�?⭐�?�?/td>
+              <td>�?/td>
             </tr>
           </tbody>
         </table>
 
-        <!-- ===== 七、PVP 戰鬥技巧 ===== -->
-        <h2 id="pvp-tips">七、PVP 戰鬥技巧</h2>
-        <p>PVP 是瑪奇 Mobile 中最具挑戰性的內容之一。不同於 PVE 的固定模式，PVP 需要面對的是真實玩家，戰況瞬息萬變。以下將從各職業策略、距離控制和反應閃避三個方面進行分析。</p>
+        <!-- ===== 七、PVP ?�鬥?��?===== -->
+        <h2 id="pvp-tips">七、PVP ?�鬥?��?/h2>
+        <p>PVP ?�瑪�?Mobile 中�??��??�性�??�容之�??��??�於 PVE ?�固定模式�?PVP ?�要面對�??��?實玩家�??��??�息?��??�以下�?從�??�業策略?��??�控?��??��??�避三個方?�進�??��???/p>
 
-        <h3 id="pvp-classes">各職業 PVP 策略</h3>
+        <h3 id="pvp-classes">?�職�?PVP 策略</h3>
         <table>
           <thead>
             <tr>
-              <th>職業</th>
-              <th>PVP定位</th>
-              <th>核心策略</th>
-              <th>優勢對局</th>
-              <th>劣勢對局</th>
+              <th>?�業</th>
+              <th>PVP定�?</th>
+              <th>?��?策略</th>
+              <th>?�勢對�?</th>
+              <th>??��對�?</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>戰士</strong></td>
-              <td>平衡型</td>
-              <td>利用防禦姿態反擊，穩扎穩打</td>
-              <td>盜賊、吟遊詩人</td>
-              <td>弓箭手、魔法師</td>
+              <td><strong>?�士</strong></td>
+              <td>平衡??/td>
+              <td>?�用?�禦姿�??��?，穩?�穩??/td>
+              <td>?��??��??�詩�?/td>
+              <td>弓箭?�、�?法師</td>
             </tr>
             <tr>
-              <td><strong>魔法師</strong></td>
-              <td>遠程控制</td>
-              <td>充能控場，保持距離輸出</td>
-              <td>戰士、治癒師</td>
-              <td>盜賊、弓箭手</td>
+              <td><strong>魔�?�?/strong></td>
+              <td>?��??�制</td>
+              <td>?�能?�場，�??��??�輸??/td>
+              <td>?�士?�治?�師</td>
+              <td>?��??��?箭�?</td>
             </tr>
             <tr>
-              <td><strong>弓箭手</strong></td>
-              <td>遠程爆發</td>
-              <td>利用射程優勢先手，標記爆發</td>
-              <td>魔法師、治癒師</td>
-              <td>盜賊、戰士</td>
+              <td><strong>弓箭??/strong></td>
+              <td>?��??�發</td>
+              <td>?�用射�??�勢?��?，�?記�???/td>
+              <td>魔�?師、治?�師</td>
+              <td>?��??�戰�?/td>
             </tr>
             <tr>
-              <td><strong>治癒師</strong></td>
-              <td>持久消耗</td>
-              <td>利用治療技能消耗對手，拖入持久戰</td>
-              <td>盜賊</td>
-              <td>弓箭手、魔法師</td>
+              <td><strong>治�?�?/strong></td>
+              <td>?��?消�?/td>
+              <td>?�用治�??�?��??��??��??�入?��???/td>
+              <td>?��?</td>
+              <td>弓箭?�、�?法師</td>
             </tr>
             <tr>
-              <td><strong>盜賊</strong></td>
-              <td>刺客型</td>
-              <td>潛行接近一套帶走，打完立即脫離</td>
-              <td>弓箭手、治癒師</td>
-              <td>戰士、魔法師</td>
+              <td><strong>?��?</strong></td>
+              <td>?�客??/td>
+              <td>潛�??��?一套帶走�??��?立即?�離</td>
+              <td>弓箭?�、治?�師</td>
+              <td>?�士?��?法師</td>
             </tr>
             <tr>
-              <td><strong>吟遊詩人</strong></td>
-              <td>輔助消耗</td>
-              <td>利用增益曲目提升自身，消耗戰為主</td>
-              <td>治癒師</td>
-              <td>盜賊、弓箭手</td>
+              <td><strong>?��?詩人</strong></td>
+              <td>輔助消�?/td>
+              <td>?�用增�??�目?��??�身，�??�戰?�主</td>
+              <td>治�?�?/td>
+              <td>?��??��?箭�?</td>
             </tr>
           </tbody>
         </table>
 
-        <h3 id="distance-control">距離控制技巧</h3>
-        <p>距離控制是 PVP 中最核心的技巧之一。以下是各職業的理想戰鬥距離：</p>
+        <h3 id="distance-control">距離?�制?��?/h3>
+        <p>距離?�制??PVP 中�??��??��?巧�?一?�以下是?�職業�??�想?�鬥距離�?/p>
         <table>
           <thead>
             <tr>
-              <th>職業</th>
-              <th>理想距離</th>
-              <th>危險距離</th>
-              <th>核心移動方式</th>
+              <th>?�業</th>
+              <th>?�想距離</th>
+              <th>?�險距離</th>
+              <th>?��?移�??��?</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>戰士</td>
-              <td>0 ~ 2m（近身）</td>
-              <td>5m+（被拉開）</td>
-              <td>直線推進、側移閃避</td>
+              <td>?�士</td>
+              <td>0 ~ 2m（�?身�?</td>
+              <td>5m+（被?��?�?/td>
+              <td>?��??�進、側移�???/td>
             </tr>
             <tr>
-              <td>魔法師</td>
-              <td>5 ~ 8m（中遠程）</td>
-              <td>0 ~ 2m（被貼身）</td>
-              <td>後退拉距、控場減速</td>
+              <td>魔�?�?/td>
+              <td>5 ~ 8m（中?��?�?/td>
+              <td>0 ~ 2m（被貼身�?/td>
+              <td>後退?��??�控?��???/td>
             </tr>
             <tr>
-              <td>弓箭手</td>
-              <td>6 ~ 10m（遠程）</td>
-              <td>0 ~ 3m（被貼身）</td>
-              <td>翻滾後跳、保持最大射程</td>
+              <td>弓箭??/td>
+              <td>6 ~ 10m（�?程�?</td>
+              <td>0 ~ 3m（被貼身�?/td>
+              <td>翻滾後跳?��??��?大�?�?/td>
             </tr>
             <tr>
-              <td>治癒師</td>
-              <td>3 ~ 6m（中距離）</td>
-              <td>0 ~ 1m（被貼身）</td>
-              <td>繞圈移動、利用治療消耗</td>
+              <td>治�?�?/td>
+              <td>3 ~ 6m（中距離�?/td>
+              <td>0 ~ 1m（被貼身�?/td>
+              <td>繞�?移�??�利?�治?��???/td>
             </tr>
             <tr>
-              <td>盜賊</td>
-              <td>0m（貼身）/ 8m+（脫離）</td>
-              <td>3 ~ 5m（中距離尷尬）</td>
-              <td>瞬移貼近、潛行脫離</td>
+              <td>?��?</td>
+              <td>0m（貼身�?/ 8m+（脫?��?</td>
+              <td>3 ~ 5m（中距離尷尬�?/td>
+              <td>?�移貼�??��?行脫??/td>
             </tr>
             <tr>
-              <td>吟遊詩人</td>
-              <td>4 ~ 7m（中距離）</td>
-              <td>0 ~ 2m（被貼身）</td>
-              <td>保持中距離、曲目切換</td>
+              <td>?��?詩人</td>
+              <td>4 ~ 7m（中距離�?/td>
+              <td>0 ~ 2m（被貼身�?/td>
+              <td>保�?中�??�、曲?��???/td>
             </tr>
           </tbody>
         </table>
 
-        <h3 id="dodge-timing">反應與閃避時機</h3>
-        <p>在 PVP 中，成功的閃避往往比 successful 攻擊更重要。以下是各職業招牌技能的閃避要點：</p>
+        <h3 id="dodge-timing">?��??��??��?�?/h3>
+        <p>??PVP 中�??��??��??��?往�?successful ?��??��?要。以下是?�職業�??��??��??�避要�?�?/p>
         <ul>
-          <li><strong>面對盜賊的暗影突襲：</strong>當你看到盜賊消失時，立即向側面移動或使用位移技能。暗影突襲是直線突進，側閃基本可以規避。</li>
-          <li><strong>面對弓箭手的爆裂箭：</strong>爆裂箭有約 0.8 秒的蓄力時間，看到弓箭手蓄力時立即向側面移動。注意爆裂箭有範圍爆炸，不要只躲箭矢本體。</li>
-          <li><strong>面對魔法師的冰風暴：</strong>冰風暴範圍大但移動速度慢，保持持續移動基本可以規避。如果被減速，立即使用位移技能脫離範圍。</li>
-          <li><strong>面對戰士的劍氣爆發：</strong>劍氣爆發是直線範圍技能，看到戰士開始蓄力時立即向側面翻滾。</li>
+          <li><strong>?��??��??��?影�?襲�?</strong>?��??�到?��?消失?��?立即?�側?�移?��?使用位移?�?�。�?影�?襲是?��?突進�??��??�本?�以規避??/li>
+          <li><strong>?��?弓箭?��??��?箭�?</strong>?��?箭�?�?0.8 秒�??��??��?，�??��?箭�??��??��??��??�面移�??�注?��?裂箭?��??��??��?不�??�躲箭矢?��???/li>
+          <li><strong>?��?魔�?師�??�風?��?</strong>?�風?��??�大但移?�速度?��?保�??��?移�??�本?�以規避?��??�被減速�?立即使用位移?�?�脫?��??��?/li>
+          <li><strong>?��??�士?��?�???��?</strong>?�氣?�發?�直線�??��??��??�到?�士?��??��??��??��??�面翻滾??/li>
         </ul>
 
-        <!-- ===== 八、深淵副本攻略 ===== -->
-        <h2 id="abyss-guide">八、深淵副本攻略</h2>
-        <p>深淵副本是瑪奇 Mobile 中最具挑戰性的 PVE 內容，需要團隊配合和個人操作的雙重支持。以下將從三大深淵的機制特點和團隊配置進行分析。</p>
+        <!-- ===== ?�、深淵副?�攻??===== -->
+        <h2 id="abyss-guide">?�、深淵副?�攻??/h2>
+        <p>深淵?�本?�瑪�?Mobile 中�??��??�性�? PVE ?�容，�?要�??��??��??�人?��??��??�支?�。以下�?從�?大深淵�?機制?��??��??��?置進�??��???/p>
 
-        <h3 id="abyss-math">마스（Math）深淵 — 機關迷宮</h3>
-        <p>Math 深淵以複雜的機關和陷阱聞名，每個房間都有不同的機關機制，需要團隊成員之間的高度配合才能通過。部分機關需要特定職業的技能才能解鎖，因此隊伍配置的靈活性至關重要。</p>
-        <p><strong>推薦職業配置：</strong>戰士×1（應對機關傷害）、魔法師×1（遠程啟動機關）、治癒師×1、輸出×1</p>
+        <h3 id="abyss-math">마스（Math）深�???機�?迷宮</h3>
+        <p>Math 深淵以�??��?機�??�陷?��??��?每個房?�都?��??��?機�?機制，�?要�??��??��??��?高度?��??�能?��??�部?��??��?要特定職業�??�?��??�解?��??�此?��??�置?��?活性至?��?要�?/p>
+        <p><strong>?�薦?�業?�置�?/strong>?�士?1（�?對�??�傷害�??��?法師?1（�?程�??��??��??�治?�師?1?�輸?��?</p>
 
-        <h3 id="abyss-barri">바리（Barri）深淵 — 怪物洪流</h3>
-        <p>Barri 深淵以大量怪物湧入為特色，玩家需要在有限的空間內抵擋一波又一波的敵人攻勢。考驗團隊的 AOE 輸出能力和控場能力。部分波次會出現精英怪物，需要優先擊殺。</p>
-        <p><strong>推薦職業配置：</strong>魔法師×2（高AOE輸出）、戰士×1（控場保護）、吟遊詩人×1（團隊增益）</p>
+        <h3 id="abyss-barri">바리（Barri）深�????�物洪�?</h3>
+        <p>Barri 深淵以大?�怪物湧入?�特?��??�家?�要在?��??�空?�內?��?一波�?一波�??�人?�勢?�考�??��???AOE 輸出?��??�控?�能?�。部?�波次�??�現精英?�物，�?要優?��?殺�?/p>
+        <p><strong>?�薦?�業?�置�?/strong>魔�?師�?（�?AOE輸出）、戰士�?（控?��?護�??��??�詩人�?（�??��??��?</p>
 
-        <h3 id="abyss-runda">룬다（Runda）深淵 — BOSS 連戰</h3>
-        <p>Runda 深淵以連續的 BOSS 戰為特色，每層都有獨特的 BOSS 機制，沒有小怪階段。玩家需要在有限的資源下連續挑戰多個 BOSS，對團隊的持續作戰能力和 BOSS 機制熟悉度有極高要求。</p>
-        <p><strong>推薦職業配置：</strong>戰士×1（主坦）、弓箭手×1（穩定輸出）、盜賊×1（爆發輸出）、治癒師×1</p>
+        <h3 id="abyss-runda">룬다（Runda）深�???BOSS ??��</h3>
+        <p>Runda 深淵以�????BOSS ?�為?�色，�?層都?�獨?��? BOSS 機制，�??��??��?段。玩家�?要在?��??��?源�?????�戰多�?BOSS，�??��??��?續�??�能?��? BOSS 機制?��?度�?極�?要�???/p>
+        <p><strong>?�薦?�業?�置�?/strong>?�士?1（主?��??��?箭�??1（穩定輸?��??��?賊�?（�??�輸?��??�治?�師?1</p>
 
         <table>
           <thead>
             <tr>
-              <th>深淵名稱</th>
-              <th>韓文原名</th>
-              <th>核心特色</th>
-              <th>挑戰重點</th>
-              <th>推薦平均等級</th>
-              <th>推薦隊伍配置</th>
+              <th>深淵?�稱</th>
+              <th>?��??��?</th>
+              <th>?��??�色</th>
+              <th>?�戰?��?</th>
+              <th>?�薦平�?等�?</th>
+              <th>?�薦?��??�置</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><strong>Math 深淵</strong></td>
               <td>마스</td>
-              <td>機關與陷阱</td>
-              <td>團隊配合、機關解謎</td>
+              <td>機�??�陷??/td>
+              <td>?��??��??��??�解�?/td>
               <td>Lv.50+</td>
-              <td>1坦 + 1法 + 1補 + 1輸出</td>
+              <td>1??+ 1�?+ 1�?+ 1輸出</td>
             </tr>
             <tr>
               <td><strong>Barri 深淵</strong></td>
               <td>바리</td>
-              <td>怪物洪流</td>
-              <td>AOE輸出、控場能力</td>
+              <td>?�物洪�?</td>
+              <td>AOE輸出?�控?�能??/td>
               <td>Lv.55+</td>
-              <td>2法 + 1戰 + 1詩人</td>
+              <td>2�?+ 1??+ 1詩人</td>
             </tr>
             <tr>
               <td><strong>Runda 深淵</strong></td>
               <td>룬다</td>
-              <td>BOSS 連戰</td>
-              <td>機制熟悉度、資源管理</td>
+              <td>BOSS ??��</td>
+              <td>機制?��?度、�?源管??/td>
               <td>Lv.60+</td>
-              <td>1坦 + 1弓 + 1賊 + 1補</td>
+              <td>1??+ 1�?+ 1�?+ 1�?/td>
             </tr>
           </tbody>
         </table>
 
-        <h3 id="team-cooperation">隊伍配合要點</h3>
-        <p>一個標準的4人副本隊伍通常包含以下角色分工：</p>
+        <h3 id="team-cooperation">?��??��?要�?</h3>
+        <p>一?��?準�?4人副?��?伍通常?�含以�?角色?�工�?/p>
         <ul>
-          <li><strong>主坦（戰士）：</strong>負責拉住 BOSS 的仇恨，站在 BOSS 正面承受傷害。主坦需要熟悉 BOSS 的所有攻擊模式，並在關鍵時刻使用防禦技能減傷。</li>
-          <li><strong>主輸出（弓箭手/魔法師/盜賊）：</strong>負責在安全位置最大化輸出。輸出職業需要注意不要超過主坦的仇恨值，否則會被 BOSS 轉移目標。</li>
-          <li><strong>副輸出/輔助（戰士/吟遊詩人）：</strong>負責輔助主坦承受壓力、提供增益效果、在主坦倒地時暫時接替坦克位置。</li>
-          <li><strong>治癒師：</strong>負責全隊的治療和復活。治癒師需要時刻關注全隊的血量，在關鍵時刻使用群體治療。復活技能冷卻很長，要謹慎使用。</li>
+          <li><strong>主坦（戰士�?�?/strong>負責?��? BOSS ?��??��?站在 BOSS �?��?��??�害?�主?��?要�???BOSS ?��??�攻?�模式�?並在?�鍵?�刻使用?�禦?�?��??��?/li>
+          <li><strong>主輸?��?弓箭??魔�?�??��?）�?</strong>負責?��??��?置�?大�?輸出?�輸?�職業�?要注?��?要�??�主?��?仇恨?��??��??�被 BOSS 轉移?��???/li>
+          <li><strong>?�輸??輔助（戰�??��?詩人）�?</strong>負責輔助主坦?��?壓�??��?供�??��??�、在主坦?�地?�暫?�接?�坦?��?置�?/li>
+          <li><strong>治�?師�?</strong>負責?��??�治?��?復活?�治?�師?�要�??��?注全?��?血?��??��??��??�使?�群體治?�。復活�??�冷?��??��?要謹?�使?��?/li>
         </ul>
-        <p>團隊配合的關鍵在於「溝通」與「時機」。建議使用遊戲內的快捷訊息系統，在 BOSS 即將釋放大招時提前通知隊友。例如：</p>
+        <p>?��??��??��??�在?�「�??�」�??��?機」。建議使?��??�內?�快?��??�系統�???BOSS ?��??�放大�??��??�通知?��??��?如�?</p>
         <blockquote>
-          <strong>BOSS 大招前 5 秒：</strong>「注意！BOSS 即將釋放全屏攻擊，請就位準備防禦！」<br>
-          <strong>隊友倒地時：</strong>「[隊友名稱] 倒地，正在復活中，請所有人暫時後退！」<br>
-          <strong>進入弱點階段：</strong>「BOSS 進入虛弱！全部集火輸出！」
+          <strong>BOSS 大�???5 秒�?</strong>?�注?��?BOSS ?��??�放?��??��?，�?就�?準�??�禦！�?br>
+          <strong>?��??�地?��?</strong>?�[?��??�稱] ?�地，正?�復活中，�??�?�人?��?後退！�?br>
+          <strong>?�入弱�??�段�?/strong>?�BOSS ?�入?�弱！全?��??�輸?��???
         </blockquote>
 
-        <!-- ===== 九、常見問題 FAQ ===== -->
-        <h2 id="faq">九、常見問題 FAQ</h2>
+        <!-- ===== 九、常見�?�?FAQ ===== -->
+        <h2 id="faq">九、常見�?�?FAQ</h2>
 
-        <p><strong>Q1：新手應該選擇哪個職業？推薦的戰鬥風格是什麼？</strong></p>
-        <p>A：建議新手選擇<strong>戰士系</strong>，操作簡單且生存能力高，怒氣累積機制直觀易懂。等你熟悉遊戲的基本戰鬥節奏後，再考慮嘗試魔法師或盜賊等操作難度較高的職業。</p>
+        <p><strong>Q1：新?��?該選?�哪?�職業�??�薦?�戰鬥風?�是什麼�?</strong></p>
+        <p>A：建議新?�選??strong>?�士�?/strong>，�?作簡?��??��??��?高�??�氣累�?機制?��??��??��?你�??��??��??�本?�鬥節奏�?，�??�慮?�試魔�?師�??��?等�?作難度�?高�??�業??/p>
 
-        <p><strong>Q2：技能點不夠怎麼辦？有什麼重置技能的方法嗎？</strong></p>
-        <p>A：遊戲提供「技能重置書」道具，可以透過商城購買或完成特定成就獲得。建議玩家在前期不要急於分配技能點，先確認自己的核心技能組合再進行分配。另外，每個月的活動通常都會贈送至少一本技能重置書，可以等到活動期間再統一調整。</p>
+        <p><strong>Q2：�??��?不�??�麼辦�??��?麼�?置�??��??��??��?</strong></p>
+        <p>A：�??��?供「�??��?置書?��??��??�以?��??��?購買?��??�特定�?就獲得。建議玩家在?��?不�??�於?��??�?��?，�?確�??�己?�核心�??��??��??��??��??�另外�?每個�??�活?�通常?��?贈送至少�??��??��?置書，可以�??�活?��??��?統�?調整??/p>
 
-        <p><strong>Q3：變身系統什麼時候解鎖？聖騎士和黑暗騎士哪個比較強？</strong></p>
-        <p>A：變身系統在玩家達到 Lv.40 左右並完成相關任務後解鎖。聖騎士和黑暗騎士各有優劣：聖騎士適合穩定推進和拓荒，黑暗騎士適合熟練玩家的極限輸出。建議新手先選擇聖騎士熟悉變身機制，之後再嘗試黑暗騎士的高風險高回報玩法。</p>
+        <p><strong>Q3：�?身系統�?麼�??�解?��??��?士�?黑�?騎士?�個�?較強�?/strong></p>
+        <p>A：�?身系統在?�家?�到 Lv.40 左右並�??�相?�任?��?�???��?騎士?��??��?士�??�優????��?士適?�穩定推?��??��?，�??��?士適?��?練玩家�?極�?輸出?�建議新?��??��??��?士�??��?身�??��?之�??��?試�??��?士�?高風?��??�報?��???/p>
 
-        <p><strong>Q4：元素克制應該怎麼運用？不同場景需要不同的元素嗎？</strong></p>
-        <p>A：是的，不同場景需要選擇不同的元素。建議玩家至少準備兩把不同屬性的武器：一把<strong>火屬性</strong>用於對抗冰系怪物，一把<strong>雷屬性</strong>用於對抗火系怪物。在挑戰深淵副本前，務必查閱攻略了解該副本的怪物屬性弱點，準備正確的元素攻擊可以讓難度大幅降低。</p>
+        <p><strong>Q4：�?素�??��?該怎麼?�用？�??�場?��?要�??��??��??��?</strong></p>
+        <p>A：是?��?不�??�景?�要選?��??��??��??�建議玩家至少�??�兩?��??�屬?��?武器：�???strong>?�屬??/strong>?�於對�??�系?�物，�???strong>?�屬??/strong>?�於對�??�系?�物?�在?�戰深淵?�本?��??��??�閱?�略了解該副?��??�物屬性弱點�?準�?�?��?��?素攻?�可以�???��大�??��???/p>
 
-        <p><strong>Q5：如何提升戰鬥評分？裝備和技能哪個更重要？</strong></p>
-        <p>A：戰鬥評分由裝備、技能等級、連招完成度和操作評分四個部分組成。在前期，技能等級的提升對戰鬥評分的影響更大；到了後期，裝備的重要性會逐漸超過技能。建議的投資優先順序為：武器 > 核心技能等級 > 防具 > 護飾 > 次要技能。另外，連招的完成度和流暢度也會影響評分，多練習技能鏈可以顯著提升戰鬥評分。</p>
+        <p><strong>Q5：�?何�??�戰鬥�??��?裝�??��??�哪?�更?��?�?/strong></p>
+        <p>A：戰鬥�??�由裝�??��??��?級、�??完�?度�??��?評�??�個部?��??�。在?��?，�??��?級�??��?對戰鬥�??��?影響?�大；到了�??��?裝�??��?要性�??�漸超�??�?�。建議�??��??��??��??��?武器 > ?��??�?��?�?> ?�具 > 護飾 > 次�??�?�。另外�?????��??�度?��??�度也�?影響評�?，�?練�??�?��??�以顯�??��??�鬥評�???/p>
 
-        <p><strong>Q6：深淵副本需要什麼配置？最少需要幾個輸出？</strong></p>
-        <p>A：標準的4人深淵隊伍建議配置為 <strong>1坦 + 2輸出 + 1輔助/治療</strong>。Math 深淵建議帶治癒師，Barri 深淵建議帶吟遊詩人，Runda 深淵則需要完整的坦補輸出配置。如果團隊裝備較好，可以考慮減少輔助人數，但高層深淵強烈建議保持完整的隊伍配置。</p>
+        <p><strong>Q6：深淵副?��?要�?麼�?置�??�少�?要幾?�輸?��?</strong></p>
+        <p>A：�?準�?4人深淵�?伍建議�?置為 <strong>1??+ 2輸出 + 1輔助/治�?</strong>?�Math 深淵建議帶治?�師，Barri 深淵建議帶�??�詩人�?Runda 深淵?��?要�??��??��?輸出?�置?��??��??��??��?好�??�以?�慮減�?輔助人數，�?高層深淵強�?建議保�?完整?��?伍�?置�?/p>
 
-        <p><strong>Q7：技能鏈和熟練連繫有什麼區別？</strong></p>
-        <p>A：技能鏈是職業固定的技能連招順序，正確銜接可觸發額外效果；熟練連繫系統是 Season 2 新增的機制，要求玩家連續使用特定技能順序來累積增益層數。簡單來說，技能鏈是「一次性的連招加成」，熟練連繫是「持續性的疊層增益」，兩者可以同時發揮作用。</p>
+        <p><strong>Q7：�??��??��?練�?��?��?麼�??��?</strong></p>
+        <p>A：�??��??�職業固定�??�?��???��?，正確�??�可觸發額�??��?；�?練�?��系統??Season 2 ?��??��??��?要�??�家???使用?��??�?��?序�?累�?增�?層數?�簡?��?說�??�?��??�「�?次性�?????��??��??�練??��?�「�?續性�??�層增�??��??�者可以�??�發?��??��?/p>
 
-        <!-- ===== 十、總結 ===== -->
-        <h2 id="conclusion">十、總結</h2>
-        <p>瑪奇 Mobile 的戰鬥系統深度遠超一般手遊，從技能鏈到熟練連繫，從變身系統到元素克制，從六大戰鬥風格到三大深淵副本，每個層面都有足夠的探索空間。掌握戰鬥系統的關鍵在於：理解每個職業的核心機制、熟練技能鏈操作、善用元素克制關係、以及與隊友的良好配合。</p>
-        <p>以下是本文的核心要點總結：</p>
+        <!-- ===== ?�、總�?===== -->
+        <h2 id="conclusion">?�、總�?/h2>
+        <p>?��? Mobile ?�戰鬥系統深度�?超�??��??��?從�??��??��?練�?��，�?變身系統?��?素�??��?從六大戰鬥風?�到三大深淵?�本，�??�層?�都?�足夠�??�索空�??��??�戰鬥系統�??�鍵?�於：�?�???�職業�??��?機制?��?練�??��??��??��??��?素�??��?係、以?��??��??�良好�??��?/p>
+        <p>以�??�本?��??��?要�?總�?�?/p>
         <table>
           <thead>
             <tr>
-              <th>面向</th>
-              <th>核心要點</th>
+              <th>?��?</th>
+              <th>?��?要�?</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>技能系統</td>
-              <td>掌握技能鏈順序，活用熟練連繫疊層，善用充能技能，優先升級核心技能</td>
+              <td>?�?�系�?/td>
+              <td>?�握?�?��??��?，活?��?練�?��?�層，�??��??��??��??��??��??��??�??/td>
             </tr>
             <tr>
               <td>變身系統</td>
-              <td>聖騎士適合穩定推進，黑暗騎士適合極限爆發，注意冷卻時間和時機選擇</td>
+              <td>?��?士適?�穩定推?��?黑�?騎士?��?極�??�發，注?�冷?��??��??��??��?</td>
             </tr>
             <tr>
-              <td>元素克制</td>
-              <td>火→冰→雷→火的循環克制，根據敵人屬性切換對應武器可獲得20%~30%傷害加成</td>
+              <td>?��??�制</td>
+              <td>?��??��??��??��?循環?�制，根?�敵人屬?��??��??�武?�可?��?20%~30%?�害?��?</td>
             </tr>
             <tr>
-              <td>戰鬥風格</td>
-              <td>選擇適合自己的職業，理解核心機制（怒氣、充能、精準、能量、節奏、潛行）</td>
+              <td>?�鬥風格</td>
+              <td>?��??��??�己?�職業�??�解?��?機制（怒氣?��??�、精準、能?�、�?奏、�?行�?</td>
             </tr>
             <tr>
-              <td>PVP 技巧</td>
-              <td>掌握距離控制、閃避時機和控場衰減三大核心技巧，屬性經過平衡調整</td>
+              <td>PVP ?��?/td>
+              <td>?�握距離?�制?��??��?機�??�場衰�?三大?��??�巧�?屬性�??�平衡調??/td>
             </tr>
             <tr>
-              <td>深淵副本</td>
-              <td>Math（機關）、Barri（洪流）、Runda（BOSS連戰），熟悉機制並合理配置團隊</td>
+              <td>深淵?�本</td>
+              <td>Math（�??��??�Barri（洪流�??�Runda（BOSS??��）�??��?機制並�??��?置�???/td>
             </tr>
           </tbody>
         </table>
         <blockquote>
-          <strong>最後提醒：</strong>戰鬥系統的精通需要時間和經驗的積累。不要因為一兩次的失敗而氣餒，每一次失敗都是學習的機會。祝各位冒險者在艾琳大陸上戰無不勝！
+          <strong>?�後�??��?</strong>?�鬥系統?�精?��?要�??��?經�??��?累。�?要�??��??�次?�失?�而氣餒�?每�?次失?�都?�學習�?機�??��??��??�險?�在?�琳大陸上戰?��??��?
         </blockquote>
 
       </div>
 
-      <!-- Ad: 300×250 Banner -->
+      <!-- Ad: 300?250 Banner -->
       <div class="mt-8">
-        <div class="ad-slot" style="min-height:250px;">廣告位 300×250</div>
+        <div class="ad-slot" style="min-height:250px;">�??�?300?250</div>
       </div>
 
       <!-- Article Footer -->
       <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
         <div class="flex flex-wrap gap-2 mb-6">
-          <span class="text-sm text-gray-500 mr-2">標籤：</span>
-          <span class="badge badge-red">戰鬥攻略</span>
-          <span class="badge badge-blue">連招技巧</span>
-          <span class="badge badge-gold">瑪奇Mobile</span>
-          <span class="badge badge-green">PVP攻略</span>
-          <span class="badge badge-blue">BOSS攻略</span>
+          <span class="text-sm text-gray-500 mr-2">標籤�?/span>
+          <span class="badge badge-red">?�鬥?�略</span>
+          <span class="badge badge-blue">????��?/span>
+          <span class="badge badge-gold">?��?Mobile</span>
+          <span class="badge badge-green">PVP?�略</span>
+          <span class="badge badge-blue">BOSS?�略</span>
         </div>
 
         <!-- Related Articles -->
-        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <h3 class="text-lg font-bold text-white mb-4">?��??�略?�薦</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <a href="tier-list.html" class="card p-4 flex items-center gap-4">
             <div class="w-12 h-12 rounded-lg bg-indigo-900/60 flex items-center justify-center flex-shrink-0">
@@ -744,8 +744,8 @@
               </svg>
             </div>
             <div>
-              <h4 class="font-bold text-white text-sm">職業強度排行榜（Tier List）</h4>
-              <p class="text-gray-500 text-xs mt-1">2026年7月版全職業評分與推薦</p>
+              <h4 class="font-bold text-white text-sm">?�業強度?��?榜�?Tier List�?/h4>
+              <p class="text-gray-500 text-xs mt-1">2026�??��??�職業�??��??�薦</p>
             </div>
           </a>
           <a href="newbie-guide.html" class="card p-4 flex items-center gap-4">
@@ -755,8 +755,8 @@
               </svg>
             </div>
             <div>
-              <h4 class="font-bold text-white text-sm">新手入門完全指南</h4>
-              <p class="text-gray-500 text-xs mt-1">從零開始的艾琳冒險攻略</p>
+              <h4 class="font-bold text-white text-sm">?��??��?完全?��?</h4>
+              <p class="text-gray-500 text-xs mt-1">從零?��??�艾?��??�攻??/p>
             </div>
           </a>
           <a href="equipment-guide.html" class="card p-4 flex items-center gap-4">
@@ -766,8 +766,8 @@
               </svg>
             </div>
             <div>
-              <h4 class="font-bold text-white text-sm">裝備養成與附魔指南</h4>
-              <p class="text-gray-500 text-xs mt-1">從白裝到紅裝的養成路線</p>
+              <h4 class="font-bold text-white text-sm">裝�?養�??��?魔�???/h4>
+              <p class="text-gray-500 text-xs mt-1">從白裝到紅�??��??�路�?/p>
             </div>
           </a>
           <a href="rune-guide.html" class="card p-4 flex items-center gap-4">
@@ -777,8 +777,8 @@
               </svg>
             </div>
             <div>
-              <h4 class="font-bold text-white text-sm">符文系統詳解</h4>
-              <p class="text-gray-500 text-xs mt-1">符文搭配與強化攻略</p>
+              <h4 class="font-bold text-white text-sm">符�?系統詳解</h4>
+              <p class="text-gray-500 text-xs mt-1">符�??��??�強?�攻??/p>
             </div>
           </a>
         </div>
@@ -788,8 +788,8 @@
     <!-- RIGHT: Ad Sidebar -->
     <aside class="hidden xl:block w-56 flex-shrink-0">
       <div class="sticky top-24 flex flex-col gap-6">
-        <div class="ad-slot" style="min-height:250px;">廣告位<br>300×250</div>
-        <div class="ad-slot" style="min-height:600px;">廣告位<br>300×600</div>
+        <div class="ad-slot" style="min-height:250px;">�??�?br>300?250</div>
+        <div class="ad-slot" style="min-height:600px;">�??�?br>300?600</div>
       </div>
     </aside>
 
@@ -805,46 +805,46 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            攻略站
+            ?�略�?
           </div>
-          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+          <p class="text-gray-500 text-sm">?�玩家�??��?實用?��??�攻?�平?��?/p>
         </div>
         <div>
-          <h4 class="text-white font-semibold mb-3">瑪奇Mobile</h4>
+          <h4 class="text-white font-semibold mb-3">?��?Mobile</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="newbie-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門指南</a></li>
-            <li><a href="tier-list.html" class="text-gray-500 hover:text-indigo-400 transition">職業排行榜</a></li>
-            <li><a href="combat-system.html" class="text-gray-500 hover:text-indigo-400 transition">戰鬥系統解析</a></li>
-            <li><a href="../index.html" class="text-gray-500 hover:text-indigo-400 transition">更多攻略...</a></li>
+            <li><a href="newbie-guide.html" class="text-gray-500 hover:text-indigo-400 transition">?��??��??��?</a></li>
+            <li><a href="tier-list.html" class="text-gray-500 hover:text-indigo-400 transition">?�業?��?�?/a></li>
+            <li><a href="combat-system.html" class="text-gray-500 hover:text-indigo-400 transition">?�鬥系統�??</a></li>
+            <li><a href="../index.html" class="text-gray-500 hover:text-indigo-400 transition">?��??�略...</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <h4 class="text-white font-semibold mb-3">?�略?��?</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">職業攻略</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">副本攻略</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">生活技能</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">裝備養成</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">?�業?�略</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">?�本?�略</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">?�活?�??/a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">裝�?養�?</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <h4 class="text-white font-semibold mb-3">?�於</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">聯絡方式</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">隱私權政策</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">服務條款</a></li>
+            <li><a href="../../index.html" class="text-gray-500 hover:text-indigo-400 transition">?��???/a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">?�絡?��?</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">?��?權政�?/a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">?��?條款</a></li>
           </ul>
         </div>
       </div>
       <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
-        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+        &copy; 2026 ?�略�?GameGuide.tw ??All rights reserved.
       </div>
     </div>
   </footer>
 
   <!-- Back to Top -->
-  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+  <button id="back-to-top" class="back-to-top" aria-label="?�到?�部">
     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
       <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
     </svg>
