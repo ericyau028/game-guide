@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="瑪奇Mobile每日任務完整清單—所有每日任務詳細解析、效率路線規劃、獎勵分析與新手老手策略指南。">
+  <meta name="keywords" content="瑪奇Mobile, 每日任務, Daily Quest, 任務攻略, Mabinogi Mobile, 任務清單, 效率攻略">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="瑪奇Mobile每日任務完整清單｜效率最大化指南 — 攻略站">
+  <meta property="og:description" content="2026年7月版每日任務全面解析，從新手到老手的效率最大化路線規劃。">
+  <meta property="og:type" content="article">
+  <title>瑪奇Mobile每日任務完整清單｜效率最大化指南 — 攻略站</title>
+  <link rel="canonical" href="https://example.com/mabinogi-mobile/articles/daily-quest.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <!-- Reading Progress -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../index.html" class="nav-link">首頁</a>
+          <a href="../index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="newbie-guide.html" class="nav-link">新手指南</a>
+          <a href="tier-list.html" class="nav-link">職業排行</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../index.html" class="nav-link">首頁</a>
+        <a href="../index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="newbie-guide.html" class="nav-link">新手指南</a>
+        <a href="tier-list.html" class="nav-link">職業排行</a>
+        <a href="daily-quest.html" class="nav-link">每日任務</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../index.html" class="hover:text-indigo-400 transition">首頁</a>
+      <span class="mx-2">›</span>
+      <a href="../index.html" class="hover:text-indigo-400 transition">瑪奇Mobile</a>
+      <span class="mx-2">›</span>
+      <a href="#" class="hover:text-indigo-400 transition">任務攻略</a>
+      <span class="mx-2">›</span>
+      <span class="text-gray-300">每日任務完整清單</span>
+    </nav>
+  </div>
+
+  <!-- ===== ARTICLE LAYOUT ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <!-- LEFT: TOC -->
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-bold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER: Article Content -->
+    <article class="flex-1 min-w-0">
+      <!-- Article Header -->
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">瑪奇 Mobile 每日任務完整清單｜效率最大化指南</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            攻略站編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-24
+          </span>
+          <span>·</span>
+          <span>約 15 分鐘閱讀</span>
+          <span class="badge badge-blue">任務攻略</span>
+          <span class="badge badge-green">瑪奇Mobile</span>
+        </div>
+      </header>
+
+      <!-- Article Body -->
+      <div id="article-content" class="article-content">
+
+        <!-- 一、每日任務系統介紹 -->
+        <h2 id="system-intro">一、每日任務系統介紹</h2>
+        <p>瑪奇 Mobile 的每日任務系統是玩家獲取日常資源最穩定、最核心的途徑。相較於一次性劇情任務或限時活動，每日任務提供持續且可預期的獎勵回饋，是角色養成的基石。無論你是剛入門的新手還是已進入後期的資深玩家，每天花少量時間完成這些任務，都能在長期累積下獲得巨大的優勢。</p>
+
+        <h3 id="reset-time">每日重置時間</h3>
+        <p>瑪奇 Mobile 的每日任務重置時間為<strong>台灣時間（UTC+8）凌晨 05:00</strong>。這個時間點與多數手遊的凌晨 00:00 或 04:00 不同，因此需要特別留意。系統會在重置時自動清除前一天未完成的任務進度，已完成但尚未領取的獎勵也會在重置時發送到信箱，有效期為 7 天。建議玩家養成在重置前檢查是否有遺漏獎勵未領取的習慣。</p>
+        <p>此外，每週的每週任務重置時間為<strong>每週一凌晨 05:00（台灣時間）</strong>，與每日任務同步重置。每週任務的獎勵遠比每日任務豐厚，包含稀有裝備箱子、大量鑽石和限定材料，是每週不可錯過的重要內容。</p>
+
+        <h3 id="task-count">任務數量與類型</h3>
+        <p>系統每天會提供以下幾種類型的任務：</p>
+        <ul>
+          <li><strong>每日簽到：</strong>最簡單的每日任務，只需登入並點擊簽到按鈕即可完成。連續簽到 7 天可獲得額外獎勵寶箱，包含鑽石、金幣和隨機材料。如果不幸中斷，連續天數會重置為第 1 天。</li>
+          <li><strong>委託任務（每日 3 個）：</strong>由 NPC 發布的戰鬥或探索類任務，通常需要擊殺特定數量的怪物或收集特定物品。任務難度分為普通、困難、精英三個等級，難度越高獎勵越豐厚，但建議量力而行。</li>
+          <li><strong>狩獵場挑戰：</strong>每日可在指定狩獵場進行一定次數的挑戰，獲得裝備強化材料和經驗值。每個狩獵場有每日次數上限，完成後會獲得對應等級的獎勵寶箱。</li>
+          <li><strong>生活技能採集：</strong>使用生活技能（採礦、伐木、採藥、釣魚）進行指定次數的採集，獲得各類原材料。這些材料是製作系統的基礎，也是交易行的重要商品。</li>
+          <li><strong>交易行巡查：</strong>在交易行完成一定次數的買賣操作，獎勵為少量金幣和交易經驗。這個任務同時鼓勵玩家 actively 參與遊戲經濟。</li>
+          <li><strong>公會任務：</strong>加入公會後解鎖的額外每日任務，完成後獲得公會幣和公會經驗值。公會幣可在公會商店兌換專屬獎勵，包括稀有配方和時裝碎片。</li>
+          <li><strong>競技場挑戰：</strong>每日可在競技場進行 5 次 PVP 對戰，根據勝負獲得競技幣。競技幣是競技場商店的專屬貨幣，可兌換 PVP 向的裝備和消耗品。</li>
+          <li><strong>深淵副本：</strong>每日可進入一次的高難度副本，掉落高級裝備材料和稀有道具。深淵副本是後期玩家提升裝備的關鍵途徑，建議組隊前往以提高通關效率。</li>
+        </ul>
+
+        <h3 id="reward-mechanism">獎勵機制</h3>
+        <p>每日任務的獎勵採用遞增機制——隨著同一天內完成的任務數量增加，會觸發額外的獎勵寶箱。具體規則如下：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>完成任務數</th>
+              <th>額外獎勵</th>
+              <th>內容物</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>完成 3 個任務</td>
+              <td>青銅寶箱</td>
+              <td>金幣 ×500、經驗藥水 ×1</td>
+            </tr>
+            <tr>
+              <td>完成 5 個任務</td>
+              <td>白銀寶箱</td>
+              <td>金幣 ×1,500、強化石 ×3</td>
+            </tr>
+            <tr>
+              <td>完成 7 個任務</td>
+              <td>黃金寶箱</td>
+              <td>金幣 ×3,000、隨機裝備箱 ×1</td>
+            </tr>
+            <tr>
+              <td>全部完成（8+個）</td>
+              <td>鑽石寶箱</td>
+              <td>鑽石 ×100、傳說材料箱 ×1</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <strong>小提示：</strong>即使你無法完成所有任務，也建議至少完成 3 個以獲得青銅寶箱。這是最基本的回報保障，每天只需花 10 分鐘左右即可達成。
+        </blockquote>
+
+        <!-- 二、每日必做任務清單 -->
+        <h2 id="daily-task-list">二、每日必做任務清單</h2>
+        <p>以下是所有每日任務的完整清單，包含任務類型、獎勵內容、預估耗時與優先級建議：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>任務名稱</th>
+              <th>類型</th>
+              <th>獎勵</th>
+              <th>耗時</th>
+              <th>優先級</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>每日簽到</strong></td>
+              <td>社交</td>
+              <td>鑽石 ×50</td>
+              <td>1 分鐘</td>
+              <td><span class="text-amber-400">★★★★★</span></td>
+            </tr>
+            <tr>
+              <td><strong>委託任務 ×3</strong></td>
+              <td>戰鬥</td>
+              <td>金幣 + 經驗值</td>
+              <td>15 分鐘</td>
+              <td><span class="text-amber-400">★★★★★</span></td>
+            </tr>
+            <tr>
+              <td><strong>狩獵場挑戰</strong></td>
+              <td>戰鬥</td>
+              <td>裝備材料</td>
+              <td>20 分鐘</td>
+              <td><span class="text-amber-400">★★★★☆</span></td>
+            </tr>
+            <tr>
+              <td><strong>生活技能採集</strong></td>
+              <td>生活</td>
+              <td>原材料</td>
+              <td>10 分鐘</td>
+              <td><span class="text-amber-400">★★★★☆</span></td>
+            </tr>
+            <tr>
+              <td><strong>交易行巡查</strong></td>
+              <td>經濟</td>
+              <td>賺差價</td>
+              <td>5 分鐘</td>
+              <td><span class="text-amber-400">★★★☆☆</span></td>
+            </tr>
+            <tr>
+              <td><strong>公會任務</strong></td>
+              <td>社交</td>
+              <td>公會幣</td>
+              <td>15 分鐘</td>
+              <td><span class="text-amber-400">★★★★☆</span></td>
+            </tr>
+            <tr>
+              <td><strong>競技場 ×5</strong></td>
+              <td>PVP</td>
+              <td>競技幣</td>
+              <td>20 分鐘</td>
+              <td><span class="text-amber-400">★★★☆☆</span></td>
+            </tr>
+            <tr>
+              <td><strong>深淵副本</strong></td>
+              <td>戰鬥</td>
+              <td>高級材料</td>
+              <td>30 分鐘</td>
+              <td><span class="text-amber-400">★★★★★</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="sign-in-detail">每日簽到</h3>
+        <p>每日簽到是整個遊戲中最輕鬆的任務，只需登入遊戲後在主介面點擊右上角的簽到按鈕即可完成。簽到獎勵包含基礎的 50 鑽石，以及隨著連續簽到天數增加的額外獎勵。連續簽到第 3 天可獲得金幣 ×2,000，第 5 天獲得經驗藥水 ×2，第 7 天獲得隨機稀有材料箱 ×1。需要注意的是，中斷簽到會導致連續天數歸零，因此即使某天無法進行遊戲，也建議花 30 秒登入完成簽到。</p>
+        <p>簽到獎勵在每月會有重置機制，每月的簽到獎勵池會更新，包含不同的時裝碎片和限定道具。建議玩家追蹤每月簽到表，以規劃自己的遊戲時間。</p>
+
+        <h3 id="commission-detail">委託任務 ×3</h3>
+        <p>委託任務是每日經驗和金幣的主要來源之一。每天會在城鎮的告示板處刷新 3 個隨機委託，任務內容可能包括：擊殺特定區域的怪物、收集特定材料、運送物品到指定 NPC 等。每個委託的獎勵不同，難度也分為三個等級。</p>
+        <p>建議優先選擇獎勵中有「經驗值」標籤的委託，因為經驗值在前期提升等級時至關重要。到中後期，則可以優先選擇金幣獎勵較高的委託。如果遇到困難等級以上的委託但覺得自身戰力不足，可以跳過並等待下一個刷新，但每日最多只能刷新 2 次。</p>
+
+        <h3 id="hunting-detail">狩獵場挑戰</h3>
+        <p>狩獵場是獲取裝備強化材料的主要途點。每日可挑戰的次數取決於玩家的 VIP 等級和冒險者手冊等級。一般玩家每日可挑戰 3 次，VIP 玩家可額外增加 1-2 次。每次挑戰會根據通關時間和表現評定 S、A、B、C 四個等級，評級越高獎勵越豐厚。</p>
+        <p>狩獵場分為多個主題區域，每個區域掉落不同類型的材料。建議根據自己當前裝備的需求，選擇對應的區域進行挑戰。例如需要武器強化材料時選擇「古代森林」，需要防具材料時選擇「冰霜洞窟」。</p>
+
+        <h3 id="life-skill-detail">生活技能採集</h3>
+        <p>生活技能採集是原材料的主要來源，也是交易行商品的重要供應。每日可在各個採集點進行一定次數的採集，採集結果受到生活技能等級、工具品質和幸運值的影響。高級採集點需要較高的技能等級才能使用，但產出的材料價值也更高。</p>
+        <p>推薦新手玩家從採藥開始練起，因為藥草是製作回復藥水的基礎材料，需求量極大且價格穩定。中後期玩家則可以根據市場行情選擇利潤最高的採集方向。伐木獲得的木材是製作家具和船隻的材料，採礦獲得的礦石是鍛造裝備的必需品，釣魚則有機會釣到稀有飾品和食譜材料。</p>
+
+        <h3 id="trade-detail">交易行巡查</h3>
+        <p>交易行巡查任務要求玩家在交易行完成指定次數的買入或賣出操作。這個任務的設計目的是鼓勵玩家 actively 參與遊戲經濟。完成後除了獲得基礎的金幣獎勵外，還會獲得交易經驗值，提升交易等級可以解鎖更多的交易行功能和降低手續費率。</p>
+        <p>建議玩家在完成這個任務的同時，順便觀察市場行情，低買高賣來賺取額外利潤。特別是在版本更新後，新材料和裝備的價格波動往往很大，是賺取差價的好時機。</p>
+
+        <h3 id="guild-detail">公會任務</h3>
+        <p>加入公會後解鎖的每日任務，通常包括公會捐贈、公會副本和公會討伐等內容。公會任務的獎勵為公會幣，可在公會商店中兌換獨特的獎勵，包括限定時裝、傳說配方碎片和專屬消耗品。此外，完成公會任務還能提升公會經驗值，幫助公會升級以解鎖更多商店物品。</p>
+        <p>建議玩家選擇一個活躍的公會，因為公會等級越高，商店中的物品種類和品質就越好。每週公會會進行一次結算，活躍度高的公會成員可獲得額外獎勵。</p>
+
+        <h3 id="arena-detail">競技場 ×5</h3>
+        <p>競技場是 PVP 玩家的主要舞台，每日 5 次對戰根據勝負獲得不同數量的競技幣。即使落敗也能獲得少量競技幣，但勝利獲得的數量是失敗的 3 倍以上。競技幣可在競技場商店中兌換 PVP 專屬裝備、飾品和消耗品。</p>
+        <p>競技場的匹配機制會根據玩家的戰力進行配對，因此不需要擔心被高等級玩家碾壓。建議新手玩家先在競技場中多練習，熟悉各職業的技能和連招模式，逐步提升自己的 PVP 技巧。</p>
+
+        <h3 id="abyss-detail">深淵副本</h3>
+        <p>深淵副本是每日任務中獎勵最豐厚但也最具挑戰性的內容。每日僅可進入一次，掉落的材料是後期裝備強化和進階的必需品。深淵副本的怪物血量和攻擊力遠高於一般副本，建議組隊前往以提高通關效率和成功率。</p>
+        <p>副本的難度會根據隊伍平均戰力動態調整，因此組隊時儘量找戰力相近的玩家。通關後的獎勵箱有機率掉落傳說級材料和限定裝備設計圖，這些物品在交易行中的價格極高。</p>
+
+        <!-- 三、每週任務重點 -->
+        <h2 id="weekly-focus">三、每週任務重點</h2>
+        <p>除了每日任務外，每週任務也是不可忽視的獎勵來源。每週任務在每週一凌晨 05:00 重置，獎勵遠比每日任務豐厚。以下是每週各天的建議行程：</p>
+
+        <h3 id="weekday-plan">週一至週五建議行程</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>日期</th>
+              <th>重點任務</th>
+              <th>建議原因</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>週一</strong></td>
+              <td>每週任務刷新 + 公會戰</td>
+              <td>每週任務剛重置，優先完成高獎勵目標；公會戰通常在週一晚間開放</td>
+            </tr>
+            <tr>
+              <td><strong>週二</strong></td>
+              <td>深淵副本 + 狩獵場集中刷</td>
+              <td>週二的深淵副本有掉落加成（10%），適合集中刷材料</td>
+            </tr>
+            <tr>
+              <td><strong>週三</strong></td>
+              <td>競技場衝排名</td>
+              <td>競技場每週三有雙倍競技幣活動，是衝排名和累積競技幣的最佳時機</td>
+            </tr>
+            <tr>
+              <td><strong>週四</strong></td>
+              <td>生活技能採集 + 製作</td>
+              <td>週四的採集點刷新率提升，材料產量增加，適合大量囤貨</td>
+            </tr>
+            <tr>
+              <td><strong>週五</strong></td>
+              <td>交易行操作 + 備戰週末</td>
+              <td>週五晚間玩家數量增加，交易行活躍度高，適合出售物品；為週末活動做準備</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="weekend-event">週末特別活動</h3>
+        <p>週末通常會推出額外的限時活動和獎勵加成，是集中遊玩的黃金時間。常見的週末活動包括：</p>
+        <ul>
+          <li><strong>經驗值加成：</strong>週末全日經驗值獲得量提升 50%，是衝等級的最佳時機。建議將主力角色的體力集中用在週末升級。</li>
+          <li><strong>掉落率提升：</strong>指定副本的稀有物品掉落率提升，通常在週六和週日各針對不同副本。建議提前查看官方公告，規劃好要刷哪些副本。</li>
+          <li><strong>限時 BOSS 出現：</strong>週末限定的世界 BOSS 會在特定時間出現，擊敗後可獲得大量獎勵。需要提前在世界頻道組織隊伍，並在指定時間到達指定位置。</li>
+          <li><strong>累積消費回饋：</strong>週末期間消耗鑽石達到指定金額可獲得額外回饋。如果有消費計畫，建議集中在週末進行。</li>
+          <li><strong>雙倍簽到獎勵：</strong>週末簽到獎勵翻倍，週六週日各可領取一次額外簽到獎勵。即使平時不玩，週末也建議登入領取。</li>
+        </ul>
+
+        <h3 id="limited-task">限時任務處理</h3>
+        <p>限時任務通常出現在版本更新、節日活動或特殊事件期間，獎勵往往包含獨特的限定物品。處理限時任務的關鍵在於：</p>
+        <ul>
+          <li><strong>即時關注公告：</strong>限時任務的開放時間通常不長（3-7 天），建議開啟遊戲內推播通知，第一時間獲知活動資訊。</li>
+          <li><strong>評估獎勵價值：</strong>不是所有限時任務都值得投入時間。優先完成包含限定裝備、時裝或稀有材料的任務。</li>
+          <li><strong>合理分配時間：</strong>限時任務通常有每日完成次數限制，建議在活動開放的第一天就開始累積，避免最後一天才匆忙完成。</li>
+          <li><strong>組隊效率：</strong>部分限時任務難度較高，建議提前在社群中尋找隊友，不要等到活動快結束才找人。</li>
+        </ul>
+
+        <!-- 四、效率最大化路線 -->
+        <h2 id="efficiency-route">四、效率最大化路線</h2>
+        <p>根據不同的遊戲時間和需求，我們設計了三種效率路線，讓你在有限的時間內獲得最大的收益：</p>
+
+        <h3 id="quick-route">最省時路線（30 分鐘版本）</h3>
+        <p>適合時間有限的休閒玩家或工作日遊玩：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>步驟</th>
+              <th>任務</th>
+              <th>耗時</th>
+              <th>預計獎勵</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>每日簽到</td>
+              <td>1 分鐘</td>
+              <td>鑽石 ×50</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>委託任務 ×3（選擇最簡單的）</td>
+              <td>10 分鐘</td>
+              <td>金幣 ×3,000、經驗值 ×2,000</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>生活技能採集</td>
+              <td>8 分鐘</td>
+              <td>原材料 ×15-20</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>交易行巡查</td>
+              <td>3 分鐘</td>
+              <td>金幣 ×500</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>領取每日完成獎勵（3 任務）</td>
+              <td>1 分鐘</td>
+              <td>青銅寶箱</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>公會捐贈</td>
+              <td>2 分鐘</td>
+              <td>公會幣 ×100</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>深淵副本（快速通關）</td>
+              <td>5 分鐘</td>
+              <td>高級材料 ×3-5</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>30 分鐘路線總結：</strong>這個路線專注於最高 CP 值的任務，跳過了耗時較長的競技場和狩獵場挑戰。雖然獎勵不如完整路線豐厚，但能在最短時間內完成每日基本目標，適合維持連續簽到和基本資源收入。</p>
+
+        <h3 id="standard-route">標準路線（1 小時版本）</h3>
+        <p>適合大多數玩家的日常遊玩時間：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>步驟</th>
+              <th>任務</th>
+              <th>耗時</th>
+              <th>預計獎勵</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>每日簽到</td>
+              <td>1 分鐘</td>
+              <td>鑽石 ×50</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>委託任務 ×3</td>
+              <td>12 分鐘</td>
+              <td>金幣 ×5,000、經驗值 ×4,000</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>生活技能採集</td>
+              <td>10 分鐘</td>
+              <td>原材料 ×25-30</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>交易行巡查</td>
+              <td>5 分鐘</td>
+              <td>金幣 ×800 + 賺差價</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>公會任務</td>
+              <td>12 分鐘</td>
+              <td>公會幣 ×200</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>競技場 ×5</td>
+              <td>15 分鐘</td>
+              <td>競技幣 ×300-500</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>深淵副本</td>
+              <td>8 分鐘</td>
+              <td>高級材料 ×5-8</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>領取全部完成獎勵</td>
+              <td>1 分鐘</td>
+              <td>鑽石寶箱（鑽石 ×100）</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>1 小時路線總結：</strong>這個路線涵蓋了所有主要每日任務，跳過了耗時最長的狩獵場挑戰。能在 1 小時內獲得大部分獎勵，是 CP 值最高的路線選擇。建議大多數玩家以此為基礎，根據自己的需求微調。</p>
+
+        <h3 id="perfect-route">完美路線（2 小時版本）</h3>
+        <p>適合追求完整的硬核玩家或假日集中遊玩：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>步驟</th>
+              <th>任務</th>
+              <th>耗時</th>
+              <th>預計獎勵</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>每日簽到 + 連續簽到獎勵</td>
+              <td>2 分鐘</td>
+              <td>鑽石 ×50 + 額外獎勵</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>委託任務 ×3（選擇困難/精英）</td>
+              <td>18 分鐘</td>
+              <td>金幣 ×8,000、經驗值 ×6,000</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>狩獵場挑戰 ×3</td>
+              <td>25 分鐘</td>
+              <td>裝備材料 ×15-20</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>生活技能採集（全部次數）</td>
+              <td>15 分鐘</td>
+              <td>原材料 ×40-50</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>交易行巡查 + 市場觀察</td>
+              <td>8 分鐘</td>
+              <td>金幣 ×1,000 + 賺差價</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>公會任務（全部）</td>
+              <td>15 分鐘</td>
+              <td>公會幣 ×350</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>競技場 ×5（認真打）</td>
+              <td>20 分鐘</td>
+              <td>競技幣 ×500-800</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>深淵副本（組隊）</td>
+              <td>12 分鐘</td>
+              <td>高級材料 ×8-12</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>日常巡視（隨機事件）</td>
+              <td>5 分鐘</td>
+              <td>隨機獎勵</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>領取全部完成獎勵 + 檢查信箱</td>
+              <td>2 分鐘</td>
+              <td>鑽石寶箱 + 歷史獎勵</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>2 小時路線總結：</strong>這個路線涵蓋了所有每日任務和額外內容，是追求完美的最佳選擇。除了所有基本獎勵外，還能獲得狩獵場的額外材料、競技幣的更高累積，以及深淵副本的完整通關獎勵。建議在週末或假期時使用此路線。</p>
+
+        <!-- 五、任務獎勵分析 -->
+        <h2 id="reward-analysis">五、任務獎勵分析</h2>
+        <p>了解每個任務的 CP 值（Cost-Performance，投入產出比）能幫助你更合理地分配遊戲時間：</p>
+
+        <h3 id="cp-ranking">各任務 CP 值排名</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>排名</th>
+              <th>任務</th>
+              <th>CP 值評分</th>
+              <th>每分鐘收益（換算鑽石）</th>
+              <th>說明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="text-amber-400 font-bold">1</span></td>
+              <td>每日簽到</td>
+              <td><span class="text-green-400 font-bold">極高</span></td>
+              <td>50 鑽石/分鐘</td>
+              <td>零成本高回報，不完成就是虧損</td>
+            </tr>
+            <tr>
+              <td><span class="text-amber-400 font-bold">2</span></td>
+              <td>深淵副本</td>
+              <td><span class="text-green-400 font-bold">高</span></td>
+              <td>約 8 鑽石/分鐘</td>
+              <td>高級材料的唯一穩定來源</td>
+            </tr>
+            <tr>
+              <td><span class="text-amber-400 font-bold">3</span></td>
+              <td>委託任務</td>
+              <td><span class="text-green-400 font-bold">高</span></td>
+              <td>約 5 鑽石/分鐘</td>
+              <td>經驗和金幣的主要來源</td>
+            </tr>
+            <tr>
+              <td><span class="text-amber-400 font-bold">4</span></td>
+              <td>公會任務</td>
+              <td><span class="text-amber-400 font-bold">中高</span></td>
+              <td>約 3 鑽石/分鐘</td>
+              <td>公會幣的穩定來源，長期回報高</td>
+            </tr>
+            <tr>
+              <td><span class="text-amber-400 font-bold">5</span></td>
+              <td>生活技能採集</td>
+              <td><span class="text-amber-400 font-bold">中</span></td>
+              <td>約 2 鑽石/分鐘</td>
+              <td>收益取決於市場行情，波動大</td>
+            </tr>
+            <tr>
+              <td><span class="text-amber-400 font-bold">6</span></td>
+              <td>狩獵場挑戰</td>
+              <td><span class="text-amber-400 font-bold">中</span></td>
+              <td>約 2 鑽石/分鐘</td>
+              <td>材料需求因人而異</td>
+            </tr>
+            <tr>
+              <td><span class="text-amber-400 font-bold">7</span></td>
+              <td>競技場</td>
+              <td><span class="text-yellow-400 font-bold">中低</span></td>
+              <td>約 1.5 鑽石/分鐘</td>
+              <td>收益依勝率而定，新手可能更低</td>
+            </tr>
+            <tr>
+              <td><span class="text-amber-400 font-bold">8</span></td>
+              <td>交易行巡查</td>
+              <td><span class="text-yellow-400 font-bold">低</span></td>
+              <td>約 1 鑽石/分鐘</td>
+              <td>基礎獎勵低，但有額外賺差價空間</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="unlock-rewards">最優先解鎖的獎勵</h3>
+        <p>在遊戲前期，以下獎勵的解鎖優先級最高：</p>
+        <ul>
+          <li><strong>深淵副本：</strong>解鎖後立即開始每日挑戰，即使無法通關也要嘗試，因為每次進入都有基礎掉落。建議在戰力達到推薦值的 80% 時開始嘗試。</li>
+          <li><strong>公會系統：</strong>儘早加入公會，解鎖公會任務和公會商店。公會商店中的強化石和經驗藥水是前期最需要的資源。</li>
+          <li><strong>競技場：</strong>儘早開始累積競技幣，競技場商店中的飾品對戰力提升有顯著幫助。即使勝率不高，每週累積的競技幣也很可觀。</li>
+          <li><strong>生活技能：</strong>從遊戲第一天就開始練習生活技能，採集等級越高可使用的採集點越好，回報也越高。建議至少將一項生活技能提升到 Lv.20。</li>
+          <li><strong>交易行：</strong>儘早熟悉交易行機制，學會觀察市場行情和判斷物品價值。交易行是遊戲中賺取金幣最有效率的途徑。</li>
+        </ul>
+
+        <h3 id="exchange-guide">獎勵兌換建議</h3>
+        <p>各商店的兌換建議如下：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>商店</th>
+              <th>貨幣</th>
+              <th>優先兌換</th>
+              <th>不建議兌換</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>公會商店</td>
+              <td>公會幣</td>
+              <td>傳說配方碎片、高級強化石</td>
+              <td>低級強化石（太貴不划算）</td>
+            </tr>
+            <tr>
+              <td>競技場商店</td>
+              <td>競技幣</td>
+              <td>PVP 飾品、屬性藥水</td>
+              <td>普通回復藥水（不如自己製作）</td>
+            </tr>
+            <tr>
+              <td>深淵商店</td>
+              <td>深淵幣</td>
+              <td>傳說裝備材料、稀有設計圖</td>
+              <td>金幣（深淵幣太珍貴不值得換金幣）</td>
+            </tr>
+            <tr>
+              <td>活動商店</td>
+              <td>活動代幣</td>
+              <td>限定時裝、限定寵物、稱號</td>
+              <td>普通材料（活動結束後還能從其他途徑獲得）</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- 六、新手 vs 老手任務策略 -->
+        <h2 id="player-strategy">六、新手 vs 老手任務策略</h2>
+        <p>不同階段的玩家應該有不同的任務策略，以下分別說明：</p>
+
+        <h3 id="newbie-strategy">新手前 7 天建議</h3>
+        <p>新手玩家在遊戲初期最重要的目標是快速提升等級和解鎖各種系統，以下是前 7 天的具體建議：</p>
+        <ul>
+          <li><strong>Day 1-2：</strong>專注主線劇情和每日簽到。主線劇情提供的經驗值和獎勵是前期最豐富的，優先推進劇情。每天完成簽到和至少 3 個委託任務。</li>
+          <li><strong>Day 3-4：</strong>解鎖公會系統後立即加入一個活躍公會。開始每天完成公會任務，並在公會商店中購買經驗藥水和強化石。同時開始練習一項生活技能（推薦採藥）。</li>
+          <li><strong>Day 5-6：</strong>解鎖競技場後開始每日 5 次挑戰。不要在意勝負，專注於熟悉 PVP 機制。同時嘗試第一次深淵副本，即使失敗也能獲得基礎獎勵。</li>
+          <li><strong>Day 7：</strong>檢視過去一週的資源累積，規劃接下來的養成方向。確認自己最需要提升的是哪個方面（等級、裝備、技能），並針對性地安排每日任務。</li>
+        </ul>
+
+        <h3 id="mid-game-strategy">中期玩家建議（Lv.30-60）</h3>
+        <p>中期玩家已經解鎖了大部分系統，重點應該轉向效率最大化：</p>
+        <ul>
+          <li><strong>時間管理：</strong>使用標準路線（1 小時版本），確保完成所有主要任務。開始根據市場行情調整生活技能的選擇。</li>
+          <li><strong>裝備強化：</strong>開始認真收集深淵副本和狩獵場的材料，有計劃地強化裝備。建議先將武器強化到 +10，再處理防具。</li>
+          <li><strong>公會參與：</strong>主動參與公會活動，包括公會戰和公會副本。這不僅能獲得更多獎勵，還能結識固定隊友。</li>
+          <li><strong>交易操作：</strong>開始在交易行中進行買賣操作，累積金幣。學會判斷哪些材料會在未來版本中漲價，提前囤貨。</li>
+          <li><strong>競技場：</strong>開始認真打競技場，研究各職業的技能和連招，提升勝率。目標是每週穩定獲得 500+ 競技幣。</li>
+        </ul>
+
+        <h3 id="late-game-strategy">後期玩家建議（Lv.60+）</h3>
+        <p>後期玩家的重點應該轉向極致優化和長期目標：</p>
+        <ul>
+          <li><strong>完美路線：</strong>使用完美路線（2 小時版本），確保完成所有任務和額外內容。開始追求每日全任務完成的成就。</li>
+          <li><strong>裝備極致化：</strong>深淵副本是獲取傳說級材料的唯一途徑，每日不可中斷。建議固定組一個高效率的深淵副本隊伍。</li>
+          <li><strong>生活技能大師：</strong>將主要生活技能提升到 Lv.40+，解鎖最高級的採集點。高級材料的利潤遠超低級材料。</li>
+          <li><strong>市場壟斷：</strong>利用對遊戲機制的深入了解，在交易行中尋找低價物品和稀缺商品，建立穩定的金幣收入來源。</li>
+          <li><strong>限時活動全攻略：</strong>後期玩家有足夠的戰力完成所有限時活動，確保不錯過任何限定獎勵。建議提前囤積活動所需的資源。</li>
+          <li><strong>社交管理：</strong>維護好公會關係和固定隊友名單，高難度內容需要可靠的夥伴。考慮創建或管理自己的公會。</li>
+        </ul>
+
+        <!-- 七、常見問題 FAQ -->
+        <h2 id="faq">七、常見問題 FAQ</h2>
+
+        <h3 id="faq1">Q1：每日任務什麼時候重置？如果錯過了怎麼辦？</h3>
+        <p>每日任務在<strong>台灣時間凌晨 05:00</strong> 重置。如果當天未能完成所有任務，未完成的任務進度會在重置時清除，但已完成的獎勵如果尚未領取，會自動發送到遊戲信箱，有效期為 7 天。因此不需要擔心「浪費」了已獲得的獎勵。建議養成在重置前檢查信箱和領取獎勵的習慣。如果你因為特殊情況（如出差、旅行）無法上線，只要在 7 天內登入領取信箱中的獎勵即可。</p>
+
+        <h3 id="faq2">Q2：委託任務可以刷新嗎？刷新有什麼限制？</h3>
+        <p>委託任務每日可以免費刷新 1 次，之後每次刷新需要消耗 50 鑽石。免費刷新次數在每日 05:00 重置。如果你對當前的委託獎勵不滿意，建議使用免費刷新。花費鑽石刷新只建議在以下情況：(1) 你急需特定類型的經驗值或材料；(2) 當天的三個委託都是高難度但獎勵豐厚的，你有把握完成但需要更好的任務組合。一般情況下不建議花費鑽石刷新，因為 50 鑽石的投入產出比不如直接完成現有任務。</p>
+
+        <h3 id="faq3">Q3：深淵副本打不過怎麼辦？</h3>
+        <p>深淵副本是每日任務中難度最高的內容，打不過是很正常的。以下是幾個建議：(1) <strong>組隊前往：</strong>在世界頻道或公會中尋找隊友，4 人組隊的難度遠低於單人挑戰。(2) <strong>提升戰力：</strong>先將武器強化到至少 +8，並裝備適合的附魔。(3) <strong>選擇合適的難度：</strong>深淵副本有普通和困難兩個難度，先從普通難度開始。(4) <strong>學習 BOSS 機制：</strong>深淵副本的 BOSS 有固定的攻擊模式，觀察並閃避是通關的關鍵。(5) <strong>利用消耗品：</strong>攜帶足夠的回復藥水和增益藥水，能顯著提升生存能力。即使暫時無法通關，每次進入副本都能獲得基礎獎勵，不要放棄嘗試。</p>
+
+        <h3 id="faq4">Q4：競技場怎麼打勝率比較高？</h3>
+        <p>提升競技場勝率的關鍵在於：(1) <strong>了解對手職業：</strong>在匹配畫面中查看對手的職業，針對性地調整技能配置和戰術。(2) <strong>掌握距離感：</strong>不同職業有不同的最佳作戰距離，例如弓手要保持遠距離，格鬥家要拉近距離。(3) <strong>利用地形：</strong>競技場中有障礙物和高低差，善用地形可以獲得戰術優勢。(4) <strong>技能循環：</strong>不要一次性釋放所有技能，合理安排技能的使用順序和冷卻時間。(5) <strong>觀察對手習慣：</strong>大多數玩家都有固定的攻擊模式，觀察幾次後就能找到破綻。建議先在練習模式中熟悉各職業的技能，再進入正式對戰。</p>
+
+        <h3 id="faq5">Q5：生活技能怎麼練比較快？</h3>
+        <p>生活技能的提升主要依賴持續的採集和製作行為。以下是快速練等的建議：(1) <strong>選擇適合等級的採集點：</strong>太高級的採集點成功率低，太低級的經驗少，選擇成功率在 70-85% 的採集點效率最高。(2) <strong>使用工具升級：</strong>更好的工具能提升採集成功率和速度，建議優先投資工具品質。(3) <strong>利用增益效果：</strong>某些食物和藥水能暫時提升生活技能經驗值，製作前記得使用。(4) <strong>批量採集：</strong>一次集中採集比分散多次效率更高，因為工具耐久和移動時間的消耗會降低整體效率。(5) <strong>製作高需求物品：</strong>製作市場需求大的物品不僅能獲得經驗，還能賺取金幣。建議從藥水和食物開始，這些物品的需求穩定且材料容易取得。</p>
+
+        <h3 id="faq6">Q6：鑽石應該怎麼花最划算？</h3>
+        <p>鑽石是遊戲中最珍貴的貨幣，花費需要謹慎規劃。以下是最划算的使用建議：(1) <strong>背包擴充（最優先）：</strong>背包空間直接影響遊戲效率，建議至少擴充到 120 格。(2) <strong>每日體力補充：</strong>體力是限制每日遊玩量的關鍵，補充體力能讓你完成更多任務。(3) <strong>限時活動抽獎：</strong>如果有心儀的限時獎勵，適度投入鑽石抽獎是值得的。(4) <strong>深淵副本次數購買：</strong>如果你的戰力足夠，購買額外的深淵副本次數能加速裝備養成。(5) <strong>不建議：</strong>不要將鑽石花在普通抽獎、低階材料購買或刷新委託任務上，這些都是低效率的使用方式。</p>
+
+        <h3 id="faq7">Q7：怎麼判斷一個活動值不值得參加？</h3>
+        <p>判斷活動價值的標準：(1) <strong>限定獎勵：</strong>如果獎勵包含限定時裝、稱號或裝備（結束後無法取得），強烈建議參加。(2) <strong>時間投入：</strong>計算完成活動所需的時間，與可能獲得的獎勵做比較。如果每分鐘的獎勵低於日常任務的效率，可以考慮放棄。(3) <strong>材料需求：</strong>活動是否需要大量消耗你正在累積的資源？如果是，需要評估是否值得。(4) <strong>重複價值：</strong>有些活動獎勵可以重複獲得（如材料箱），這類活動的價值通常較高。(5) <strong>社群評價：</strong>關注遊戲社群中其他玩家對活動的評價，可以幫助你做出更好的判斷。</p>
+
+        <!-- 八、總結 -->
+        <h2 id="conclusion">八、總結</h2>
+        <p>瑪奇 Mobile 的每日任務系統設計得相當完善，為不同類型的玩家都提供了合適的遊玩節奏。無論你是每天只玩 30 分鐘的休閒玩家，還是願意投入 2 小時的硬核玩家，都能從每日任務中獲得穩定且有意義的獎勵。</p>
+        <p>以下是最重要的幾個要點：</p>
+        <ul>
+          <li><strong>簽到是最低成本的高回報任務：</strong>每天花 1 分鐘完成簽到，累積下來的鑽石和獎勵非常可觀。中斷連續簽到是最大的損失。</li>
+          <li><strong>優先完成高 CP 值任務：</strong>簽到、深淵副本和委託任務是 CP 值最高的三個任務，即使時間有限也應該優先完成。</li>
+          <li><strong>根據自身階段調整策略：</strong>新手專注升級和解鎖系統，中期開始強化裝備，後期追求極致優化。不要盲目跟隨他人的遊玩方式。</li>
+          <li><strong>善用週末加成：</strong>週末的經驗值加成和掉落率提升是加速養成的最佳時機，合理安排自己的遊戲時間。</li>
+          <li><strong>不要忽視生活技能：</strong>生活技能看似不起眼，但長期累積的材料和金幣收入非常可觀，是穩定的被動收入來源。</li>
+          <li><strong>社交是遊戲的一部分：</strong>加入公會、結識隊友不僅能獲得更多獎勵，還能讓遊戲體驗更加豐富。獨行俠在後期會遇到很多困難。</li>
+        </ul>
+        <p>最後，遊戲的本質是享受過程。不要讓每日任務變成一種負擔，根據自己的時間和心情合理安排遊玩計畫。如果某天實在沒時間完成所有任務，至少完成簽到和 3 個委託任務就已經很好了。祝各位冒險者在艾琳大陸上玩得愉快！</p>
+        <blockquote>
+          <strong>最後提醒：</strong>本攻略基於 2026 年 7 月版本撰寫，遊戲內容可能會隨版本更新而調整。建議玩家關注官方公告，及時了解任務系統的最新變化。如有疑問，歡迎在留言區討論！
+        </blockquote>
+
+      </div>
+
+      <!-- Article Footer -->
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-blue">每日任務</span>
+          <span class="badge badge-green">任務攻略</span>
+          <span class="badge badge-gold">瑪奇Mobile</span>
+          <span class="badge badge-red">效率攻略</span>
+          <span class="badge badge-purple">新手必看</span>
+        </div>
+
+        <!-- Google AdSense -->
+        <div class="ad-slot my-6" style="min-height:90px;">廣告位<br>728×90</div>
+
+        <!-- Related Articles -->
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="newbie-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-indigo-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">新手入門完全指南</h4>
+              <p class="text-gray-500 text-xs mt-1">從零開始的艾琳冒險攻略</p>
+            </div>
+          </a>
+          <a href="tier-list.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-amber-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">職業強度排行榜（Tier List）</h4>
+              <p class="text-gray-500 text-xs mt-1">全職業評分與適合玩家類型分析</p>
+            </div>
+          </a>
+          <div class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-emerald-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">經濟系統與賺金幣攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">交易行機製與金幣收入最大化</p>
+            </div>
+          </div>
+          <div class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-rose-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">深淵副本攻略大全</h4>
+              <p class="text-gray-500 text-xs mt-1">各層BOSS機制與通關技巧</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIGHT: Ad Sidebar -->
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="ad-slot" style="min-height:250px;">廣告位<br>300×250</div>
+        <div class="ad-slot" style="min-height:600px;">廣告位<br>300×600</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">瑪奇Mobile</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="newbie-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門指南</a></li>
+            <li><a href="tier-list.html" class="text-gray-500 hover:text-indigo-400 transition">職業排行榜</a></li>
+            <li><a href="daily-quest.html" class="text-gray-500 hover:text-indigo-400 transition">每日任務攻略</a></li>
+            <li><a href="../index.html" class="text-gray-500 hover:text-indigo-400 transition">更多攻略...</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">職業攻略</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">副本攻略</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">生活技能</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">裝備養成</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">任務攻略</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">聯絡方式</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">隱私權政策</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">服務條款</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

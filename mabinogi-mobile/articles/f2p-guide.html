@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="瑪奇 Mobile 無課/微課玩家完全攻略—不花錢也能玩得好的詳細指南，包含資源規劃、每日行程、職業推薦、裝備路線與賺金幣攻略。">
+  <meta name="keywords" content="瑪奇Mobile, 無課攻略, F2P, 微課, 不花錢, 賺金幣, 裝備路線, Mabinogi Mobile">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="瑪奇 Mobile 無課玩家攻略｜不花錢也能玩得好 — 攻略站">
+  <meta property="og:description" content="2026年版無課/微課玩家完整攻略，從零開始的最強生存指南。">
+  <meta property="og:type" content="article">
+  <title>瑪奇 Mobile 無課玩家攻略｜不花錢也能玩得好 — 攻略站</title>
+  <link rel="canonical" href="https://example.com/mabinogi-mobile/articles/f2p-guide.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <!-- Reading Progress -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../index.html" class="nav-link">首頁</a>
+          <a href="../index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="newbie-guide.html" class="nav-link">新手指南</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../index.html" class="nav-link">首頁</a>
+        <a href="../index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="newbie-guide.html" class="nav-link">新手指南</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../index.html" class="hover:text-indigo-400 transition">首頁</a>
+      <span class="mx-2">›</span>
+      <a href="../index.html" class="hover:text-indigo-400 transition">瑪奇Mobile</a>
+      <span class="mx-2">›</span>
+      <span class="text-gray-300">無課玩家攻略</span>
+    </nav>
+  </div>
+
+  <!-- ===== ARTICLE LAYOUT ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <!-- LEFT: TOC -->
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER: Article Content -->
+    <article class="flex-1 min-w-0">
+      <!-- Article Header -->
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">瑪奇 Mobile 無課玩家攻略｜不花錢也能玩得好</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            攻略站編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-24
+          </span>
+          <span>·</span>
+          <span>約 18 分鐘閱讀</span>
+          <span class="badge badge-green">玩法攻略</span>
+        </div>
+      </header>
+
+      <!-- Article Body -->
+      <div id="article-content" class="article-content">
+
+        <!-- ==================== 一、無課玩家的優勢與劣勢 ==================== -->
+        <h2 id="pros-cons">一、無課玩家的優勢與劣勢</h2>
+        <p>在瑪奇 Mobile 的世界裡，無課（F2P）玩家佔了非常大的比例。你不需要花任何一毛錢，也能在遊戲中獲得完整的冒險體驗。事實上，無課玩家有許多獨特的優勢，只要掌握正確的方法，你完全可以跟課金玩家一樣享受遊戲樂趣。</p>
+
+        <h3 id="f2p-advantages">無課玩家的優勢</h3>
+        <ul>
+          <li><strong>零經濟壓力：</strong>不用擔心花了多少錢、有沒有值得回本。遊戲對你來說完全是免費的娛樂，每一筆收入都是額外的驚喜。</li>
+          <li><strong>更深度理解遊戲機制：</strong>因為不能用錢直接跳過困難，你必須深入理解遊戲的每個系統，包括製作、採集、交易、技能搭配等。這些知識在後期會成為你最大的資產。</li>
+          <li><strong>更強的成就感：</strong>當你靠自己的努力打造出一件紫色裝備，那種成就感是課金玩家花錢直接買到無法比擬的。</li>
+          <li><strong>更長的遊戲壽命：</strong>無課玩家的進度自然較慢，這反而讓遊戲內容可以讓你享受更長的時間。課金玩家可能一個月就畢業了，你可以慢慢玩三個月甚至半年。</li>
+          <li><strong>更健康的遊戲心態：</strong>不會因為「別人都比我強」而焦慮，因為你知道自己是用自己的節奏在玩。遊戲的本質是娛樂，不是比賽。</li>
+        </ul>
+
+        <h3 id="f2p-disadvantages">無課玩家的劣勢</h3>
+        <ul>
+          <li><strong>資源獲取速度較慢：</strong>鑽石、稀有材料、高級裝備的取得速度明顯低於課金玩家，這是必須面對的現實。</li>
+          <li><strong>部分內容需要更長的準備時間：</strong>高難度副本可能需要更久的裝備累積才能挑戰，PVP 中也可能因為裝備差距而處於劣勢。</li>
+          <li><strong>時裝與外觀選擇受限：</strong>許多好看的時裝是課金限定或鑽石商城物品，無課玩家的外觀選擇相對有限。</li>
+          <li><strong>欄位與背包壓力：</strong>免費欄位有限，如果不花鑽石擴充，物品管理會成為日常課題。</li>
+        </ul>
+
+        <h3 id="f2p-mindset">心態調整建議</h3>
+        <blockquote>
+          <strong>核心理念：</strong>無課不是「什麼都沒有」，而是「用智慧取代金錢」。把遊戲當成一場長期經營的模擬遊戲，享受每一步成長的過程。
+        </blockquote>
+        <p>首先，<strong>不要跟課金玩家比進度</strong>。這是最重要的心態調整。課金玩家花了真金白銀，他們的進度快是正常的。你要比的是：在相同時間內，你作為無課玩家能成長多少。其次，<strong>設定自己的小目標</strong>。例如「這個月我要存到 100 萬金幣」、「這週我要把弓手練到 50 級」，一個個小目標的達成會給你持續的動力。最後，<strong>享受過程而非結果</strong>。瑪奇 Mobile 的魅力在於它的世界觀、劇情和冒險體驗，這些都是免費的。</p>
+
+        <!-- ==================== 二、無課玩家資源規劃 ==================== -->
+        <h2 id="resource-planning">二、無課玩家資源規劃</h2>
+        <p>資源管理是無課玩家最重要的技能。每一枚金幣、每一顆鑽石都要花在刀口上。以下是無課玩家各類資源的詳細規劃指南：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>資源類型</th>
+              <th>取得管道</th>
+              <th>每日預估產量</th>
+              <th>使用優先級</th>
+              <th>使用建議</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>金幣</strong></td>
+              <td>每日任務、副本掉落、交易行販售、採集販售</td>
+              <td>~50,000</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>優先升級裝備強化、技能升級。不要花在商城消耗品上。</td>
+            </tr>
+            <tr>
+              <td><strong>鑽石</strong></td>
+              <td>簽到獎勵、成就解鎖、活動贈送、維護補償</td>
+              <td>~100</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>優先購買背包欄位擴充，其次是角色欄位。絕對不要抽轉蛋。</td>
+            </tr>
+            <tr>
+              <td><strong>材料</strong></td>
+              <td>野外採集、副本掉落、任務獎勵</td>
+              <td>不固定</td>
+              <td>⭐⭐⭐</td>
+              <td>優先製作自己的裝備，多餘的賣交易行換金幣。</td>
+            </tr>
+            <tr>
+              <td><strong>經驗值</strong></td>
+              <td>主線任務、每日任務、副本挑戰、掛機刷怪</td>
+              <td>不固定</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>優先推主線任務，主線給的經驗和獎勵最豐富。</td>
+            </tr>
+            <tr>
+              <td><strong>體力/耐力</strong></td>
+              <td>時間回復、藥水補充</td>
+              <td>自然回復為主</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>優先用在高收益副本，不要浪費在低價值活動上。</td>
+            </tr>
+            <tr>
+              <td><strong>技能點</strong></td>
+              <td>升級獎勵、任務獎勵</td>
+              <td>隨等級提升</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>集中點主力技能，不要平均分配。參考職業攻略的技能配置。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="diamond-priority">鑽石使用優先順序（極重要）</h3>
+        <p>鑽石是無課玩家最稀缺的貨幣，花錯了可能要多花好幾週才能彌補。以下是鑽石花費的絕對優先順序：</p>
+        <ol>
+          <li><strong>背包欄位擴充（第一優先）：</strong>初始欄位根本不夠用，建議至少擴充到 80 格以上。這會直接影響你採集和刷副本的效率。</li>
+          <li><strong>角色欄位擴充（第二優先）：</strong>如果你打算練第二個職業，至少需要一個額外角色欄位。建議等到確定要練第二職再買。</li>
+          <li><strong>倉庫欄位擴充（第三優先）：</strong>當你的材料和裝備越積越多時，倉庫欄位會成為必需品。</li>
+          <li><strong>便利性功能（酌量）：</strong>自動戰鬥時間擴充、快速傳送等，可以提升效率但非必需。</li>
+        </ol>
+
+        <blockquote>
+          <strong>絕對不要做的事：</strong>不要用鑽石抽轉蛋、不要用鑽石復活、不要用鑽石購買金幣商城能買到的消耗品。轉蛋的機率對無課玩家來說是不可承受的風險。
+        </blockquote>
+
+        <!-- ==================== 三、無課玩家每日行程 ==================== -->
+        <h2 id="daily-routine">三、無課玩家每日行程</h2>
+        <p>根據你每天能投入的時間，這裡提供三種版本的每日行程安排。選擇最適合你的版本，持之以恆就能穩定成長。</p>
+
+        <h3 id="routine-30min">30 分鐘版本 — 快速清單型</h3>
+        <p>適合時間有限的玩家，確保每天不漏掉高收益的免費內容。</p>
+        <table>
+          <thead>
+            <tr>
+              <th>時間</th>
+              <th>活動</th>
+              <th>預計收益</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5 分鐘</td>
+              <td>領取簽到獎勵、郵件獎勵、活躍度獎勵</td>
+              <td>鑽石 50~100、材料若干</td>
+            </tr>
+            <tr>
+              <td>10 分鐘</td>
+              <td>完成每日任務（選擇經驗值最高的 3~5 個）</td>
+              <td>經驗值、金幣 ~20,000</td>
+            </tr>
+            <tr>
+              <td>10 分鐘</td>
+              <td>刷一次日常副本（選擇最高難度能打過的）</td>
+              <td>經驗值、裝備掉落、材料</td>
+            </tr>
+            <tr>
+              <td>5 分鐘</td>
+              <td>採集（家園或公共區域的稀有資源點）</td>
+              <td>材料 30~50 個</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="routine-1hour">1 小時版本 — 穩定成長型</h3>
+        <p>最推薦的版本，效率與收益取得最佳平衡。</p>
+        <table>
+          <thead>
+            <tr>
+              <th>時間</th>
+              <th>活動</th>
+              <th>預計收益</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5 分鐘</td>
+              <td>領取所有免費獎勵與郵件</td>
+              <td>鑽石、材料</td>
+            </tr>
+            <tr>
+              <td>15 分鐘</td>
+              <td>完成全部每日任務</td>
+              <td>經驗值、金幣 ~30,000</td>
+            </tr>
+            <tr>
+              <td>20 分鐘</td>
+              <td>刷 2~3 次日常副本</td>
+              <td>經驗值、裝備、材料</td>
+            </tr>
+            <tr>
+              <td>10 分鐘</td>
+              <td>完成主線或支線任務（推進劇情）</td>
+              <td>大量經驗值、鑽石獎勵</td>
+            </tr>
+            <tr>
+              <td>10 分鐘</td>
+              <td>採集 + 製作（製作當天採到的材料）</td>
+              <td>成品裝備或材料（可賣交易行）</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="routine-2hour">2 小時版本 — 全面發展型</h3>
+        <p>適合假日或時間充裕的日子，最大化每日收益。</p>
+        <table>
+          <thead>
+            <tr>
+              <th>時間</th>
+              <th>活動</th>
+              <th>預計收益</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5 分鐘</td>
+              <td>領取所有獎勵</td>
+              <td>鑽石、材料</td>
+            </tr>
+            <tr>
+              <td>15 分鐘</td>
+              <td>完成全部每日任務</td>
+              <td>經驗值、金幣 ~30,000</td>
+            </tr>
+            <tr>
+              <td>30 分鐘</td>
+              <td>挑戰 3~5 次副本（含每日限定副本）</td>
+              <td>經驗值、裝備、材料、金幣</td>
+            </tr>
+            <tr>
+              <td>20 分鐘</td>
+              <td>推主線/支線任務</td>
+              <td>大量經驗值、鑽石</td>
+            </tr>
+            <tr>
+              <td>20 分鐘</td>
+              <td>深入採集（遍歷多個採集點）</td>
+              <td>稀有材料 50~80 個</td>
+            </tr>
+            <tr>
+              <td>15 分鐘</td>
+              <td>製作裝備 + 整理交易行掛單</td>
+              <td>裝備、金幣收入</td>
+            </tr>
+            <tr>
+              <td>15 分鐘</td>
+              <td>PVP 或休閒活動（競技場、公會活動等）</td>
+              <td>競技場幣、公會貢獻</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <strong>重點提醒：</strong>不管選哪個版本，「領取免費獎勵」和「完成每日任務」是絕對不能跳過的。這兩項的 CP 值（成本效益比）最高，是你作為無課玩家最重要的成長來源。
+        </blockquote>
+
+        <!-- ==================== 四、無課玩家職業推薦 ==================== -->
+        <h2 id="class-recommend">四、無課玩家職業推薦</h2>
+        <p>職業選擇對無課玩家至關重要。有些職業在低裝備投入下就能發揮出色的表現，而有些職業則需要大量資源才能發光發熱。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>推薦等級</th>
+              <th>職業</th>
+              <th>低配評分</th>
+              <th>無課適合度</th>
+              <th>核心原因</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="text-green-400 font-bold">⭐ 最推薦</span></td>
+              <td><strong>劍士</strong></td>
+              <td>9.0/10</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>白裝就能打、生存最強、操作最簡單</td>
+            </tr>
+            <tr>
+              <td><span class="text-green-400 font-bold">⭐ 最推薦</span></td>
+              <td><strong>弓手</strong></td>
+              <td>8.5/10</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>遠程安全、刷怪效率高、裝備需求低</td>
+            </tr>
+            <tr>
+              <td><span class="text-blue-400 font-bold">推薦</span></td>
+              <td><strong>格鬥家</strong></td>
+              <td>7.5/10</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>連招流暢、不依賴裝備數值、打擊感佳</td>
+            </tr>
+            <tr>
+              <td><span class="text-blue-400 font-bold">推薦</span></td>
+              <td><strong>槍騎士</strong></td>
+              <td>7.0/10</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>坦克定位易組隊、增益技能實用</td>
+            </tr>
+            <tr>
+              <td><span class="text-yellow-400 font-bold">普通</span></td>
+              <td><strong>法師</strong></td>
+              <td>6.5/10</td>
+              <td>⭐⭐⭐</td>
+              <td>需要裝備支持魔力值、前期傷害偏低</td>
+            </tr>
+            <tr>
+              <td><span class="text-red-400 font-bold">不推薦</span></td>
+              <td><strong>詩人</strong></td>
+              <td>5.0/10</td>
+              <td>⭐⭐</td>
+              <td>solo 能力最差、需要固定隊友、裝備需求高</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="best-class">最推薦：劍士</h3>
+        <ul>
+          <li><strong>為什麼最適合無課：</strong>劍士是所有職業中對裝備依賴度最低的。即使穿著白色裝備，靠著高倍率的技能傷害和優秀的防禦機制，也能順利推進大部分內容。</li>
+          <li><strong>核心優勢：</strong>防禦姿態提供大量的傷害減免，讓你在裝備不好的情況下也能存活。旋風斬的群體傷害讓刷怪效率極高。技能冷卻短，持續輸出能力穩定。</li>
+          <li><strong>無課技能加點建議：</strong>猛力斬擊（滿）→ 旋風斬（滿）→ 防禦姿態（滿）→ 劍氣爆發（剩餘點數投入）</li>
+          <li><strong>日常體驗：</strong>掛機刷怪輕鬆、單人副本穩定、組隊副本也是熱門選擇。幾乎不會遇到「打不過」的窘境。</li>
+        </ul>
+
+        <h3 id="second-class">次推薦：弓手</h3>
+        <ul>
+          <li><strong>為什麼適合無課：</strong>遠程攻擊意味著你可以在安全距離輸出，減少受到傷害的機會，間接降低了對防禦裝備的需求。箭矢是消耗品但非常便宜，幾乎不花錢。</li>
+          <li><strong>核心優勢：</strong>射程優勢讓你可以無傷刷怪、瞄準射擊的單體爆發很高、閃避翻滾提供了額外的生存手段。</li>
+          <li><strong>無課注意事項：</strong>需要練習走位，被近身時要及時翻滾。箭雨的群體清怪能力需要一定等級才能發揮。</li>
+        </ul>
+
+        <h3 id="not-recommended">不推薦：詩人</h3>
+        <ul>
+          <li><strong>為什麼不適合無課：</strong>詩人的核心價值在於團隊增益，單人戰力在所有職業中墊底。無課玩家通常沒有固定的團隊， solo 體驗非常痛苦。</li>
+          <li><strong>裝備依賴：</strong>詩人的增益效果部分與裝備數值掛鉤，低裝備的詩人增益效果有限，團隊也不太願意組低裝備的詩人。</li>
+          <li><strong>例外情況：</strong>如果你有固定的固定隊友（例如現實朋友一起玩），而且他們願意帶著你，那麼詩人反而可以成為團隊中不可或缺的角色。</li>
+        </ul>
+
+        <!-- ==================== 五、無課玩家裝備路線 ==================== -->
+        <h2 id="gear-path">五、無課玩家裝備路線</h2>
+        <p>裝備是無課玩家最需要規劃的系統。以下是從零開始的裝備發展路線，每個階段都有明確的目標和取得方式。</p>
+
+        <h3 id="gear-early">前期裝備：白裝 → 綠裝（Lv.1~30）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>推薦裝備</th>
+              <th>取得方式</th>
+              <th>預估花費</th>
+              <th>使用時間</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器</td>
+              <td>任務贈送的綠色武器</td>
+              <td>主線任務獎勵</td>
+              <td>免費</td>
+              <td>10~15 等</td>
+            </tr>
+            <tr>
+              <td>防具</td>
+              <td>副本掉落的綠色防具套裝</td>
+              <td>普通難度副本</td>
+              <td>免費</td>
+              <td>10~15 等</td>
+            </tr>
+            <tr>
+              <td>飾品</td>
+              <td>商店販售的基礎飾品</td>
+              <td>NPC 商店</td>
+              <td>~5,000 金幣</td>
+              <td>5~10 等</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>前期裝備不需要特別花心思，跟著主線走就會送你夠用的綠裝。重點是<strong>不要在強化上花太多金幣</strong>，因為這些裝備很快就會被淘汰。強化到 +3 就夠了，把金幣省下來用在中期裝備上。</p>
+
+        <h3 id="gear-mid">中期裝備：綠裝 → 藍裝（Lv.30~60）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>推薦裝備</th>
+              <th>取得方式</th>
+              <th>預估花費</th>
+              <th>使用時間</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器</td>
+              <td>藍色稀有武器</td>
+              <td>副本掉落 / 製作 / 交易行</td>
+              <td>~100,000 金幣</td>
+              <td>20~30 等</td>
+            </tr>
+            <tr>
+              <td>防具</td>
+              <td>藍色稀有防具（至少 3 件套裝效果）</td>
+              <td>副本掉落 / 製作</td>
+              <td>~150,000 金幣</td>
+              <td>20~30 等</td>
+            </tr>
+            <tr>
+              <td>飾品</td>
+              <td>藍色飾品套裝</td>
+              <td>交易行購買</td>
+              <td>~80,000 金幣</td>
+              <td>20~30 等</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>中期是裝備升級的關鍵期。建議<strong>先換武器再換防具</strong>，因為武器的傷害提升對效率的影響最大。藍色裝備可以從副本中機率掉落，也可以透過製作系統自己打造。如果你有認真採集，製作是一個非常省錢的選擇。強化建議到 +5，性價比最高。</p>
+
+        <h3 id="gear-late">後期裝備：藍裝 → 紫裝（Lv.60~90）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>推薦裝備</th>
+              <th>取得方式</th>
+              <th>預估花費</th>
+              <th>使用時間</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器</td>
+              <td>紫色史詩武器</td>
+              <td>高難副本掉落 / 交易行</td>
+              <td>~500,000 金幣</td>
+              <td>20~30 等</td>
+            </tr>
+            <tr>
+              <td>防具</td>
+              <td>紫色史詩防具（追求 5 件套裝）</td>
+              <td>高難副本掉落 / 製作</td>
+              <td>~800,000 金幣</td>
+              <td>20~30 等</td>
+            </tr>
+            <tr>
+              <td>飾品</td>
+              <td>紫色史詩飾品</td>
+              <td>交易行</td>
+              <td>~300,000 金幣</td>
+              <td>20~30 等</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>後期裝備是無課玩家面臨的第一個大關卡。紫色裝備的價格不菲，但<strong>不要急著一次湊齊</strong>。建議按照「武器 → 頭盔 → 衣服 → 褲子 → 鞋子 → 飾品」的順序逐步更換。每次更換一件，你的戰力就會有明顯提升。強化到 +7 是目標，再往上就看個人情況。</p>
+
+        <h3 id="gear-endgame">終極裝備：紫裝 → 橙裝（Lv.90+）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>部位</th>
+              <th>推薦裝備</th>
+              <th>取得方式</th>
+              <th>預估花費</th>
+              <th>說明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>武器</td>
+              <td>橙色傳說武器</td>
+              <td>最高難副本 / 拍賣行</td>
+              <td>~2,000,000+ 金幣</td>
+              <td>無課終極目標</td>
+            </tr>
+            <tr>
+              <td>防具</td>
+              <td>橙色傳說防具</td>
+              <td>最高難副本 / 製作</td>
+              <td>~3,000,000+ 金幣</td>
+              <td>可遇不可求</td>
+            </tr>
+            <tr>
+              <td>飾品</td>
+              <td>橙色傳說飾品</td>
+              <td>限定活動 / 拍賣行</td>
+              <td>~1,500,000+ 金幣</td>
+              <td>有活動時優先入手</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>橙色裝備對無課玩家来说是終極目標，可能需要數月的累積才能湊齊。但好消息是，<strong>紫色裝備在強化到 +8 以上時，戰力已經非常接近低強化的橙色裝備</strong>。所以如果你不想追橙裝，專注於把紫裝強化到極致也是一個完全可行的路線。</p>
+
+        <!-- ==================== 六、無課玩家賺金幣攻略 ==================== -->
+        <h2 id="gold-guide">六、無課玩家賺金幣攻略</h2>
+        <p>金幣是無課玩家的命脈。以下提供四種經過驗證的賺金幣方法，你可以根據自己的喜好和時間選擇最適合的方式。</p>
+
+        <h3 id="gold-gathering">採集賺錢法</h3>
+        <p>採集是無課玩家最穩定的收入來源。不需要任何成本，只需要時間和耐心。</p>
+        <ul>
+          <li><strong>稀有礦石採集：</strong>地圖上的稀有礦石節點每 2 小時刷新一次，採到的稀有礦石在交易行可以賣到 5,000~15,000 金幣一個。每天定時巡邏採集點，一個月下來收入非常可觀。</li>
+          <li><strong>藥草採集：</strong>製作藥水的藥草需求量永遠很大。特別是高級回復藥水的材料，長期以來價格都很穩定。每天花 15 分鐘採藥草，一個月可以存下 50 萬以上的金幣。</li>
+          <li><strong>木材與布料：</strong>製作裝備和家具的基礎材料。雖然單價不高，但勝在量大。建議邊做其他事邊掛機採集。</li>
+          <li><strong>稀有材料蹲點：</strong>某些特殊地圖會隨機出現稀有採集點，出現時間不固定但收益極高。可以加入社群關注其他玩家的情報分享。</li>
+        </ul>
+
+        <h3 id="gold-crafting">製作賺錢法</h3>
+        <p>利用低買高賣的原理，將廉價材料加工成高價成品出售。</p>
+        <ul>
+          <li><strong>裝備製作轉售：</strong>收集副本掉落的設計圖和材料，製作市場需求量大的藍色或紫色裝備。一件好的藍色武器可以賣 20 萬以上，而材料成本可能只有 5 萬。</li>
+          <li><strong>藥水製作：</strong>製作各級回復藥水和增益藥水。雖然利潤不如裝備，但銷量穩定，是長期收入的好來源。</li>
+          <li><strong>附魔捲軸：</strong>如果你的生活技能等級夠高，製作附魔捲軸的利潤非常豐厚。特別是攻擊力附魔和防禦力附魔，始終保持高需求。</li>
+        </ul>
+
+        <h3 id="gold-trading">交易行賺錢法</h3>
+        <p>利用市場價格波動來賺取差價，需要一定的市場觀察力。</p>
+        <ul>
+          <li><strong>低買高賣：</strong>觀察交易行的價格趨勢，在價格低谷時買入，在價格高峰時賣出。通常維護更新後或活動結束時，物價會有明顯波動。</li>
+          <li><strong>資訊差套利：</strong>不同伺服器的物價可能有差異，如果你有開多個角色的習慣，可以利用這個資訊差來賺取利潤。</li>
+          <li><strong>囤貨策略：</strong>在活動期間大量收購限時材料，活動結束後物價回升時再賣出。但要注意風險，如果判斷錯誤可能會虧錢。</li>
+        </ul>
+
+        <h3 id="gold-events">活動賺錢法</h3>
+        <p>遊戲定期舉辦的活動是無課玩家最大的金幣來源之一。</p>
+        <ul>
+          <li><strong>限時活動任務：</strong>每次活動通常會贈送大量的金幣、鑽石和材料獎勵。務必把活動任務全部完成，這是免費的財富。</li>
+          <li><strong>活動商店：</strong>活動代幣可以兌換稀有物品，有些物品在活動結束後會大幅漲價。先兌換自己需要的，多餘的代幣兌換可交易物品留著以後賣。</li>
+          <li><strong>節日活動：</strong>春節、周年慶等大型活動的獎勵通常最豐富。提前存好體力和材料，活動開始時全力衝刺。</li>
+        </ul>
+
+        <table>
+          <thead>
+            <tr>
+              <th>賺錢方法</th>
+              <th>每日所需時間</th>
+              <th>每日預估收入</th>
+              <th>門檻要求</th>
+              <th>推薦度</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>稀有礦石採集</td>
+              <td>30 分鐘</td>
+              <td>30,000~50,000</td>
+              <td>無</td>
+              <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+              <td>藥草採集</td>
+              <td>15 分鐘</td>
+              <td>20,000~40,000</td>
+              <td>生活技能 Lv.20+</td>
+              <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+              <td>裝備製作轉售</td>
+              <td>20 分鐘</td>
+              <td>50,000~100,000</td>
+              <td>製作技能 Lv.40+</td>
+              <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+              <td>交易行套利</td>
+              <td>10 分鐘</td>
+              <td>10,000~80,000</td>
+              <td>需要市場敏感度</td>
+              <td>⭐⭐⭐</td>
+            </tr>
+            <tr>
+              <td>活動刷金</td>
+              <td>視活動而定</td>
+              <td>100,000~500,000</td>
+              <td>活動期間限定</td>
+              <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- ==================== 七、無課玩家 vs 課金玩家 ==================== -->
+        <h2 id="f2p-vs-p2w">七、無課玩家 vs 課金玩家</h2>
+        <p>很多人覺得「不花錢就玩不贏課金玩家」，但事實真的如此嗎？讓我們來做一個客觀的分析。</p>
+
+        <h3 id="gap-analysis">差距分析</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>比較項目</th>
+              <th>無課玩家（3個月）</th>
+              <th>課金玩家（3個月）</th>
+              <th>差距幅度</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>角色等級</td>
+              <td>Lv.70~80</td>
+              <td>Lv.85~95</td>
+              <td>約 15~20%</td>
+            </tr>
+            <tr>
+              <td>裝備等級</td>
+              <td>全藍裝 +7</td>
+              <td>全紫裝 +8</td>
+              <td>約 30~40%</td>
+            </tr>
+            <tr>
+              <td>戰力數值</td>
+              <td>15,000~20,000</td>
+              <td>30,000~40,000</td>
+              <td>約 50~100%</td>
+            </tr>
+            <tr>
+              <td>金幣持有</td>
+              <td>200~500 萬</td>
+              <td>1,000~3,000 萬</td>
+              <td>約 300~500%</td>
+            </tr>
+            <tr>
+              <td>PVP 排名</td>
+              <td>中段班</td>
+              <td>前段班</td>
+              <td>明顯但非不可逆</td>
+            </tr>
+            <tr>
+              <td>副本通關</td>
+              <td>普通~困難</td>
+              <td>困難~傳說</td>
+              <td>約 1~2 個難度等級</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="close-gap">如何縮小差距</h3>
+        <ul>
+          <li><strong>善用遊戲機制：</strong>無課玩家最大的武器是「知識」。深入了解每個系統的運作方式，找到最有效率的玩法。例如，知道哪個副本的 CP 值最高、哪個時間段的物價最好、哪些活動的獎勵最值得衝。</li>
+          <li><strong>把握每一次活動：</strong>遊戲活動是無課玩家拉近差距的最佳機會。活動贈送的鑽石、材料和裝備，加起來的價值可能相當於數週的課金投入。務必把每個活動的獎勵都領好領滿。</li>
+          <li><strong>加入活躍的公會：</strong>公會成員可以互相幫助、分享情報、組隊打副本。一個好的公會可以讓你獲得更多單人無法取得的資源和經驗。</li>
+          <li><strong>專注生活技能：</strong>高等級的生活技能可以讓你製作高價值的物品出售，這是無課玩家獨有的金幣來源。很多課金玩家因為懶得練生活技能，寧願直接在交易行購買。</li>
+          <li><strong>培養交易嗅覺：</strong>學會觀察市場趨勢，利用物價波動來獲利。這需要時間和經驗，但一旦掌握，將成為你最強的經濟來源。</li>
+        </ul>
+
+        <h3 id="f2p-advantages-comparison">無課玩家的獨特優勢</h3>
+        <ul>
+          <li><strong>更強的遊戲理解：</strong>無課玩家被迫深入理解每個系統，這讓你在遊戲知識方面往往比課金玩家更強。在組隊時，很多隊長其實更喜歡有經驗的無課玩家，因為他們通常更認真、更懂機制。</li>
+          <li><strong>更強的適應能力：</strong>因為沒有花錢「走捷徑」，無課玩家在面對困難時通常更有耐心和毅力。版本更新時，課金玩家可能因為裝備被削弱而失落，但無課玩家早就習慣用現有的資源克服困難。</li>
+          <li><strong>更健康的遊戲關係：</strong>無課玩家通常更珍惜遊戲中的社交關係。你不會因為「我花了比你多的錢」而有優越感，也不會因為「他花了比我多」而嫉妒。這種健康的心態讓你更容易交到真正的朋友。</li>
+          <li><strong>更持久的遊戲動力：</strong>因為每一步成長都是靠自己努力得來的，你會更珍惜這些成果。課金玩家可能在「畢業」後就失去動力，但無課玩家永遠有下一個目標在等著你。</li>
+        </ul>
+
+        <blockquote>
+          <strong>記住：</strong>瑪奇 Mobile 本質上是一款社交冒險遊戲，不是比數值的遊戲。你的價值不在於戰力數值，而在於你帶來的遊戲體驗。一個幽默風趣的無課玩家，永遠比一個沉默寡言的課金大佬更受歡迎。
+        </blockquote>
+
+        <!-- ==================== 八、常見問題 FAQ ==================== -->
+        <h2 id="faq">八、常見問題 FAQ</h2>
+
+        <h3 id="faq-1">Q1：無課玩家需要多久才能追上課金玩家的進度？</h3>
+        <p>嚴格來說，如果課金玩家持續投入，無課玩家很難完全追上。但在遊戲的核心 PvE 內容上，大約 3~6 個月後差距會明顯縮小。很多副本的門檻並不高，紫色裝備 +7 就足以挑戰大部分內容。更重要的是，遊戲會不斷推出新內容，每次大更新都會讓裝備價值重新洗牌，這是無課玩家縮小差距的最佳時機。</p>
+
+        <h3 id="faq-2">Q2：無課玩家要怎麼應對 PVP？</h3>
+        <p>PVP 確實是無課玩家的弱項，因為裝備差距在 PVP 中最為明顯。但你可以：(1) 專注技術提升，操作和走位可以彌補一部分裝備差距；(2) 選擇職業克制，在匹配中利用職業相性取勝；(3) 參與公會戰等團隊 PVP，你的角色可以專注於輔助和戰術執行，不需要正面对决裝備碾壓的對手；(4) 不要把 PVP 排名當成唯一指標，享受戰鬥過程就好。</p>
+
+        <h3 id="faq-3">Q3：微課（月卡黨）和完全無課差距大嗎？</h3>
+        <p>月卡（通常 30 天 ~150~300 元台幣）提供的每日鑽石和增益效果確實能加速成長，大約能提升 20~30% 的效率。如果你預算有限，月卡是 CP 值最高的課金選擇。但即使不買月卡，完全無課也能玩得很好。差別主要在於：月卡黨可能提早 1~2 週到達某個裝備門檻，但整體遊戲體驗差異不大。</p>
+
+        <h3 id="faq-4">Q4：無課玩家要練第二個角色嗎？</h3>
+        <p>建議先等主角色達到 Lv.60 以上再考慮。第二個角色意味著資源分散，對無課玩家的成長速度會有明顯影響。如果你要練第二角色，建議選擇與主角色互補的職業（例如主劍士配副詩人），這樣在組隊時有更多選擇。另外，第二角色的欄位需要花鑽石購買，要提前規劃鑽石使用。</p>
+
+        <h3 id="faq-5">Q5：交易行手續費怎麼算？有什麼省錢技巧？</h3>
+        <p>交易行通常會收取 5~10% 的手續費。省錢技巧：(1) 盡量一次賣出大量物品，減少交易次數；(2) 關注手續費減免活動，有些活動期間手續費會降低或免除；(3) 如果物品單價不高，考慮直接賣給 NPC 而不是掛交易行；(4) 與公會成員直接交易可以省下手續費，但要注意安全。</p>
+
+        <h3 id="faq-6">Q6：無課玩家適合打精英副本嗎？</h3>
+        <p>完全可以！精英副本的門檻主要是裝備和技術，不是課金。只要你把紫色裝備強化到 +7 以上，並且熟悉 Boss 的技能模式，就能穩定通關精英副本。建議先看攻略影片了解 Boss 機制，然後找公會成員一起組隊。精英副本掉落的裝備和材料是你後期成長的主要來源，一定要積極參與。</p>
+
+        <h3 id="faq-7">Q7：怎麼判斷自己是不是「玩對了」？</h3>
+        <p>最簡單的判斷標準是：你是否每週都在穩定成長？即使成長速度很慢，只要你在持續進步（等級提升、裝備更新、技能升級），就代表你的玩法是正確的。如果你發現自己停滯不前，可能是資源分配出了問題，建議重新檢視本攻略的資源規劃建議。另外，如果你每天上線都覺得「有事可做」，而不是「不知道該做什麼」，也代表你的遊戲節奏是健康的。</p>
+
+        <!-- ==================== 九、總結 ==================== -->
+        <h2 id="conclusion">九、總結</h2>
+        <p>瑪奇 Mobile 是一款對無課玩家非常友善的遊戲。它的核心樂趣——探索世界、體驗劇情、培養角色、結交朋友——全部都是免費的。課金只是加速成長的手段，不是享受遊戲的必要條件。</p>
+
+        <p>作為無課玩家，你最重要的資產不是金幣或裝備，而是<strong>知識和耐心</strong>。了解遊戲的每個系統、掌握高效的玩法、保持長期經營的心態，這些才是讓你在無課條件下玩得好的關鍵。</p>
+
+        <p>最後，分享幾個無課玩家的黃金法則：</p>
+        <ul>
+          <li><strong>法則一：</strong>鑽石只花在欄位擴充上，其他一律不碰。</li>
+          <li><strong>法則二：</strong>每日任務和免費獎勵永遠是第一優先。</li>
+          <li><strong>法則三：</strong>先換武器再換防具，傷害提升的 CP 值最高。</li>
+          <li><strong>法則四：</strong>加入活躍公會，善用團隊資源。</li>
+          <li><strong>法則五：</strong>享受過程，不要跟任何人比較。</li>
+        </ul>
+
+        <blockquote>
+          <strong>最後的最後：</strong>遊戲是為了快樂，不是為了焦慮。不管你花多少錢、玩多久，只要你在遊戲中找到了快樂，你就是最成功的玩家。祝每一位無課冒險者在瑪奇 Mobile 的世界中玩得開心！
+        </blockquote>
+
+      </div>
+
+      <!-- Article Footer -->
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-green">無課攻略</span>
+          <span class="badge badge-blue">F2P</span>
+          <span class="badge badge-gold">瑪奇Mobile</span>
+          <span class="badge badge-red">賺金幣</span>
+          <span class="badge badge-green">裝備路線</span>
+          <span class="badge badge-blue">資源規劃</span>
+        </div>
+
+        <!-- Related Articles -->
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="newbie-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-indigo-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">新手入門完全指南</h4>
+              <p class="text-gray-500 text-xs mt-1">從零開始的艾琳冒險攻略</p>
+            </div>
+          </a>
+          <a href="tier-list.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-amber-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">職業強度排行榜</h4>
+              <p class="text-gray-500 text-xs mt-1">全職業評分與適合玩家類型分析</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIGHT: Ad Sidebar -->
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="ad-slot" style="min-height:250px;">廣告位<br>300×250</div>
+        <div class="ad-slot" style="min-height:600px;">廣告位<br>300×600</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">瑪奇Mobile</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="newbie-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門指南</a></li>
+            <li><a href="tier-list.html" class="text-gray-500 hover:text-indigo-400 transition">職業排行榜</a></li>
+            <li><a href="f2p-guide.html" class="text-gray-500 hover:text-indigo-400 transition">無課玩家攻略</a></li>
+            <li><a href="../index.html" class="text-gray-500 hover:text-indigo-400 transition">更多攻略...</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">職業攻略</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">副本攻略</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">生活技能</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">裝備養成</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">聯絡方式</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">隱私權政策</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">服務條款</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

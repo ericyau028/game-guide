@@ -1,0 +1,561 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="瑪奇 Mobile 台灣限定內容攻略 — 藍白拖時裝、夜市料理全收集、台灣稱號成就完整指南。台港澳玩家專屬福利與活動詳解。">
+  <meta name="keywords" content="瑪奇Mobile, 台灣限定, 藍白拖, 夜市料理, 台港澳, Mabinogi Mobile, 台灣活動">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="瑪奇Mobile台灣限定內容攻略｜藍白拖、夜市料理全收集 — 攻略站">
+  <meta property="og:description" content="台港澳限定藍白拖時裝、夜市料理、限定稱號完整攻略，台灣玩家必看！">
+  <meta property="og:type" content="article">
+  <title>瑪奇Mobile台灣限定內容攻略｜藍白拖、夜市料理全收集 — 攻略站</title>
+  <link rel="canonical" href="https://example.com/mabinogi-mobile/articles/taiwan-exclusive.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../index.html" class="nav-link">首頁</a>
+          <a href="../index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="newbie-guide.html" class="nav-link">新手指南</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../index.html" class="nav-link">首頁</a>
+        <a href="../index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="newbie-guide.html" class="nav-link">新手指南</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../index.html" class="hover:text-indigo-400 transition">首頁</a>
+      <span class="mx-2">›</span>
+      <a href="../index.html" class="hover:text-indigo-400 transition">瑪奇Mobile</a>
+      <span class="mx-2">›</span>
+      <span class="text-gray-300">台灣限定攻略</span>
+    </nav>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <article class="flex-1 min-w-0">
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">瑪奇 Mobile 台灣限定內容攻略｜藍白拖、夜市料理全收集</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            攻略站編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-24
+          </span>
+          <span>·</span>
+          <span>約 18 分鐘閱讀</span>
+          <span class="badge badge-red">台灣限定</span>
+        </div>
+      </header>
+
+      <div class="mb-8">
+        <div class="ad-slot" style="min-height:100px;">廣告位 Google AdSense 728x90</div>
+      </div>
+
+      <div id="article-content" class="article-content">
+
+        <h2 id="intro">一、台灣限定內容介紹</h2>
+        <p>瑪奇 Mobile（Mabinogi Mobile）於 <strong>2026 年 7 月 22 日</strong>正式在台港澳地區上線，這是繼韓國、日本之後第三個上線的市場。為了慶祝台港澳玩家的加入，官方準備了豐富的「台灣限定」內容，包括專屬時裝、料理系統、限定稱號以及多項在地化活動。這些內容僅在台港澳伺服器中可用，是台灣玩家獨享的福利。</p>
+
+        <h3 id="launch-info">上線日期與伺服器資訊</h3>
+        <table>
+          <thead><tr><th>項目</th><th>資訊</th></tr></thead>
+          <tbody>
+            <tr><td><strong>上線日期</strong></td><td>2026 年 7 月 22 日（三）12:00 GMT+8</td></tr>
+            <tr><td><strong>支援地區</strong></td><td>台灣、香港、澳門</td></tr>
+            <tr><td><strong>伺服器名稱</strong></td><td>台港澳專屬伺服器「艾琳」</td></tr>
+            <tr><td><strong>語言支援</strong></td><td>繁體中文（完整在地化）</td></tr>
+            <tr><td><strong>客服時段</strong></td><td>週一至週五 09:00-18:00 GMT+8</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="exclusive-overview">台灣限定活動概覽</h3>
+        <p>台灣限定內容涵蓋以下幾大類別：</p>
+        <ul>
+          <li><strong>藍白拖時裝：</strong>台灣國民拖鞋化身遊戲時裝，完成指定任務即可免費取得。</li>
+          <li><strong>夜市料理系統：</strong>8 道台灣經典夜市美食，各有不同屬性加成，可透過多種途徑收集。</li>
+          <li><strong>限定稱號與成就：</strong>完成台灣限定挑戰，獲得專屬稱號與能力加成。</li>
+          <li><strong>首週限時活動：</strong>上線首週限定的挑戰任務與獎勵。</li>
+          <li><strong>在地化內容：</strong>包含台灣地圖場景、NPC 台詞以及節慶活動預告。</li>
+        </ul>
+
+        <h3 id="how-to-get">限定內容取得方式總覽</h3>
+        <p>大部分台灣限定內容均可透過遊戲內活動免費取得，無需額外付費。主要取得途徑包括：完成主線或支線任務、參與限時活動、在夜市攤販處購買、以及達成特定成就條件。以下各章節將詳細說明每項內容的取得方式。</p>
+
+        <blockquote>
+          <strong>小提醒：</strong>台灣限定活動為期間限定，部分內容可能在活動結束後無法再次取得。建議玩家盡早完成收集，以免錯過稀有獎勵！
+        </blockquote>
+
+        <h2 id="blue-slippers">二、藍白拖時裝取得攻略</h2>
+        <p>藍白拖是台灣最具代表性的國民拖鞋，在瑪奇 Mobile 中化身為一套充滿台灣味的限定時裝。這套時裝不僅外觀獨特，還附帶實用的屬性加成，是台港澳玩家必備的收藏品。</p>
+
+        <h3 id="slipper-condition">取得條件</h3>
+        <ul>
+          <li><strong>等級要求：</strong>角色等級達到 Lv.10 以上</li>
+          <li><strong>任務起點：</strong>前往「艾琳鎮」中心廣場，與 NPC「阿財伯」對話</li>
+          <li><strong>前置任務：</strong>需完成主線任務「初到艾琳」（第三章）</li>
+          <li><strong>活動期限：</strong>2026/7/22 - 2026/8/31（為期 40 天）</li>
+        </ul>
+
+        <h3 id="slipper-quest">任務流程（圖文教學）</h3>
+        <p>藍白拖任務共分為五個步驟，預計耗時約 30-45 分鐘：</p>
+
+        <p><strong>步驟一：與阿財伯對話</strong></p>
+        <p>前往艾琳鎮中心廣場（座標 X:125, Y:87），找到穿著白色背心的 NPC「阿財伯」。與他對話後，他會提到他的藍白拖在搬運貨物時飛走了，需要你幫忙找回來。</p>
+
+        <p><strong>步驟二：前往海邊尋找拖鞋碎片</strong></p>
+        <p>根據阿財伯的提示，前往「貝爾海灘」（從艾琳鎮向南走約 2 分鐘）。在海灘上搜索三個發光點，分別位於沙灘北端、中部礁石旁、以及南端的椰子樹下。每個發光點需互動一次即可拾取「藍白拖碎片」。</p>
+
+        <p><strong>步驟三：收集修復材料</strong></p>
+        <p>將三片碎片帶回給阿財伯後，他會要求你再收集以下修復材料：</p>
+        <ul>
+          <li>「堅固的橡膠」x5 — 可從貝爾海灘的「沙灘螃蟹」怪物掉落（掉落率約 40%）</li>
+          <li>「柔軟的棉布」x3 — 可在艾琳鎮的布料商店購買（每片 100 金幣）</li>
+          <li>「魔法膠水」x1 — 可在阿財伯旁邊的攤販處免費領取（每日限領一次）</li>
+        </ul>
+
+        <p><strong>步驟四：修復藍白拖</strong></p>
+        <p>收集完所有材料後，回到阿財伯處交給他，觸發修復動畫。修復完成後，藍白拖時裝將自動放入你的背包。</p>
+
+        <p><strong>步驟五：穿上並拍照紀念</strong></p>
+        <p>最後，阿財伯會請你穿上藍白拖，並在艾琳鎮的指定地點（廣場中央的噴泉旁）拍照。拍照完成後即可領取額外獎勵「台灣之心稱號」。</p>
+
+        <h3 id="slipper-stats">時裝屬性</h3>
+        <table>
+          <thead><tr><th>屬性</th><th>數值</th><th>說明</th></tr></thead>
+          <tbody>
+            <tr><td><strong>防禦力</strong></td><td>+3</td><td>輕微提升物理防禦</td></tr>
+            <tr><td><strong>移動速度</strong></td><td>+5%</td><td>穿上後走路更快（跑步特效：拖鞋拍地聲）</td></tr>
+            <tr><td><strong>幸運值</strong></td><td>+8</td><td>提升掉落率與暴擊率</td></tr>
+            <tr><td><strong>魅力值</strong></td><td>+12</td><td>台灣味十足，魅力大增</td></tr>
+            <tr><td><strong>套裝效果</strong></td><td colspan="2">若同時穿戴「阿伯背心」（活動額外獎勵），額外獲得 +10% 經驗值加成</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="slipper-effect">穿戴效果</h3>
+        <p>藍白拖時裝為腳部裝備外觀，穿戴後會替換角色原本的鞋子視覺效果。具體視覺表現如下：</p>
+        <ul>
+          <li><strong>靜止狀態：</strong>角色腳上穿著經典的藍色鞋面、白色鞋底的拖鞋，鞋面有微微的光澤反射。</li>
+          <li><strong>行走狀態：</strong>拖鞋會有輕微的晃動效果，並發出「啪嗒啪嗒」的音效。</li>
+          <li><strong>跑步狀態：</strong>拖鞋後方會產生小型的塵土飛揚特效，增添趣味感。</li>
+          <li><strong>戰鬥狀態：</strong>使用踢擊類技能時，會有特殊的「拖鞋飛踢」特效，視覺效果非常搞笑。</li>
+        </ul>
+
+        <h3 id="slipper-combo">搭配建議</h3>
+        <p>藍白拖時裝可與以下台灣限定物品搭配，獲得額外的視覺與屬性效果：</p>
+        <ul>
+          <li><strong>阿伯背心（白色汗衫）：</strong>可透過完成每日任務「阿財伯的幫手」獲得。搭配藍白拖可觸發「台灣阿伯套裝」效果，+10% 經驗值。</li>
+          <li><strong>台灣啤酒帽：</strong>可在夜市攤販處用 500 金幣購買。搭配後觸發「夏日台灣」效果，+5% 水屬性傷害。</li>
+          <li><strong>鳳梨酥背包：</strong>限時活動獎勵。搭配後觸發「台灣好味道」效果，背包容量 +10 格。</li>
+        </ul>
+
+        <h2 id="night-market">三、夜市料理收集指南</h2>
+        <p>夜市料理是台灣限定內容中最豐富的收集系統，共有 8 道經典台灣美食，每道料理都帶有獨特的屬性加成效果。玩家可透過不同途徑取得這些料理，收集全部 8 道後還能獲得「夜市達人」稱號。</p>
+
+        <h3 id="food-list">夜市料理一覽表</h3>
+        <table>
+          <thead><tr><th>料理名稱</th><th>效果</th><th>取得方式</th><th>稀有度</th></tr></thead>
+          <tbody>
+            <tr><td><strong>珍珠奶茶</strong></td><td>+10% 經驗值（持續 30 分鐘）</td><td>夜市攤販購買（200 金幣）</td><td><span class="text-purple-400">稀有</span></td></tr>
+            <tr><td><strong>鹽酥雞</strong></td><td>+15% 攻擊力（持續 20 分鐘）</td><td>料理製作系統（需 Lv.20 料理技能）</td><td><span class="text-amber-400">史詩</span></td></tr>
+            <tr><td><strong>滷肉飯</strong></td><td>+20% HP 回復速度（持續 60 分鐘）</td><td>每日任務「阿財伯的午餐」獎勵</td><td><span class="text-gray-400">普通</span></td></tr>
+            <tr><td><strong>蚵仔煎</strong></td><td>+10% 暴擊率（持續 20 分鐘）</td><td>活動限定「夜市大胃王」挑戰</td><td><span class="text-amber-400">史詩</span></td></tr>
+            <tr><td><strong>芒果冰</strong></td><td>+5% 移動速度（持續 30 分鐘）</td><td>夜市攤販購買（300 金幣）</td><td><span class="text-purple-400">稀有</span></td></tr>
+            <tr><td><strong>臭豆腐</strong></td><td>+10% 防禦力（持續 20 分鐘）</td><td>料理製作系統（需 Lv.15 料理技能）</td><td><span class="text-gray-400">普通</span></td></tr>
+            <tr><td><strong>滷味拼盤</strong></td><td>+15% 生命值上限（持續 60 分鐘）</td><td>支線任務「夜市的秘密」獎勵</td><td><span class="text-purple-400">稀有</span></td></tr>
+            <tr><td><strong>仙草凍</strong></td><td>+10% 技能傷害（持續 30 分鐘）</td><td>活動限定「傳說夜市」隱藏挑戰</td><td><span class="text-orange-400">傳說</span></td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="food-details">料理詳細解析</h3>
+
+        <p><strong>珍珠奶茶 — 台灣國飲</strong></p>
+        <p>珍珠奶茶是最早取得的夜市料理之一，效果為增加 10% 經驗值，持續 30 分鐘。這道料理非常適合練功時使用，建議在進行經驗值密集的活動（如刷副本或完成日常任務）前飲用。攤販位於艾琳鎮夜市街的入口處，每日可購買 3 杯。珍珠奶茶的製作原料包括「高山茶葉」、「新鮮牛奶」以及「木薯粉圓」，這些材料也可透過生活技能「種植」與「料理」自行生產。</p>
+
+        <p><strong>鹽酥雞 — 戰鬥必備</strong></p>
+        <p>鹽酥雞提供 15% 攻擊力加成，是戰鬥前的最佳選擇。製作這道料理需要料理技能達到 Lv.20，並且準備以下材料：「新鮮雞肉」x3、「九層塔」x2、「地瓜粉」x1。材料可從野外怪物或商店取得。製作成功率為 75%，可使用「調味秘方」提升至 100%。鹽酥雞在所有攻擊類料理中加成最高，建議在挑戰高難度副本或 BOSS 戰前使用，配合隊友的增益效果可以達到最大輸出。</p>
+
+        <p><strong>滷肉飯 — 回復之王</strong></p>
+        <p>滷肉飯提供 20% HP 回復速度加成，持續 60 分鐘，是所有料理中持續時間最長的。每天透過完成「阿財伯的午餐」任務即可獲得，任務內容簡單（通常是收集食材或送餐），適合每日上線時順手完成。滷肉飯的效果在長時間刷怪或連續挑戰副本時特別有用，可以大幅減少使用藥水的頻率，節省金幣開支。</p>
+
+        <p><strong>蚵仔煎 — 暴擊利器</strong></p>
+        <p>蚵仔煎提供 10% 暴擊率加成，需要透過限時活動「夜市大胃王」取得。活動中玩家需要在 60 秒內吃完指定數量的食物小遊戲，達到 S 級評價即可獲得。這道料理的取得有一定難度，但效果非常強力，建議搭配其他暴擊裝備使用。蚵仔煎的暴擊加成可與「暴擊藥水」的效果疊加，理論上可將暴擊率提升至 35% 以上。</p>
+
+        <p><strong>芒果冰 — 夏日涼爽</strong></p>
+        <p>芒果冰提供 5% 移動速度加成，適合在需要快速移動的場景中使用。可在夜市攤販處購買，價格為 300 金幣。雖然移動速度加成數值不高，但在競速挑戰或需要快速趕路的任務中能發揮關鍵作用。芒果冰的持續時間為 30 分鐘，建議在需要長途移動的活動前使用。</p>
+
+        <p><strong>臭豆腐 — 防禦專家</strong></p>
+        <p>臭豆腐提供 10% 防禦力加成，是坦克型玩家的最愛。製作需要料理技能 Lv.15，材料包括「新鮮豆腐」x2、「酸菜」x1、「特製醬料」x1。製作成功率為 80%，相對容易上手。臭豆腐的防禦加成在高難度副本中非常實用，尤其是需要承受大量傷害的坦克角色，可以大幅提升生存能力。</p>
+
+        <p><strong>滷味拼盤 — 生命增幅</strong></p>
+        <p>滷味拼盤提供 15% 生命值上限加成，持續 60 分鐘。透過完成支線任務「夜市的秘密」獲得，該任務需要玩家在夜市中尋找五個隱藏的食材攤位。滷味拼盤的效果對於所有職業都有幫助，特別是生命值較低的法師和弓手職業，可以有效提升生存能力。</p>
+
+        <p><strong>仙草凍 — 傳說級料理</strong></p>
+        <p>仙草凍是所有夜市料理中稀有度最高的，提供 10% 技能傷害加成。需要透過隱藏活動「傳說夜市」取得，該活動在每日凌晨 00:00 隨機觸發，持續時間僅 30 分鐘。仙草凍的取得非常困難，但效果極其強力，是所有追求極限輸出的玩家必備的料理。建議在進行競速挑戰或高難度副本時使用，配合職業的核心技能可以達到毀滅性的傷害數字。</p>
+
+        <h3 id="food-collection">料理收集進度追蹤</h3>
+        <table>
+          <thead><tr><th>收集階段</th><th>所需數量</th><th>獎勵</th></tr></thead>
+          <tbody>
+            <tr><td>入門美食家</td><td>收集 3 道料理</td><td>稱號「小吃貨」+ 500 金幣</td></tr>
+            <tr><td>進階美食家</td><td>收集 5 道料理</td><td>稱號「夜市常客」+ 1000 金幣 + 料理背包擴充</td></tr>
+            <tr><td>美食大師</td><td>收集 7 道料理</td><td>稱號「美食獵人」+ 2000 金幣 + 專屬料理食譜</td></tr>
+            <tr><td>夜市達人</td><td>收集全部 8 道料理</td><td>稱號「夜市達人」+ 5000 金幣 + 全能力 +10% 永久 buff</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="tw-activities">四、台灣限定活動攻略</h2>
+        <p>台灣限定活動是上線初期最重要的內容之一，提供豐富的獎勵和獨特的遊戲體驗。以下是各活動的詳細攻略。</p>
+
+        <h3 id="first-week">首週活動：台灣之光挑戰</h3>
+        <p>首週活動「台灣之光挑戰」於 2026/7/22 至 2026/7/28 期間開放，完成所有挑戰可獲得稀有獎勵「台灣之光稱號」和限定時裝碎片。</p>
+
+        <table>
+          <thead><tr><th>挑戰項目</th><th>內容</th><th>獎勵</th><th>難度</th></tr></thead>
+          <tbody>
+            <tr><td><strong>第一天：踏上艾琳</strong></td><td>完成主線第三章</td><td>500 金幣 + 經驗藥水 x3</td><td>簡單</td></tr>
+            <tr><td><strong>第二天：夜市初探</strong></td><td>訪問所有夜市攤位（共 8 個）</td><td>珍珠奶茶 x2 + 300 金幣</td><td>簡單</td></tr>
+            <tr><td><strong>第三天：料理新手</strong></td><td>成功製作 3 道料理</td><td>料理材料禮包 + 500 金幣</td><td>普通</td></tr>
+            <tr><td><strong>第四天：戰鬥訓練</strong></td><td>完成 5 個戰鬥任務</td><td>攻擊藥水 x5 + 800 金幣</td><td>普通</td></tr>
+            <tr><td><strong>第五天：社交達人</strong></td><td>加入公會並完成公會任務</td><td>公會貢獻箱 + 1000 金幣</td><td>普通</td></tr>
+            <tr><td><strong>第六天：副本挑戰</strong></td><td>通關任意副本 3 次</td><td>隨機史詩裝備箱 + 1500 金幣</td><td>困難</td></tr>
+            <tr><td><strong>第七天：台灣之光</strong></td><td>完成前六天所有挑戰</td><td>台灣之光稱號 + 限定頭飾 + 5000 金幣</td><td>困難</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="time-challenge">限時挑戰：夜市大胃王</h3>
+        <p>「夜市大胃王」是一個趣味十足的限時小遊戲活動，玩家需要在限定時間內完成食物挑戰。活動每日開放 3 場，分別為 12:00、18:00 和 22:00，每場持續 10 分鐘。</p>
+
+        <p><strong>活動規則：</strong></p>
+        <ul>
+          <li>進入活動後，玩家會被傳送到專屬的夜市場景。</li>
+          <li>場景中有 10 個食物攤位，每個攤位提供不同的食物挑戰。</li>
+          <li>玩家需要在 60 秒內完成每個攤位的挑戰（如快速點擊、方向鍵輸入等）。</li>
+          <li>完成挑戰後獲得「夜市代幣」，可用於兌換限定獎勵。</li>
+        </ul>
+
+        <p><strong>評價標準與獎勵：</strong></p>
+        <table>
+          <thead><tr><th>評價</th><th>所需分數</th><th>獎勵</th></tr></thead>
+          <tbody>
+            <tr><td>C 級</td><td>300 分以下</td><td>夜市代幣 x10 + 滷肉飯 x1</td></tr>
+            <tr><td>B 級</td><td>300-599 分</td><td>夜市代幣 x25 + 珍珠奶茶 x1</td></tr>
+            <tr><td>A 級</td><td>600-899 分</td><td>夜市代幣 x50 + 蚵仔煎 x1 + 隨機稀有材料</td></tr>
+            <tr><td>S 級</td><td>900 分以上</td><td>夜市代幣 x100 + 蚵仔煎 x3 + 史詩材料箱</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="reward-claim">獎勵領取方式</h3>
+        <p>所有活動獎勵均可透過以下方式領取：</p>
+        <ul>
+          <li><strong>活動介面：</strong>點擊遊戲主畫面右上角的「活動」按鈕，進入活動總覽頁面。在「台灣限定」分頁中可以看到所有進行中的活動及對應獎勵。</li>
+          <li><strong>信箱領取：</strong>部分獎勵會透過遊戲內信箱發送，請注意信箱容量上限為 50 封，超時未領取的獎勵將會消失。</li>
+          <li><strong>NPC 兌換：</strong>夜市代幣可在夜市中央的「代幣兌換商」NPC 處兌換限定物品，包括時裝、寵物、消耗品等。</li>
+          <li><strong>成就系統：</strong>部分稱號和成就獎勵會自動解鎖，並在成就面板中顯示。可隨時前往查看並領取額外獎勵。</li>
+        </ul>
+
+        <blockquote>
+          <strong>注意：</strong>首週活動結束後，部分獎勵將永久絕版。「台灣之光稱號」和首週限定頭飾為永久絕版物品，錯過將無法再次獲得。強烈建議玩家在活動期間內儘快完成所有挑戰！
+        </blockquote>
+
+        <h2 id="titles-achievements">五、台灣限定稱號與成就</h2>
+        <p>台灣限定稱號與成就是收集系統的重要組成部分，不僅提供獨特的稱號外觀，還附帶實際的能力加成。以下是所有台灣限定稱號與成就的完整列表。</p>
+
+        <h3 id="title-list">稱號與成就一覽表</h3>
+        <table>
+          <thead><tr><th>稱號/成就</th><th>效果</th><th>取得條件</th><th>稀有度</th></tr></thead>
+          <tbody>
+            <tr><td><strong>台灣之光</strong></td><td>+5% 全能力</td><td>完成所有台灣首週限定活動</td><td><span class="text-orange-400">傳說</span></td></tr>
+            <tr><td><strong>夜市達人</strong></td><td>+10% 金幣獲取</td><td>收集全部 8 道夜市料理</td><td><span class="text-amber-400">史詩</span></td></tr>
+            <tr><td><strong>藍白拖傳人</strong></td><td>+5% 移動速度</td><td>取得藍白拖時裝並完成拍照任務</td><td><span class="text-purple-400">稀有</span></td></tr>
+            <tr><td><strong>小吃貨</strong></td><td>+3% 經驗值</td><td>收集 3 道夜市料理</td><td><span class="text-gray-400">普通</span></td></tr>
+            <tr><td><strong>夜市常客</strong></td><td>+5% 經驗值</td><td>收集 5 道夜市料理</td><td><span class="text-purple-400">稀有</span></td></tr>
+            <tr><td><strong>美食獵人</strong></td><td>+7% 經驗值</td><td>收集 7 道夜市料理</td><td><span class="text-amber-400">史詩</span></td></tr>
+            <tr><td><strong>大胃王傳說</strong></td><td>+5% 攻擊力</td><td>在夜市大胃王活動中累計獲得 10 次 S 級評價</td><td><span class="text-amber-400">史詩</span></td></tr>
+            <tr><td><strong>台灣探索者</strong></td><td>+3% 所有抗性</td><td>探索台灣限定地圖的所有隱藏區域（共 12 處）</td><td><span class="text-purple-400">稀有</span></td></tr>
+            <tr><td><strong>阿財伯的好幫手</strong></td><td>+5% 料理成功率</td><td>累計完成 30 次「阿財伯的幫手」每日任務</td><td><span class="text-purple-400">稀有</span></td></tr>
+            <tr><td><strong>傳說夜市行者</strong></td><td>+8% 技能傷害</td><td>在「傳說夜市」活動中累計獲得 5 次仙草凍</td><td><span class="text-orange-400">傳說</span></td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="title-combo">稱號套裝效果</h3>
+        <p>當玩家同時裝備多個台灣限定稱號時，可以觸發特殊的「台灣套裝效果」：</p>
+        <ul>
+          <li><strong>台灣三寶（台灣之光 + 夜市達人 + 藍白拖傳人）：</strong>全能力 +8%、金幣獲取 +15%、移動速度 +10%。這是所有台灣限定稱號中最強大的組合效果。</li>
+          <li><strong>美食系列（小吃貨 + 夜市常客 + 美食獵人）：</strong>經驗值 +20%、料理持續時間延長 50%。適合練功和收集料理的玩家。</li>
+          <li><strong>夜市傳說（大胃王傳說 + 傳說夜市行者）：</strong>攻擊力 +10%、技能傷害 +15%、暴擊率 +5%。適合追求極限輸出的玩家。</li>
+        </ul>
+
+        <blockquote>
+          <strong>收集建議：</strong>優先完成首週活動以取得「台灣之光稱號」，因為這是永久絕版物品。接著可專注於夜市料理收集，以取得「夜市達人稱號」。最後再挑戰高難度的隱藏成就。
+        </blockquote>
+
+        <h2 id="exclusive-benefits">六、台灣玩家專屬福利</h2>
+        <p>除了遊戲內的限定內容外，台港澳玩家還享有許多專屬的福利與服務，讓遊戲體驗更加顺畅且舒適。</p>
+
+        <h3 id="exclusive-server">台港澳專屬伺服器</h3>
+        <p>台港澳玩家將在專屬伺服器「艾琳」中進行遊戲，此伺服器具有以下特點：</p>
+        <ul>
+          <li><strong>低延遲：</strong>伺服器位於台灣，確保台港澳玩家享有最低的網路延遲（平均延遲 15-30ms）。</li>
+          <li><strong>獨立經濟：</strong>交易行與經濟系統獨立運作，不會受到其他地區伺服器的物價波動影響。</li>
+          <li><strong>專屬活動：</strong>台港澳伺服器享有獨家的在地化活動，如農曆新年、端午節、中秋節等節慶限定活動。</li>
+          <li><strong>社群活躍：</strong>由於語言相通，台港澳伺服器的玩家社群非常活躍，公會招募和組隊都更加便利。</li>
+          <li><strong>語言優勢：</strong>所有遊戲內介面、NPC 對話、任務描述均為繁體中文，無需擔心語言障礙。</li>
+        </ul>
+
+        <h3 id="tw-support">台灣客服支援</h3>
+        <p>為了提供更好的服務品質，台港澳地區設有專屬的客服團隊：</p>
+        <ul>
+          <li><strong>服務時段：</strong>週一至週五 09:00-18:00 GMT+8（國定假日休息）。</li>
+          <li><strong>聯絡方式：</strong>可透過遊戲內客服系統、官方網站表單、或客服信箱聯繫。</li>
+          <li><strong>回應時間：</strong>一般問題 24 小時內回覆，緊急問題 4 小時內處理。</li>
+          <li><strong>語言支援：</strong>繁體中文客服，溝通無礙。</li>
+          <li><strong>社群客服：</strong>官方 Facebook 粉絲團與 Discord 社群也有專人回覆玩家問題。</li>
+        </ul>
+
+        <h3 id="localization">在地化活動</h3>
+        <p>台港澳伺服器將定期推出在地化的節慶活動，以下為已確認的活動排程：</p>
+        <table>
+          <thead><tr><th>節慶</th><th>預計時間</th><th>活動內容</th><th>限定獎勵</th></tr></thead>
+          <tbody>
+            <tr><td><strong>農曆新年</strong></td><td>2027 年 1 月</td><td>红包活動、年獸討伐戰</td><td>限定時裝「新年紅裝」、稱號「福氣滿滿」</td></tr>
+            <tr><td><strong>元宵節</strong></td><td>2027 年 2 月</td><td>猜燈謎、提燈籠巡遊</td><td>限定寵物「小燈籠」、稱號「燈謎高手」</td></tr>
+            <tr><td><strong>端午節</strong></td><td>2027 年 6 月</td><td>划龍舟競賽、包粽子料理</td><td>限定時裝「龍舟勇士」、稱號「端午傳人」</td></tr>
+            <tr><td><strong>中秋節</strong></td><td>2027 年 9 月</td><td>烤肉大會、嫦娥奔月副本</td><td>限定寵物「玉兔」、稱號「月光冒險家」</td></tr>
+            <tr><td><strong>台灣光復節</strong></td><td>2027 年 10 月</td><td>台灣歷史探索任務</td><td>限定稱號「寶島之魂」、全能力 +3%</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="community-resources">社群資源</h3>
+        <p>台港澳玩家可以透過以下管道獲取最新的遊戲資訊與攻略：</p>
+        <ul>
+          <li><strong>官方網站：</strong>提供最新的遊戲公告、更新資訊和活動預告。</li>
+          <li><strong>Facebook 粉絲團：</strong>每日發布遊戲攻略、活動資訊和玩家互動內容。</li>
+          <li><strong>Discord 社群：</strong>即時討論、組隊招募、問題回報的主要平台。</li>
+          <li><strong>YouTube 頻道：</strong>官方與合作實況主的攻略影片和遊戲實況。</li>
+          <li><strong>本攻略站：</strong>持續更新最全面的攻略內容，涵蓋所有職業、副本和收集系統。</li>
+        </ul>
+
+        <h2 id="faq">七、常見問題 FAQ</h2>
+
+        <h3 id="faq-1">Q1：台灣限定內容只在台港澳伺服器可用嗎？韓服或日服的玩家可以取得嗎？</h3>
+        <p><strong>A：</strong>是的，台灣限定內容（包括藍白拖時裝、夜市料理、限定稱號等）僅在台港澳伺服器「艾琳」中可用。韓服和日服的玩家無法取得這些內容。這是台港澳玩家的專屬福利，也是官方回饋在地玩家的方式。如果你在其他伺服器有角色，需要在台港澳伺服器重新創建角色才能體驗這些限定內容。</p>
+
+        <h3 id="faq-2">Q2：藍白拖時裝活動結束後還能取得嗎？</h3>
+        <p><strong>A：</strong>藍白拖時裝的取得任務（與阿財伯的對話任務）在 2026/8/31 活動結束後將永久關閉。但已經取得藍白拖時裝的玩家可以永久使用該時裝，不會因為活動結束而消失。此外，藍白拖時裝可透過交易行出售給其他玩家（但限定任務中獲得的「台灣之心稱號」為綁定物品，無法交易）。</p>
+
+        <h3 id="faq-3">Q3：夜市料理的效果可以疊加嗎？可以同時使用多種料理嗎？</h3>
+        <p><strong>A：</strong>夜市料理的效果<strong>無法疊加</strong>。同一時間只能生效一種夜市料理的效果。例如，如果你先吃了珍珠奶茶（+10% 經驗值），再吃鹽酥雞（+15% 攻擊力），珍珠奶茶的效果會被覆蓋，只剩下鹽酥雞的效果。因此建議在不同場景下選擇最適合的料理使用。但夜市料理的效果可以與其他消耗品（如藥水）的效果疊加。</p>
+
+        <h3 id="faq-4">Q4：「傳說夜市」活動什麼時候會觸發？如何提高觸發機率？</h3>
+        <p><strong>A：</strong>「傳說夜市」為隨機觸發的隱藏活動，每日凌晨 00:00（GMT+8）有 15% 的機率觸發。觸發後持續 30 分鐘，並會在遊戲內公告通知。提高觸發機率的方式包括：穿戴「台灣探索者」稱號（+5% 觸發率）、完成「夜市的秘密」支線任務（+3% 觸發率）、以及在活動期間內累計登入 7 天以上（+2% 觸發率）。最高可將觸發率提升至 25%。</p>
+
+        <h3 id="faq-5">Q5：台灣限定稱號的效果可以與其他稱號效果疊加嗎？</h3>
+        <p><strong>A：</strong>台灣限定稱號的效果可以與遊戲中的其他稱號效果疊加。玩家最多可以同時裝備 3 個稱號，因此可以同時享受多個稱號的加成效果。但同一個稱號的效果無法重複疊加（即無法裝備兩個相同的稱號）。建議根據不同的遊戲場景切換稱號組合，以達到最佳效果。</p>
+
+        <h3 id="faq-6">Q6：我在台港澳伺服器的角色資料可以轉移到其他伺服器嗎？</h3>
+        <p><strong>A：</strong>目前不支援跨伺服器的角色轉移。台港澳伺服器的角色資料為獨立儲存，無法轉移到韓服或日服。這是為了保護台港澳伺服器的經濟平衡和遊戲公平性。如果你希望在其他伺服器遊玩，需要重新創建角色。</p>
+
+        <h3 id="faq-7">Q7：台灣限定活動的獎勵可以透過課金取得嗎？</h3>
+        <p><strong>A：</strong>大部分台灣限定活動的獎勵都可以透過免費途徑取得（如完成任務、參與活動等）。但部分限定物品（如特定時裝外觀、寵物等）可能會在商城中推出付費版本。這些付費物品不會提供任何屬性優勢，僅為外觀差異。官方承諾台灣限定的屬性加成內容不會出現付費才能取得的情況。</p>
+
+        <h2 id="conclusion">八、總結</h2>
+        <p>瑪奇 Mobile 的台灣限定內容為台港澳玩家帶來了豐富且獨特的遊戲體驗。從充滿台灣味的藍白拖時裝，到令人垂涎的夜市料理系統，再到豐富的限定稱號與成就，每一項內容都展現了開發團隊對台灣市場的用心與重視。</p>
+
+        <p>以下是我們對台灣玩家的建議整理：</p>
+
+        <table>
+          <thead><tr><th>優先級</th><th>目標</th><th>建議</th></tr></thead>
+          <tbody>
+            <tr><td><span class="text-red-400 font-bold">最高</span></td><td>完成首週活動</td><td>取得永久絕版的「台灣之光稱號」，這是所有台灣限定稱號中效果最強的</td></tr>
+            <tr><td><span class="text-red-400 font-bold">最高</span></td><td>取得藍白拖時裝</td><td>活動期間有限，儘早完成任務流程，並順手取得「台灣之心稱號」</td></tr>
+            <tr><td><span class="text-amber-400 font-bold">高</span></td><td>收集夜市料理</td><td>每日完成阿財伯任務，參與夜市大胃王活動，逐步收集所有料理</td></tr>
+            <tr><td><span class="text-amber-400 font-bold">高</span></td><td>解鎖限定成就</td><td>在收集料理的過程中自然解鎖低階成就，再挑戰高難度隱藏成就</td></tr>
+            <tr><td><span class="text-purple-400 font-bold">中</span></td><td>收集套裝效果</td><td>優先取得「台灣三寶」套裝效果，提供最強大的全能力加成</td></tr>
+            <tr><td><span class="text-gray-400 font-bold">低</span></td><td>關注節慶活動</td><td>持續關注官方公告，不錯過任何在地化節慶活動的限時獎勵</td></tr>
+          </tbody>
+        </table>
+
+        <p>台灣限定內容是瑪奇 Mobile 在台港澳市場的核心特色之一，這些內容不僅提供了實用的遊戲優勢，更讓台灣玩家能夠在遊戲中感受到濃厚的在地文化氛圍。隨著後續的節慶活動和新內容更新，我們期待看到更多精彩的台灣限定體驗。</p>
+
+        <p>如果你覺得這篇攻略對你有幫助，歡迎分享給你的冒險夥伴！更多瑪奇 Mobile 攻略內容，請持續關注我們的攻略站。祝各位冒險者在艾琳世界中玩得開心！</p>
+
+        <blockquote>
+          <strong>最後提醒：</strong>遊戲內容可能因版本更新而有所調整，建議玩家以遊戲內實際內容為準。本攻略將持續更新，確保提供最新、最準確的資訊。
+        </blockquote>
+
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-red">台灣限定</span>
+          <span class="badge badge-blue">藍白拖</span>
+          <span class="badge badge-green">夜市料理</span>
+          <span class="badge badge-gold">瑪奇Mobile</span>
+        </div>
+
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="newbie-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-indigo-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">新手入門完全指南</h4>
+              <p class="text-gray-500 text-xs mt-1">從零開始的艾琳冒險攻略</p>
+            </div>
+          </a>
+          <a href="tier-list.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-amber-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">職業強度排行榜（Tier List）</h4>
+              <p class="text-gray-500 text-xs mt-1">2026年7月版全職業評分分析</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="ad-slot" style="min-height:250px;">廣告位<br>300x250</div>
+        <div class="ad-slot" style="min-height:600px;">廣告位<br>300x600</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">瑪奇Mobile</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="newbie-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門指南</a></li>
+            <li><a href="tier-list.html" class="text-gray-500 hover:text-indigo-400 transition">職業排行榜</a></li>
+            <li><a href="taiwan-exclusive.html" class="text-gray-500 hover:text-indigo-400 transition">台灣限定攻略</a></li>
+            <li><a href="../index.html" class="text-gray-500 hover:text-indigo-400 transition">更多攻略...</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">職業攻略</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">副本攻略</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">生活技能</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">裝備養成</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">聯絡方式</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">隱私權政策</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">服務條款</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
