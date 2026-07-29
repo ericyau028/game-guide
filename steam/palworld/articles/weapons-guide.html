@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="幻獸帕魯（Palworld）全武器與裝備攻略 — 近戰/遠程/特殊武器分類、各武器數據表格、防具套裝效果、科技樹解鎖建議與傳說級裝備取得方式。">
+  <meta name="keywords" content="幻獸帕魯, Palworld, 武器, 裝備, 防具, 傳說裝備, 科技樹, 製作">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="google-adsense-account" content="ca-pub-4900630860092971">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="幻獸帕魯 全武器與裝備攻略｜製作與進階 — 攻略站">
+  <meta property="og:description" content="全武器數據表格、防具套裝效果、科技樹解鎖建議與傳說級裝備取得方式。">
+  <meta property="og:type" content="article">
+  <title>幻獸帕魯 全武器與裝備攻略｜製作與進階 — 攻略站</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "幻獸帕魯 全武器與裝備攻略｜製作與進階",
+    "description": "近戰/遠程/特殊武器分類、各武器數據表格、防具套裝效果、科技樹解鎖建議與傳說級裝備取得方式。",
+    "author": { "@type": "Organization", "name": "GameGuide.tw" },
+    "datePublished": "2026-07-24",
+    "dateModified": "2026-07-24",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://game.cubedhub.com/steam/palworld/articles/weapons-guide.html" }
+  }
+  </script>
+  <link rel="canonical" href="https://game.cubedhub.com/steam/palworld/articles/weapons-guide.html">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4900630860092971" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <!-- Reading Progress -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../../index.html" class="nav-link">首頁</a>
+          <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="../index.html" class="nav-link">幻獸帕魯</a>
+          <a href="weapons-guide.html" class="nav-link active">武器裝備</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../../index.html" class="nav-link">首頁</a>
+        <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="../index.html" class="nav-link">幻獸帕魯</a>
+        <a href="weapons-guide.html" class="nav-link active">武器裝備</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../../index.html" class="hover:text-indigo-400 transition">首頁</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../../index.html" class="hover:text-indigo-400 transition">Steam</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../index.html" class="hover:text-indigo-400 transition">幻獸帕魯</a>
+      <span class="mx-2">&#8250;</span>
+      <span class="text-gray-300">全武器與裝備攻略</span>
+    </nav>
+  </div>
+
+  <!-- ===== ARTICLE LAYOUT ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <!-- LEFT: TOC -->
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER: Article Content -->
+    <article class="flex-1 min-w-0">
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">幻獸帕魯 全武器與裝備攻略｜製作與進階</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            GameGuide 編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-24
+          </span>
+          <span>·</span>
+          <span>約 18 分鐘閱讀</span>
+          <span class="badge badge-gold">推薦必讀</span>
+        </div>
+      </header>
+
+      <div id="article-content" class="article-content">
+
+        <h2 id="intro">武器與裝備概覽</h2>
+        <p>在《幻獸帕魯》中，合適的武器與防具是生存與戰鬥的關鍵。從最基礎的石製武器到傳說級的科技裝備，每一階段的升級都能帶來明顯的戰力提升。本章將詳細介紹所有武器與防具的數據、製作方式以及推薦解鎖路線。</p>
+        <p>武器主要分為 <strong>近戰武器</strong>、<strong>遠程武器</strong> 與 <strong>特殊武器</strong> 三大類，每類都有各自的優勢與使用場景。</p>
+        <blockquote>
+          <strong>核心建議：</strong>不要跳級製作裝備。每階段的裝備都值得製作，因為材料成本遠低於越級挑戰失敗的損失。
+        </blockquote>
+
+        <h2 id="melee">近戰武器</h2>
+        <p>近戰武器在遊戲前期非常重要，即使到了後期，部分特殊近戰武器仍然有不可取代的地位。</p>
+        <table>
+          <thead>
+            <tr>
+              <th>名稱</th>
+              <th>攻擊力</th>
+              <th>解鎖等級</th>
+              <th>製作材料</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>簡易棍棒</td><td>10</td><td>Lv.1</td><td>木材 ×5</td><td>初始武器，聊勝於無</td></tr>
+            <tr><td>石頭短劍</td><td>20</td><td>Lv.3</td><td>木材 ×8、石頭 ×6</td><td>前期主力近戰</td></tr>
+            <tr><td>金屬長劍</td><td>45</td><td>Lv.12</td><td>金屬錠 ×10、木材 ×5</td><td>中期標準武器</td></tr>
+            <tr><td>精煉武士刀</td><td>70</td><td>Lv.25</td><td>精煉金屬錠 ×15、皮革 ×5</td><td>攻速快，DPS高</td></tr>
+            <tr><td>傳說之刃</td><td>110</td><td>Lv.40</td><td>碳纖維 ×20、帕魯礦 ×15、傳說核心 ×1</td><td>最強近戰</td></tr>
+          </tbody>
+        </table>
+        <p>近戰武器的優勢在於不消耗彈藥或耐久度（僅消耗少量體力），適合日常清怪與資源採集。</p>
+
+        <h2 id="ranged">遠程武器</h2>
+        <p>遠程武器是對抗 Boss 和高威脅敵人的首選，但需要消耗對應的彈藥。</p>
+        <table>
+          <thead>
+            <tr>
+              <th>名稱</th>
+              <th>攻擊力</th>
+              <th>解鎖等級</th>
+              <th>彈藥類型</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>粗製弓</td><td>15</td><td>Lv.4</td><td>木箭</td><td>最早可用的遠程武器</td></tr>
+            <tr><td>十字弓</td><td>40</td><td>Lv.10</td><td>金屬弩箭</td><td>單發傷害高，適合偷襲</td></tr>
+            <tr><td>老式手槍</td><td>55</td><td>Lv.15</td><td>子彈</td><td>射速快，但傷害偏低</td></tr>
+            <tr><td>突擊步槍</td><td>75</td><td>Lv.28</td><td>突擊步槍彈藥</td><td>全自動射擊，DPS極高</td></tr>
+            <tr><td>狙擊步槍</td><td>120</td><td>Lv.35</td><td>狙擊彈</td><td>超遠射程，爆頭傷害加倍</td></tr>
+            <tr><td>火箭發射器</td><td>200</td><td>Lv.45</td><td>火箭彈</td><td>範圍傷害，Boss戰利器</td></tr>
+          </tbody>
+        </table>
+        <h3 id="ranged-ammo">彈藥管理</h3>
+        <ul>
+          <li>不同武器使用不同彈藥，不能通用。</li>
+          <li>彈藥可在工作台製作，或從敵人身上拾取。</li>
+          <li>建議隨身攜帶至少 2 組彈藥，避免戰鬥中彈盡糧絕。</li>
+        </ul>
+        <blockquote>
+          <strong>進階技巧：</strong>設置自動化彈藥生產線，指派帕魯大量生產子彈，省去手動製作的麻煩。
+        </blockquote>
+
+        <h2 id="special">特殊武器</h2>
+        <p>特殊武器包含投擲類與消耗品類，在特定場合有奇效。</p>
+        <table>
+          <thead>
+            <tr>
+              <th>名稱</th>
+              <th>效果</th>
+              <th>解鎖等級</th>
+              <th>製作材料</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>燃燒瓶</td><td>投擲後製造火焰區域，持續傷害</td><td>Lv.6</td><td>木材 ×3、莓果酒 ×1</td></tr>
+            <tr><td>煙霧彈</td><td>製造煙霧區域，降低敵人命中率</td><td>Lv.14</td><td>纖維 ×5、蘑菇 ×2</td></tr>
+            <tr><td>冰凍手榴彈</td><td>範圍冰凍，使敵人減速</td><td>Lv.22</td><td>金屬錠 ×5、冰凍器官 ×3</td></tr>
+            <tr><td>閃光彈</td><td>使敵人短暫失明</td><td>Lv.30</td><td>金屬錠 ×5、發光物質 ×3</td></tr>
+            <tr><td>帕魯召喚笛</td><td>一次性召喚指定帕魯參戰</td><td>Lv.38</td><td>帕魯礦 ×10、傳說核心 ×1</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="armor">防具套裝效果</h2>
+        <p>防具是提升生存率的關鍵。穿戴完整套裝可獲得套裝加成效果。</p>
+        <table>
+          <thead>
+            <tr>
+              <th>名稱</th>
+              <th>防禦力</th>
+              <th>解鎖等級</th>
+              <th>套裝效果</th>
+              <th>製作材料</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>布甲套裝</td><td>5</td><td>Lv.2</td><td>無</td><td>纖維 ×10、羊毛 ×5</td></tr>
+            <tr><td>皮革套裝</td><td>12</td><td>Lv.8</td><td>耐寒 +1</td><td>皮革 ×8、纖維 ×5</td></tr>
+            <tr><td>金屬套裝</td><td>25</td><td>Lv.16</td><td>耐熱 +1、防禦 +10%</td><td>金屬錠 ×20、皮革 ×5</td></tr>
+            <tr><td>精煉金屬套裝</td><td>40</td><td>Lv.26</td><td>耐寒 +2、耐熱 +2、防禦 +20%</td><td>精煉金屬錠 ×25、碳纖維 ×10</td></tr>
+            <tr><td>傳說套裝</td><td>65</td><td>Lv.42</td><td>全屬性抗性 +30%、防禦 +35%</td><td>碳纖維 ×30、帕魯礦 ×20、傳說核心 ×3</td></tr>
+          </tbody>
+        </table>
+        <h3 id="armor-accessories">飾品欄位</h3>
+        <p>除了防具，你還可以裝備飾品來獲得額外效果：</p>
+        <ul>
+          <li><strong>攻擊戒指：</strong>提升近戰/遠程攻擊力。</li>
+          <li><strong>防禦護符：</strong>減少受到的傷害。</li>
+          <li><strong>速度靴：</strong>增加移動速度。</li>
+          <li><strong>幸運硬幣：</strong>增加資源掉落率。</li>
+        </ul>
+
+        <h2 id="tech-tree">科技樹解鎖建議</h2>
+        <p>以下是武器與裝備相關的科技樹推薦解鎖路徑：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>優先級</th>
+              <th>等級</th>
+              <th>解鎖項目</th>
+              <th>理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>★ 最高</td><td>Lv.2</td><td>布甲套裝</td><td>最基本防禦，大幅降低初期死亡率</td></tr>
+            <tr><td>★ 最高</td><td>Lv.4</td><td>粗製弓</td><td>遠程攻擊手段，安全狩獵</td></tr>
+            <tr><td>★ 高</td><td>Lv.10</td><td>十字弓</td><td>傷害大幅提升，可挑戰小型Boss</td></tr>
+            <tr><td>★ 高</td><td>Lv.16</td><td>金屬套裝</td><td>中期核心防具</td></tr>
+            <tr><td>★ 中</td><td>Lv.25</td><td>精煉武士刀</td><td>近戰輸出質變</td></tr>
+            <tr><td>★ 中</td><td>Lv.28</td><td>突擊步槍</td><td>遠程輸出質變</td></tr>
+            <tr><td>★ 低</td><td>Lv.42+</td><td>傳說套裝 / 火箭發射器</td><td>後期終極裝備</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="legendary">傳說級裝備取得</h2>
+        <p>傳說級裝備是遊戲中最頂級的裝備，需要透過特定方式獲得：</p>
+        <h3 id="legendary-weapons">傳說武器</h3>
+        <ul>
+          <li><strong>傳說之刃：</strong>擊敗火山 Boss「炎魔帝王」後有機率掉落圖紙。</li>
+          <li><strong>傳說突擊步槍：</strong>沙漠地下城最深處的寶箱低機率開出。</li>
+          <li><strong>傳說狙擊步槍：</strong>雪山區域的世界 Boss「冰霜女王」掉落。</li>
+          <li><strong>傳說火箭發射器：</strong>擊敗最終 Boss「空冥龍」後必定獲得圖紙。</li>
+        </ul>
+
+        <h3 id="legendary-armor">傳說防具</h3>
+        <ul>
+          <li><strong>傳說頭盔：</strong>完成所有成就挑戰後獲得。</li>
+          <li><strong>傳說胸甲：</strong>地下城第 50 層 Boss 掉落。</li>
+          <li><strong>傳說護腿：</strong>擊敗世界 Boss「混沌騎士」機率掉落。</li>
+          <li><strong>傳說靴子：</strong>釣魚大賽冠軍獎勵（需解鎖釣魚系統）。</li>
+        </ul>
+        <blockquote>
+          <strong>提醒：</strong>傳說裝備圖紙可以重複刷，但掉落率普遍偏低（約 1%~5%），建議準備好足夠的物資進行長期作戰。
+        </blockquote>
+
+        <h3 id="legendary-upgrade">傳說裝備強化</h3>
+        <p>獲得傳說裝備後，可以使用「傳說核心」進行強化：</p>
+        <ul>
+          <li>每次強化提升 5%~10% 的基礎屬性。</li>
+          <li>最高強化等級為 +10。</li>
+          <li>強化失敗不會降級，但會消耗材料。</li>
+          <li>傳說核心可從地下城 Boss、世界 Boss 與特殊活動中獲得。</li>
+        </ul>
+
+      </div>
+
+      <!-- Article Footer -->
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-gold">武器</span>
+          <span class="badge badge-blue">防具</span>
+          <span class="badge badge-red">傳說裝備</span>
+          <span class="badge badge-green">科技樹</span>
+        </div>
+
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="tech-tree-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-amber-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">科技樹攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">最佳解鎖順序與推薦科技</p>
+            </div>
+          </a>
+          <a href="map-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-sky-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">全地圖探索攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">資源點與快速旅行位置</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIGHT: Ad Sidebar -->
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="ad-slot" style="min-height:250px;">
+<!-- sidebar_rect -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="2122827923"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+        <div class="ad-slot" style="min-height:600px;">
+<!-- sidebar_wide -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="7565057991"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">幻獸帕魯</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="breeding-guide.html" class="text-gray-500 hover:text-indigo-400 transition">配種攻略</a></li>
+            <li><a href="beginner-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門</a></li>
+            <li><a href="base-building.html" class="text-gray-500 hover:text-indigo-400 transition">基地建設</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="beginner-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門</a></li>
+            <li><a href="base-building.html" class="text-gray-500 hover:text-indigo-400 transition">基地建設</a></li>
+            <li><a href="weapons-guide.html" class="text-gray-500 hover:text-indigo-400 transition">武器裝備</a></li>
+            <li><a href="tech-tree-guide.html" class="text-gray-500 hover:text-indigo-400 transition">科技樹</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

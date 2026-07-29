@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="幻獸帕魯（Palworld）新手入門完全指南 — 從遊戲下載安裝、角色創建、前期快速升級技巧、第一天的必做事項到推薦初期捕捉帕魯，一篇搞定所有新手問題。">
+  <meta name="keywords" content="幻獸帕魯, Palworld, 新手, 入門, 攻略, 初期, 升級, 帕魯捕捉, 生存">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="google-adsense-account" content="ca-pub-4900630860092971">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="幻獸帕魯 新手入門完全指南｜從零開始的帕魯生存 — 攻略站">
+  <meta property="og:description" content="從遊戲下載到高手之路，最完整的新手入門指南，助你快速上手幻獸帕魯。">
+  <meta property="og:type" content="article">
+  <title>幻獸帕魯 新手入門完全指南｜從零開始的帕魯生存 — 攻略站</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "幻獸帕魯 新手入門完全指南｜從零開始的帕魯生存",
+    "description": "從遊戲下載安裝、角色創建、前期快速升級技巧、第一天的必做事項到推薦初期捕捉帕魯，一篇搞定所有新手問題。",
+    "author": { "@type": "Organization", "name": "GameGuide.tw" },
+    "datePublished": "2026-07-24",
+    "dateModified": "2026-07-24",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://game.cubedhub.com/steam/palworld/articles/beginner-guide.html" }
+  }
+  </script>
+  <link rel="canonical" href="https://game.cubedhub.com/steam/palworld/articles/beginner-guide.html">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4900630860092971" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <!-- Reading Progress -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../../index.html" class="nav-link">首頁</a>
+          <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="../index.html" class="nav-link">幻獸帕魯</a>
+          <a href="beginner-guide.html" class="nav-link active">新手入門</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../../index.html" class="nav-link">首頁</a>
+        <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="../index.html" class="nav-link">幻獸帕魯</a>
+        <a href="beginner-guide.html" class="nav-link active">新手入門</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../../index.html" class="hover:text-indigo-400 transition">首頁</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../../index.html" class="hover:text-indigo-400 transition">Steam</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../index.html" class="hover:text-indigo-400 transition">幻獸帕魯</a>
+      <span class="mx-2">&#8250;</span>
+      <span class="text-gray-300">新手入門完全指南</span>
+    </nav>
+  </div>
+
+  <!-- ===== ARTICLE LAYOUT ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <!-- LEFT: TOC -->
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER: Article Content -->
+    <article class="flex-1 min-w-0">
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">幻獸帕魯 新手入門完全指南｜從零開始的帕魯生存</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            GameGuide 編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-24
+          </span>
+          <span>·</span>
+          <span>約 20 分鐘閱讀</span>
+          <span class="badge badge-blue">新手必看</span>
+        </div>
+      </header>
+
+      <div id="article-content" class="article-content">
+
+        <h2 id="intro">前言：歡迎來到帕魯世界</h2>
+        <p>《幻獸帕魯》（Palworld）是由日本開發商 Pocketpair 打造的開放世界生存冒險遊戲。你將在廣闊的帕魯群島上生存、建造、收集物資，並捕捉超過 100 種帕魯成為夥伴。無論是騎乘飛行帕魯翱翔天際，還是建立全自動化生產線，這款遊戲的自由度都超乎想像。</p>
+        <p>本篇新手入門指南將從零開始，一步步帶你了解遊戲的基礎機制、前期發展策略與常見注意事項，幫助你順利度過最艱難的初期階段。</p>
+        <blockquote>
+          <strong>貼心提醒：</strong>本指南適用於遊戲發售後的最新版本（2026年），內容涵蓋從創角到 20 級的核心要點。
+        </blockquote>
+
+        <h2 id="download">遊戲下載與安裝</h2>
+        <p>幻獸帕魯目前可在以下平台購買遊玩：</p>
+        <ul>
+          <li><strong>Steam（PC）：</strong>建議售價 NT$ 499 / HK$ 138，支援 Windows 作業系統。</li>
+          <li><strong>Xbox Series X|S / Xbox One：</strong>支援 Xbox Game Pass 訂閱服務。</li>
+          <li><strong>系統需求（最低）：</strong>Windows 10（64-bit）、Intel i5-3570K / AMD FX-6300、16GB RAM、NVIDIA GTX 1050 Ti / AMD Radeon RX 580。</li>
+        </ul>
+        <p>購買並下載完成後，首次啟動遊戲需要建立角色並選擇伺服器。你可以選擇單人模式（離線）或多人模式（官方 / 自架伺服器）。</p>
+        <blockquote>
+          <strong>小提示：</strong>初次遊玩建議先選單人模式熟悉機制，之後再考慮加入多人伺服器。
+        </blockquote>
+
+        <h2 id="initial-setup">初始設定與角色創建</h2>
+        <h3 id="setup-character">角色創建</h3>
+        <ul>
+          <li>可以自訂角色的性別、臉型、髮型、膚色等外觀特徵。</li>
+          <li>角色名稱不可與伺服器上其他玩家重複。</li>
+          <li>創建完成後會進入一段開場動畫，隨後降落在初始重生點。</li>
+        </ul>
+
+        <h3 id="setup-difficulty">難度設定</h3>
+        <p>在開始遊戲前，可以調整世界設定：</p>
+        <ul>
+          <li><strong>普通模式：</strong>預設體驗，適合大多數玩家。</li>
+          <li><strong>簡單模式：</strong>經驗值獲取增加、敵人傷害降低，適合純粹享受遊戲的玩家。</li>
+          <li><strong>困難模式：</strong>資源獲取減少、敵人更加強大，適合尋求挑戰的老手。</li>
+        </ul>
+        <p>所有設定在遊戲過程中皆可透過 Esc 選單調整（單人模式），不必擔心選錯。</p>
+
+        <h3 id="setup-interface">基礎介面介紹</h3>
+        <ul>
+          <li><strong>快捷鍵欄（底部）：</strong>放置武器、工具、食物等常用物品，數字鍵 1~0 切換。</li>
+          <li><strong>狀態列（左上）：</strong>生命值、飽食度、體力與防護值。</li>
+          <li><strong>小地圖（右上）：</strong>顯示周圍地形、資源點與帕魯位置。</li>
+          <li><strong>等級與經驗條：</strong>進行採集、捕捉、戰鬥等活動均可獲得經驗值。</li>
+        </ul>
+
+        <h2 id="fast-leveling">前期快速升級技巧</h2>
+        <p>前 10 級是遊戲最關鍵的階段，以下方法可以幫助你快速升級：</p>
+        <h3 id="leveling-gather">大量採集基礎資源</h3>
+        <p>採集木材、石頭、纖維等基礎資源每次都會給予少量經驗值，但累積起來相當可觀。初期建議先用手收集周圍的木材與石頭，存夠材料後再做工具。</p>
+
+        <h3 id="leveling-capture">積極捕捉帕魯</h3>
+        <p>每捕捉一隻新的帕魯都會獲得大量經驗值（約 100~500 取決於帕魯稀有度），同時解鎖圖鑑還有額外獎勵。初期看到任何沒抓過的帕魯都建議捕捉。</p>
+
+        <h3 id="leveling-quest">完成任務與成就</h3>
+        <p>遊戲中有隱藏的成就系統，完成特定目標（如建造第一個設施、捕捉第一隻帕魯等）會給予經驗值獎勵。開啟選單中的成就列表可以查看所有可達成的目標。</p>
+
+        <h3 id="leveling-boss">挑戰小型Boss</h3>
+        <p>地圖上有一些標示為 Boss 的強大帕魯（等級 10~15），擊敗或捕捉它們可獲得大量經驗，但建議先準備好武器與防具再挑戰。</p>
+        <blockquote>
+          <strong>升級捷徑：</strong>捕捉帕魯 > 採集資源 > 完成成就。初期捕捉 10 種不同帕魯就能輕鬆升到 8~10 級。
+        </blockquote>
+
+        <h2 id="first-day">第一天的必做事項</h2>
+        <p>以下是你進入遊戲後第一天應該完成的目標清單：</p>
+        <ol>
+          <li><strong>收集基礎資源：</strong>木材 ×50、石頭 ×50、纖維 ×20。</li>
+          <li><strong>製作初始工具：</strong>石頭斧頭（伐木）、石頭鎬子（採礦）。</li>
+          <li><strong>捕捉 3 隻帕魯：</strong>推薦棉悠悠、搗蛋貓、皮皮雞。</li>
+          <li><strong>建立第一個篝火：</strong>用於烹飪食物與取暖。</li>
+          <li><strong>搭建簡易庇護所：</strong>至少四面牆壁 + 屋頂，放置睡袋。</li>
+          <li><strong>製作烹飪鍋：</strong>開始製作基礎食物，避免餓死。</li>
+          <li><strong>解鎖帕魯球：</strong>科技樹 2 級解鎖，製作至少 10 個。</li>
+          <li><strong>找到一個好位置：</strong>為未來的基地選址（靠近水源與礦石資源）。</li>
+          <li><strong>升到 5 級：</strong>解鎖更多科技（床、箱子、工作台）。</li>
+        </ol>
+
+        <h2 id="common-mistakes">新手常見錯誤</h2>
+        <ul>
+          <li><strong>忽略飽食度：</strong>角色餓死是最常見的死因。隨身攜帶食物，及時補充。</li>
+          <li><strong>夜晚沒有光源：</strong>晚上野外非常危險，記得攜帶火把或建造燈具。</li>
+          <li><strong>過度擴張基地：</strong>前期資源有限，先集中建設一個小型基地即可。</li>
+          <li><strong>忘記設定重生點：</strong>建造床後記得互動設定重生點，否則死亡後會回到初始重生點。</li>
+          <li><strong>硬扛高等級帕魯：</strong>看到等級差距過大的帕魯先撤退，不要硬碰硬。</li>
+          <li><strong>不製作防具：</strong>至少製作基礎的布甲，能顯著提升生存率。</li>
+          <li><strong>忽略被動技能：</strong>捕捉帕魯時留意金色被動技能，後期配種非常有用。</li>
+        </ul>
+
+        <h2 id="recommended-pals">推薦初期捕捉的帕魯</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>帕魯</th>
+              <th>推薦原因</th>
+              <th>工作適合</th>
+              <th>捕捉地點</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>棉悠悠（Lamball）</td><td>初期最容易捕捉，掉落羊毛可用於製作布甲</td><td>採集 Lv.1</td><td>初始區域到處都是</td></tr>
+            <tr><td>搗蛋貓（Cattiva）</td><td>種植與採集效率不錯，萬能工具帕魯</td><td>種植 Lv.1、採集 Lv.1</td><td>初始區域草地</td></tr>
+            <tr><td>皮皮雞（Chikipi）</td><td>掉落雞蛋，穩定的食物來源</td><td>無</td><td>初始區域草地</td></tr>
+            <tr><td>火絨狐（Foxparks）</td><td>生火技能，可用於冶煉金屬與烹飪</td><td>生火 Lv.1</td><td>初始區域東側</td></tr>
+            <tr><td>衝浪鴨（Fuack）</td><td>澆水技能，種植農田必備</td><td>澆水 Lv.1</td><td>河流附近</td></tr>
+            <tr><td>翠葉鼠（Vixy）</td><td>挖掘技能，可自動收集地面資源</td><td>挖掘 Lv.1</td><td>初始區域森林</td></tr>
+            <tr><td>伏特喵（Sparkit）</td><td>發電技能，後期自動化基礎</td><td>發電 Lv.1</td><td>初始區域洞穴附近</td></tr>
+            <tr><td>吊縛靈（Daedream）</td><td>挖礦技能，夜間也能工作</td><td>挖礦 Lv.1</td><td>初始區域夜晚出沒</td></tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <strong>捕捉策略：</strong>每種帕魯建議至少捕捉 2 隻（一公一母），為後期配種做好準備。
+        </blockquote>
+
+        <h2 id="faq">新手常見問題 FAQ</h2>
+
+        <h3 id="faq-respawn">Q：死亡後物品會消失嗎？</h3>
+        <p>一般難度下，死亡後會在設定的重生點復活，掉落的物品會留在死亡地點，可以回去撿取。建議設定床為重生點並快速返回撿屍。</p>
+
+        <h3 id="faq-base">Q：可以建立幾個基地？</h3>
+        <p>預設最多 2 個基地，後期可透過科技樹升級增加至最多 3 個。每個基地可以指派最多 15 隻帕魯工作。</p>
+
+        <h3 id="faq-pal-sphere">Q：帕魯球不夠用怎麼辦？</h3>
+        <p>帕魯球需要木材 ×3 + 石頭 ×3 + 帕魯礦 ×1 製作。初期帕魯礦比較稀缺，可在初始區域附近的礦點採集，或擊敗搗蛋貓等帕魯獲得。</p>
+
+        <h3 id="faq-level-limit">Q：有等級上限嗎？</h3>
+        <p>目前遊戲的等級上限為 50 級。達到 50 級後可以繼續收集科技點數解鎖所有科技，但經驗值不再增加。</p>
+
+        <h3 id="faq-multiplayer">Q：單人模式的存檔可以轉到多人伺服器嗎？</h3>
+        <p>目前官方不支援單人存檔直接轉移到多人伺服器。不過部分自架伺服器有提供轉移工具，請查閱各伺服器的說明。</p>
+
+      </div>
+
+      <!-- Article Footer -->
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-blue">新手</span>
+          <span class="badge badge-green">入門</span>
+          <span class="badge badge-gold">升級技巧</span>
+          <span class="badge badge-red">生存指南</span>
+        </div>
+
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="base-building.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-emerald-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">基地建設攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">高效率自動化生產線配置</p>
+            </div>
+          </a>
+          <a href="tech-tree-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-amber-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">科技樹攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">最佳解鎖順序推薦</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIGHT: Ad Sidebar -->
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="ad-slot" style="min-height:250px;">
+<!-- sidebar_rect -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="2122827923"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+        <div class="ad-slot" style="min-height:600px;">
+<!-- sidebar_wide -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="7565057991"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">幻獸帕魯</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="breeding-guide.html" class="text-gray-500 hover:text-indigo-400 transition">配種攻略</a></li>
+            <li><a href="beginner-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門</a></li>
+            <li><a href="base-building.html" class="text-gray-500 hover:text-indigo-400 transition">基地建設</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="beginner-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門</a></li>
+            <li><a href="base-building.html" class="text-gray-500 hover:text-indigo-400 transition">基地建設</a></li>
+            <li><a href="weapons-guide.html" class="text-gray-500 hover:text-indigo-400 transition">武器裝備</a></li>
+            <li><a href="tech-tree-guide.html" class="text-gray-500 hover:text-indigo-400 transition">科技樹</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

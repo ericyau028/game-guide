@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="黑神話：悟空全Boss攻略 — 六大章節所有Boss的詳細打法、弱點屬性、推薦技能組合與獎勵一覽，含隱藏Boss觸發條件。">
+  <meta name="keywords" content="黑神話悟空, Black Myth Wukong, Boss攻略, 黑風山, 黃風嶺, 浮屠界, 盤絲洞, 火焰山, 花果山, Boss弱點">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="google-adsense-account" content="ca-pub-4900630860092971">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="黑神話：悟空全Boss攻略（2026年最新版）— 攻略站">
+  <meta property="og:description" content="六大章節所有Boss的詳細打法、弱點屬性、推薦技能組合與獎勵一覽，含隱藏Boss觸發條件。">
+  <meta property="og:type" content="article">
+  <title>黑神話：悟空全Boss攻略（2026年最新版）— 攻略站</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "黑神話：悟空全Boss攻略（2026年最新版）",
+    "description": "六大章節所有Boss的詳細打法、弱點屬性、推薦技能組合與獎勵一覽，含隱藏Boss觸發條件。",
+    "author": { "@type": "Organization", "name": "GameGuide.tw" },
+    "datePublished": "2026-07-24",
+    "dateModified": "2026-07-24",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://game.cubedhub.com/steam/wukong/articles/boss-guide.html" }
+  }
+  </script>
+  <link rel="canonical" href="https://game.cubedhub.com/steam/wukong/articles/boss-guide.html">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4900630860092971" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .badge-amber { background:rgba(245,158,11,0.15); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); }
+    .badge-red { background:rgba(239,68,68,0.15); color:#ef4444; border:1px solid rgba(239,68,68,0.3); }
+    .badge-purple { background:rgba(147,51,234,0.15); color:#a855f7; border:1px solid rgba(147,51,234,0.3); }
+    .badge-blue { background:rgba(59,130,246,0.15); color:#3b82f6; border:1px solid rgba(59,130,246,0.3); }
+    .badge-green { background:rgba(16,185,129,0.15); color:#10b981; border:1px solid rgba(16,185,129,0.3); }
+  </style>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-amber-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../../index.html" class="nav-link">首頁</a>
+          <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="../../palworld/index.html" class="nav-link">幻獸帕魯</a>
+          <a href="../index.html" class="nav-link">黑神話悟空</a>
+          <a href="boss-guide.html" class="nav-link active">Boss攻略</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-amber-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../../index.html" class="nav-link">首頁</a>
+        <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="../../palworld/index.html" class="nav-link">幻獸帕魯</a>
+        <a href="../index.html" class="nav-link">黑神話悟空</a>
+        <a href="boss-guide.html" class="nav-link active">Boss攻略</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-amber-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../../index.html" class="hover:text-amber-400 transition">首頁</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../../index.html" class="hover:text-amber-400 transition">Steam</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../index.html" class="hover:text-amber-400 transition">黑神話悟空</a>
+      <span class="mx-2">&#8250;</span>
+      <span class="text-gray-300">全Boss攻略</span>
+    </nav>
+  </div>
+
+  <!-- ===== ARTICLE LAYOUT ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <!-- LEFT: TOC -->
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER -->
+    <article class="flex-1 min-w-0">
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">黑神話：悟空 — 全Boss攻略大全</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            GameGuide 編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-24
+          </span>
+          <span>·</span>
+          <span>約 25 分鐘閱讀</span>
+          <span class="badge badge-red">Boss</span>
+          <span class="badge badge-amber">進階攻略</span>
+        </div>
+      </header>
+
+      <div id="article-content" class="article-content">
+
+        <h2 id="chapter1">第一章：黑風山</h2>
+        <p>黑風山是遊戲的第一個章節，也是玩家熟悉操作與核心機制的入門區域。雖然 BOSS 難度相對較低，但對於新手來說仍有不少挑戰。</p>
+
+        <h3 id="boss-01">牛頭怪（Bullguard）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第一章 — 黑風山（初始區域）</td></tr>
+            <tr><td>弱點</td><td>火屬性傷害、蓄力重擊</td></tr>
+            <tr><td>推薦等級</td><td>初始（無等級限制）</td></tr>
+            <tr><td>推薦技能</td><td>定身術、輕棍連擊 + 蓄力重棍</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×500、青銅套裝（胸甲）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>作為遊戲的第一個 BOSS，牛頭怪的攻擊模式較為固定。主要為衝撞與揮拳，注意牠的蓄力動作後會接重拳。利用輕棍累積專注值後，在牠攻擊硬直時使用重棍造成大量傷害。定身術可以在牠衝撞時打斷其攻勢。<strong>注意：</strong>場地邊緣有懸崖，小心不要被撞下去。</p>
+
+        <h3 id="boss-02">廣智（Guangzhi）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第一章 — 黑風山（寺廟區域）</td></tr>
+            <tr><td>弱點</td><td>雷屬性傷害</td></tr>
+            <tr><td>推薦等級</td><td>Lv 5+</td></tr>
+            <tr><td>推薦技能</td><td>定身術、跳躍重棍、閃避反擊</td></tr>
+            <tr><td>獎勵</td><td>廣智的長刀（武器）、靈蘊 ×800</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>廣智使用的長刀攻擊範圍較大，近距離時會連續揮砍。建議保持中距離引誘牠出招，在牠揮空後上前輸出。廣智的連續揮砍通常為 3~4 下，最後一下硬直較長，是主要輸出時機。注意牠會後撤步接突刺，這個招式速度很快，看到後撤立刻橫向閃避。</p>
+
+        <h3 id="boss-03">廣謀（Guangmou）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第一章 — 黑風山（竹林深處）</td></tr>
+            <tr><td>弱點</td><td>火屬性傷害</td></tr>
+            <tr><td>推薦等級</td><td>Lv 8+</td></tr>
+            <tr><td>推薦技能</td><td>定身術、火屬性附魔、範圍攻擊</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×1000、丹藥配方</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>廣謀會召喚小怪助戰，優先清理小怪避免被圍攻。本體攻擊以範圍毒霧為主，注意地面上的毒霧範圍提示。使用定身術控住後盡可能輸出，火屬性攻擊對其有額外傷害加成。毒霧累積過多會限制走位空間，建議將戰鬥引導到乾淨的區域。</p>
+
+        <h3 id="boss-04">白衣秀士（Whiteclad Noble）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第一章 — 黑風山（水潭區域）</td></tr>
+            <tr><td>弱點</td><td>雷屬性傷害、中毒狀態</td></tr>
+            <tr><td>推薦等級</td><td>Lv 12+</td></tr>
+            <tr><td>推薦技能</td><td>定身術、雷屬性附魔、快速位移技能</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×1500、白衣秀士的衣角（珍玩）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>白衣秀士是第一章最難的 BOSS 之一。牠的攻擊速度極快，且會使用水屬性遠程攻擊。戰鬥場地在水潭中，部分區域會減緩移動速度。注意牠的二階段形態——血量降至 50% 以下後會解放真實形態，攻擊範圍與傷害大幅提升。核心策略是保持貼身纏鬥，利用牠攻擊後的微小硬直進行反擊。</p>
+
+        <h3 id="boss-05">黑風大王 → 黑熊精（Black Wind King → Black Bear Guai）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第一章 — 黑風山（黑風寺）</td></tr>
+            <tr><td>弱點</td><td>火屬性傷害（第一階段）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 15+</td></tr>
+            <tr><td>推薦技能</td><td>定身術、火屬性法術、充足回復藥</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×3000、黑熊精的毛皮（珍玩）、關卡完整通過</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>這是一場連續兩階段的 BOSS 戰。第一階段黑風大王以遠程風屬性攻擊為主，保持移動接近後輸出。打敗黑風大王後會立即進入第二階段——黑熊精現出真身。黑熊精擁有極高的攻擊力與範圍傷害，注意躲避牠的拍地與滾動攻擊。場地中有柱子可以繞柱躲避部分攻擊。<strong>關鍵提示：</strong>第二階段開始時立刻拉開距離，等牠的第一波攻擊落空後再上前。</p>
+
+        <h2 id="chapter2">第二章：黃風嶺</h2>
+        <p>黃風嶺是一片廣闊的沙漠區域，充滿了流沙與石窟。此章節的 BOSS 難度明顯提升，建議玩家已經熟練掌握了基本戰鬥技巧。</p>
+
+        <h3 id="boss-06">虎先鋒（Tiger Vanguard）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第二章 — 黃風嶺（虎穴）</td></tr>
+            <tr><td>弱點</td><td>冰屬性傷害、打斷類法術</td></tr>
+            <tr><td>推薦等級</td><td>Lv 20+</td></tr>
+            <tr><td>推薦技能</td><td>定身術、冰屬性附魔、高機動性閃避</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×2000、虎先鋒的利爪（武器材料）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>虎先鋒以極快的速度與高傷害的連續攻擊聞名。牠的招牌技能「猛虎連擊」會連續攻擊 5~6 次，最後一擊帶有擊飛效果。建議在牠發動連擊時保持防禦或閃避，等連擊結束後的短暫喘息期進行反擊。冰屬性可以減緩牠的移動速度，大幅降低戰鬥難度。</p>
+
+        <h3 id="boss-07">石先鋒（Stone Vanguard）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第二章 — 黃風嶺（石窟）</td></tr>
+            <tr><td>弱點</td><td>打擊類攻擊（對石甲傷害加成）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 22+</td></tr>
+            <tr><td>推薦技能</td><td>重棍蓄力、跳躍攻擊、雷屬性法術</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×2500、堅固石材 ×10</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>石先鋒全身覆蓋石甲，普通攻擊傷害大幅降低。使用蓄力重棍或跳躍重棍可以對其造成較高傷害，同時有機率打破石甲。打破石甲後牠會進入短暫的硬直狀態，這是爆發輸出的最佳時機。注意牠的全範圍地震波攻擊，看到牠捶地時立刻跳躍躲避。</p>
+
+        <h3 id="boss-08">黃風大聖（Yellow Wind Sage）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第二章 — 黃風嶺（黃風寺）</td></tr>
+            <tr><td>弱點</td><td>火屬性傷害（可驅散風沙）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 30+</td></tr>
+            <tr><td>推薦技能</td><td>定身術、火屬性法術、大範圍技能、解毒藥</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×5000、黃風大聖的佛珠（珍玩）、關卡完整通過</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>黃風大聖是第二章的關底 BOSS，極具挑戰性。牠會召喚強風干擾玩家的移動，並使用沙塵攻擊造成視野遮蔽。火屬性法術可以暫時驅散風沙。黃風大聖有兩個階段：第一階段以近戰爪擊與風刃為主；第二階段會飛到空中釋放大範圍沙塵暴，地面會出現流沙陷阱。建議準備足夠的解毒藥與回復藥，並在二階段注意腳下流沙的位置。</p>
+
+        <h2 id="chapter3">第三章：浮屠界</h2>
+        <p>浮屠界是一個陰暗詭異的區域，充滿了佛法與魔障交織的氛圍。此章節的 BOSS 多與精神攻擊相關。</p>
+
+        <h3 id="boss-09">赤尻馬猴（Macaque Chief）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第三章 — 浮屠界（浮屠塔）</td></tr>
+            <tr><td>弱點</td><td>雷屬性傷害、精神類攻擊</td></tr>
+            <tr><td>推薦等級</td><td>Lv 35+</td></tr>
+            <tr><td>推薦技能</td><td>定身術、雷屬性法術、快速位移</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×3000、赤尻馬猴的毛髮（製作材料）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>赤尻馬猴以高速移動與分身攻擊為主。牠會召喚數個分身同時攻擊，需要辨識本體的位置。本體的攻擊帶有紅色軌跡，分身的攻擊較為暗淡。建議在牠召喚分身時使用範圍攻擊清掉分身，然後集中火力攻擊本體。雷屬性法術對其有額外的麻痺效果。</p>
+
+        <h3 id="boss-10">不白（Non-White）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第三章 — 浮屠界（苦海）</td></tr>
+            <tr><td>弱點</td><td>火屬性傷害、破防攻擊</td></tr>
+            <tr><td>推薦等級</td><td>Lv 38+</td></tr>
+            <tr><td>推薦技能</td><td>火屬性法術、蓄力重棍、防禦姿態</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×3500、不白的白衣（裝備）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>不白的攻擊帶有冰凍效果，被命中多次後會減緩移動速度。牠的長槍攻擊範圍極廣，保持側面輸出較為安全。注意牠的二階段會釋放大範圍冰霜爆炸，看到地面出現白色圓圈時迅速遠離。推薦使用火屬性法術進行屬性克制，同時可以解除自身的冰凍狀態。</p>
+
+        <h3 id="boss-11">黃眉（Yellowbrow）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第三章 — 浮屠界（小雷音寺）</td></tr>
+            <tr><td>弱點</td><td>佛法攻擊、持續傷害法術</td></tr>
+            <tr><td>推薦等級</td><td>Lv 45+</td></tr>
+            <tr><td>推薦技能</td><td>定身術、持續傷害法術、解毒藥、充足回復</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×8000、黃眉的念珠（傳說珍玩）、關卡完整通過</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>黃眉是第三章的關底 BOSS，也是遊戲至今最難的戰鬥之一。牠的攻擊模式極其多變，包含遠程金光照射、範圍金缽鎮壓與精神攻擊。戰鬥分為三個階段：第一階段以佛法金光攻擊為主；第二階段會召喚金身護體，需打破護盾才能造成傷害；第三階段（HP 20% 以下）會釋放全屏大招「金缽罩頂」，必須躲在場地中的柱子後面才能避開。建議使用持續傷害法術慢慢消耗牠的 HP，同時保持高度專注力應對多變的攻擊模式。</p>
+
+        <h2 id="chapter4">第四章：盤絲洞</h2>
+        <p>盤絲洞是一個巨大的蜘蛛巢穴，充滿了毒液與蛛網。此區域的 BOSS 多以毒屬性攻擊與召喚小蜘蛛為特色。</p>
+
+        <h3 id="boss-12">毒敵山大王（Venom Daoist）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第四章 — 盤絲洞（毒敵山）</td></tr>
+            <tr><td>弱點</td><td>火屬性傷害、淨化類法術</td></tr>
+            <tr><td>推薦等級</td><td>Lv 45+</td></tr>
+            <tr><td>推薦技能</td><td>火屬性法術、解毒藥、遠程攻擊</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×4000、毒敵山大王的内丹（丹藥材料）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>毒敵山大王以毒屬性攻擊為主，場地中會持續出現毒霧區域。被命中有機率進入中毒狀態，持續損失 HP。戰鬥中牠會定期產出小蜘蛛，如果小蜘蛛數量過多會非常麻煩，建議使用範圍火屬性攻擊清理小蜘蛛。解毒藥是必備道具，建議攜帶至少 10 瓶以上。火屬性可以燒掉地上的蛛網，擴大安全走位空間。</p>
+
+        <h3 id="boss-13">百眼魔君（The Hundred-Eyed Daoist Lord）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第四章 — 盤絲洞（紫雲山）</td></tr>
+            <tr><td>弱點</td><td>破防攻擊、持續傷害</td></tr>
+            <tr><td>推薦等級</td><td>Lv 52+</td></tr>
+            <tr><td>推薦技能</td><td>定身術、蓄力重棍、高級回復藥、解毒藥</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×10000、百眼魔君的寶珠（傳說珍玩）、關卡完整通過</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>百眼魔君是第四章的關底 BOSS，擁有極高的法術抗性與多種大範圍攻擊。牠的百眼光束會持續掃射全場，需要不斷移動躲避。戰鬥中場地會被紫色蛛網覆蓋，站在上面會被減速。使用火屬性攻擊可以燒毀蛛網。注意牠會使用「石化凝視」技能，看到牠胸口發光時立刻背對牠，否則會被石化。這個 BOSS 考驗玩家的持續輸出能力與走位精準度。</p>
+
+        <h2 id="chapter5">第五章：火焰山</h2>
+        <p>火焰山是一片熾熱的熔岩地帶，BOSS 多以火屬性與強力近戰攻擊為主。建議裝備火抗裝備。</p>
+
+        <h3 id="boss-14">紅孩兒（Red Boy）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第五章 — 火焰山（火雲洞）</td></tr>
+            <tr><td>弱點</td><td>冰屬性傷害、水屬性法術</td></tr>
+            <tr><td>推薦等級</td><td>Lv 55+</td></tr>
+            <tr><td>推薦技能</td><td>冰屬性附魔、水屬性法術、防火裝備</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×5000、紅孩兒的火焰槍（武器）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>紅孩兒以高速接近攻擊與火焰範圍技能為主。牠會頻繁使用瞬移接近玩家，然後接火焰連擊。冰屬性攻擊可以有效壓制牠的火焰護盾。注意地面上的火焰殘留區域會持續造成傷害。紅孩兒的弱點在攻擊後的短暫停滯，使用定身術可以延長這個輸出窗口。<strong>裝備建議：</strong>強烈建議在挑戰前裝備防火護甲，並攜帶抗火丹藥。</p>
+
+        <h3 id="boss-15">牛魔王（Bull King）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第五章 — 火焰山（火焰山頂）</td></tr>
+            <tr><td>弱點</td><td>持續傷害法術、破防攻擊</td></tr>
+            <tr><td>推薦等級</td><td>Lv 60+</td></tr>
+            <tr><td>推薦技能</td><td>定身術、蓄力重棍、高級回復藥、火焰抗性裝備</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×12000、牛魔王的鐵角（傳說材料）、關卡完整通過</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>牛魔王是第五章的關底 BOSS，擁有遊戲中最高的近戰傷害之一。牠的攻擊範圍極大，舉手投足都有大範圍判定。主要威脅技能為「天崩地裂」——跳起後重砸地面，全場範圍衝擊波，看到牠跳起時立刻跳躍躲避。牛魔王有三個階段：第一階段以普通近戰為主；第二階段會開始使用火焰附魔，攻擊附帶灼燒效果；第三階段（HP 30% 以下）進入狂暴狀態，攻擊速度與傷害大幅提升。建議保持耐心，不要貪刀，利用牠大動作後的硬直進行反擊。</p>
+
+        <h2 id="chapter6">第六章：花果山</h2>
+        <p>花果山是最終章節，天命之猴將在此面對自己的宿命。此章節的 BOSS 是遊戲中最困難的戰鬥。</p>
+
+        <h3 id="boss-16">殘缺的身外身（Broken Shell / Stone Monkey）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第六章 — 花果山（水簾洞）</td></tr>
+            <tr><td>弱點</td><td>無特定弱點（需觀察攻擊模式）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 65+</td></tr>
+            <tr><td>推薦技能</td><td>定身術、滿級法術、傳說級裝備、充足回復</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×20000、身外身的碎片（傳說材料）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>殘缺的身外身是遊戲中倒數第二場戰鬥，也是一場極具象徵意義的戰鬥。對手是石猴形態的天命之人，使用的招式與玩家完全相同。牠會複製你的戰鬥風格，包括輕棍連擊、重棍蓄力，甚至會使用定身術反制你。這場戰鬥的核心在於節奏——不要使用固定的連招模式，嘗試混合輕重攻擊與法術打亂牠的節奏。當牠準備使用定身術時，會有一個短暫的抬手動作，此時可以使用閃避取消當前動作。</p>
+
+        <h3 id="boss-17">大聖殘軀（Great Sage's Broken Shell）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第六章 — 花果山（最終舞台）</td></tr>
+            <tr><td>弱點</td><td>佛法攻擊、持續傷害法術</td></tr>
+            <tr><td>推薦等級</td><td>Lv 70+（滿級為佳）</td></tr>
+            <tr><td>推薦技能</td><td>全部滿級法術、傳說級裝備、金丹、滿回復藥</td></tr>
+            <tr><td>獎勵</td><td>遊戲通關（結局觸發）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>大聖殘軀是遊戲最終 BOSS，代表齊天大聖孫悟空的殘存意志。這場戰鬥是整個遊戲最困難的挑戰，BOSS 擁有所有章節 BOSS 的技能組合。戰鬥分為四個階段：第一階段使用金箍棒近戰，攻擊模式類似加強版的天命之人；第二階段開始使用法術——定身術、分身術、金剛不壞；第三階段解放全部力量，全屏大招連發；第四階段（HP 10% 以下）進入劇情階段。<strong>終極提示：</strong>準備好所有的金丹與最高級回復藥，確保裝備與法術全部滿級。學習每個階段的攻擊模式是取勝的關鍵。不要急於輸出，活著比傷害更重要。</p>
+
+        <h2 id="hidden-boss">隱藏Boss</h2>
+        <p>遊戲中存在多個隱藏 Boss，挑戰牠們可以獲得豐厚的獎勵，部分隱藏 Boss 與真結局相關。</p>
+
+        <h3 id="boss-hidden-01">金池長老（Elder Jinchi）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第一章 — 黑風山（隱藏區域）</td></tr>
+            <tr><td>觸發條件</td><td>敲響三口鐘後開啟隱藏傳送門</td></tr>
+            <tr><td>推薦等級</td><td>Lv 15+</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×2000、金池僧袍（珍稀裝備）、幽魂精魄</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>金池長老以佛法攻擊與幽魂召喚為主。戰鬥中會不斷有幽魂從四周飛來，優先清理幽魂避免被圍攻。金池長老在血量低於 50% 後會進入狂暴狀態，攻擊速度加快。使用物理攻擊對其效果較好，法術抗性較高。</p>
+
+        <h3 id="boss-hidden-02">毒敵山大王（紫雲山隱藏）</h3>
+        <table>
+          <thead><tr><th>項目</th><th>內容</th></tr></thead>
+          <tbody>
+            <tr><td>章節</td><td>第四章 — 紫雲山（隱藏區域）</td></tr>
+            <tr><td>觸發條件</td><td>取得飛龍鱗片後在特定水池使用</td></tr>
+            <tr><td>推薦等級</td><td>Lv 50+</td></tr>
+            <tr><td>獎勵</td><td>靈蘊 ×5000、毒敵大王的毒囊（傳說材料）、飛龍棍（武器）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>與第四章的毒敵山大王不同，紫雲山隱藏區域的毒敵山大王是強化版本，攻擊頻率更高、毒霧範圍更大。場地中有解毒泉水可以淨化中毒狀態，建議利用這個機制降低戰鬥難度。</p>
+
+        <h2 id="tips">綜合戰鬥技巧</h2>
+        <ul>
+          <li><strong>定身術運用：</strong>定身術不僅可以用來打斷 BOSS 的攻擊，還可以在 BOSS 即將釋放大招時強制打斷。注意部分 BOSS 在特定階段會免疫定身。</li>
+          <li><strong>專注值管理：</strong>透過輕棍攻擊累積專注值，在 BOSS 硬直時使用重棍釋放，造成大量傷害。學會在閃避間穿插輕擊是進階玩家的必備技能。</li>
+          <li><strong>屬性克制：</strong>不同 BOSS 有各自的屬性弱點，使用對應屬性的法術或附魔可以大幅提升傷害。火剋冰、冰剋火、雷剋水/毒。</li>
+          <li><strong>裝備配置：</strong>挑戰 BOSS 前根據其攻擊屬性調整裝備的抗性。例如火焰山區域需要高火抗裝備，盤絲洞需要毒抗裝備。</li>
+          <li><strong>丹藥準備：</strong>丹藥在 BOSS 戰中至關重要。攻擊丹藥、防禦丹藥、回血丹藥都應該準備充足，在 BOSS 進入二階段前使用攻擊丹藥最大化輸出。</li>
+          <li><strong>場地利用：</strong>多數 BOSS 戰的場地都有可以利用的地形元素——柱子可以擋住遠程攻擊，高台可以躲避地面範圍技能，善用場地可以大幅降低難度。</li>
+          <li><strong>心態管理：</strong>黑神話：悟空的 BOSS 戰極具挑戰性，多次嘗試是正常的。每次失敗都是學習——觀察 BOSS 的攻擊模式，找出安全的輸出窗口。</li>
+        </ul>
+
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-red">Boss</span>
+          <span class="badge badge-amber">攻略</span>
+          <span class="badge badge-blue">全章節</span>
+          <span class="badge badge-green">隱藏Boss</span>
+        </div>
+
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="ending-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(147,51,234,0.5);">
+              <svg class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">多結局攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">真結局條件與分歧點解析</p>
+            </div>
+          </a>
+          <a href="hidden-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(16,185,129,0.5);">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">隱藏關卡攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">全章節隱藏要素大全</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIGHT: Ad Sidebar -->
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="ad-slot" style="min-height:250px;">
+<!-- sidebar_rect -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="2122827923"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+        <div class="ad-slot" style="min-height:600px;">
+<!-- sidebar_wide -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="7565057991"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">黑神話：悟空</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="boss-guide.html" class="text-gray-500 hover:text-amber-400 transition">全Boss攻略</a></li>
+            <li><a href="ending-guide.html" class="text-gray-500 hover:text-amber-400 transition">多結局攻略</a></li>
+            <li><a href="hidden-guide.html" class="text-gray-500 hover:text-amber-400 transition">隱藏關卡</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="boss-guide.html" class="text-gray-500 hover:text-amber-400 transition">Boss攻略</a></li>
+            <li><a href="ending-guide.html" class="text-gray-500 hover:text-amber-400 transition">結局攻略</a></li>
+            <li><a href="hidden-guide.html" class="text-gray-500 hover:text-amber-400 transition">隱藏關卡</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../../index.html" class="text-gray-500 hover:text-amber-400 transition">回首頁</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

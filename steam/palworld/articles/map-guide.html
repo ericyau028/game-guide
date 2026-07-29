@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="幻獸帕魯（Palworld）全地圖探索攻略 — 全區域介紹、重要資源點位置、快速旅行點解鎖、各區域帕魯分布與隱藏地點。">
+  <meta name="keywords" content="幻獸帕魯, Palworld, 地圖, 探索, 資源點, 快速旅行, 帕魯分布, 隱藏地點">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="google-adsense-account" content="ca-pub-4900630860092971">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="幻獸帕魯 全地圖探索攻略｜資源點與快速旅行 — 攻略站">
+  <meta property="og:description" content="完整地圖攻略，標示所有重要資源點、快速旅行點、帕魯分布與隱藏地點。">
+  <meta property="og:type" content="article">
+  <title>幻獸帕魯 全地圖探索攻略｜資源點與快速旅行 — 攻略站</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "幻獸帕魯 全地圖探索攻略｜資源點與快速旅行",
+    "description": "全區域介紹、重要資源點位置、快速旅行點解鎖、各區域帕魯分布與隱藏地點。",
+    "author": { "@type": "Organization", "name": "GameGuide.tw" },
+    "datePublished": "2026-07-24",
+    "dateModified": "2026-07-24",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://game.cubedhub.com/steam/palworld/articles/map-guide.html" }
+  }
+  </script>
+  <link rel="canonical" href="https://game.cubedhub.com/steam/palworld/articles/map-guide.html">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4900630860092971" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <!-- Reading Progress -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../../index.html" class="nav-link">首頁</a>
+          <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="../index.html" class="nav-link">幻獸帕魯</a>
+          <a href="map-guide.html" class="nav-link active">地圖探索</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../../index.html" class="nav-link">首頁</a>
+        <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="../index.html" class="nav-link">幻獸帕魯</a>
+        <a href="map-guide.html" class="nav-link active">地圖探索</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../../index.html" class="hover:text-indigo-400 transition">首頁</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../../index.html" class="hover:text-indigo-400 transition">Steam</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../index.html" class="hover:text-indigo-400 transition">幻獸帕魯</a>
+      <span class="mx-2">&#8250;</span>
+      <span class="text-gray-300">全地圖探索攻略</span>
+    </nav>
+  </div>
+
+  <!-- ===== ARTICLE LAYOUT ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <!-- LEFT: TOC -->
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER: Article Content -->
+    <article class="flex-1 min-w-0">
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">幻獸帕魯 全地圖探索攻略｜資源點與快速旅行</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            GameGuide 編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-24
+          </span>
+          <span>·</span>
+          <span>約 20 分鐘閱讀</span>
+          <span class="badge badge-blue">探索必備</span>
+        </div>
+      </header>
+
+      <div id="article-content" class="article-content">
+
+        <h2 id="intro">帕魯群島地圖總覽</h2>
+        <p>《幻獸帕魯》的地圖「帕魯群島」由多個生態區域組成，每個區域都有獨特的資源、帕魯種類與氣候條件。地圖總面積約 25 平方公里，從溫暖的初始草原到嚴寒的雪山頂峰應有盡有。</p>
+        <p>探索是遊戲的重要組成部分——解鎖快速旅行點、發現隱藏洞穴與找到稀有帕魯都需要你踏遍每一寸土地。</p>
+        <blockquote>
+          <strong>探索建議：</strong>製作飛行坐騎（如疾風隼 Lv.15+）可以大幅提升探索效率，建議優先解鎖。
+        </blockquote>
+
+        <h2 id="regions">全區域介紹</h2>
+        <p>地圖主要分為以下幾個大區域：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>區域名稱</th>
+              <th>氣候</th>
+              <th>推薦等級</th>
+              <th>特色資源</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>初始草原</td><td>溫和</td><td>1~10</td><td>木材、石頭、莓果、羊毛</td></tr>
+            <tr><td>密林區</td><td>潮濕</td><td>8~18</td><td>稀有木材、蘑菇、蜂蜜</td></tr>
+            <tr><td>沙漠地帶</td><td>炎熱</td><td>15~28</td><td>金屬礦、硫磺、仙人掌</td></tr>
+            <tr><td>雪山山脈</td><td>嚴寒</td><td>22~35</td><td>冰礦、純淨石英、傳說核心</td></tr>
+            <tr><td>火山區域</td><td>高溫</td><td>30~45</td><td>精煉金屬礦、火焰器官、碳纖維</td></tr>
+            <tr><td>沼澤窪地</td><td>腐蝕</td><td>18~28</td><td>稀有藥草、毒囊、黏液</td></tr>
+            <tr><td>海灘與島嶼</td><td>溫和</td><td>5~20</td><td>貝殼、珍珠、魚類</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="region-start">初始草原</h3>
+        <p>遊戲的起始區域，地形平坦、資源豐富、帕魯溫和。這裡是你建立第一個基地的理想地點。主要帕魯有棉悠悠、搗蛋貓、皮皮雞、翠葉鼠等。</p>
+
+        <h3 id="region-jungle">密林區</h3>
+        <p>位於地圖中央偏東，樹木茂密、光線昏暗。這裡有大量稀有木材與藥草，但也潛伏著更具攻擊性的帕魯。建議攜帶火把與足夠的食物再進入。</p>
+
+        <h3 id="region-desert">沙漠地帶</h3>
+        <p>地圖東南方的炎熱區域，白天高溫需要耐熱裝備。這裡是金屬礦的主要產地，同時也是部分稀有帕魯的棲息地，如紅小鯊、鐵腕猿等。</p>
+
+        <h3 id="region-snow">雪山山脈</h3>
+        <p>地圖西北方的高海拔區域，氣候嚴寒，需要耐寒套裝才能進入。這裡有全遊戲最稀有的冰礦資源，以及傳說帕魯「喚冰獸」。探索時務必攜帶抗寒藥劑。</p>
+
+        <h3 id="region-volcano">火山區域</h3>
+        <p>地圖西南方的極端高溫區，需要最高級的耐熱裝備。這裡是後期玩家必訪的地方，盛產精煉金屬與碳纖維。Boss「炎魔帝王」棲息於此。</p>
+
+        <h2 id="resources">重要資源點位置</h2>
+        <p>以下是各地圖關鍵資源的出沒位置：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>資源</th>
+              <th>區域</th>
+              <th>座標（約略）</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>金屬礦（密集）</td><td>沙漠地帶</td><td>350, 150</td><td>礦脈密集，建議建基地</td></tr>
+            <tr><td>純淨石英</td><td>雪山山脈</td><td>-250, 480</td><td>製作電子產品必需</td></tr>
+            <tr><td>硫磺</td><td>火山區域</td><td>550, -150</td><td>製作火藥與子彈</td></tr>
+            <tr><td>碳纖維</td><td>火山區域深處</td><td>620, -220</td><td>後期裝備必需材料</td></tr>
+            <tr><td>傳說核心</td><td>雪山 Boss 區</td><td>-300, 550</td><td>傳說裝備強化材料</td></tr>
+            <tr><td>稀有木材</td><td>密林區深處</td><td>100, -50</td><td>高級建築材料</td></tr>
+            <tr><td>蜂蜜</td><td>密林區樹洞</td><td>80, -20</td><td>製作回復藥水</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="fast-travel">快速旅行點解鎖</h2>
+        <p>快速旅行點（Fast Travel Points）分布在地圖各處，解鎖後可以瞬間傳送。以下是完整的快速旅行點列表與解鎖方式：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>名稱</th>
+              <th>區域</th>
+              <th>座標</th>
+              <th>如何解鎖</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>初始重生點</td><td>初始草原</td><td>0, -500</td><td>自動解鎖</td></tr>
+            <tr><td>草原哨站</td><td>初始草原</td><td>50, -450</td><td>走到附近即可解鎖</td></tr>
+            <tr><td>密林入口</td><td>密林區</td><td>100, -100</td><td>擊敗守門帕魯</td></tr>
+            <tr><td>沙漠前哨</td><td>沙漠地帶</td><td>350, 100</td><td>走到附近即可解鎖</td></tr>
+            <tr><td>雪山營地</td><td>雪山山脈</td><td>-200, 450</td><td>建造篝火取暖後解鎖</td></tr>
+            <tr><td>火山檢查點</td><td>火山區域</td><td>500, -150</td><td>裝備耐熱套裝後靠近</td></tr>
+            <tr><td>沼澤小屋</td><td>沼澤窪地</td><td>-100, 200</td><td>清除周圍敵人</td></tr>
+            <tr><td>海灘碼頭</td><td>海灘</td><td>200, -400</td><td>走到附近即可解鎖</td></tr>
+            <tr><td>地下城入口</td><td>各區域</td><td>隨機</td><td>發現地下城時自動解鎖</td></tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <strong>技巧：</strong>每解鎖一個新的快速旅行點，建議直接在帳篷或基地製作記憶標記，方便日後快速返回。
+        </blockquote>
+
+        <h2 id="pal-locations">各區域帕魯分布</h2>
+        <p>不同區域棲息著不同的帕魯，以下為重點帕魯的分布位置：</p>
+
+        <h3 id="pals-beginner">前期區域（Lv.1~15）</h3>
+        <ul>
+          <li><strong>初始草原：</strong>棉悠悠、搗蛋貓、皮皮雞、翠葉鼠、波娜兔。</li>
+          <li><strong>海灘：</strong>衝浪鴨、伏特喵、霍普吉翁。</li>
+          <li><strong>小型洞穴：</strong>吊縛靈、火絨狐。</li>
+        </ul>
+
+        <h3 id="pals-mid">中期區域（Lv.15~30）</h3>
+        <ul>
+          <li><strong>密林區：</strong>玉藻狐、草莽豬、羽箭射手。</li>
+          <li><strong>沙漠地帶：</strong>紅小鯊、鐵腕猿、雷角馬。</li>
+          <li><strong>沼澤：</strong>碧海龍、焰巫狐（稀有）。</li>
+        </ul>
+
+        <h3 id="pals-late">後期區域（Lv.30~50）</h3>
+        <ul>
+          <li><strong>雪山：</strong>喚冰獸、碎岩龜、吹雪狐。</li>
+          <li><strong>火山：</strong>炎魔帝王、鋼鐵帝王、空冥龍（傳說）。</li>
+          <li><strong>地下城深層：</strong>混沌騎士、聖光騎士（傳說）。</li>
+        </ul>
+
+        <h2 id="hidden">隱藏地點</h2>
+        <p>地圖中有許多隱藏地點，等待玩家發掘：</p>
+
+        <h3 id="hidden-cave">隱藏洞穴</h3>
+        <ul>
+          <li><strong>瀑布後的洞穴：</strong>在瀑布谷地（-150, -300）後方有一個隱藏洞穴，內部有稀有礦脈與寶箱。</li>
+          <li><strong>沙漠地下神殿：</strong>在沙漠中心的地下有一處古代遺跡，需要解謎才能進入。</li>
+          <li><strong>冰封洞窟：</strong>雪山山脈的懸崖邊有一個被冰塊封住的洞口，用火系帕魯融化冰塊後可進入。</li>
+        </ul>
+
+        <h3 id="hidden-boss">隱藏 Boss</h3>
+        <ul>
+          <li><strong>午夜行者：</strong>每晚 0:00 在密林區中央隨機出現，擊敗後有機率掉落傳說級飾品。</li>
+          <li><strong>沙漠巨蠍：</strong>在沙塵暴天氣時出現在沙漠地帶，掉落稀有製作材料。</li>
+          <li><strong>深海巨獸：</strong>在海灘區域遠海處游泳時有機率觸發，需要船隻或水系帕魯才能靠近。</li>
+        </ul>
+
+        <h3 id="hidden-egg">隱藏蛋點</h3>
+        <p>地圖上散落著一些特殊的蛋點，可以孵化出稀有帕魯：</p>
+        <ul>
+          <li><strong>巨大龍蛋：</strong>火山山頂平台（620, -200）—— 可孵化傳說龍系帕魯。</li>
+          <li><strong>冰晶蛋：</strong>雪山最高峰（-280, 580）—— 可孵化冰系稀有帕魯。</li>
+          <li><strong>暗影蛋：</strong>沼澤中央小島（-120, 220）—— 可孵化暗系帕魯。</li>
+        </ul>
+        <blockquote>
+          <strong>提示：</strong>隱藏蛋點的蛋刷新時間約為現實時間 24~48 小時，建議標記位置定期查看。
+        </blockquote>
+
+      </div>
+
+      <!-- Article Footer -->
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-blue">地圖</span>
+          <span class="badge badge-green">探索</span>
+          <span class="badge badge-gold">資源點</span>
+          <span class="badge badge-red">隱藏</span>
+        </div>
+
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="farming-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-lime-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Farming 攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">資源收集與自動化農場</p>
+            </div>
+          </a>
+          <a href="beginner-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-cyan-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">新手入門指南</h4>
+              <p class="text-gray-500 text-xs mt-1">從零開始的帕魯生存</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIGHT: Ad Sidebar -->
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="ad-slot" style="min-height:250px;">
+<!-- sidebar_rect -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="2122827923"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+        <div class="ad-slot" style="min-height:600px;">
+<!-- sidebar_wide -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="7565057991"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">幻獸帕魯</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="breeding-guide.html" class="text-gray-500 hover:text-indigo-400 transition">配種攻略</a></li>
+            <li><a href="beginner-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門</a></li>
+            <li><a href="base-building.html" class="text-gray-500 hover:text-indigo-400 transition">基地建設</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="beginner-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門</a></li>
+            <li><a href="base-building.html" class="text-gray-500 hover:text-indigo-400 transition">基地建設</a></li>
+            <li><a href="weapons-guide.html" class="text-gray-500 hover:text-indigo-400 transition">武器裝備</a></li>
+            <li><a href="tech-tree-guide.html" class="text-gray-500 hover:text-indigo-400 transition">科技樹</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

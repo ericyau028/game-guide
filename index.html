@@ -6,6 +6,7 @@
   <meta name="description" content="遊戲攻略站 - 提供各類熱門遊戲的最新攻略、角色培養指南、關卡解析與裝備推薦。">
   <meta name="keywords" content="遊戲攻略, 遊戲指南, Mabinogi Mobile, 瑪奇Mobile, 手遊攻略">
   <meta name="author" content="GameGuide.tw">
+  <meta name="google-adsense-account" content="ca-pub-4900630860092971">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="遊戲攻略站 - 最全遊戲攻略指南">
   <meta property="og:description" content="提供各類熱門遊戲的最新攻略、角色培養指南與關卡解析。">
@@ -16,12 +17,14 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "遊戲攻略站",
-    "url": "https://game.yau888.com/",
+    "url": "https://game.cubedhub.com/",
     "description": "提供各類熱門遊戲的最新攻略、角色培養指南、關卡解析與裝備推薦。"
   }
   </script>
-  <link rel="canonical" href="https://game.yau888.com/">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="canonical" href="https://game.cubedhub.com/">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4900630860092971" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -46,18 +49,17 @@
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-2 text-white font-bold text-xl">
-          <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
+          <img src="images/logo.png" alt="CubedHub" class="w-8 h-8">
           <span>攻略站</span>
         </a>
 
         <!-- Desktop Nav -->
         <div class="hidden md:flex items-center gap-1">
           <a href="index.html" class="nav-link active">首頁</a>
+          <a href="mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="steam/palworld/index.html" class="nav-link">幻獸帕魯</a>
+          <a href="steam/wukong/index.html" class="nav-link">黑神話悟空</a>
           <a href="#popular" class="nav-link">熱門攻略</a>
-          <a href="#categories" class="nav-link">遊戲分類</a>
           <a href="#about" class="nav-link">關於我們</a>
         </div>
 
@@ -90,8 +92,10 @@
       </div>
       <div class="flex flex-col gap-2">
         <a href="index.html" class="nav-link active">首頁</a>
+        <a href="mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="steam/palworld/index.html" class="nav-link">幻獸帕魯</a>
+        <a href="steam/wukong/index.html" class="nav-link">黑神話悟空</a>
         <a href="#popular" class="nav-link">熱門攻略</a>
-        <a href="#categories" class="nav-link">遊戲分類</a>
         <a href="#about" class="nav-link">關於我們</a>
       </div>
       <div class="mt-6">
@@ -127,7 +131,7 @@
 
   <!-- ===== AD SLOT TOP ===== -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-8">
-    <div class="ad-slot">廣告位 — Google AdSense 728×90</div>
+    <div class="ad-slot"><!-- header_banner --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4900630860092971" data-ad-slot="6428216085"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
   </div>
 
   <!-- ===== POPULAR GAMES ===== -->
@@ -162,29 +166,24 @@
         </a>
 
         <!-- Game Card 2 -->
-        <div class="card searchable-item" data-category="rpg">
-          <div class="card-image flex items-center justify-center bg-gradient-to-br from-emerald-900/60 to-teal-900/60">
-            <svg class="w-20 h-20 text-emerald-400 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
+        <a href="steam/palworld/index.html" class="card searchable-item" data-category="survival">
+          <div class="card-image flex items-center justify-center bg-gradient-to-br from-emerald-900/60 to-teal-900/60" style="background-image:linear-gradient(135deg, rgba(16,185,129,0.3), rgba(13,148,136,0.2));background-size:cover;background-position:center;"></div>
           <div class="p-5">
             <div class="flex items-center gap-2 mb-2">
-              <span class="badge badge-blue">即將上線</span>
-              <span class="badge badge-green">RPG</span>
+              <span class="badge badge-gold">🔥 熱門</span>
+              <span class="badge badge-green">生存</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-1">艾爾登法環 Mobile</h3>
-            <p class="text-gray-400 text-sm mb-3">預計上線的經典移植手遊，提前掌握先機。</p>
+            <h3 class="text-lg font-bold text-white mb-1">幻獸帕魯 Palworld</h3>
+            <p class="text-gray-400 text-sm mb-3">1.0 版完整攻略：配種配方、全帕魯圖鑑、Boss攻略。</p>
             <div class="flex items-center text-xs text-gray-500 gap-4">
               <span class="flex items-center gap-1">
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                預告中
+                 10 篇攻略
               </span>
-              <span>關注更新</span>
+              <span>1.0 版</span>
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- Game Card 3 -->
         <div class="card searchable-item" data-category="strategy">
@@ -284,7 +283,7 @@
 
   <!-- ===== AD SLOT MID ===== -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8">
-    <div class="ad-slot" style="min-height:250px;">廣告位 — Google AdSense 300×250</div>
+    <div class="ad-slot" style="min-height:250px;"><!-- sidebar_rect --><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4900630860092971" data-ad-slot="2122827923"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
   </div>
 
   <!-- ===== LATEST ARTICLES ===== -->
@@ -361,6 +360,19 @@
           </div>
         </div>
 
+        <!-- Article 5 -->
+        <a href="steam/palworld/index.html" class="card flex flex-col sm:flex-row searchable-item">
+            <div class="sm:w-48 sm:min-h-[140px] flex-shrink-0 flex items-center justify-center bg-gradient-to-br from-emerald-900/60 to-teal-900/60 rounded-t-xl sm:rounded-t-none sm:rounded-l-xl" style="min-height:120px;background-image:linear-gradient(135deg, rgba(16,185,129,0.3), rgba(13,148,136,0.2));background-size:cover;background-position:center;"></div>
+          <div class="p-5 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-gold">幻獸帕魯</span>
+              <span class="text-xs text-gray-500">2026-07-24</span>
+            </div>
+            <h3 class="font-bold text-white mb-1">幻獸帕魯 1.0 完整攻略：配種配方、圖鑑與 Boss 指南</h3>
+            <p class="text-gray-400 text-sm">Palworld 1.0 最新攻略，配種組合配方表、全帕魯圖鑑與世界Boss攻略。</p>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
@@ -375,16 +387,16 @@
       </p>
       <div class="flex flex-wrap justify-center gap-8 text-center">
         <div>
-          <div class="text-3xl font-bold text-indigo-400">100+</div>
+          <div class="text-3xl font-bold text-indigo-400">11</div>
           <div class="text-gray-500 text-sm mt-1">攻略文章</div>
         </div>
         <div>
-          <div class="text-3xl font-bold text-purple-400">10+</div>
+          <div class="text-3xl font-bold text-purple-400">1</div>
           <div class="text-gray-500 text-sm mt-1">遊戲專區</div>
         </div>
         <div>
-          <div class="text-3xl font-bold text-emerald-400">50K+</div>
-          <div class="text-gray-500 text-sm mt-1">月訪問量</div>
+          <div class="text-3xl font-bold text-emerald-400">🆕</div>
+          <div class="text-gray-500 text-sm mt-1">持續更新中</div>
         </div>
       </div>
     </div>
@@ -424,10 +436,7 @@
           <h4 class="text-white font-semibold mb-3">關於</h4>
           <ul class="space-y-2 text-sm">
             <li><a href="#about" class="text-gray-500 hover:text-indigo-400 transition">關於我們</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">聯絡方式</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">隱私權政策</a></li>
-            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">服務條款</a></li>
-          </ul>
+            </ul>
         </div>
       </div>
       <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">

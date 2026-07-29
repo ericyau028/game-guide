@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="幻獸帕魯（Palworld）基地建設攻略 — 最佳基地選址、設施解鎖順序、帕魯工作分配技巧、自動化生產線設計與防禦設施布局。">
+  <meta name="keywords" content="幻獸帕魯, Palworld, 基地建設, 自動化, 生產線, 帕魯工作, 防禦">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="google-adsense-account" content="ca-pub-4900630860092971">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="幻獸帕魯 基地建設攻略｜高效率自動化生產線 — 攻略站">
+  <meta property="og:description" content="最佳基地選址與布局教學，帕魯工作分配優化，打造全自動化生產線。">
+  <meta property="og:type" content="article">
+  <title>幻獸帕魯 基地建設攻略｜高效率自動化生產線 — 攻略站</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "幻獸帕魯 基地建設攻略｜高效率自動化生產線",
+    "description": "最佳基地選址、設施解鎖順序、帕魯工作分配技巧、自動化生產線設計與防禦設施布局。",
+    "author": { "@type": "Organization", "name": "GameGuide.tw" },
+    "datePublished": "2026-07-24",
+    "dateModified": "2026-07-24",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://game.cubedhub.com/steam/palworld/articles/base-building.html" }
+  }
+  </script>
+  <link rel="canonical" href="https://game.cubedhub.com/steam/palworld/articles/base-building.html">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4900630860092971" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <!-- Reading Progress -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../../index.html" class="nav-link">首頁</a>
+          <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="../index.html" class="nav-link">幻獸帕魯</a>
+          <a href="base-building.html" class="nav-link active">基地建設</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../../index.html" class="nav-link">首頁</a>
+        <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="../index.html" class="nav-link">幻獸帕魯</a>
+        <a href="base-building.html" class="nav-link active">基地建設</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../../index.html" class="hover:text-indigo-400 transition">首頁</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../../index.html" class="hover:text-indigo-400 transition">Steam</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../index.html" class="hover:text-indigo-400 transition">幻獸帕魯</a>
+      <span class="mx-2">&#8250;</span>
+      <span class="text-gray-300">基地建設攻略</span>
+    </nav>
+  </div>
+
+  <!-- ===== ARTICLE LAYOUT ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <!-- LEFT: TOC -->
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER: Article Content -->
+    <article class="flex-1 min-w-0">
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">幻獸帕魯 基地建設攻略｜高效率自動化生產線</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            GameGuide 編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-24
+          </span>
+          <span>·</span>
+          <span>約 22 分鐘閱讀</span>
+          <span class="badge badge-green">進階必讀</span>
+        </div>
+      </header>
+
+      <div id="article-content" class="article-content">
+
+        <h2 id="intro">基地系統概述</h2>
+        <p>基地是《幻獸帕魯》的核心玩法之一。你可以在基地中建造各種設施、指派帕魯工作，實現從採集、冶煉、製作到防禦的全自動化流程。一個規劃良好的基地能讓你在遊戲中事半功倍。</p>
+        <p>本章將從選址、設施解鎖、帕魯配置到進階布局，一步步教你建立高效基地。</p>
+        <blockquote>
+          <strong>核心概念：</strong>一個基地的核心在於「帕魯工作流」——確保每隻帕魯都能發揮所長，資源從投入到產出的路徑最短。
+        </blockquote>
+
+        <h2 id="location">最佳基地選址</h2>
+        <p>選址決定了基地的發展潛力。以下是推薦的幾個地點：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>地點名稱</th>
+              <th>座標（約略）</th>
+              <th>優點</th>
+              <th>適合階段</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>初始高原</td><td>50, -450</td><td>平坦開闊、資源豐富、靠近初始重生點</td><td>前期（1~15級）</td></tr>
+            <tr><td>瀑布谷地</td><td>-150, -300</td><td>水源充足、礦脈集中、風景優美</td><td>中期（15~30級）</td></tr>
+            <tr><td>沙漠綠洲</td><td>400, 200</td><td>稀有礦石產地、空間巨大</td><td>中後期（25~40級）</td></tr>
+            <tr><td>雪山山麓</td><td>-300, 500</td><td>冰系帕魯聚集、冰礦資源豐富</td><td>後期（35~50級）</td></tr>
+            <tr><td>火山台地</td><td>600, -200</td><td>高溫環境適合冶煉、大量金屬礦</td><td>後期（40~50級）</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="location-criteria">選址要點</h3>
+        <ul>
+          <li><strong>平坦度：</strong>盡量選擇平坦地形，減少地基調整的工作量。</li>
+          <li><strong>資源距離：</strong>靠近水源、木材、礦石等基礎資源。</li>
+          <li><strong>防禦性：</strong>遠離高等級帕魯出沒區域，或利用地形天然屏障。</li>
+          <li><strong>擴展空間：</strong>預留未來基地擴建的空間，不要緊貼懸崖或水域。</li>
+        </ul>
+
+        <h2 id="facility-order">設施解鎖順序</h2>
+        <p>按照以下順序解鎖設施，可以讓基地發展最流暢：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>等級</th>
+              <th>推薦解鎖設施</th>
+              <th>功能</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Lv.2</td><td>帕魯球、石頭斧頭</td><td>捕捉帕魯、採集基礎資源</td></tr>
+            <tr><td>Lv.3</td><td>木床、小型箱子、篝火</td><td>設定重生點、儲物、烹飪</td></tr>
+            <tr><td>Lv.4</td><td>工作台、粗製弓</td><td>製作進階工具與武器</td></tr>
+            <tr><td>Lv.5</td><td>烹飪鍋、農田</td><td>穩定食物來源</td></tr>
+            <tr><td>Lv.7</td><td>帕魯床、飼料盒</td><td>帕魯休息與自動餵食</td></tr>
+            <tr><td>Lv.10</td><td>熔爐、粉碎機</td><td>金屬冶煉與材料加工</td></tr>
+            <tr><td>Lv.12</td><td>溫泉</td><td>恢復帕魯 SAN 值</td></tr>
+            <tr><td>Lv.15</td><td>發電機、燈具</td><td>基地電力系統</td></tr>
+            <tr><td>Lv.19</td><td>花園（配種）</td><td>帕魯配種系統</td></tr>
+            <tr><td>Lv.22</td><td>生產線裝配台</td><td>自動化大量生產</td></tr>
+            <tr><td>Lv.25</td><td>防禦牆、弩炮</td><td>基地防禦系統</td></tr>
+            <tr><td>Lv.30+</td><td>高級熔爐、電路板</td><td>高階材料加工</td></tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <strong>優先級建議：</strong>床 &gt; 工作台 &gt; 烹飪鍋 &gt; 熔爐 &gt; 花園。先確保生存，再追求效率。
+        </blockquote>
+
+        <h2 id="workstation">各類工作台配置</h2>
+        <p>不同工作檯需要對應的帕魯技能才能高效運作：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>工作檯</th>
+              <th>所需技能</th>
+              <th>推薦帕魯</th>
+              <th>數量建議</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>熔爐</td><td>生火</td><td>火絨狐、焰巫狐</td><td>2~3 隻</td></tr>
+            <tr><td>粉碎機</td><td>挖礦</td><td>吊縛靈、碎岩龜</td><td>1~2 隻</td></tr>
+            <tr><td>鋸木機</td><td>伐木</td><td>草莽豬、鐵腕猿</td><td>1~2 隻</td></tr>
+            <tr><td>紡織機</td><td>採集</td><td>棉悠悠、翠葉鼠</td><td>1~2 隻</td></tr>
+            <tr><td>烹飪鍋</td><td>生火</td><td>火絨狐</td><td>1 隻</td></tr>
+            <tr><td>發電機</td><td>發電</td><td>伏特喵、雷角馬</td><td>2~3 隻</td></tr>
+            <tr><td>農田</td><td>種植 + 澆水</td><td>玉藻狐（種植）、衝浪鴨（澆水）</td><td>各 2~3 隻</td></tr>
+            <tr><td>生產線裝配台</td><td>手工</td><td>鐵腕猿、羽箭射手</td><td>2~3 隻</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="pal-assignment">帕魯工作分配技巧</h2>
+        <h3 id="assignment-skill-match">技能匹配原則</h3>
+        <p>每隻帕魯都有自己的工作適合技能與等級。例如火絨狐有「生火 Lv.1」，可以操作熔爐，但是無法操作需要「生火 Lv.2」的高爐。指派時務必確認等級是否符合。</p>
+
+        <h3 id="assignment-priority">工作優先級設定</h3>
+        <p>在帕魯終端機中可以調整每隻帕魯的工作優先級：</p>
+        <ul>
+          <li><strong>單一專精：</strong>讓一隻帕魯只做一件事（如只挖礦），效率最高。</li>
+          <li><strong>多工模式：</strong>讓帕魯做多種工作，適合人手不足的初期。</li>
+          <li><strong>夜間切換：</strong>部分帕魯有「夜間工作」被動，可以安排它們在夜晚接手工作。</li>
+        </ul>
+
+        <h3 id="assignment-pal-sanity">SAN 值管理</h3>
+        <p>帕魯工作會消耗 SAN 值，SAN 值過低會導致帕魯生病或罷工。解決方案：</p>
+        <ul>
+          <li>在基地中建造<strong>溫泉</strong>，帕魯會自動去泡溫泉恢復 SAN 值。</li>
+          <li>在飼料盒放置高品質食物（如烤莓果、麵包）。</li>
+          <li>定時手動指派帕魯休息（不太推薦，手動太麻煩）。</li>
+        </ul>
+        <blockquote>
+          <strong>效率關鍵：</strong>一隻 SAN 值全滿的帕魯工作效率是低 SAN 值的 2 倍以上。
+        </blockquote>
+
+        <h2 id="automation">自動化生產線設計</h2>
+        <h3 id="automation-food">食物自動化生產線</h3>
+        <ol>
+          <li>建立 3~4 塊農田，種植莓果。</li>
+          <li>指派具備「種植」技能的帕魯（如玉藻狐）播種。</li>
+          <li>指派具備「澆水」技能的帕魯（如衝浪鴨）澆水。</li>
+          <li>成熟後指派具備「採集」技能的帕魯收成。</li>
+          <li>將莓果送入烹飪鍋，指派「生火」帕魯製作烤莓果。</li>
+          <li>烤莓果自動存入飼料盒，供所有帕魯食用。</li>
+        </ol>
+
+        <h3 id="automation-ingot">金屬錠自動化生產線</h3>
+        <ol>
+          <li>在礦脈旁建立基地（或在基地旁建造採礦場）。</li>
+          <li>指派「挖礦」帕魯開採礦石。</li>
+          <li>帕魯會自動將礦石搬運到箱子。</li>
+          <li>熔爐旁指派「生火」帕魯從箱子取礦石冶煉。</li>
+          <li>冶煉完成的金屬錠放入另一個箱子。</li>
+          <li>指派「手工」帕魯從箱子取金屬錠製作裝備。</li>
+        </ol>
+
+        <h3 id="automation-ranch">牧場自動化</h3>
+        <p>部分帕魯在牧場中可以自動產出資源：</p>
+        <ul>
+          <li><strong>棉悠悠：</strong>產出羊毛（製作布料）。</li>
+          <li><strong>皮皮雞：</strong>產出雞蛋（製作蛋糕）。</li>
+          <li><strong>搗蛋貓：</strong>產出金幣。</li>
+          <li><strong>翠葉鼠：</strong>產出隨機資源。</li>
+        </ul>
+        <p>只需將這些帕魯放入牧場範圍內，它們就會自動產出資源，完全不需要額外操作。</p>
+
+        <h2 id="defense">防禦設施佈局</h2>
+        <p>基地會定時受到帕魯襲擊，完善的防禦可以減少損失：</p>
+        <h3 id="defense-wall">圍牆設計</h3>
+        <ul>
+          <li>用石牆或金屬牆圍繞基地外圍，至少 2 層。</li>
+          <li>在牆外放置陷阱或尖刺，增加敵人進入難度。</li>
+          <li>預留至少一個出入口，方便進出。</li>
+        </ul>
+
+        <h3 id="defense-turret">防禦設施</h3>
+        <ul>
+          <li><strong>弩炮：</strong>自動攻擊進入範圍的敵人，適合放置在圍牆轉角。</li>
+          <li><strong>火焰噴射器：</strong>範圍傷害，適合防守狹窄通道。</li>
+          <li><strong>電擊塔：</strong>需消耗電力，範圍大傷害高。</li>
+        </ul>
+
+        <h3 id="defense-layout">防禦布局建議</h3>
+        <ul>
+          <li>外層：石牆 + 尖刺陷阱。</li>
+          <li>中層：弩炮 + 火焰噴射器交替排列。</li>
+          <li>內層：重要設施（熔爐、花園）集中放置，並配置高戰力帕魯巡邏。</li>
+        </ul>
+        <blockquote>
+          <strong>注意：</strong>襲擊強度會隨玩家等級提升而增加，後期需要定期升級防禦設施。
+        </blockquote>
+
+        <h2 id="advanced-layout">進階基地布局範例</h2>
+        <p>以下是針對中後期玩家的進階基地布局方案：</p>
+
+        <h3 id="layout-mining">礦業基地（專注採礦與冶煉）</h3>
+        <ul>
+          <li><strong>位置：</strong>礦脈密集區域（如沙漠綠洲）。</li>
+          <li><strong>核心設施：</strong>8~10 個熔爐、4 台粉碎機、大型倉庫。</li>
+          <li><strong>帕魯配置：</strong>6 隻挖礦（碎岩龜、吊縛靈）、4 隻生火（焰巫狐）、2 隻搬運。</li>
+          <li><strong>產出：</strong>金屬錠、精煉金屬、碳纖維。</li>
+        </ul>
+
+        <h3 id="layout-farming">農業基地（專注食物與牧場）</h3>
+        <ul>
+          <li><strong>位置：</strong>水源充足的平地（如瀑布谷地）。</li>
+          <li><strong>核心設施：</strong>8~10 塊農田、4 個牧場、多個烹飪鍋。</li>
+          <li><strong>帕魯配置：</strong>4 隻種植、4 隻澆水、4 隻採集、4 隻牧場生產。</li>
+          <li><strong>產出：</strong>大量莓果、雞蛋、羊毛、蛋糕（配種用）。</li>
+        </ul>
+
+        <h3 id="layout-hybrid">綜合基地（全能型）</h3>
+        <ul>
+          <li><strong>位置：</strong>峽谷或盆地地形。</li>
+          <li><strong>核心設施：</strong>2 熔爐、2 農田、1 花園、防禦設施齊全。</li>
+          <li><strong>帕魯配置：</strong>全能均衡配置，每個工作類型至少 2 隻。</li>
+          <li><strong>特色：</strong>自給自足，不需要頻繁換基地。</li>
+        </ul>
+
+      </div>
+
+      <!-- Article Footer -->
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-green">基地</span>
+          <span class="badge badge-gold">自動化</span>
+          <span class="badge badge-blue">生產線</span>
+          <span class="badge badge-red">防禦</span>
+        </div>
+
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="farming-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-lime-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Farming 攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">資源收集與自動化農場設計</p>
+            </div>
+          </a>
+          <a href="palskills-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-purple-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">全夥伴技能一覽</h4>
+              <p class="text-gray-500 text-xs mt-1">工作適應性與技能評比</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIGHT: Ad Sidebar -->
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="ad-slot" style="min-height:250px;">
+<!-- sidebar_rect -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="2122827923"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+        <div class="ad-slot" style="min-height:600px;">
+<!-- sidebar_wide -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="7565057991"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">幻獸帕魯</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="breeding-guide.html" class="text-gray-500 hover:text-indigo-400 transition">配種攻略</a></li>
+            <li><a href="beginner-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門</a></li>
+            <li><a href="base-building.html" class="text-gray-500 hover:text-indigo-400 transition">基地建設</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="beginner-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門</a></li>
+            <li><a href="base-building.html" class="text-gray-500 hover:text-indigo-400 transition">基地建設</a></li>
+            <li><a href="weapons-guide.html" class="text-gray-500 hover:text-indigo-400 transition">武器裝備</a></li>
+            <li><a href="tech-tree-guide.html" class="text-gray-500 hover:text-indigo-400 transition">科技樹</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

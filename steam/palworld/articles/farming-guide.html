@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="幻獸帕魯（Palworld）Farming 攻略 — 各類資源取得方式、最佳採集路線、自動化農場設計與稀有材料取得方法。">
+  <meta name="keywords" content="幻獸帕魯, Palworld, Farming, 資源收集, 自動化農場, 稀有材料, 採集路線">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="google-adsense-account" content="ca-pub-4900630860092971">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="幻獸帕魯 Farming 攻略｜資源收集與自動化 — 攻略站">
+  <meta property="og:description" content="最佳採集路線規劃、自動化農場設計教學、稀有材料取得方法全收錄。">
+  <meta property="og:type" content="article">
+  <title>幻獸帕魯 Farming 攻略｜資源收集與自動化 — 攻略站</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "幻獸帕魯 Farming 攻略｜資源收集與自動化",
+    "description": "各類資源取得方式、最佳採集路線、自動化農場設計與稀有材料取得方法。",
+    "author": { "@type": "Organization", "name": "GameGuide.tw" },
+    "datePublished": "2026-07-24",
+    "dateModified": "2026-07-24",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://game.cubedhub.com/steam/palworld/articles/farming-guide.html" }
+  }
+  </script>
+  <link rel="canonical" href="https://game.cubedhub.com/steam/palworld/articles/farming-guide.html">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4900630860092971" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <!-- Reading Progress -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../../index.html" class="nav-link">首頁</a>
+          <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="../index.html" class="nav-link">幻獸帕魯</a>
+          <a href="farming-guide.html" class="nav-link active">Farming</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../../index.html" class="nav-link">首頁</a>
+        <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="../index.html" class="nav-link">幻獸帕魯</a>
+        <a href="farming-guide.html" class="nav-link active">Farming</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../../index.html" class="hover:text-indigo-400 transition">首頁</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../../index.html" class="hover:text-indigo-400 transition">Steam</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../index.html" class="hover:text-indigo-400 transition">幻獸帕魯</a>
+      <span class="mx-2">&#8250;</span>
+      <span class="text-gray-300">Farming 攻略</span>
+    </nav>
+  </div>
+
+  <!-- ===== ARTICLE LAYOUT ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <!-- LEFT: TOC -->
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER: Article Content -->
+    <article class="flex-1 min-w-0">
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">幻獸帕魯 Farming 攻略｜資源收集與自動化</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            GameGuide 編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-24
+          </span>
+          <span>·</span>
+          <span>約 20 分鐘閱讀</span>
+          <span class="badge badge-green">資源必知</span>
+        </div>
+      </header>
+
+      <div id="article-content" class="article-content">
+
+        <h2 id="intro">Farming 系統概覽</h2>
+        <p>在《幻獸帕魯》中，Farming 不僅僅是種田——它涵蓋了所有資源收集與自動化生產的範疇。一個完善的 Farming 體系可以讓你從繁瑣的手動採集中解放出來，專注於探索與戰鬥。</p>
+        <p>本章將從基礎資源入手，逐步介紹如何建立全自動化的 Farming 系統，並分享稀有材料的最佳取得路線。</p>
+        <blockquote>
+          <strong>Farming 核心目標：</strong>從「手動採集」過渡到「自動生產」，最終實現資源的自給自足。
+        </blockquote>
+
+        <h2 id="resources">各類資源取得方式</h2>
+        <p>遊戲中的資源可分為基礎資源、加工資源與稀有資源三大類：</p>
+
+        <h3 id="res-basic">基礎資源</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>資源</th>
+              <th>採集方式</th>
+              <th>自動化方式</th>
+              <th>用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>木材</td><td>手動伐木 / 斧頭</td><td>指派帕魯使用鋸木機</td><td>建築、工具、燃料</td></tr>
+            <tr><td>石頭</td><td>手動敲擊 / 鎬子</td><td>指派帕魯使用粉碎機</td><td>建築、武器</td></tr>
+            <tr><td>纖維</td><td>採集草叢</td><td>牧場翠葉鼠自動產出</td><td>布料、繩索</td></tr>
+            <tr><td>莓果</td><td>手動採集灌木</td><td>農田種植 + 帕魯採收</td><td>食物、蛋糕材料</td></tr>
+            <tr><td>帕魯礦</td><td>敲擊發光礦石</td><td>指派帕魯挖礦</td><td>帕魯球、進階裝備</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="res-processed">加工資源</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>資源</th>
+              <th>製作方式</th>
+              <th>所需設施</th>
+              <th>用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>金屬錠</td><td>熔煉金屬礦</td><td>熔爐 + 生火帕魯</td><td>武器、防具、建築</td></tr>
+            <tr><td>精煉金屬錠</td><td>熔煉精煉金屬礦</td><td>高爐 + 生火 Lv.2+</td><td>高級裝備</td></tr>
+            <tr><td>布料</td><td>紡織羊毛</td><td>紡織機 + 採集帕魯</td><td>防具、裝飾</td></tr>
+            <tr><td>碳纖維</td><td>精煉 + 特殊加工</td><td>生產線裝配台</td><td>傳說裝備</td></tr>
+            <tr><td>電路板</td><td>組合純淨石英 + 金屬</td><td>生產線裝配台</td><td>電子設備</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="res-rare">稀有資源</h3>
+        <ul>
+          <li><strong>傳說核心：</strong>雪山 Boss「喚冰獸」掉落 / 地下城 40 層以上寶箱。</li>
+          <li><strong>純淨石英：</strong>雪山礦脈開採 / 碎岩龜挖礦機率獲得。</li>
+          <li><strong>硫磺：</strong>火山區域礦脈 / 擊敗火系帕魯掉落。</li>
+          <li><strong>蜂蜜：</strong>密林區樹洞採集 / 牧場特定帕魯產出。</li>
+          <li><strong>發光物質：</strong>夜晚擊敗發光帕魯掉落 / 洞穴深處收集。</li>
+          <li><strong>古代文明零件：</strong>地下城寶箱 / 擊敗守關 Boss。</li>
+        </ul>
+
+        <h2 id="routes">最佳採集路線</h2>
+        <p>以下是針對不同階段的最佳採集路線規劃：</p>
+
+        <h3 id="route-beginner">前期路線（Lv.1~15）</h3>
+        <p><strong>路線：</strong>初始重生點 → 草原東側礦區 → 河流沿岸 → 密林入口 → 返回基地</p>
+        <ul>
+          <li>重點採集：木材、石頭、莓果、帕魯礦、金屬礦。</li>
+          <li>建議時間：遊戲內一天（來回一趟約 15 分鐘現實時間）。</li>
+          <li>攜帶：火絨狐（照明）+ 搗蛋貓（負重）。</li>
+        </ul>
+
+        <h3 id="route-mid">中期路線（Lv.15~30）</h3>
+        <p><strong>路線：</strong>基地 → 沙漠邊緣 → 密林深處 → 沼澤外圍 → 快速旅行返程</p>
+        <ul>
+          <li>重點採集：金屬礦（大量）、稀有木材、蜂蜜、硫磺。</li>
+          <li>建議時間：遊戲內 2~3 天。</li>
+          <li>攜帶：疾風隼（飛行坐騎）+ 鐵腕猿（戰鬥 + 挖礦）。</li>
+        </ul>
+
+        <h3 id="route-late">後期路線（Lv.30~50）</h3>
+        <p><strong>路線：</strong>基地（快速旅行）→ 雪山營地 → 火山檢查點 → 地下城入口</p>
+        <ul>
+          <li>重點採集：純淨石英、傳說核心、碳纖維、精煉金屬礦。</li>
+          <li>建議時間：依目標而定，刷 Boss 可能需要多次往返。</li>
+          <li>攜帶：空冥龍（傳說飛行坐騎）+ 全套傳說裝備。</li>
+        </ul>
+        <blockquote>
+          <strong>路線優化：</strong>每條路線出發前確認包裹空間充足，並在路線中途設置小型儲物箱作為中轉站。
+        </blockquote>
+
+        <h2 id="automation-farm">自動化農場設計</h2>
+        <p>自動化農場是解放雙手的關鍵。以下是幾種實用的自動化設計：</p>
+
+        <h3 id="farm-berry">莓果自動農場</h3>
+        <p><strong>設計步驟：</strong></p>
+        <ol>
+          <li>建造 6~8 塊農田（3×3 大小）。</li>
+          <li>指派 2 隻玉藻狐負責種植。</li>
+          <li>指派 2 隻衝浪鴨負責澆水。</li>
+          <li>指派 2 隻翠葉鼠負責採收。</li>
+          <li>在農田旁放置大型箱子，收集採收的莓果。</li>
+          <li>在箱子旁放置烹飪鍋，指派火絨狐自動將莓果烤熟。</li>
+        </ol>
+        <p><strong>產出：</strong>每遊戲日約 200~300 個烤莓果，足夠供應 10 隻以上帕魯食用。</p>
+
+        <h3 id="farm-cake">蛋糕自動生產線</h3>
+        <p>蛋糕是配種的消耗品，建立自動化生產線非常重要：</p>
+        <ol>
+          <li>農田種植小麥（麵粉原料）+ 莓果。</li>
+          <li>牧場養殖皮皮雞（產蛋）與棉悠悠（產牛奶）。</li>
+          <li>麵粉由粉碎機加工小麥獲得。</li>
+          <li>所有材料送入烹飪鍋，由生火帕魯製作蛋糕。</li>
+        </ol>
+        <p><strong>每蛋糕材料：</strong>麵粉 ×5、莓果 ×8、牛奶 ×7、蛋 ×1。</p>
+
+        <h3 id="farm-ranch">牧場自動化</h3>
+        <p>牧場是被動資源產出的重要設施：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>帕魯</th>
+              <th>產出</th>
+              <th>每小時產量</th>
+              <th>用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>棉悠悠</td><td>羊毛</td><td>~20 個</td><td>布料、防具</td></tr>
+            <tr><td>皮皮雞</td><td>雞蛋</td><td>~15 個</td><td>蛋糕、食物</td></tr>
+            <tr><td>翠葉鼠</td><td>隨機資源</td><td>~10 個</td><td>各種基礎資源</td></tr>
+            <tr><td>搗蛋貓</td><td>金幣</td><td>~30 個</td><td>購買物品</td></tr>
+            <tr><td>火絨狐</td><td>火焰器官</td><td>~5 個</td><td>製作燃燒瓶</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="farm-ore">礦石自動農場</h3>
+        <p>在礦脈上方建造基地，指派挖礦帕魯自動開採：</p>
+        <ul>
+          <li><strong>推薦地點：</strong>沙漠地帶（350, 150）與火山區域（550, -150）。</li>
+          <li><strong>推薦帕魯：</strong>鋼鐵帝王 ×2、碎岩龜 ×2、吊縛靈 ×2（夜間輪班）。</li>
+          <li><strong>配套設施：</strong>大型箱子 ×4、熔爐 ×4、生火帕魯 ×2。</li>
+          <li><strong>產出：</strong>每遊戲日約 200~300 個金屬錠。</li>
+        </ul>
+
+        <h2 id="rare-materials">稀有材料取得</h2>
+        <p>以下是最重要稀有材料的最佳取得方式：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>材料</th>
+              <th>最佳取得方式</th>
+              <th>難度</th>
+              <th>用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>傳說核心</td><td>擊敗雪山 Boss「喚冰獸」（建議 Lv.35+）</td><td>高</td><td>傳說裝備製作與強化</td></tr>
+            <tr><td>純淨石英</td><td>雪山礦脈採集，配備碎岩龜效率最高</td><td>中</td><td>電路板、電子設備</td></tr>
+            <tr><td>古代文明零件</td><td>地下城 30~50 層寶箱與 B2 關Boss</td><td>高</td><td>高級科技解鎖</td></tr>
+            <tr><td>碳纖維</td><td>火山區域採集 + 生產線裝配台加工</td><td>中</td><td>傳說防具、高級武器</td></tr>
+            <tr><td>發光物質</td><td>夜晚在密林區擊殺發光帕魯</td><td>低</td><td>閃光彈、燈具</td></tr>
+            <tr><td>蜂蜜</td><td>密林區樹洞採集或擊敗蜂系帕魯</td><td>低</td><td>藥水、食物</td></tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <strong>稀有材料 Farming 建議：</strong>針對每個稀有材料建立專門的 Farming 路線，並在對應區域設置小型前哨基地（包含床、箱子與工作台）。
+        </blockquote>
+
+      </div>
+
+      <!-- Article Footer -->
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-green">Farming</span>
+          <span class="badge badge-gold">資源收集</span>
+          <span class="badge badge-blue">自動化</span>
+          <span class="badge badge-red">稀有材料</span>
+        </div>
+
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="base-building.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-emerald-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">基地建設攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">高效率自動化生產線設計</p>
+            </div>
+          </a>
+          <a href="map-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-sky-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">全地圖探索攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">資源點與快速旅行</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIGHT: Ad Sidebar -->
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="ad-slot" style="min-height:250px;">
+<!-- sidebar_rect -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="2122827923"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+        <div class="ad-slot" style="min-height:600px;">
+<!-- sidebar_wide -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="7565057991"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">幻獸帕魯</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="breeding-guide.html" class="text-gray-500 hover:text-indigo-400 transition">配種攻略</a></li>
+            <li><a href="beginner-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門</a></li>
+            <li><a href="base-building.html" class="text-gray-500 hover:text-indigo-400 transition">基地建設</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="beginner-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門</a></li>
+            <li><a href="base-building.html" class="text-gray-500 hover:text-indigo-400 transition">基地建設</a></li>
+            <li><a href="weapons-guide.html" class="text-gray-500 hover:text-indigo-400 transition">武器裝備</a></li>
+            <li><a href="tech-tree-guide.html" class="text-gray-500 hover:text-indigo-400 transition">科技樹</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

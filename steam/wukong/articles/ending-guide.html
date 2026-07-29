@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="黑神話：悟空多結局攻略 — 真結局解鎖條件、三種結局分歧點完整解析、全成就解鎖條件一覽，含隱藏要素完成度檢查表。">
+  <meta name="keywords" content="黑神話悟空, Black Myth Wukong, 結局, 真結局, 多結局, 成就, 隱藏結局, 齊天大聖, 天命之人">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="google-adsense-account" content="ca-pub-4900630860092971">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="黑神話：悟空多結局攻略（2026年最新版）— 攻略站">
+  <meta property="og:description" content="真結局解鎖條件、三種結局分歧點完整解析、全成就解鎖條件一覽，含隱藏要素完成度檢查表。">
+  <meta property="og:type" content="article">
+  <title>黑神話：悟空多結局攻略（2026年最新版）— 攻略站</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "黑神話：悟空多結局攻略（2026年最新版）",
+    "description": "真結局解鎖條件、三種結局分歧點完整解析、全成就解鎖條件一覽，含隱藏要素完成度檢查表。",
+    "author": { "@type": "Organization", "name": "GameGuide.tw" },
+    "datePublished": "2026-07-24",
+    "dateModified": "2026-07-24",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://game.cubedhub.com/steam/wukong/articles/ending-guide.html" }
+  }
+  </script>
+  <link rel="canonical" href="https://game.cubedhub.com/steam/wukong/articles/ending-guide.html">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4900630860092971" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .badge-amber { background:rgba(245,158,11,0.15); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); }
+    .badge-red { background:rgba(239,68,68,0.15); color:#ef4444; border:1px solid rgba(239,68,68,0.3); }
+    .badge-purple { background:rgba(147,51,234,0.15); color:#a855f7; border:1px solid rgba(147,51,234,0.3); }
+    .badge-blue { background:rgba(59,130,246,0.15); color:#3b82f6; border:1px solid rgba(59,130,246,0.3); }
+    .badge-green { background:rgba(16,185,129,0.15); color:#10b981; border:1px solid rgba(16,185,129,0.3); }
+    .ending-card-1 { background:linear-gradient(135deg, rgba(239,68,68,0.15), rgba(180,83,9,0.15)); border:1px solid rgba(239,68,68,0.3); }
+    .ending-card-2 { background:linear-gradient(135deg, rgba(147,51,234,0.15), rgba(59,130,246,0.15)); border:1px solid rgba(147,51,234,0.3); }
+    .ending-card-3 { background:linear-gradient(135deg, rgba(245,158,11,0.15), rgba(217,119,6,0.15)); border:1px solid rgba(245,158,11,0.3); }
+  </style>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-amber-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../../index.html" class="nav-link">首頁</a>
+          <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="../../palworld/index.html" class="nav-link">幻獸帕魯</a>
+          <a href="../index.html" class="nav-link">黑神話悟空</a>
+          <a href="ending-guide.html" class="nav-link active">結局攻略</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-amber-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../../index.html" class="nav-link">首頁</a>
+        <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="../../palworld/index.html" class="nav-link">幻獸帕魯</a>
+        <a href="../index.html" class="nav-link">黑神話悟空</a>
+        <a href="ending-guide.html" class="nav-link active">結局攻略</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-amber-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../../index.html" class="hover:text-amber-400 transition">首頁</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../../index.html" class="hover:text-amber-400 transition">Steam</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../index.html" class="hover:text-amber-400 transition">黑神話悟空</a>
+      <span class="mx-2">&#8250;</span>
+      <span class="text-gray-300">多結局攻略</span>
+    </nav>
+  </div>
+
+  <!-- ===== ARTICLE LAYOUT ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <!-- LEFT: TOC -->
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER -->
+    <article class="flex-1 min-w-0">
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">黑神話：悟空 — 多結局攻略與成就解鎖指南</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            GameGuide 編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-24
+          </span>
+          <span>·</span>
+          <span>約 15 分鐘閱讀</span>
+          <span class="badge badge-purple">結局</span>
+          <span class="badge badge-amber">成就</span>
+        </div>
+      </header>
+
+      <div id="article-content" class="article-content">
+
+        <h2 id="overview">結局系統概述</h2>
+        <p>《黑神話：悟空》中共有三種不同的結局，根據玩家在遊戲過程中的選擇與隱藏要素的完成度來決定最終的結局走向。值得注意的是，遊戲不會在過程中明確提示玩家的選擇會影響結局，許多關鍵決定都是隱晦的。本攻略將詳細解析每種結局的達成條件。</p>
+
+        <div class="grid grid-cols-1 gap-6 my-8">
+          <div class="p-6 rounded-xl ending-card-1">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">1</span>
+              <h3 class="text-lg font-bold text-white m-0">普通結局 —「天命歸位」</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-2">天命之人擊敗大聖殘軀後，戴上緊箍咒，繼承了齊天大聖的宿命，成為新的鬥戰勝佛。</p>
+            <p class="text-gray-500 text-xs"><strong>英文成就：</strong>The Fateful Return</p>
+          </div>
+          <div class="p-6 rounded-xl ending-card-2">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">2</span>
+              <h3 class="text-lg font-bold text-white m-0">隱藏結局 —「未竟之路」</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-2">天命之人拒絕戴上緊箍咒，選擇繼續做一個自由自在的猴子，踏上新的旅程。</p>
+            <p class="text-gray-500 text-xs"><strong>英文成就：</strong>The Unfinished Journey</p>
+          </div>
+          <div class="p-6 rounded-xl ending-card-3">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">3</span>
+              <h3 class="text-lg font-bold text-white m-0">真結局 —「大聖歸來」</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-2">完成所有隱藏要素後，天命之人繼承了完整的大聖之力，真正成為了齊天大聖，獲得了最完整的結局動畫與製作人員名單後彩蛋。</p>
+            <p class="text-gray-500 text-xs"><strong>英文成就：</strong>The Great Sage Returns</p>
+          </div>
+        </div>
+
+        <h2 id="ending1">普通結局：天命歸位</h2>
+        <p><strong>達成條件：</strong>最簡單的結局，只需正常通關主線劇情，擊敗最終 Boss 大聖殘軀即可觸發。不需要完成任何隱藏要素。</p>
+        <h3>劇情過場</h3>
+        <p>在擊敗大聖殘軀後，天命之人會看到齊天大聖的記憶片段。在最後的場景中，老猴子（觀音菩薩化身）拿出緊箍咒，天命之人自願戴上，從此成為新的鬥戰勝佛，受制於佛法之下。結局動畫結束後，畫面回到主選單。</p>
+        <h3>注意事項</h3>
+        <ul>
+          <li>這個結局的動畫長度較短，缺少部分關鍵情節的解釋。</li>
+          <li>製作人員名單後沒有額外彩蛋。</li>
+          <li>如果不小心進入了這個結局，可以繼續完成隱藏要素後重新挑戰最終 Boss，不需要重新開檔。</li>
+        </ul>
+
+        <h2 id="ending2">隱藏結局：未竟之路</h2>
+        <p><strong>達成條件：</strong>在擊敗最終 Boss 大聖殘軀時，拒絕戴上緊箍咒。觸發這個結局的關鍵在於遊戲過程中與特定 NPC 的互動選項。</p>
+        <h3>關鍵選擇</h3>
+        <p>在第六章花果山的探索過程中，玩家會遇到以下關鍵選擇點：</p>
+        <table>
+          <thead><tr><th>選擇點</th><th>位置</th><th>影響</th></tr></thead>
+          <tbody>
+            <tr><td>與老猴子的對話</td><td>花果山 — 水簾洞入口</td><td>選擇「質疑天命」相關選項</td></tr>
+            <tr><td>菩提祖師的幻影</td><td>花果山 — 三星洞遺址</td><td>選擇「追尋自由」相關選項</td></tr>
+            <tr><td>最終戰前的選擇</td><td>大聖殘軀戰前</td><td>系統根據先前的選擇自動判定</td></tr>
+          </tbody>
+        </table>
+        <h3>劇情過場</h3>
+        <p>當老猴子拿出緊箍咒時，天命之人搖頭拒絕，並將緊箍咒打碎。老猴子微笑點頭，化作金光消散。天命之人獨自站在花果山山頂，眺望遠方，踏上新的旅程。結局動畫結束後，畫面呈現開放式結局，暗示未來可能的故事發展。</p>
+        <h3>注意事項</h3>
+        <ul>
+          <li>這個結局的動畫長度約 3 分鐘，包含一段原創動畫。</li>
+          <li>製作人員名單後有短暫的彩蛋畫面。</li>
+          <li>不會解鎖「大聖歸來」成就，但會解鎖「未竟之路」成就。</li>
+        </ul>
+
+        <h2 id="true-ending">真結局：大聖歸來</h2>
+        <p><strong>達成條件：</strong>這是遊戲中最完整的結局，需要完成所有隱藏要素才能觸發。具體條件如下：</p>
+        <h3>必要條件清單</h3>
+        <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:12px;padding:20px;margin:1rem 0;">
+          <h4 style="color:#f59e0b;font-size:1rem;font-weight:600;margin-bottom:12px;">真結局必備條件</h4>
+          <ul>
+            <li>擊敗全部分支 Boss（包含隱藏 Boss）</li>
+            <li>收集全部 6 件「大聖遺物」（分佈在六大章節的隱藏區域）</li>
+            <li>解鎖全部 3 個「記憶碎片」（通過與特定 NPC 互動獲得）</li>
+            <li>完成紫雲山支線（第四章隱藏區域）</li>
+            <li>完成碧水洞支線（第五章隱藏區域）</li>
+            <li>在最終戰前與所有關鍵 NPC 完成對話</li>
+            <li>持有「齊天大聖的完整記憶」（集齊所有碎片後自動獲得）</li>
+            <li>擊敗最終 Boss 大聖殘軀後自動觸發真結局動畫</li>
+          </ul>
+        </div>
+
+        <h4>大聖遺物位置一覽</h4>
+        <table>
+          <thead><tr><th>遺物名稱</th><th>章節</th><th>獲取方式</th></tr></thead>
+          <tbody>
+            <tr><td>大聖的毛髮</td><td>第一章 — 黑風山</td><td>擊敗金池長老後獲得（需敲響三口鐘）</td></tr>
+            <tr><td>大聖的鎧甲碎片</td><td>第二章 — 黃風嶺</td><td>完成黃風大聖隱藏對話後獲得</td></tr>
+            <tr><td>大聖的佛珠</td><td>第三章 — 浮屠界</td><td>浮屠塔隱藏房間寶箱</td></tr>
+            <tr><td>大聖的披風</td><td>第四章 — 盤絲洞</td><td>紫雲山隱藏區域任務獎勵</td></tr>
+            <tr><td>大聖的頭箍</td><td>第五章 — 火焰山</td><td>碧水洞隱藏 Boss 掉落</td></tr>
+            <tr><td>大聖的元神</td><td>第六章 — 花果山</td><td>三星洞遺址獲得（需完成前五件收集）</td></tr>
+          </tbody>
+        </table>
+
+        <h3>劇情過場</h3>
+        <p>真結局的動畫是全遊戲最長的過場動畫（約 8 分鐘），完整展示了齊天大聖的完整故事。天命之人繼承了大聖的全部力量與記憶，真正成為了新的齊天大聖。緊箍咒在戴上之前碎裂化為金光，天命之人獲得了完整的自由與力量。最後的畫面中，身穿完整大聖套裝的天命之人站在花果山之巔，身後是百萬猴兵猴將，場面極具震撼力。</p>
+        <h3>注意事項</h3>
+        <ul>
+          <li>如果先達成了普通結局，可以讀檔繼續完成隱藏要素後再次挑戰最終 Boss。</li>
+          <li>真結局通關後會解鎖「新遊戲+」模式（New Game Plus），繼承部分裝備與等級重新開始。</li>
+          <li>製作人員名單後有重要的劇情彩蛋，請務必看到最後。</li>
+          <li>部分收集品在通關後仍然可以獲取，不需要擔心錯過。</li>
+        </ul>
+
+        <h2 id="choices">結局分歧點詳細解析</h2>
+        <p>遊戲的結局分歧是在第五章到第六章之間悄然形成的。系統會根據以下幾個隱藏數值來決定最終結局：</p>
+        <table>
+          <thead><tr><th>影響因素</th><th>普通結局</th><th>隱藏結局</th><th>真結局</th></tr></thead>
+          <tbody>
+            <tr><td>隱藏 Boss 完成度</td><td>無要求</td><td>無要求</td><td>全隱藏 Boss 擊敗</td></tr>
+            <tr><td>大聖遺物收集</td><td>無要求</td><td>至少 1 件</td><td>全部 6 件</td></tr>
+            <tr><td>記憶碎片收集</td><td>無要求</td><td>至少 1 個</td><td>全部 3 個</td></tr>
+            <tr><td>NPC 對話選項</td><td>順從/默認</td><td>質疑/反抗</td><td>(自動判定)</td></tr>
+            <tr><td>紫雲山支線</td><td>可跳過</td><td>可跳過</td><td>必須完成</td></tr>
+            <tr><td>碧水洞支線</td><td>可跳過</td><td>可跳過</td><td>必須完成</td></tr>
+          </tbody>
+        </table>
+        <p><strong>總結：</strong>如果你想一次獲得真結局，最保險的做法是每章都徹底探索，完成所有隱藏區域，收集所有可獲取的物品，與所有 NPC 對話並選擇所有可選的互動選項。如果錯過了任何要素，通關後仍然可以讀檔或透過土地廟快速旅行返回完成。</p>
+
+        <h2 id="achievements">成就解鎖條件</h2>
+        <p>《黑神話：悟空》在 Steam 平台上有 36 個成就，以下列出主要成就的解鎖條件：</p>
+
+        <h3>劇情相關成就</h3>
+        <table>
+          <thead><tr><th>成就名稱</th><th>解鎖條件</th><th>備註</th></tr></thead>
+          <tbody>
+            <tr><td>天命歸位</td><td>達成普通結局</td><td>不會被其他結局覆蓋</td></tr>
+            <tr><td>未竟之路</td><td>達成隱藏結局</td><td>需完成關鍵對話選擇</td></tr>
+            <tr><td>大聖歸來</td><td>達成真結局</td><td>最難的劇情成就</td></tr>
+            <tr><td>黑風山的黎明</td><td>完成第一章</td><td>主線自動獲得</td></tr>
+            <tr><td>黃風嶺的落日</td><td>完成第二章</td><td>主線自動獲得</td></tr>
+            <tr><td>浮屠界的月光</td><td>完成第三章</td><td>主線自動獲得</td></tr>
+            <tr><td>盤絲洞的曙光</td><td>完成第四章</td><td>主線自動獲得</td></tr>
+            <tr><td>火焰山的烈焰</td><td>完成第五章</td><td>主線自動獲得</td></tr>
+            <tr><td>花果山的重生</td><td>完成第六章</td><td>主線自動獲得</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Boss 相關成就</h3>
+        <table>
+          <thead><tr><th>成就名稱</th><th>解鎖條件</th></tr></thead>
+          <tbody>
+            <tr><td>百妖斬</td><td>擊敗 50 個頭目級敵人</td></tr>
+            <tr><td>千妖斬</td><td>擊敗 100 個頭目級敵人</td></tr>
+            <tr><td>萬妖之王</td><td>擊敗全部主線 Boss</td></tr>
+            <tr><td>隱世強者</td><td>擊敗全部隱藏 Boss</td></tr>
+            <tr><td>金池驚魂</td><td>擊敗金池長老</td></tr>
+            <tr><td>毒王伏誅</td><td>擊敗毒敵山大王（隱藏版）</td></tr>
+          </tbody>
+        </table>
+
+        <h3>收集相關成就</h3>
+        <table>
+          <thead><tr><th>成就名稱</th><th>解鎖條件</th></tr></thead>
+          <tbody>
+            <tr><td>珍玩收藏家</td><td>收集 30 件不同的珍玩</td></tr>
+            <tr><td>武器大師</td><td>收集全部武器</td></tr>
+            <tr><td>法術全書</td><td>解鎖全部法術</td></tr>
+            <tr><td>丹藥宗師</td><td>煉製全部丹藥配方</td></tr>
+            <tr><td>百草集</td><td>收集全部草藥材料</td></tr>
+            <tr><td>文物修復師</td><td>收集全部大聖遺物</td></tr>
+          </tbody>
+        </table>
+
+        <h3>挑戰相關成就</h3>
+        <table>
+          <thead><tr><th>成就名稱</th><th>解鎖條件</th></tr></thead>
+          <tbody>
+            <tr><td>無傷通關</td><td>在不被擊中的情況下擊敗任何一個 Boss</td></tr>
+            <tr><td>速戰速決</td><td>在 2 分鐘內擊敗任何一個 Boss</td></tr>
+            <tr><td>完美閃避</td><td>在單場戰鬥中完成 10 次完美閃避</td></tr>
+            <tr><td>蓄力大師</td><td>使用三階蓄力重棍擊敗 10 個敵人</td></tr>
+            <tr><td>定身高手</td><td>使用定身術成功打斷 20 次 Boss 攻擊</td></tr>
+            <tr><td>不滅之身</td><td>在不使用回覆道具的情況下擊敗一個 Boss</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="checklist">真結局完成度檢查表</h2>
+        <p>為了方便你確認是否已滿足真結局的所有條件，以下是完整的檢查清單：</p>
+        <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2);border-radius:12px;padding:20px;margin:1rem 0;">
+          <ul>
+            <li>第一章：敲響三口鐘 → 擊敗金池長老 → 取得大聖的毛髮</li>
+            <li>第二章：與黃風大聖隱藏對話 → 取得大聖的鎧甲碎片</li>
+            <li>第三章：探索浮屠塔隱藏房間 → 取得大聖的佛珠</li>
+            <li>第四章：完成紫雲山支線 → 擊敗隱藏 Boss → 取得大聖的披風</li>
+            <li>第五章：完成碧水洞支線 → 擊敗隱藏 Boss → 取得大聖的頭箍</li>
+            <li>第六章：收集全部 5 件遺物 → 前往三星洞遺址 → 取得大聖的元神</li>
+            <li>與所有重要 NPC 完成最終對話（老猴子、菩提祖師幻影、袁守誠）</li>
+            <li>挑戰最終 Boss → 觸發真結局動畫 → 成就「大聖歸來」解鎖</li>
+          </ul>
+        </div>
+
+        <h2 id="ngplus">新遊戲+（NG+）說明</h2>
+        <p>通關真結局後，遊戲會解鎖新遊戲+模式。以下是 NG+ 的主要變化：</p>
+        <ul>
+          <li><strong>繼承內容：</strong>等級、已學習的法術、已獲得的武器與裝備、珍玩、丹藥配方、材料</li>
+          <li><strong>重置內容：</strong>主線進度、所有 Boss（會重生）、所有收集品（可重新收集）</li>
+          <li><strong>新增內容：</strong>Boss 難度提升（攻擊力與血量增加 1.5~2 倍）、部分 Boss 新增技能</li>
+          <li><strong>新增獎勵：</strong>NG+ 專屬裝備與珍玩、更高等級的丹藥配方</li>
+          <li><strong>成就相關：</strong>NG+ 中擊敗強化 Boss 可解鎖專屬成就</li>
+          <li><strong>建議：</strong>建議至少完成一次真結局後再進入 NG+，體驗完整的遊戲內容</li>
+        </ul>
+
+        <blockquote>
+          <strong>提示：</strong>如果你在通關後發現漏掉了某些收集品，可以使用土地廟快速旅行返回之前的章節進行補收集。遊戲沒有「錯過不可逆」的內容，所有收集品在通關後仍然可以獲取。
+        </blockquote>
+
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-purple">結局</span>
+          <span class="badge badge-amber">成就</span>
+          <span class="badge badge-blue">真結局</span>
+          <span class="badge badge-green">NG+</span>
+        </div>
+
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="boss-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(239,68,68,0.5);">
+              <svg class="w-6 h-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">全Boss攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">Boss打法與弱點一覽</p>
+            </div>
+          </a>
+          <a href="hidden-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(16,185,129,0.5);">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">隱藏關卡攻略</h4>
+              <p class="text-gray-500 text-xs mt-1">全章節隱藏要素大全</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIGHT: Ad Sidebar -->
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="ad-slot" style="min-height:250px;">
+<!-- sidebar_rect -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="2122827923"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+        <div class="ad-slot" style="min-height:600px;">
+<!-- sidebar_wide -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="7565057991"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">黑神話：悟空</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="boss-guide.html" class="text-gray-500 hover:text-amber-400 transition">全Boss攻略</a></li>
+            <li><a href="ending-guide.html" class="text-gray-500 hover:text-amber-400 transition">多結局攻略</a></li>
+            <li><a href="hidden-guide.html" class="text-gray-500 hover:text-amber-400 transition">隱藏關卡</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="boss-guide.html" class="text-gray-500 hover:text-amber-400 transition">Boss攻略</a></li>
+            <li><a href="ending-guide.html" class="text-gray-500 hover:text-amber-400 transition">結局攻略</a></li>
+            <li><a href="hidden-guide.html" class="text-gray-500 hover:text-amber-400 transition">隱藏關卡</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../../index.html" class="text-gray-500 hover:text-amber-400 transition">回首頁</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="幻獸帕魯（Palworld）Boss攻略大全 — 世界Boss、地下城Boss與塔主Boss的詳細打法、弱點屬性、推薦等級與掉落物完整整理。">
+  <meta name="keywords" content="幻獸帕魯, Palworld, Boss攻略, 世界Boss, 塔主, 地下城Boss, 掉落物, 弱點屬性, 傳說帕魯">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="google-adsense-account" content="ca-pub-4900630860092971">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="幻獸帕魯Boss攻略大全（2026年最新版）— 攻略站">
+  <meta property="og:description" content="世界Boss、地下城Boss與塔主Boss的詳細打法、弱點屬性、推薦等級與掉落物完整整理。">
+  <meta property="og:type" content="article">
+  <title>幻獸帕魯Boss攻略大全（2026年最新版）— 攻略站</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "幻獸帕魯Boss攻略大全（2026年最新版）",
+    "description": "世界Boss、地下城Boss與塔主Boss的詳細打法、弱點屬性、推薦等級與掉落物完整整理。",
+    "author": { "@type": "Organization", "name": "GameGuide.tw" },
+    "datePublished": "2026-07-24",
+    "dateModified": "2026-07-24",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://game.cubedhub.com/steam/palworld/articles/boss-guide.html" }
+  }
+  </script>
+  <link rel="canonical" href="https://game.cubedhub.com/steam/palworld/articles/boss-guide.html">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4900630860092971" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../../index.html" class="nav-link">首頁</a>
+          <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="../index.html" class="nav-link">幻獸帕魯</a>
+          <a href="boss-guide.html" class="nav-link active">Boss攻略</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../../index.html" class="nav-link">首頁</a>
+        <a href="../../../mabinogi-mobile/index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="../index.html" class="nav-link">幻獸帕魯</a>
+        <a href="boss-guide.html" class="nav-link active">Boss攻略</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../../index.html" class="hover:text-indigo-400 transition">首頁</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../../index.html" class="hover:text-indigo-400 transition">Steam</a>
+      <span class="mx-2">&#8250;</span>
+      <a href="../index.html" class="hover:text-indigo-400 transition">幻獸帕魯</a>
+      <span class="mx-2">&#8250;</span>
+      <span class="text-gray-300">Boss攻略大全</span>
+    </nav>
+  </div>
+
+  <!-- ===== ARTICLE LAYOUT ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <!-- LEFT: TOC -->
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER -->
+    <article class="flex-1 min-w-0">
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">Boss攻略大全：世界Boss與地下城Boss打法（2026年最新版）</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            GameGuide 編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-24
+          </span>
+          <span>·</span>
+          <span>約 20 分鐘閱讀</span>
+          <span class="badge badge-red">Boss</span>
+          <span class="badge badge-gold">進階攻略</span>
+        </div>
+      </header>
+
+      <div id="article-content" class="article-content">
+
+        <h2 id="intro">Boss系統概覽</h2>
+        <p>《幻獸帕魯》中有多種類型的 Boss 挑戰，主要分為以下三類：</p>
+        <ul>
+          <li><strong>世界Boss（Alpha Boss）：</strong>在地圖特定位置出現的巨大帕魯，等級固定且會重生。擊敗後可獲得稀有掉落物，並有機會捕捉。</li>
+          <li><strong>地下城Boss：</strong>進入地下城最深處後出現的 Boss，擊敗後可獲得戰利品寶箱。</li>
+          <li><strong>塔主Boss（Tower Boss）：</strong>分佈在各區域高塔中的強力 Boss，通常是主線進度的關鍵挑戰。</li>
+        </ul>
+        <p>挑戰 Boss 前，務必準備好充足的<strong>食物、藥水、帕魯球</strong>，並確認推薦等級與屬性優勢。</p>
+        <blockquote>
+          <strong>核心原則：</strong>利用屬性克制可以造成 2 倍傷害，同時受到傷害減半。務必根據 Boss 屬性選擇合適的帕魯出戰。
+        </blockquote>
+
+        <h2 id="world-boss">世界Boss攻略</h2>
+
+        <h3 id="boss-001">長毛象王（Mammorest）</h3>
+        <table>
+          <thead>
+            <tr><th>項目</th><th>內容</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>等級</td><td>Lv 15</td></tr>
+            <tr><td>屬性</td><td>草</td></tr>
+            <tr><td>弱點</td><td>火（2倍傷害）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 15+</td></tr>
+            <tr><td>掉落物</td><td>優質木材、奇異花朵、皮革</td></tr>
+            <tr><td>位置</td><td>初始台地西側草原</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>長毛象王的攻擊模式較為單純，主要為衝撞與大範圍踐踏。保持側面輸出，注意躲避牠的前搖明顯的踐踏攻擊。使用火系帕魯（如火絨狐）可大幅加快討伐速度。牠的 HP 降至 30% 以下時會進入狂暴狀態，攻擊頻率提高。</p>
+
+        <h3 id="boss-002">疾風隼王（Nitewing）</h3>
+        <table>
+          <thead>
+            <tr><th>項目</th><th>內容</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>等級</td><td>Lv 25</td></tr>
+            <tr><td>屬性</td><td>無</td></tr>
+            <tr><td>弱點</td><td>暗（1.5倍傷害）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 25+</td></tr>
+            <tr><td>掉落物</td><td>高級羽毛、皮革、古代文明零件</td></tr>
+            <tr><td>位置</td><td>沙漠峽谷高處</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>疾風隼王會頻繁使用空中俯衝攻擊，落地後會用利爪進行連續打擊。建議裝備遠程武器（弓箭或手槍）在牠俯衝時保持移動。當牠落地攻擊時，是輸出的好時機。暗系帕魯對其有額外加成。</p>
+
+        <h3 id="boss-003">焰巫狐王（Foxfire）</h3>
+        <table>
+          <thead>
+            <tr><th>項目</th><th>內容</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>等級</td><td>Lv 35</td></tr>
+            <tr><td>屬性</td><td>火</td></tr>
+            <tr><td>弱點</td><td>水（2倍傷害）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 35+</td></tr>
+            <tr><td>掉落物</td><td>火焰器官、高級皮革、熱能裝置設計圖</td></tr>
+            <tr><td>位置</td><td>火山地帶入口</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>焰巫狐王擅長範圍火焰攻擊，會在地面留下持續燃燒的火圈。務必裝備防火護甲，並攜帶水系帕魯（如碧海龍、衝浪鴨）進行壓制。注意牠的火焰噴射技能前搖較長，看到警示範圍後迅速閃避。階段轉換時會釋放大範圍爆炸，建議拉開距離。</p>
+
+        <h3 id="boss-004">碎岩龜王（Digtoise）</h3>
+        <table>
+          <thead>
+            <tr><th>項目</th><th>內容</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>等級</td><td>Lv 40</td></tr>
+            <tr><td>屬性</td><td>地</td></tr>
+            <tr><td>弱點</td><td>草、水（1.5倍傷害）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 40+</td></tr>
+            <tr><td>掉落物</td><td>金屬礦石、龜殼、堅固石材</td></tr>
+            <tr><td>位置</td><td>岩石山區礦場</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>碎岩龜王擁有極高的物理防禦，使用魔法攻擊或屬性攻擊效果更好。牠會將身體縮入殼中旋轉攻擊，此時所有傷害減半。建議在牠攻擊後喘息時輸出。使用草系帕魯可造成額外傷害。注意牠的滾動攻擊速度極快，看到蓄力動作時立即橫向閃避。</p>
+
+        <h3 id="boss-005">空冥龍（Jetragon）</h3>
+        <table>
+          <thead>
+            <tr><th>項目</th><th>內容</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>等級</td><td>Lv 50</td></tr>
+            <tr><td>屬性</td><td>龍</td></tr>
+            <tr><td>弱點</td><td>冰（2倍傷害）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 45+</td></tr>
+            <tr><td>掉落物</td><td>龍之水晶、傳說設計圖、鑽石</td></tr>
+            <tr><td>位置</td><td>遠古遺跡深處</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>空冥龍是遊戲中最強的傳說級世界Boss之一。牠的龍息攻擊範圍極大且傷害極高，務必保持移動。推薦使用冰系帕魯（如喚冰獸）進行克制，同時玩家自身需要傳說級裝備。戰鬥分為三個階段：第一階段以龍息為主，第二階段會開始飛行並釋放追蹤彈幕，第三階段（HP 20% 以下）會瘋狂連發大範圍攻擊。建議使用高機動性坐騎靈活走位，耐心消耗。</p>
+
+        <h3 id="boss-006">聖光騎士（Paladius）</h3>
+        <table>
+          <thead>
+            <tr><th>項目</th><th>內容</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>等級</td><td>Lv 47</td></tr>
+            <tr><td>屬性</td><td>無</td></tr>
+            <tr><td>弱點</td><td>暗（1.5倍傷害）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 45+</td></tr>
+            <tr><td>掉落物</td><td>聖甲片、傳說裝備設計圖</td></tr>
+            <tr><td>位置</td><td>聖山頂峰</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>聖光騎士以高速突進和神聖系技能為主。牠的衝刺攻擊速度極快，需要在牠蓄力時預判閃避方向。推薦使用暗系帕魯，並準備足夠的恢復藥水。聖光騎士在 HP 低於 50% 後會釋放全屏光柱攻擊，地面上會出現預警圈，注意躲避。</p>
+
+        <h2 id="dungeon-boss">地下城Boss攻略</h2>
+        <p>地下城分為不同難度等級，每次進入地城最深處都會遇到隨機的 Boss。以下是常見的地下城 Boss：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>地下城等級</th>
+              <th>推薦等級</th>
+              <th>可能出現的Boss</th>
+              <th>主要掉落</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>初級地下城（Lv 10~20）</td><td>Lv 15+</td><td>長毛象王、皮皮雞王</td><td>基礎材料、綠色裝備</td></tr>
+            <tr><td>中級地下城（Lv 20~35）</td><td>Lv 25+</td><td>疾風隼王、鐵腕猿王</td><td>高級材料、藍色裝備</td></tr>
+            <tr><td>高級地下城（Lv 35~45）</td><td>Lv 38+</td><td>焰巫狐王、碎岩龜王</td><td>稀有材料、紫色裝備</td></tr>
+            <tr><td>傳說地下城（Lv 45+）</td><td>Lv 45+</td><td>隨機傳說帕魯</td><td>傳說裝備、金色設計圖</td></tr>
+          </tbody>
+        </table>
+
+        <p><strong>地下城探索要點：</strong></p>
+        <ul>
+          <li>進入地下城前務必準備<strong>火把、食物、藥水</strong>，部分地城內無法快速傳送離開。</li>
+          <li>地城內有機會遇到寶箱房間與礦脈，建議走完全程。</li>
+          <li>Boss 房間前通常有休息點，可在此補給後再進入戰鬥。</li>
+          <li>組隊挑戰時，Boss 血量會按人數倍率增加，但掉落物也會更好。</li>
+          <li>部分地下城有時間限制，需要在限定時間內到達 Boss 房間。</li>
+        </ul>
+
+        <h2 id="tower-boss">塔主Boss攻略</h2>
+        <p>塔主 Boss 是主線進度的主要門檻，擊敗後可獲得重要的能力解鎖：</p>
+
+        <h3 id="tower-zoe">塔主 雷恩（Zoe &amp; Grizzbolt）</h3>
+        <table>
+          <thead>
+            <tr><th>項目</th><th>內容</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>等級</td><td>Lv 30</td></tr>
+            <tr><td>屬性</td><td>雷</td></tr>
+            <tr><td>弱點</td><td>地（2倍傷害）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 30+</td></tr>
+            <tr><td>掉落物</td><td>古代科技點數、高級帕魯球</td></tr>
+            <tr><td>位置</td><td>起始區域高塔</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>雷恩騎乘雷鳴獅（Grizzbolt）作戰。雷鳴獅的攻擊以近距離電擊與範圍放電為主。保持中距離使用遠程武器輸出，當地面上出現電擊預警圈時，迅速脫離範圍。推薦使用地系帕魯對其進行屬性壓制。注意雷恩本人也會參與攻擊，使用手槍射擊玩家，需要一邊躲避射擊一邊輸出。</p>
+
+        <h3 id="tower-lily">塔主 莉莉（Lily &amp; Lyleen）</h3>
+        <table>
+          <thead>
+            <tr><th>項目</th><th>內容</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>等級</td><td>Lv 40</td></tr>
+            <tr><td>屬性</td><td>草</td></tr>
+            <tr><td>弱點</td><td>火（2倍傷害）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 40+</td></tr>
+            <tr><td>掉落物</td><td>古代科技點數、奇異花朵、高級帕魯球</td></tr>
+            <tr><td>位置</td><td>森林區域高塔</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>莉莉與花冠龍（Lyleen）的組合以持續恢復與範圍花粉攻擊為特色。花冠龍會定期為自己恢復 HP，需要使用火系技能壓制其恢復效果。房間中會定期出現治療花朵，優先破壞這些花朵可以阻止 Boss 回血。莉莉本人會在遠處施放荊棘束縛技能，被命中後會短暫無法移動，需要隊友協助解控。</p>
+
+        <h3 id="tower-axe">塔主 艾克斯（Axel &amp; Orserk）</h3>
+        <table>
+          <thead>
+            <tr><th>項目</th><th>內容</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>等級</td><td>Lv 48</td></tr>
+            <tr><td>屬性</td><td>雷/龍</td></tr>
+            <tr><td>弱點</td><td>冰、地（1.5倍傷害）</td></tr>
+            <tr><td>推薦等級</td><td>Lv 48+</td></tr>
+            <tr><td>掉落物</td><td>古代科技點數、傳奇設計圖碎片</td></tr>
+            <tr><td>位置</td><td>火山區域高塔</td></tr>
+          </tbody>
+        </table>
+        <p><strong>打法要點：</strong>艾克斯與雷神獸（Orserk）是目前遊戲中最強的塔主 Boss。雷神獸擁有全屏雷擊、追蹤閃電球與瞬間移動等多種技能。戰鬥場地較小，需要極高的反應速度。建議穿戴傳說級裝備，攜帶滿級冰系帕魯。雷神獸的連招非常致命——閃現 + 近距離雷擊 + 全屏放電，必須在牠閃現的瞬間準備好翻滾閃避。這個 Boss 極度考驗走位技巧和裝備強度。</p>
+
+        <h2 id="preparation">戰前準備建議</h2>
+        <p>挑戰任何 Boss 前，建議做好以下準備：</p>
+        <ul>
+          <li><strong>裝備等級：</strong>確認你的武器與防具等級不低於 Boss 等級 -5。傳說級 Boss 建議裝備等級與 Boss 持平。</li>
+          <li><strong>藥水與食物：</strong>攜帶至少 20 瓶高級恢復藥水，以及增加攻擊力或防禦力的料理。戰鬥中記得補 buff。</li>
+          <li><strong>帕魯準備：</strong>至少準備 5 隻等級接近 Boss 的帕魯，其中 2~3 隻為屬性克制帕魯。將備用帕魯放在快捷欄以便隨時更換。</li>
+          <li><strong>帕魯球：</strong>如果打算捕捉 Boss，準備至少 20 顆高級帕魯球或傳說帕魯球。Boss 血量越低捕獲率越高。</li>
+          <li><strong>彈藥與耐久：</strong>確認武器耐久度與彈藥充足，傳說 Boss 戰可能持續 10 分鐘以上。</li>
+        </ul>
+
+        <h2 id="rewards">Boss掉落物總覽</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Boss類型</th>
+              <th>常見掉落</th>
+              <th>稀有掉落</th>
+              <th>傳說掉落</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>世界Boss（Lv 15~25）</td><td>優質材料、金幣</td><td>藍色品質裝備設計圖</td><td>-</td></tr>
+            <tr><td>世界Boss（Lv 35~40）</td><td>高級材料、古代零件</td><td>紫色品質裝備設計圖</td><td>金色技能果實</td></tr>
+            <tr><td>傳說世界Boss（Lv 45+）</td><td>傳說材料、鑽石</td><td>傳說裝備設計圖</td><td>傳說帕魯蛋</td></tr>
+            <tr><td>塔主Boss</td><td>古代科技點數、高級帕魯球</td><td>設計圖碎片</td><td>塔主專屬獎勵</td></tr>
+            <tr><td>地下城Boss</td><td>隨機材料、裝備</td><td>紫色飾品</td><td>金色飾品</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="tips">進階討伐技巧</h2>
+        <ul>
+          <li><strong>等級壓制：</strong>如果當前等級不足以挑戰 Boss，可以先提升 5 級再來。每 1 級等級差距約影響 4% 傷害。</li>
+          <li><strong>屬性隊列：</strong>派出的帕魯按照克制鏈排列，當一隻帕魯倒下時，下一隻帕魯能立即補上屬性優勢。</li>
+          <li><strong>場地利用：</strong>利用地形阻擋 Boss 的遠程攻擊，部分 Boss 的招式可以被柱子或岩石擋住。</li>
+          <li><strong>合作討伐：</strong>組隊時分工明確——一人負責吸引仇恨，其他人從側面或背面輸出。多人時注意分散站位，避免同時被範圍技能命中。</li>
+          <li><strong>捕捉時機：</strong>想捕捉 Boss 的話，在牠血量低於 5% 時使用傳說帕魯球，並搭配背襲與狀態異常（如睡眠、冰凍）提高捕獲率。</li>
+          <li><strong>重置刷新：</strong>世界Boss 被擊敗後約 30 分鐘~1 小時重生（視 Boss 強度而定），可以在附近建造臨時基地以便反覆刷取掉落物。</li>
+        </ul>
+
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-red">Boss</span>
+          <span class="badge badge-gold">討伐攻略</span>
+          <span class="badge badge-blue">世界Boss</span>
+          <span class="badge badge-green">地下城</span>
+        </div>
+
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="breeding-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-pink-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">配種攻略完全指南</h4>
+              <p class="text-gray-500 text-xs mt-1">配方表與遺傳機制詳解</p>
+            </div>
+          </a>
+          <a href="paldeck.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-indigo-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">全帕魯圖鑑</h4>
+              <p class="text-gray-500 text-xs mt-1">查詢各帕魯屬性与工作適合</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIGHT: Ad Sidebar -->
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="ad-slot" style="min-height:250px;">
+<!-- sidebar_rect -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="2122827923"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+        <div class="ad-slot" style="min-height:600px;">
+<!-- sidebar_wide -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="7565057991"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">幻獸帕魯</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="breeding-guide.html" class="text-gray-500 hover:text-indigo-400 transition">配種攻略</a></li>
+            <li><a href="paldeck.html" class="text-gray-500 hover:text-indigo-400 transition">全帕魯圖鑑</a></li>
+            <li><a href="boss-guide.html" class="text-gray-500 hover:text-indigo-400 transition">Boss攻略</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">攻略分類</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">配種攻略</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">帕魯圖鑑</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-indigo-400 transition">Boss討伐</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>
