@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="蔚藍檔案攻略專區 — 抽卡機制解析、學生強度排行、總力戰攻略與新手入門指南。">
+  <meta name="keywords" content="蔚藍檔案, Blue Archive, 攻略, 抽卡, Tier List, 總力戰, 新手">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="蔚藍檔案攻略專區 — 攻略站">
+  <meta property="og:description" content="蔚藍檔案攻略大全 — 抽卡機制、學生強度排行、總力戰攻略。">
+  <meta property="og:type" content="website">
+  <title>蔚藍檔案攻略專區 — 攻略站</title>
+  <link rel="canonical" href="https://game.cubedhub.com/blue-archive/">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4900630860092971" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="../images/logo.png" alt="CubedHub" class="w-8 h-8">
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../index.html" class="nav-link">首頁</a>
+          <a href="index.html" class="nav-link active">蔚藍檔案</a>
+          <a href="#latest-articles" class="nav-link">攻略文章</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="relative py-20 px-4 text-center" style="background: linear-gradient(135deg, #0f1117 0%, #1a1d2e 50%, #0f1117 100%);">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-6xl mb-6">📚</div>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">蔚藍檔案攻略專區</h1>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">學生強度排行、抽卡機制、總力戰攻略與新手入門指南</p>
+    </div>
+  </section>
+
+  <section class="py-16 px-4" id="latest-articles">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl font-bold text-white mb-10">攻略文章</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="articles/gacha-changes.html" class="game-card block p-6 rounded-xl bg-[#1a1d2e] border border-[#2a2d3e] hover:border-blue-500/40 transition-all duration-300">
+          <div class="text-3xl mb-4">💎</div>
+          <h3 class="text-lg font-bold text-white mb-2">蔚藍檔案抽卡保底改動完整分析</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">JP 5.5 周年直播公布的新抽卡機制完整解說，天井系統變更與玩家反應。</p>
+          <div class="mt-4 text-blue-400 text-sm font-semibold">閱讀詳情 →</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div><h4 class="text-white font-semibold mb-3">蔚藍檔案攻略</h4><p class="text-gray-500 text-sm">本站攻略資料僅供參考，實際遊戲內容以官方版本為準。</p></div>
+        <div><h4 class="text-white font-semibold mb-3">相關連結</h4><ul class="space-y-2 text-sm"><li><a href="https://bluearchive.jp/" class="text-gray-500 hover:text-blue-400 transition" target="_blank" rel="noopener">蔚藍檔案官方網站</a></li></ul></div>
+        <div><h4 class="text-white font-semibold mb-3">關於</h4><ul class="space-y-2 text-sm"><li><a href="../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li></ul></div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">&copy; 2026 攻略站 GameGuide.tw — All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
