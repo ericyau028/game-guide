@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="瑪奇Mobile 寵物系統全攻略 — 寵物取得方式、培養進化、技能學習與戰鬥搭配技巧。">
+  <meta name="keywords" content="瑪奇Mobile, 寵物, 夥伴, 培養, 進化, 技能, 戰鬥搭配, Mabinogi Mobile, ペット">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="google-adsense-account" content="ca-pub-4900630860092971">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="瑪奇Mobile 寵物系統完整指南：取得、培養與戰鬥應用 — 攻略站">
+  <meta property="og:description" content="瑪奇Mobile 寵物系統全攻略 — 寵物取得方式、培養進化、技能學習與戰鬥搭配技巧。">
+  <meta property="og:type" content="article">
+  <title>瑪奇Mobile 寵物系統完整指南：取得、培養與戰鬥應用 — 攻略站</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "瑪奇Mobile 寵物系統完整指南：取得、培養與戰鬥應用",
+    "description": "寵物取得方式、培養進化、技能學習與戰鬥搭配技巧完整解析。",
+    "author": { "@type": "Organization", "name": "GameGuide.tw" },
+    "datePublished": "2026-07-30",
+    "dateModified": "2026-07-30",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://game.cubedhub.com/mabinogi-mobile/articles/pets-guide.html" }
+  }
+  </script>
+  <link rel="canonical" href="https://game.cubedhub.com/mabinogi-mobile/articles/pets-guide.html">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4900630860092971" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <!-- Reading Progress -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../index.html" class="nav-link">首頁</a>
+          <a href="../index.html" class="nav-link">瑪奇Mobile</a>
+          <a href="newbie-guide.html" class="nav-link">新手指南</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:block">
+            <input id="search-input" type="text" placeholder="搜尋攻略..." class="w-48 lg:w-64 bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-[#1a1d2e] transition" aria-label="選單">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0f1117] border-l border-[#2a2d3e] z-50 p-6 md:hidden">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">選單</span>
+        <button id="menu-close" class="p-2 rounded-lg hover:bg-[#1a1d2e]" onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('menu-overlay').classList.add('hidden');">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="../../index.html" class="nav-link">首頁</a>
+        <a href="../index.html" class="nav-link">瑪奇Mobile</a>
+        <a href="newbie-guide.html" class="nav-link">新手指南</a>
+      </div>
+      <div class="mt-6">
+        <input type="text" placeholder="搜尋攻略..." class="w-full bg-[#1a1d2e] border border-[#2a2d3e] rounded-lg px-4 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-indigo-500">
+      </div>
+    </div>
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6">
+    <nav class="flex items-center text-sm text-gray-500 flex-wrap" aria-label="breadcrumb">
+      <a href="../../index.html" class="hover:text-indigo-400 transition">首頁</a>
+      <span class="mx-2">›</span>
+      <a href="../index.html" class="hover:text-indigo-400 transition">瑪奇Mobile</a>
+      <span class="mx-2">›</span>
+      <span class="text-gray-300">寵物系統完整指南｜取得、培養與戰鬥應用</span>
+    </nav>
+  </div>
+
+  <!-- ===== ARTICLE LAYOUT ===== -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 flex gap-8">
+
+    <!-- LEFT: TOC -->
+    <aside class="hidden lg:block w-56 flex-shrink-0">
+      <div class="toc">
+        <h4 class="text-white font-semibold text-sm mb-3 px-3">目錄</h4>
+        <div id="toc-list" class="flex flex-col gap-0.5"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER: Article Content -->
+    <article class="flex-1 min-w-0">
+      <!-- Article Header -->
+      <header class="mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">瑪奇 Mobile 寵物系統完整指南｜取得、培養與戰鬥應用</h1>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            攻略站編輯部
+          </span>
+          <span>·</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            2026-07-30
+          </span>
+          <span>·</span>
+          <span>約 15 分鐘閱讀</span>
+          <span class="badge badge-green">寵物系統</span>
+          <span class="badge badge-gold">瑪奇Mobile</span>
+        </div>
+      </header>
+
+      <!-- Ad: 728×90 Banner -->
+      <div class="mb-8">
+        <div class="ad-slot" style="min-height:90px;">
+<!-- header_banner -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="6428216085"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+      </div>
+
+      <!-- Article Body -->
+      <div id="article-content" class="article-content">
+
+        <!-- ===== 一、寵物系統概述 ===== -->
+        <h2 id="pets-overview">一、寵物系統概述</h2>
+        <p>瑪奇 Mobile 的寵物系統繼承了原作的精髓並加以創新，夥伴不僅是可愛的跟隨裝飾，更是戰鬥中不可或缺的重要戰力。寵物可以協助玩家拾取掉落物、提供各種 Buff 加成、在戰鬥中施放專屬技能，部分稀有寵物甚至擁有改變戰局的特殊能力。</p>
+        <p>遊戲中的寵物分為 <strong>一般寵物</strong>、<strong>特殊寵物</strong> 和 <strong>傳說寵物</strong> 三大類別，稀有度越高，基礎屬性與技能品質也越強。每隻寵物都擁有獨立的等級、親密度與技能系統，透過培養可以大幅提升寵物的實戰價值。</p>
+        <p>寵物系統的核心功能包括：</p>
+        <ul>
+          <li><strong>自動拾取</strong> — 寵物會自動拾取地面上掉落的金幣與道具</li>
+          <li><strong>屬性加成</strong> — 上陣寵物會為角色提供額外的屬性加成</li>
+          <li><strong>寵物技能</strong> — 寵物在戰鬥中會自動施放技能，輔助作戰</li>
+          <li><strong>騎乘功能</strong> — 特定寵物可作為坐騎，提升移動速度</li>
+          <li><strong>合體進化</strong> — 兩隻相同寵物可合成進化為更高階型態</li>
+        </ul>
+
+        <!-- ===== 二、寵物取得方式 ===== -->
+        <h2 id="pet-acquisition">二、寵物取得方式</h2>
+        <p>遊戲中獲取寵物的管道相當多元，從免費獲得到付費召喚皆有。以下整理主要的取得途徑：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>途徑</th>
+              <th>說明</th>
+              <th>難度</th>
+              <th>花費</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>主線任務獎勵</strong></td>
+              <td>完成特定主線章節後贈送基礎寵物（如：基本貓咪、小狗）</td>
+              <td>★☆☆☆☆</td>
+              <td>免費</td>
+            </tr>
+            <tr>
+              <td><strong>寵物召喚系統</strong></td>
+              <td>使用「寵物召喚券」進行召喚，有機率獲得稀有寵物。分為一般召喚與高級召喚</td>
+              <td>★★☆☆☆</td>
+              <td>召喚券（遊戲幣/商城）</td>
+            </tr>
+            <tr>
+              <td><strong>活動限定</strong></td>
+              <td>期間限定活動贈送特殊外觀寵物，通常具有獨特技能</td>
+              <td>★★★☆☆</td>
+              <td>活動參與（免費）</td>
+            </tr>
+            <tr>
+              <td><strong>副本掉落</strong></td>
+              <td>特定深淵副本有極低機率掉落寵物蛋，可孵化出稀有寵物</td>
+              <td>★★★★☆</td>
+              <td>副本入場券</td>
+            </tr>
+            <tr>
+              <td><strong>交易所購買</strong></td>
+              <td>玩家之間可交易寵物蛋或已孵化的寵物（部分寵物綁定不可交易）</td>
+              <td>★★☆☆☆</td>
+              <td>遊戲幣</td>
+            </tr>
+            <tr>
+              <td><strong>商城直購</strong></td>
+              <td>部分傳說級寵物限定商城販售，通常為禮包形式</td>
+              <td>★☆☆☆☆</td>
+              <td>付費（NT$ 300~1500）</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <strong>新手建議：</strong>前期透過主線任務即可獲得實用的基礎寵物，不需要急著花錢召喚。先將免費寵物培養起來，等到中期對遊戲機制有充分了解後，再考慮投資高級寵物。
+        </blockquote>
+
+        <!-- ===== 三、寵物培養指南 ===== -->
+        <h2 id="pet-training">三、寵物培養指南</h2>
+
+        <h3 id="level-up">等級提升</h3>
+        <p>寵物等級是影響其基礎屬性和技能效果的核心指標。寵物獲得經驗的方式如下：</p>
+        <ul>
+          <li><strong>並肩作戰</strong> — 將寵物設定為出戰狀態，打怪時寵物會獲得與角色一定比例的經驗值</li>
+          <li><strong>寵物經驗藥水</strong> — 可在商店購買或副本獎勵獲得，直接餵養提升等級</li>
+          <li><strong>寵物訓練場</strong> — 特定區域可讓寵物離線訓練，隨時間自動累積經驗</li>
+          <li><strong>每日任務</strong> — 完成寵物相關每日任務可獲得大量寵物經驗</li>
+        </ul>
+
+        <h3 id="evolution">進化系統</h3>
+        <p>寵物達到最高等級（Lv.50）後，可透過進化系統突破上限。進化分為三個階段：</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>進化階段</th>
+              <th>條件</th>
+              <th>素材</th>
+              <th>效果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>一階進化</strong></td>
+              <td>寵物 Lv.50</td>
+              <td>進化石 ×10、同類寵物 ×1</td>
+              <td>等級上限提升至 Lv.70，外觀小幅變化，解鎖第 3 技能格</td>
+            </tr>
+            <tr>
+              <td><strong>二階進化</strong></td>
+              <td>寵物 Lv.70</td>
+              <td>進化石 ×30、同類寵物 ×2</td>
+              <td>等級上限提升至 Lv.90，外觀大幅改變，解鎖第 4 技能格</td>
+            </tr>
+            <tr>
+              <td><strong>三階進化（終極）</strong></td>
+              <td>寵物 Lv.90</td>
+              <td>進化石 ×50、傳說級寵物 ×1</td>
+              <td>等級上限提升至 Lv.100，獲得獨特外觀特效，解鎖終極技能</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="pet-skills">技能學習</h3>
+        <p>寵物技能分為 <strong>天生技能</strong> 與 <strong>學習技能</strong> 兩類。天生技能隨寵物種類固定，無法更換；學習技能則可透過技能書自由搭配。</p>
+        <p>技能書的取得途徑包括寵物副本、活動獎勵、交易所購買等。每隻寵物的技能格數量取決於其稀有度與進化階段，一般寵物初始 2 格，傳說寵物初始 3 格。</p>
+        <p>以下是常見的寵物技能分類：</p>
+        <ul>
+          <li><strong>攻擊型</strong> — 追加傷害、屬性攻擊、範圍攻擊（如：火焰吐息、閃電連擊）</li>
+          <li><strong>防禦型</strong> — 護盾、減傷、嘲諷（如：守護光環、鋼鐵外皮）</li>
+          <li><strong>輔助型</strong> — 治療、增益、淨化（如：治癒之光、力量祝福）</li>
+          <li><strong>特殊型</strong> — 自動拾取範圍擴大、經驗加成、金幣加成</li>
+        </ul>
+
+        <h3 id="affinity">親密度系統</h3>
+        <p>寵物親密度影響寵物在戰鬥中的 AI 表現與技能觸發機率。提升親密度的方法：</p>
+        <ul>
+          <li><strong>定時餵食</strong> — 使用專屬飼料（一般飼料/高級飼料）</li>
+          <li><strong>互動撫摸</strong> — 每日可與寵物互動 5 次，每次增加少量親密度</li>
+          <li><strong>一起戰鬥</strong> — 寵物出戰時間越長，親密度自然提升</li>
+          <li><strong>寵物玩具</strong> — 贈送特定玩具可大幅提升親密度</li>
+        </ul>
+        <blockquote>
+          <strong>小技巧：</strong>親密度達到 max（1000）時，寵物會解鎖隱藏語音和特殊動作。更重要的是，滿親密度寵物的技能冷卻會縮短 15%，這在後期高難度副本中非常實用。
+        </blockquote>
+
+        <!-- ===== 四、推薦寵物排行 ===== -->
+        <h2 id="top-pets">四、推薦寵物排行</h2>
+        <p>以下依照當前版本（2026年7月）的實用性，整理出五隻最值得培養的寵物：</p>
+
+        <div class="overflow-x-auto mb-8">
+          <table>
+            <thead>
+              <tr>
+                <th>排名</th>
+                <th>名稱</th>
+                <th>稀有度</th>
+                <th>特色</th>
+                <th>推薦理由</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>🥇 1</strong></td>
+                <td><strong>月光精靈</strong></td>
+                <td><span class="text-purple-400">傳說</span></td>
+                <td>範圍治療 + 全隊攻擊 Buff</td>
+                <td>唯一同時擁有群體治療與攻擊增益的寵物，深淵副本必備</td>
+              </tr>
+              <tr>
+                <td><strong>🥈 2</strong></td>
+                <td><strong>火焰幼龍</strong></td>
+                <td><span class="text-yellow-400">史詩</span></td>
+                <td>高傷害範圍火屬性攻擊</td>
+                <td>取得難度適中，AOE 傷害極高，刷怪效率提升 30% 以上</td>
+              </tr>
+              <tr>
+                <td><strong>🥉 3</strong></td>
+                <td><strong>冰晶狐狸</strong></td>
+                <td><span class="text-yellow-400">史詩</span></td>
+                <td>冰凍控場 + 減速效果</td>
+                <td>控場能力頂尖，PVP 與高難度副本中控場價值極高</td>
+              </tr>
+              <tr>
+                <td><strong>4</strong></td>
+                <td><strong>黑曜石貓</strong></td>
+                <td><span class="text-blue-400">稀有</span></td>
+                <td>自動拾取範圍擴大 + 金幣加成</td>
+                <td>經濟實惠的首選，練功農幣必帶，回收成本最快</td>
+              </tr>
+              <tr>
+                <td><strong>5</strong></td>
+                <td><strong>聖光獨角獸</strong></td>
+                <td><span class="text-purple-400">傳說</span></td>
+                <td>騎乘加速 + 護盾技能</td>
+                <td>唯一可騎乘的傳說寵物，趕圖效率與生存能力兼備</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ===== 五、寵物戰鬥搭配 ===== -->
+        <h2 id="combat-synergy">五、寵物戰鬥搭配</h2>
+
+        <h3 id="pet-battle-mechanics">寵物戰鬥機制</h3>
+        <p>在戰鬥中，寵物會根據 AI 設定自動行動。玩家可以在寵物設定面板中調整寵物的 <strong>戰鬥模式</strong>：</p>
+        <ul>
+          <li><strong>主動模式</strong> — 寵物會主動攻擊視野內的敵人，適合練功刷怪</li>
+          <li><strong>防禦模式</strong> — 寵物只在玩家受到攻擊時反擊，優先施放防禦技能</li>
+          <li><strong>被動模式</strong> — 寵物不參與攻擊，僅提供屬性加成與 Buff</li>
+        </ul>
+        <p>寵物的技能施放為全自動，但玩家可以透過「寵物指令」按鈕手動觸發寵物終極技能（冷卻獨立計算）。熟練運用寵物指令可以在關鍵時刻扭轉戰局。</p>
+
+        <h3 id="best-class-combos">職業與寵物最佳搭配</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>職業</th>
+              <th>推薦寵物</th>
+              <th>搭配理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>戰士系</strong></td>
+              <td>月光精靈</td>
+              <td>戰士在前線承受傷害，月光精靈提供穩定治療與攻擊 Buff，續戰力最大化</td>
+            </tr>
+            <tr>
+              <td><strong>魔法師系</strong></td>
+              <td>火焰幼龍</td>
+              <td>雙重範圍攻擊疊加清場，元素屬性一致可觸發連鎖加成效果</td>
+            </tr>
+            <tr>
+              <td><strong>弓箭手系</strong></td>
+              <td>冰晶狐狸</td>
+              <td>冰凍控場讓弓箭手有充裕時間拉開距離進行精準射擊</td>
+            </tr>
+            <tr>
+              <td><strong>治癒師系</strong></td>
+              <td>火焰幼龍</td>
+              <td>彌補治癒師輸出不足的問題，讓補師也能有一定的清怪能力</td>
+            </tr>
+            <tr>
+              <td><strong>吟遊詩人系</strong></td>
+              <td>聖光獨角獸</td>
+              <td>雙重輔助疊加，護盾與減傷讓團隊生存能力翻倍</td>
+            </tr>
+            <tr>
+              <td><strong>盜賊系</strong></td>
+              <td>黑曜石貓</td>
+              <td>盜賊需要頻繁移動拉怪，黑曜石貓的自動拾取範圍確保不漏戰利品</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="team-synergy">隊伍中寵物的配合</h3>
+        <p>在 4 人隊伍中，寵物的選擇與搭配同樣重要。一個理想的隊伍寵物配置建議包含：</p>
+        <ul>
+          <li><strong>1 補助型</strong>（月光精靈 / 聖光獨角獸）— 穩定團隊血量與提供增益</li>
+          <li><strong>2 輸出型</strong>（火焰幼龍 / 雷電之鷹）— 最大化隊伍整體 DPS</li>
+          <li><strong>1 控場型</strong>（冰晶狐狸 / 暗影蝙蝠）— 應對高壓波次與 BOSS 機制</li>
+        </ul>
+        <p>如果隊伍成員的寵物配置重疊，建議互相溝通調整。例如已有月光精靈時，其他隊友可以選擇純輸出寵物來補充傷害。</p>
+
+        <!-- ===== 六、常見問題 FAQ ===== -->
+        <h2 id="faq">六、常見問題 FAQ</h2>
+
+        <div class="space-y-6">
+          <div class="bg-[#1a1d2e] rounded-xl p-6">
+            <h3 class="text-white font-semibold mb-2">Q：寵物最多可以擁有幾隻？可以同時上陣多隻嗎？</h3>
+            <p class="text-gray-400">玩家最多可擁有 50 隻寵物。戰鬥中同時只能上陣 <strong>1 隻</strong>寵物，但可以透過寵物快捷切換功能在戰鬥外快速更換。部分特殊活動或副本允許上陣 2 隻，但這是少數例外。</p>
+          </div>
+          <div class="bg-[#1a1d2e] rounded-xl p-6">
+            <h3 class="text-white font-semibold mb-2">Q：寵物進化後技能會重置嗎？進化素材在哪裡取得？</h3>
+            <p class="text-gray-400">寵物進化後已學習的技能 <strong>不會重置</strong>，會完整保留。進化石的主要來源為：寵物副本（毎日可刷 3 次）、公會商店兌換（週限 10 個）、分解不需要的寵物（每隻可獲得 1~5 個碎片）。傳說級寵物進化素材較難取得，建議多加參與公會 RAID 活動。</p>
+          </div>
+          <div class="bg-[#1a1d2e] rounded-xl p-6">
+            <h3 class="text-white font-semibold mb-2">Q：無課玩家可以拿到好寵物嗎？推薦優先培養哪隻？</h3>
+            <p class="text-gray-400">完全可以。主線贈送的基礎寵物雖然不是最強，但培養到二階進化後仍然實用。優先推薦 <strong>黑曜石貓</strong>（可透過寵物召喚機率取得或交易所購買，價格不高），它的金幣加成與自動拾取範圍擴大能顯著提升練功效率，長期下來累積的資源遠超過投資成本。另外，定期參與活動也有機會獲得限定寵物。</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Ad: 300×250 Banner -->
+      <div class="mt-8">
+        <div class="ad-slot" style="min-height:250px;">
+<!-- sidebar_rect -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="2122827923"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+      </div>
+
+      <!-- Article Footer -->
+      <div class="mt-12 pt-8 border-t border-[#2a2d3e]">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-sm text-gray-500 mr-2">標籤：</span>
+          <span class="badge badge-green">寵物系統</span>
+          <span class="badge badge-gold">瑪奇Mobile</span>
+          <span class="badge badge-blue">培養攻略</span>
+          <span class="badge badge-red">戰鬥搭配</span>
+        </div>
+
+        <!-- Related Articles -->
+        <h3 class="text-lg font-bold text-white mb-4">相關攻略推薦</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="newbie-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-amber-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">新手入門完全指南</h4>
+              <p class="text-gray-500 text-xs mt-1">從零開始的艾琳冒險攻略</p>
+            </div>
+          </a>
+          <a href="combat-system.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-indigo-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">戰鬥系統深度解析</h4>
+              <p class="text-gray-500 text-xs mt-1">技能鏈、變身與元素克制完整攻略</p>
+            </div>
+          </a>
+          <a href="equipment-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-emerald-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">裝備養成與附魔指南</h4>
+              <p class="text-gray-500 text-xs mt-1">從白裝到紅裝的養成路線</p>
+            </div>
+          </a>
+          <a href="rune-guide.html" class="card p-4 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-purple-900/60 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">符文系統詳解</h4>
+              <p class="text-gray-500 text-xs mt-1">符文搭配與強化攻略</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIGHT: Ad Sidebar -->
+    <aside class="hidden xl:block w-56 flex-shrink-0">
+      <div class="sticky top-24 flex flex-col gap-6">
+        <div class="ad-slot" style="min-height:250px;">
+<!-- sidebar_rect -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="2122827923"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+        <div class="ad-slot" style="min-height:600px;">
+<!-- sidebar_wide -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-4900630860092971"
+     data-ad-slot="7565057991"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-white font-bold text-lg mb-3">
+            <svg class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            攻略站
+          </div>
+          <p class="text-gray-500 text-sm">為玩家打造最實用的遊戲攻略平台。</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">瑪奇Mobile攻略</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="newbie-guide.html" class="text-gray-500 hover:text-indigo-400 transition">新手入門指南</a></li>
+            <li><a href="tier-list.html" class="text-gray-500 hover:text-indigo-400 transition">職業排行榜</a></li>
+            <li><a href="combat-system.html" class="text-gray-500 hover:text-indigo-400 transition">戰鬥系統解析</a></li>
+            <li><a href="../index.html" class="text-gray-500 hover:text-indigo-400 transition">更多攻略...</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">相關連結</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../index.html" class="text-gray-500 hover:text-indigo-400 transition">寵物圖鑑</a></li>
+            <li><a href="../index.html" class="text-gray-500 hover:text-indigo-400 transition">技能書查詢</a></li>
+            <li><a href="../index.html" class="text-gray-500 hover:text-indigo-400 transition">進化素材表</a></li>
+            <li><a href="../index.html" class="text-gray-500 hover:text-indigo-400 transition">活動時程表</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">關於</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">
+        &copy; 2026 攻略站 GameGuide.tw — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
