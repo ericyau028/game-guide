@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="鳴潮聲骸系統完整攻略 — COST 配裝、主詞條選擇、副詞條刷取原則、套裝搭配與體力規劃（2026年7月）。">
+  <meta name="keywords" content="鳴潮, Wuthering Waves, 聲骸, 詞條, COST, 43311, 聲骸套裝, 配裝攻略">
+  <meta name="author" content="GameGuide.tw">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="鳴潮聲骸養成攻略：COST 配裝與詞條選擇完整指南（2026年7月） — 攻略站">
+  <meta property="og:description" content="COST 配裝、主詞條選擇、副詞條刷取原則、套裝搭配與體力規劃一次看懂。">
+  <meta property="og:type" content="article">
+  <title>鳴潮聲骸養成攻略：COST 配裝與詞條選擇完整指南（2026年7月） — 攻略站</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "鳴潮聲骸養成攻略：COST 配裝與詞條選擇完整指南（2026年7月）",
+    "description": "COST 配裝、主詞條選擇、副詞條刷取原則、套裝搭配與體力規劃一次看懂。",
+    "author": { "@type": "Organization", "name": "GameGuide.tw" },
+    "datePublished": "2026-07-31",
+    "dateModified": "2026-07-31",
+    "mainEntityOfPage": { "@id": "https://game.cubedhub.com/wuthering-waves/articles/echo-guide.html" }
+  }
+  </script>
+  <link rel="canonical" href="https://game.cubedhub.com/wuthering-waves/articles/echo-guide.html">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4900630860092971" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0f1117] text-gray-200 min-h-screen flex flex-col">
+
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-indigo-500 z-[200] transition-[width] duration-100" style="width:0%"></div>
+
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../index.html" class="flex items-center gap-2 text-white font-bold text-xl">
+          <img src="../../images/logo.png" alt="CubedHub" class="w-8 h-8">
+          <span>攻略站</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../index.html" class="nav-link">首頁</a>
+          <a href="../index.html" class="nav-link">鳴潮</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-blue-400 mb-4">
+        <a href="../index.html" class="hover:underline">鳴潮</a>
+        <span>/</span>
+        <span>聲骸攻略</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">鳴潮聲骸養成攻略：COST 配裝與詞條選擇完整指南</h1>
+      <div class="flex items-center gap-4 text-sm text-gray-500">
+        <time datetime="2026-07-31">2026-07-31</time>
+        <span>•</span>
+        <span>約 9 分鐘閱讀</span>
+        <span>•</span>
+        <span>更新至 3.5 版本</span>
+      </div>
+    </div>
+
+    <div class="prose prose-invert max-w-none">
+      <div class="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 mb-8">
+        <p class="text-gray-300 leading-relaxed">聲骸是鳴潮角色強度提升的核心系統，等同於角色的「裝備」。許多漂泊者把大量體力投進聲骸副本，卻因為不了解 COST 與主詞條機制，刷出一整套「詞條不對」的聲骸而白費資源。本篇用最務實的方式拆解聲骸系統，讓你明白先刷什麼、詞條怎麼選、體力怎麼分配。</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6" id="echo-basics">一、聲骸基礎：COST 與負載</h2>
+      <p class="text-gray-300 leading-relaxed mb-4">每個聲骸都有一個負載值（COST），決定了你能攜帶幾個聲骸。數據塢等級提升後，角色最大負載為 12，因此最主流的配裝是 <strong>43311</strong>：一個 4-COST、兩個 3-COST、兩個 1-COST，合計 12 點，屬性能量利用最大化。</p>
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-[#1a1d2e]">
+              <th class="text-left p-3 border-b border-[#2a2d3e] font-semibold text-white">COST</th>
+              <th class="text-left p-3 border-b border-[#2a2d3e] font-semibold text-white">主要來源</th>
+              <th class="text-left p-3 border-b border-[#2a2d3e] font-semibold text-white">主詞條特點</th>
+              <th class="text-left p-3 border-b border-[#2a2d3e] font-semibold text-white">掉落難度</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#2a2d3e]">
+            <tr><td class="p-3 text-gray-300">4-COST</td><td class="p-3 text-gray-300">週本與地圖 Boss（海嘯級）</td><td class="p-3 text-gray-300">包含暴擊率、暴擊傷害、治療加成等最強詞條</td><td class="p-3 text-gray-300">低</td></tr>
+            <tr><td class="p-3 text-gray-300">3-COST</td><td class="p-3 text-gray-300">巨浪級精英怪</td><td class="p-3 text-gray-300">攻擊%、屬性傷害% 等</td><td class="p-3 text-gray-300">最高（屬性種類多）</td></tr>
+            <tr><td class="p-3 text-gray-300">1-COST</td><td class="p-3 text-gray-300">輕波級普通怪</td><td class="p-3 text-gray-300">攻擊%、生命%、防禦%</td><td class="p-3 text-gray-300">低</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-gray-300 leading-relaxed mb-4">也可以根據角色需求調整成 44111（合計 11 點）等變體，但 43311 是最通用、最能發揮屬性增傷的配置。要注意 1-COST 聲骸的主詞條看似固定為生命/防禦百分比，但副詞條仍有機會出現暴擊屬性，可用作補足暴擊率的「秘密武器」。</p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6" id="main-stat">二、主詞條選擇：最關鍵的單一決策</h2>
+      <p class="text-gray-300 leading-relaxed mb-4">主詞條在聲骸掉落時就已固定，無法靠調諧改變。主詞條選錯的 4-COST 聲骸，無論副詞條多漂亮都是廢物，因此主詞條優先級是聲骸養成的第一課。以下是各 COST 槽位的推薦主詞條：</p>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-[#1a1d2e]">
+              <th class="text-left p-3 border-b border-[#2a2d3e] font-semibold text-white">槽位</th>
+              <th class="text-left p-3 border-b border-[#2a2d3e] font-semibold text-white">主C（雙爆）</th>
+              <th class="text-left p-3 border-b border-[#2a2d3e] font-semibold text-white">治療</th>
+              <th class="text-left p-3 border-b border-[#2a2d3e] font-semibold text-white">+25 滿級數值參考</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#2a2d3e]">
+            <tr><td class="p-3 text-gray-300">4-COST</td><td class="p-3 text-gray-300">暴擊率 / 暴擊傷害</td><td class="p-3 text-gray-300">治療加成</td><td class="p-3 text-gray-300">暴擊率 22%、暴擊傷害 44%</td></tr>
+            <tr><td class="p-3 text-gray-300">3-COST #1</td><td class="p-3 text-gray-300">屬性傷害%</td><td class="p-3 text-gray-300">生命%</td><td class="p-3 text-gray-300">攻擊% 30%、屬性傷害 30%</td></tr>
+            <tr><td class="p-3 text-gray-300">3-COST #2</td><td class="p-3 text-gray-300">屬性傷害% 或 攻擊%</td><td class="p-3 text-gray-300">生命%</td><td class="p-3 text-gray-300">同上</td></tr>
+            <tr><td class="p-3 text-gray-300">1-COST ×2</td><td class="p-3 text-gray-300">攻擊% ×2</td><td class="p-3 text-gray-300">生命% ×2</td><td class="p-3 text-gray-300">攻擊% 18%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-gray-300 leading-relaxed mb-4">核心法則：<strong>暴擊率和暴擊傷害在 4-COST 上可互換，最終比例接近 1:2 為佳</strong>。若武器與副詞條已提供 60% 暴擊率，就放暴擊傷害；若卡在 40%，則放暴擊率。屬性傷害% 在 4-COST 的上限與 3-COST 相同（30%），與其把昂貴的 4-COST 槽位浪費在屬性傷害上，不如留給雙爆——屬性傷害請放在 3-COST 槽位。</p>
+      <p class="text-gray-300 leading-relaxed mb-4">新手如果雙爆還未成形，4-COST 暫時用攻擊% 也能過渡，但攻擊% 的有效傷害提升低於雙爆，一旦副詞條堆到 60% 以上暴擊率就應換回雙爆。1-COST 則絕對不要用固定數值主詞條，固定攻擊/生命/防禦的成長性遠低於百分比版本，是新手常見陷阱。</p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6" id="sub-stat">三、副詞條刷取：有效詞條與停損原則</h2>
+      <p class="text-gray-300 leading-relaxed mb-4">副詞條依賴調諧隨機出現，五星聲骸每升 5 級解鎖一條，最高可到 5 條。副詞條的隨機池包含多種屬性，但對輸出角色而言，真正有價值的「有效詞條」只有四種：<strong>暴擊率、暴擊傷害、攻擊百分比、屬性傷害加成</strong>；輔助角色則看重生命%、防禦%、共鳴效率。</p>
+      <p class="text-gray-300 leading-relaxed mb-4">由於詞條隨機且數值隨機，刷出完美聲骸的代價極高，建議採用「三振出局」停損策略節省體力：</p>
+      <div class="space-y-3 mb-8">
+        <div class="bg-[#1a1d2e] rounded-xl p-5">
+          <h3 class="text-white font-semibold mb-1">+9 檢定</h3>
+          <p class="text-gray-400 text-sm">升級到 +9 若未出現至少兩條有效詞條，直接當作經驗狗糧。</p>
+        </div>
+        <div class="bg-[#1a1d2e] rounded-xl p-5">
+          <h3 class="text-white font-semibold mb-1">+12 檢定</h3>
+          <p class="text-gray-400 text-sm">+12 時若有效詞條未滿三條，停止繼續投入。</p>
+        </div>
+        <div class="bg-[#1a1d2e] rounded-xl p-5">
+          <h3 class="text-white font-semibold mb-1">+15 對比</h3>
+          <p class="text-gray-400 text-sm">+15 滿級若只有兩條有效詞條，強度反而不如 +12 的三詞條胚子。</p>
+        </div>
+      </div>
+      <p class="text-gray-300 leading-relaxed mb-4">這套策略能讓體力利用率提升約四成，長線養成省下的資源相當可觀。副詞條的最低實用門檻是「同時有暴擊率與暴擊傷害」，這樣的面板才能支撐後期高難內容。</p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6" id="set">四、套裝搭配：2 件套與 5 件套</h2>
+      <p class="text-gray-300 leading-relaxed mb-4">聲骸套裝支援 2 件套與 5 件套效果，可自由混搭。常見配置是 3+2（三個 A 套裝 + 兩個 B 套裝），或直接湊滿 5 件套拿完整效果。3.5 版本新增的三個合鳴套裝（「冥途夜行之燈」「清邪蕩煞之心」「羽落空塵之歌」）可透過在玄方地界探索與挑戰新的聲骸精英怪取得。</p>
+      <p class="text-gray-300 leading-relaxed mb-4">配裝鐵律：<strong>主詞條正確的高品級散件，優於主詞條錯誤的套裝件</strong>。特別是 3-COST 位置，主詞條的優先級高於一切套裝效果。不要為了湊套裝而犧牲主詞條正確性，否則會陷入「套裝齊了但傷害反而變低」的窘境。</p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6" id="stamina">五、體力規劃：3:2:1 法則</h2>
+      <p class="text-gray-300 leading-relaxed mb-4">聲骸與角色養成共享體力資源，建議採用 <strong>3:2:1</strong> 分配法：30% 體力刷目標套裝、20% 刷通用散件、10% 儲備狗糧。切忌把全部體力押注在單一副本，否則詞條類型會過度單一，難以湊齊有效配裝。</p>
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-[#1a1d2e]">
+              <th class="text-left p-3 border-b border-[#2a2d3e] font-semibold text-white">體力去向</th>
+              <th class="text-left p-3 border-b border-[#2a2d3e] font-semibold text-white">用途</th>
+              <th class="text-left p-3 border-b border-[#2a2d3e] font-semibold text-white">佔比</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#2a2d3e]">
+            <tr><td class="p-3 text-gray-300">無音區 / 目標副本</td><td class="p-3 text-gray-300">刷取角色對應的合鳴套裝</td><td class="p-3 text-gray-300">30%</td></tr>
+            <tr><td class="p-3 text-gray-300">大世界精英怪</td><td class="p-3 text-gray-300">刷取優質 3-COST 與通用散件</td><td class="p-3 text-gray-300">20%</td></tr>
+            <tr><td class="p-3 text-gray-300">數據融合 / 狗糧儲備</td><td class="p-3 text-gray-300">低品質聲骸 5 合 1、儲備升級素材</td><td class="p-3 text-gray-300">10%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-gray-300 leading-relaxed mb-4">前期（角色未突破完成）體力優先投在角色與武器突破，聲骸先靠大世界刷怪過渡；後期再集中刷無音區。聲骸畢業是長期工程，不需要急於求成，邊刷邊優化即可。</p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-6" id="faq">六、常見問題 FAQ</h2>
+      <div class="space-y-6">
+        <div class="bg-[#1a1d2e] rounded-xl p-6">
+          <h3 class="text-white font-semibold mb-2">Q：主詞條和套裝效果哪個重要？</h3>
+          <p class="text-gray-400">絕對優先主詞條正確的胚子，套裝效果可以後期替換。3-COST 的主詞條優先級高於一切套裝效果。</p>
+        </div>
+        <div class="bg-[#1a1d2e] rounded-xl p-6">
+          <h3 class="text-white font-semibold mb-2">Q：聲骸 +9 和 +12 差很多嗎？</h3>
+          <p class="text-gray-400">對主C 角色而言，+12 相比 +9 平均提升約 8–10% 傷害，資源充足建議拉滿；輔助角色 +9 即可。</p>
+        </div>
+        <div class="bg-[#1a1d2e] rounded-xl p-6">
+          <h3 class="text-white font-semibold mb-2">Q：刷不出金色 3-COST 聲骸怎麼辦？</h3>
+          <p class="text-gray-400">使用數據塢的「數據融合」功能，將三個金色低 COST 聲骸合成為 3-COST，成本較高但勝在穩定。</p>
+        </div>
+        <div class="bg-[#1a1d2e] rounded-xl p-6">
+          <h3 class="text-white font-semibold mb-2">Q：版本更新後配裝會變動嗎？</h3>
+          <p class="text-gray-400">會。新套裝推出、角色機制調整都可能影響最佳配裝，例如 3.5 版本新增的三套合鳴套裝就提供了新的養成方向。建議定期回來參考最新攻略。</p>
+        </div>
+      </div>
+
+      <div class="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 mt-8">
+        <p class="text-gray-300 leading-relaxed">聲骸系統本質是機率與資源的動態博弈，沒有絕對完美的配裝，只有最適合當前場景的組合。先確保主詞條正確，再用三振出局原則篩選副詞條，就能用最少的體力養出堪用甚至優秀的聲骸。如果你對特定角色的配裝有疑問，歡迎參考本站的角色強度排行榜。</p>
+      </div>
+    </div>
+  </article>
+
+  <footer class="footer mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div><h4 class="text-white font-semibold mb-3">鳴潮攻略</h4><p class="text-gray-500 text-sm">本文基於鳴潮 3.5 版本撰寫，聲骸數值與機制以遊戲內實際顯示為準。</p></div>
+        <div><h4 class="text-white font-semibold mb-3">相關連結</h4><ul class="space-y-2 text-sm"><li><a href="https://wutheringwaves.kurogame.com/" class="text-gray-500 hover:text-blue-400 transition" target="_blank" rel="noopener">鳴潮官方網站</a></li><li><a href="https://forum.gamer.com.tw/A.php?bsn=74934" class="text-gray-500 hover:text-blue-400 transition" target="_blank" rel="noopener">巴哈姆特 鳴潮板</a></li></ul></div>
+        <div><h4 class="text-white font-semibold mb-3">關於</h4><ul class="space-y-2 text-sm"><li><a href="../../index.html" class="text-gray-500 hover:text-indigo-400 transition">回首頁</a></li></ul></div>
+      </div>
+      <div class="border-t border-[#2a2d3e] pt-6 text-center text-gray-600 text-sm">&copy; 2026 攻略站 GameGuide.tw — All rights reserved.</div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
